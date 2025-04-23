@@ -1,5 +1,9 @@
 # Day-of-Dragons-Cheat-SDK
 
+### 2025/4/23
+
+实体列表遍历正在导致崩溃，等待调查
+
 ### To-do
 - EntityList ✔
 - LocalPlayer ✔
