@@ -3,7 +3,7 @@
 ### 2025/12/25
 
 ### To-do
-- 2D ESP ×
+- 2D ESP ✔
 - 3D ESP ✔
 - Aimbot ×
 - Trigger Bot ×
