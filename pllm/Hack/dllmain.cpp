@@ -1,6 +1,7 @@
 ﻿#include "../Minimal-D3D12-Hook-ImGui-1.0.0/Main/mdx12_api.h"
 #include "../CppSDK/SDK.hpp"
 #include "ESP.h"
+#include "Configs.h"
 
 void DrawESP() {
     SDK::UWorld* World = SDK::UWorld::GetWorld();
@@ -16,56 +17,169 @@ void DrawESP() {
         if (!PS || !PS->PawnPrivate) continue;
 
         SDK::APawn* Pawn = PS->PawnPrivate;
-        if (Pawn == LocalPC->Pawn) continue; // 排除自己
+        if (Pawn == LocalPC->Pawn) continue;
 
         auto TargetActor = reinterpret_cast<SDK::AActor*>(Pawn);
+        if (!TargetActor) continue;
+
         auto BaseChar = reinterpret_cast<SDK::AChar_Parent_All_C*>(TargetActor);
+        if (!BaseChar || BaseChar->IsDead) continue;
 
-        // 1. 绘制方框并获取矩形坐标
-        g_ESP::BoxRect rect = g_ESP::DrawBox(TargetActor, 255, 255, 255, 255, 0.5f);
+        auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(TargetActor);
+        if (!PlayerChar) continue;
 
-        // 如果物体不在屏幕内，跳过后续绘制
-        if (!rect.valid) continue;
+        // --- 关键：重置当前玩家的 Flag 高度偏移 ---
+        g_ESP::ResetFlagOffsets();
 
-        // 2. 绘制名称
-        g_ESP::DrawName(TargetActor, rect, 255, 255, 255, 255);
-
-        // 3. 维护 Flags 队列
-        std::vector<g_ESP::Flag> flags;
-
-        // 添加血量 Flag (代替 HealthBar)
-        if (BaseChar) {
-            byte health = BaseChar->HealthPercent;
-            // 简单的颜色插值：血越少越红
-            float hpFactor = health / 200.0f;
-            ImU32 hpColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f - hpFactor, hpFactor, 0.0f, 1.0f));
-
-            flags.push_back({ "HP: " + std::to_string(health), hpColor });
+        // 1. 绘制方框并获取 Rect
+        g_ESP::BoxRect rect;
+        if (g_Config::bDrawBox) {
+            rect = g_ESP::DrawBox(TargetActor,
+                g_Config::BoxColor[0] * 255.0f,
+                g_Config::BoxColor[1] * 255.0f,
+                g_Config::BoxColor[2] * 255.0f,
+                g_Config::BoxColor[3] * 255.0f, 0.5f);
+        }
+        else {
+            // 如果不画框，传透明色(alpha=0)来静默获取 rect 坐标
+            rect = g_ESP::DrawBox(TargetActor, 0, 0, 0, 0, 0.5f);
         }
 
-        // 添加距离 Flag
-        float distance = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f; // 转换成米
-        flags.push_back({ std::to_string((int)distance) + "m", ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 1.0f, 1.0f, 1.0f)) });
+        if (!rect.valid) continue;
 
-        // 4. 一次性渲染所有文字标签
-        g_ESP::RenderFlags(rect, flags);
+        // 2. 绘制血条（其内部已包含 Health Text 逻辑，会自动占用左侧第一行）
+        if (g_Config::bDrawHealthBar) {
+            g_ESP::DrawHealthBar(rect, (float)BaseChar->HealthPercent, 200.0f, 255.0f);
+        }
+
+        // 3. 绘制名称
+        if (g_Config::bDrawName) {
+            g_ESP::DrawName(TargetActor, rect,
+                g_Config::NameColor[0] * 255.0f,
+                g_Config::NameColor[1] * 255.0f,
+                g_Config::NameColor[2] * 255.0f,
+                g_Config::NameColor[3] * 255.0f);
+        }
+
+        // 4. 绘制各种 Flags (右侧)
+
+        // 种类 (Species)
+        if (g_Config::bDrawSpecies) {
+            std::string speciesName;
+            ImU32 speciesColor;
+            switch (PlayerChar->CharacterSpecies) {
+            case SDK::Enum_PlayerCharacter::NewEnumerator0: speciesName = "FS"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 0.4f, 0.4f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator1: speciesName = "IR"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.4f, 1.0f, 1.0f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator2: speciesName = "SS"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 1.0f, 0.4f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator3: speciesName = "ASD"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.6f, 1.0f, 0.4f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator5: speciesName = "BS"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 0.4f, 0.7f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator10: speciesName = "BW"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.4f, 0.4f, 1.0f, 1.0f)); break;
+            case SDK::Enum_PlayerCharacter::NewEnumerator12: speciesName = "BIO"; speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.0f, 1.0f, 1.0f, 1.0f)); break;
+            default:
+                speciesName = "Spec_" + std::to_string((unsigned char)PlayerChar->CharacterSpecies);
+                speciesColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+                break;
+            }
+            g_ESP::RenderFlag(rect, speciesName, speciesColor, g_ESP::FlagPos::Right);
+        }
+
+        // 阶段 (Growth Stage)
+        if (g_Config::bDrawGrowth) {
+            std::string stageName = "Unknown";
+            ImU32 stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+            switch (BaseChar->GrowthStage) {
+            case SDK::Enum_GrowthStage::NewEnumerator1: stageName = "Hatchling"; stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.8f, 0.8f, 0.8f, 1.0f)); break;
+            case SDK::Enum_GrowthStage::NewEnumerator2: stageName = "Juvenile"; stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.0f, 1.0f, 0.5f, 1.0f)); break;
+            case SDK::Enum_GrowthStage::NewEnumerator3: stageName = "Adult"; stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(0.1f, 0.6f, 1.0f, 1.0f)); break;
+            case SDK::Enum_GrowthStage::NewEnumerator4: stageName = "Elder"; stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 0.5f, 0.0f, 1.0f)); break;
+            case SDK::Enum_GrowthStage::NewEnumerator5: stageName = "Ancient"; stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 0.0f, 1.0f, 1.0f)); break;
+            }
+            g_ESP::RenderFlag(rect, stageName, stageColor, g_ESP::FlagPos::Right);
+        }
+
+        // 距离 (Distance)
+        if (g_Config::bDrawDistance) {
+            float distance = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+            std::string distStr = std::to_string((int)distance) + "m";
+            g_ESP::RenderFlag(rect, distStr, g_Config::GetU32Color(g_Config::DistanceColor), g_ESP::FlagPos::Right);
+        }
     }
 }
 
-// 定义自定义 ImGui 绘制函数
+// --- GUI 菜单渲染 ---
 void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-    // 检查菜单是否打开（按 F1 切换）
     if (g_MDX12::g_MenuState::g_isOpen) {
-        ImGui::SetNextWindowPos(ImVec2(100, 100), ImGuiCond_FirstUseEver);
-        ImGui::SetNextWindowSize(ImVec2(400, 300), ImGuiCond_FirstUseEver);
+        ImGui::SetNextWindowSize(ImVec2(450, 400), ImGuiCond_FirstUseEver);
 
-        if (ImGui::Begin("My Menu")) {
-            ImGui::Text("Hello World!");
+        if (ImGui::Begin("Begeerte", nullptr)) {
 
-            static bool option = false;
-            ImGui::Checkbox("My Option", &option);
+            // 设定调色盘默认显示 Alpha 条
+            static ImGuiColorEditFlags color_flags = ImGuiColorEditFlags_AlphaBar |
+                ImGuiColorEditFlags_AlphaPreview |
+                ImGuiColorEditFlags_NoLabel;
 
+            // 用于跨颜色器复制粘贴的颜色缓存
+            static float saved_color[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+
+            // 统一定制颜色编辑器的 Lambda，包含复制粘贴逻辑
+            auto DrawColorPicker = [&](const char* label_id, float* col_ptr) {
+                // 绘制基础颜色预览块
+                ImGui::ColorEdit4(label_id, col_ptr, color_flags | ImGuiColorEditFlags_NoInputs);
+
+                // 右键点击预览块弹出 Copy / Paste 菜单
+                if (ImGui::BeginPopupContextItem(label_id)) {
+                    if (ImGui::MenuItem("Copy")) {
+                        memcpy(saved_color, col_ptr, sizeof(float) * 4);
+                    }
+                    if (ImGui::MenuItem("Paste")) {
+                        memcpy(col_ptr, saved_color, sizeof(float) * 4);
+                    }
+                    ImGui::EndPopup();
+                }
+            };
+
+            if (ImGui::BeginTabBar("Tabs")) {
+
+                // --- 视觉设置 ---
+                if (ImGui::BeginTabItem("Visuals")) {
+
+                    ImGui::Checkbox("Box", &g_Config::bDrawBox);
+                    if (g_Config::bDrawBox) {
+                        ImGui::SameLine();
+                        DrawColorPicker("BoxCol##1", g_Config::BoxColor);
+                    }
+
+                    ImGui::Checkbox("Health Bar", &g_Config::bDrawHealthBar);
+
+                    ImGui::Checkbox("Player Name", &g_Config::bDrawName);
+                    if (g_Config::bDrawName) {
+                        ImGui::SameLine();
+                        DrawColorPicker("NameCol##1", g_Config::NameColor);
+                    }
+
+                    ImGui::EndTabItem();
+                }
+
+                // --- 标签/信息设置 ---
+                if (ImGui::BeginTabItem("Flags")) {
+
+                    ImGui::Checkbox("Species", &g_Config::bDrawSpecies);
+                    ImGui::Checkbox("Growth Stage", &g_Config::bDrawGrowth);
+
+                    ImGui::Checkbox("Distance", &g_Config::bDrawDistance);
+                    if (g_Config::bDrawDistance) {
+                        ImGui::SameLine();
+                        DrawColorPicker("DistCol##1", g_Config::DistanceColor);
+                    }
+
+                    ImGui::EndTabItem();
+                }
+
+                ImGui::EndTabBar();
+            }
+
+            ImGui::Separator();
             ImGui::End();
         }
     }

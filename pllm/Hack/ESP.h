@@ -13,18 +13,24 @@ namespace g_ESP {
         bool valid = false;
     };
 
-    // 修复后的 DrawBox：利用 GetActorBounds 动态计算缩放
-    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale);
-
-    // 绘制名称：基于 Box 坐标
-    void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a);
-
-    // Flag 系统
-    struct Flag {
-        std::string text;
-        ImU32 color;
+    // 渲染位置枚举
+    enum class FlagPos {
+        Left,
+        Right
     };
 
-    // AddFlags 渲染器：自动维护垂直队列
-    void RenderFlags(BoxRect rect, const std::vector<Flag>& flags);
+    // 绘制方框
+    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale);
+
+    // 绘制血条（内部包含 Health Text）
+    void DrawHealthBar(BoxRect rect, float healthPercent, float maxHealth, float a);
+
+    // 绘制名称
+    void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a);
+
+    // 核心改进：单行渲染 Flag，内部自动处理队列高度
+    void RenderFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos);
+
+    // 重置偏移量，每个玩家循环开始时调用
+    void ResetFlagOffsets();
 }

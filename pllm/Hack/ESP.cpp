@@ -4,6 +4,15 @@
 
 namespace g_ESP {
 
+    // 静态变量：用于追踪当前 Box 左右两侧已经占用的高度
+    static float g_CurrentLeftY = 0.0f;
+    static float g_CurrentRightY = 0.0f;
+
+    void ResetFlagOffsets() {
+        g_CurrentLeftY = 0.0f;
+        g_CurrentRightY = 0.0f;
+    }
+
     SDK::APlayerController* GetLocalPC() {
         SDK::UWorld* World = SDK::UWorld::GetWorld();
         if (!World || !World->OwningGameInstance || World->OwningGameInstance->LocalPlayers.Num() == 0) return nullptr;
@@ -14,7 +23,6 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
-    // --- 修复“近小远大”逻辑 ---
     BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale) {
         BoxRect rect;
         if (!entity || entity->bHidden) return rect;
@@ -22,21 +30,17 @@ namespace g_ESP {
         auto PC = GetLocalPC();
         if (!PC) return rect;
 
-        // 利用你提供的接口获取 3D 包围盒
         SDK::FVector origin, extent;
         entity->GetActorBounds(true, &origin, &extent, false);
 
-        // 计算 3D 空间的顶部点和底部点
         SDK::FVector worldTop = { origin.X, origin.Y, origin.Z + extent.Z };
         SDK::FVector worldBottom = { origin.X, origin.Y, origin.Z - extent.Z };
 
         SDK::FVector2D screenTop, screenBottom;
 
-        // 将 3D 点投影到 2D 屏幕
         if (SDK::UGameplayStatics::ProjectWorldToScreen(PC, worldTop, &screenTop, false) &&
             SDK::UGameplayStatics::ProjectWorldToScreen(PC, worldBottom, &screenBottom, false)) {
 
-            // 屏幕上的高度 = 底部 Y - 顶部 Y (UE坐标系中 Y 向下递增)
             float height = abs(screenBottom.Y - screenTop.Y);
             float width = height * width_scale;
 
@@ -44,59 +48,87 @@ namespace g_ESP {
             rect.bottomRight = ImVec2(screenTop.X + width / 2.0f, screenBottom.Y);
             rect.valid = true;
 
-            ImDrawList* drawList = ImGui::GetBackgroundDrawList();
-
-            // 绘制黑色外边框（阴影效果）
-            drawList->AddRect(ImVec2(rect.topLeft.x - 1, rect.topLeft.y - 1),
-                ImVec2(rect.bottomRight.x + 1, rect.bottomRight.y + 1),
-                ToImColor(0, 0, 0, a), 0.0f, 0, 1.5f);
-
-            // 绘制主方框
-            drawList->AddRect(rect.topLeft, rect.bottomRight, ToImColor(r, g, b, a), 0.0f, 0, 1.0f);
+            if (a > 0.1f) {
+                ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+                drawList->AddRect(ImVec2(rect.topLeft.x - 1, rect.topLeft.y - 1),
+                    ImVec2(rect.bottomRight.x + 1, rect.bottomRight.y + 1),
+                    ToImColor(0, 0, 0, a), 0.0f, 0, 1.5f);
+                drawList->AddRect(rect.topLeft, rect.bottomRight, ToImColor(r, g, b, a), 0.0f, 0, 1.0f);
+            }
         }
         return rect;
     }
 
-    // --- 绘制名称 ---
-    void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a) {
+    void RenderFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos) {
+        if (!rect.valid || text.empty()) return;
+
+        ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+        ImVec2 textSize = ImGui::CalcTextSize(text.c_str());
+        ImVec2 drawPos;
+
+        if (pos == FlagPos::Right) {
+            // 右侧：起始 X 为右边界 + 间距，Y 随右侧累计高度偏移
+            drawPos = ImVec2(rect.bottomRight.x + 5.0f, rect.topLeft.y + g_CurrentRightY);
+            g_CurrentRightY += textSize.y + 1.0f; // 累加高度
+        }
+        else {
+            // 左侧：起始 X 为左边界 - 间距 - 文本宽度（保持右对齐），Y 随左侧累计高度偏移
+            // 额外 -5 像素是为了避开血条
+            drawPos = ImVec2(rect.topLeft.x - 8.0f - textSize.x, rect.topLeft.y + g_CurrentLeftY);
+            g_CurrentLeftY += textSize.y + 1.0f; // 累加高度
+        }
+
+        // 绘制文字（带黑色投影）
+        drawList->AddText(ImVec2(drawPos.x + 1, drawPos.y + 1), ToImColor(0, 0, 0, 255), text.c_str());
+        drawList->AddText(drawPos, color, text.c_str());
+    }
+
+    void DrawHealthBar(BoxRect rect, float healthPercent, float maxHealth, float a) {
         if (!rect.valid) return;
 
+        ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+        float boxHeight = rect.bottomRight.y - rect.topLeft.y;
+        float barWidth = 2.5f;
+        float barMargin = 4.0f;
+
+        ImVec2 barBgTop = ImVec2(rect.topLeft.x - barMargin - barWidth, rect.topLeft.y);
+        ImVec2 barBgBottom = ImVec2(rect.topLeft.x - barMargin, rect.bottomRight.y);
+
+        // 背景
+        drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+
+        float percentage = healthPercent / maxHealth;
+        percentage = (percentage > 1.0f) ? 1.0f : (percentage < 0.0f ? 0.0f : percentage);
+
+        // 动态颜色计算
+        ImVec4 col;
+        if (percentage > 0.5f)
+            col = ImVec4((1.0f - percentage) * 2.0f, 1.0f, 0.0f, a / 255.0f);
+        else
+            col = ImVec4(1.0f, percentage * 2.0f, 0.0f, a / 255.0f);
+        ImU32 hpColor = ImGui::ColorConvertFloat4ToU32(col);
+
+        if (healthPercent > 0) {
+            float dynamicHeight = boxHeight * percentage;
+            drawList->AddRectFilled(ImVec2(barBgTop.x, barBgBottom.y - dynamicHeight), barBgBottom, hpColor);
+        }
+
+        // --- 核心改进：在此直接添加 Health Text 到左侧队列 ---
+        std::string hpText = std::to_string((int)healthPercent);
+        RenderFlag(rect, hpText, hpColor, FlagPos::Left);
+    }
+
+    void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a) {
+        if (!rect.valid) return;
         auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(entity);
-        if (!PlayerChar) return;
+        if (!PlayerChar || !PlayerChar->PlayerName.IsValid()) return;
 
-        SDK::FString fName = PlayerChar->PlayerName;
-        if (!fName.IsValid()) return;
-
-        std::string nameStr = fName.ToString();
+        std::string nameStr = PlayerChar->PlayerName.ToString();
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
         ImVec2 textSize = ImGui::CalcTextSize(nameStr.c_str());
-
-        // 将名字放在 Box 顶部正中央
-        ImVec2 textPos = ImVec2(rect.topLeft.x + (rect.bottomRight.x - rect.topLeft.x) / 2.0f - textSize.x / 2.0f,
-            rect.topLeft.y - textSize.y - 5.0f);
+        ImVec2 textPos = ImVec2(rect.topLeft.x + (rect.bottomRight.x - rect.topLeft.x) / 2.0f - textSize.x / 2.0f, rect.topLeft.y - textSize.y - 5.0f);
 
         drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), ToImColor(0, 0, 0, a), nameStr.c_str());
         drawList->AddText(textPos, ToImColor(r, g, b, a), nameStr.c_str());
-    }
-
-    // --- AddFlags 自动维护队列系统 ---
-    void RenderFlags(BoxRect rect, const std::vector<Flag>& flags) {
-        if (!rect.valid || flags.empty()) return;
-
-        ImDrawList* drawList = ImGui::GetBackgroundDrawList();
-        float currentOffsetY = 0.0f;
-
-        for (const auto& flag : flags) {
-            // 起点：Box 的右上角 (rect.bottomRight.x, rect.topLeft.y)
-            ImVec2 pos = ImVec2(rect.bottomRight.x + 5.0f, rect.topLeft.y + currentOffsetY);
-
-            // 绘制文字阴影
-            drawList->AddText(ImVec2(pos.x + 1, pos.y + 1), ToImColor(0, 0, 0, 255), flag.text.c_str());
-            // 绘制文字内容
-            drawList->AddText(pos, flag.color, flag.text.c_str());
-
-            // 自动累加高度：字体大小 + 2像素行间距
-            currentOffsetY += ImGui::GetFontSize() + 2.0f;
-        }
     }
 }
