@@ -3843,6 +3843,12 @@
     <ClInclude Include="Hack\Configs.h">
       <Filter>Hack</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\DrawESP.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\DrawImGui.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppSDK\SDK\Act_AI_Dynamic_Parent_Spawner_functions.cpp">
@@ -5184,6 +5190,12 @@
       <Filter>Minimal-D3D12-Hook-ImGui-1.0.0\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Hack\ESP.cpp">
+      <Filter>Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\DrawESP.cpp">
+      <Filter>Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\DrawImGui.cpp">
       <Filter>Hack</Filter>
     </ClCompile>
   </ItemGroup>

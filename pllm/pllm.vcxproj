@@ -1415,6 +1415,8 @@
     <ClInclude Include="CppSDK\UnrealContainers.hpp" />
     <ClInclude Include="CppSDK\UtfN.hpp" />
     <ClInclude Include="Hack\Configs.h" />
+    <ClInclude Include="Hack\DrawESP.h" />
+    <ClInclude Include="Hack\DrawImGui.h" />
     <ClInclude Include="Hack\ESP.h" />
     <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imconfig.h" />
     <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imgui.h" />
@@ -1862,6 +1864,8 @@
     <ClCompile Include="CppSDK\SDK\W_Panel_PreviewPane_functions.cpp" />
     <ClCompile Include="CppSDK\SDK\W_Panel_QuestJournal_functions.cpp" />
     <ClCompile Include="Hack\dllmain.cpp" />
+    <ClCompile Include="Hack\DrawESP.cpp" />
+    <ClCompile Include="Hack\DrawImGui.cpp" />
     <ClCompile Include="Hack\ESP.cpp" />
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imgui.cpp" />
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imgui_demo.cpp" />
