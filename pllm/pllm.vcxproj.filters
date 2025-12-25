@@ -3840,6 +3840,9 @@
     <ClInclude Include="Hack\ESP.h">
       <Filter>Hack</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\Configs.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppSDK\SDK\Act_AI_Dynamic_Parent_Spawner_functions.cpp">

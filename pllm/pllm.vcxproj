@@ -1414,6 +1414,7 @@
     <ClInclude Include="CppSDK\SDK\W_Panel_QuestJournal_parameters.hpp" />
     <ClInclude Include="CppSDK\UnrealContainers.hpp" />
     <ClInclude Include="CppSDK\UtfN.hpp" />
+    <ClInclude Include="Hack\Configs.h" />
     <ClInclude Include="Hack\ESP.h" />
     <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imconfig.h" />
     <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.0\ImGui\imgui.h" />

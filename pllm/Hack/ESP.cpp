@@ -3,8 +3,6 @@
 #include "ESP.h"
 
 namespace g_ESP {
-
-    // 静态变量：用于追踪当前 Box 左右两侧已经占用的高度
     static float g_CurrentLeftY = 0.0f;
     static float g_CurrentRightY = 0.0f;
 
@@ -67,18 +65,14 @@ namespace g_ESP {
         ImVec2 drawPos;
 
         if (pos == FlagPos::Right) {
-            // 右侧：起始 X 为右边界 + 间距，Y 随右侧累计高度偏移
             drawPos = ImVec2(rect.bottomRight.x + 5.0f, rect.topLeft.y + g_CurrentRightY);
-            g_CurrentRightY += textSize.y + 1.0f; // 累加高度
+            g_CurrentRightY += textSize.y + 1.0f;
         }
         else {
-            // 左侧：起始 X 为左边界 - 间距 - 文本宽度（保持右对齐），Y 随左侧累计高度偏移
-            // 额外 -5 像素是为了避开血条
             drawPos = ImVec2(rect.topLeft.x - 8.0f - textSize.x, rect.topLeft.y + g_CurrentLeftY);
-            g_CurrentLeftY += textSize.y + 1.0f; // 累加高度
+            g_CurrentLeftY += textSize.y + 1.0f;
         }
 
-        // 绘制文字（带黑色投影）
         drawList->AddText(ImVec2(drawPos.x + 1, drawPos.y + 1), ToImColor(0, 0, 0, 255), text.c_str());
         drawList->AddText(drawPos, color, text.c_str());
     }
@@ -94,13 +88,11 @@ namespace g_ESP {
         ImVec2 barBgTop = ImVec2(rect.topLeft.x - barMargin - barWidth, rect.topLeft.y);
         ImVec2 barBgBottom = ImVec2(rect.topLeft.x - barMargin, rect.bottomRight.y);
 
-        // 背景
         drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
 
         float percentage = healthPercent / maxHealth;
         percentage = (percentage > 1.0f) ? 1.0f : (percentage < 0.0f ? 0.0f : percentage);
 
-        // 动态颜色计算
         ImVec4 col;
         if (percentage > 0.5f)
             col = ImVec4((1.0f - percentage) * 2.0f, 1.0f, 0.0f, a / 255.0f);
@@ -113,7 +105,6 @@ namespace g_ESP {
             drawList->AddRectFilled(ImVec2(barBgTop.x, barBgBottom.y - dynamicHeight), barBgBottom, hpColor);
         }
 
-        // --- 核心改进：在此直接添加 Health Text 到左侧队列 ---
         std::string hpText = std::to_string((int)healthPercent);
         RenderFlag(rect, hpText, hpColor, FlagPos::Left);
     }

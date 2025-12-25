@@ -28,10 +28,8 @@ void DrawESP() {
         auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(TargetActor);
         if (!PlayerChar) continue;
 
-        // --- 关键：重置当前玩家的 Flag 高度偏移 ---
         g_ESP::ResetFlagOffsets();
 
-        // 1. 绘制方框并获取 Rect
         g_ESP::BoxRect rect;
         if (g_Config::bDrawBox) {
             rect = g_ESP::DrawBox(TargetActor,
@@ -47,12 +45,10 @@ void DrawESP() {
 
         if (!rect.valid) continue;
 
-        // 2. 绘制血条（其内部已包含 Health Text 逻辑，会自动占用左侧第一行）
         if (g_Config::bDrawHealthBar) {
             g_ESP::DrawHealthBar(rect, (float)BaseChar->HealthPercent, 200.0f, 255.0f);
         }
 
-        // 3. 绘制名称
         if (g_Config::bDrawName) {
             g_ESP::DrawName(TargetActor, rect,
                 g_Config::NameColor[0] * 255.0f,
@@ -61,9 +57,6 @@ void DrawESP() {
                 g_Config::NameColor[3] * 255.0f);
         }
 
-        // 4. 绘制各种 Flags (右侧)
-
-        // 种类 (Species)
         if (g_Config::bDrawSpecies) {
             std::string speciesName;
             ImU32 speciesColor;
@@ -83,7 +76,6 @@ void DrawESP() {
             g_ESP::RenderFlag(rect, speciesName, speciesColor, g_ESP::FlagPos::Right);
         }
 
-        // 阶段 (Growth Stage)
         if (g_Config::bDrawGrowth) {
             std::string stageName = "Unknown";
             ImU32 stageColor = ImGui::ColorConvertFloat4ToU32(ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
@@ -97,7 +89,6 @@ void DrawESP() {
             g_ESP::RenderFlag(rect, stageName, stageColor, g_ESP::FlagPos::Right);
         }
 
-        // 距离 (Distance)
         if (g_Config::bDrawDistance) {
             float distance = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
             std::string distStr = std::to_string((int)distance) + "m";
@@ -106,7 +97,6 @@ void DrawESP() {
     }
 }
 
-// --- GUI 菜单渲染 ---
 void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
     if (g_MDX12::g_MenuState::g_isOpen) {
@@ -114,20 +104,15 @@ void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 
         if (ImGui::Begin("Begeerte", nullptr)) {
 
-            // 设定调色盘默认显示 Alpha 条
             static ImGuiColorEditFlags color_flags = ImGuiColorEditFlags_AlphaBar |
                 ImGuiColorEditFlags_AlphaPreview |
                 ImGuiColorEditFlags_NoLabel;
 
-            // 用于跨颜色器复制粘贴的颜色缓存
             static float saved_color[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
-            // 统一定制颜色编辑器的 Lambda，包含复制粘贴逻辑
             auto DrawColorPicker = [&](const char* label_id, float* col_ptr) {
-                // 绘制基础颜色预览块
                 ImGui::ColorEdit4(label_id, col_ptr, color_flags | ImGuiColorEditFlags_NoInputs);
 
-                // 右键点击预览块弹出 Copy / Paste 菜单
                 if (ImGui::BeginPopupContextItem(label_id)) {
                     if (ImGui::MenuItem("Copy")) {
                         memcpy(saved_color, col_ptr, sizeof(float) * 4);
@@ -140,8 +125,6 @@ void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
             };
 
             if (ImGui::BeginTabBar("Tabs")) {
-
-                // --- 视觉设置 ---
                 if (ImGui::BeginTabItem("Visuals")) {
 
                     ImGui::Checkbox("Box", &g_Config::bDrawBox);
@@ -161,7 +144,6 @@ void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
                     ImGui::EndTabItem();
                 }
 
-                // --- 标签/信息设置 ---
                 if (ImGui::BeginTabItem("Flags")) {
 
                     ImGui::Checkbox("Species", &g_Config::bDrawSpecies);
@@ -191,15 +173,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 {
     switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
-        // 初始化 Hook 系统
         g_MDX12::Initialize();
-
-        // 设置自定义绘制回调
         g_MDX12::SetSetupImGuiCallback(MyImGuiDraw);
         break;
 
     case DLL_PROCESS_DETACH:
-        // 清理资源
         g_MDX12::FinalCleanupAll();
         break;
     }
