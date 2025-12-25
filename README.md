@@ -2,7 +2,7 @@
 
 ### How to use
 - include [Minimal-D3D12-Hook-ImGui](https://github.com/zetsr/Minimal-D3D12-Hook-ImGui)
-- include the latest SDK by [Dumper-7](https://github.com/Encryqed/Dumper-7)
+- include the latest Day of Dragons SDK by [Dumper-7](https://github.com/Encryqed/Dumper-7)
 - build project
 - inject the dll without eac launcher
 
