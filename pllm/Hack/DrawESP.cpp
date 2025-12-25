@@ -94,6 +94,10 @@ namespace g_DrawESP {
                         g_ESP::DrawHealthBar(rect, (float)BaseChar->HealthPercent, 200.0f, 255.0f);
 
                         std::string hpStr = std::to_string((int)BaseChar->HealthPercent);
+                        if ((int)BaseChar->HealthPercent <= 0) {
+                            hpStr = "Dead";
+                        }
+
                         float hpPercent = BaseChar->HealthPercent / 200.0f;
                         ImVec4 hpColor;
                         if (hpPercent > 0.5f)
