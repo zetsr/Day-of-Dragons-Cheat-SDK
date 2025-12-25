@@ -31,17 +31,27 @@ namespace g_ESP {
         void AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos);
     };
 
-    // 原有函数
-    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale);
+    // 原有函数 - 添加 bTestOnly 参数
+    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale, bool bTestOnly = false);
     void DrawHealthBar(BoxRect rect, float healthPercent, float maxHealth, float a);
     void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a);
 
-    // 新增：OOF 结构体，用于传递需要显示的文本
+    // OOF 结构体
     struct OOFFlag {
         std::string text;
         ImU32 color;
     };
 
-    // 新增：OOF 渲染函数
+    // OOF 渲染函数
     void DrawOutOfFOV(SDK::AActor* entity, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags);
+
+    // 关系类型枚举
+    enum class RelationType {
+        Enemy,      // 敌人
+        Team,       // 队友
+        Clan        // 氏族成员
+    };
+
+    // 获取玩家关系
+    RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS);
 }

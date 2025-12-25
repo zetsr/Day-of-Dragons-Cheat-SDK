@@ -16,6 +16,28 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
+    // 获取玩家关系
+    RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS) {
+        if (!targetPS || !localPS) return RelationType::Enemy;
+
+        auto targetDragonPS = reinterpret_cast<SDK::ADragonsPS_C*>(targetPS);
+        auto localDragonPS = reinterpret_cast<SDK::ADragonsPS_C*>(localPS);
+
+        if (!targetDragonPS || !localDragonPS) return RelationType::Enemy;
+
+        // 检查 GroupID (队友)
+        if (targetDragonPS->GroupID != 0 && targetDragonPS->GroupID == localDragonPS->GroupID) {
+            return RelationType::Team;
+        }
+
+        // 检查 ClanID (氏族成员)
+        if (targetDragonPS->ClanID != 0 && targetDragonPS->ClanID == localDragonPS->ClanID) {
+            return RelationType::Clan;
+        }
+
+        return RelationType::Enemy;
+    }
+
     // Flag 管理器实现
     void FlagManager::AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos) {
         if (!rect.valid || text.empty()) return;
@@ -43,35 +65,26 @@ namespace g_ESP {
         ImVec2 screenSize = io.DisplaySize;
         ImVec2 screenCenter = ImVec2(screenSize.x * 0.5f, screenSize.y * 0.5f);
 
-        // 获取玩家和目标的世界位置
         SDK::FVector playerLoc = LocalPC->Pawn->K2_GetActorLocation();
         SDK::FVector targetLoc = entity->K2_GetActorLocation();
         SDK::FRotator cameraRot = LocalPC->PlayerCameraManager->GetCameraRotation();
 
-        // 计算世界坐标系下的方向向量
         SDK::FVector delta = targetLoc - playerLoc;
         float distance3D = sqrtf(delta.X * delta.X + delta.Y * delta.Y + delta.Z * delta.Z);
 
-        // 转换角度为弧度
         float yawRad = cameraRot.Yaw * (3.14159f / 180.0f);
         float pitchRad = cameraRot.Pitch * (3.14159f / 180.0f);
 
-        // 完整的相机空间转换（包含pitch和yaw）
-        // 先应用yaw旋转（水平旋转）
         float tempX = delta.X * cosf(yawRad) + delta.Y * sinf(yawRad);
         float tempY = delta.Y * cosf(yawRad) - delta.X * sinf(yawRad);
         float tempZ = delta.Z;
 
-        // 再应用pitch旋转（垂直旋转）
         float forward = tempX * cosf(pitchRad) + tempZ * sinf(pitchRad);
         float right = tempY;
         float up = tempZ * cosf(pitchRad) - tempX * sinf(pitchRad);
 
-        // 计算屏幕空间的2D方向
-        // right对应屏幕X轴（正值=右边），up对应屏幕Y轴（正值=上方，但ImGui Y轴向下为正）
-        float relativeAngle = atan2f(right, up);  // 现在up在前，正确对应屏幕坐标
+        float relativeAngle = atan2f(right, up);
 
-        // 计算投影位置
         float radiusX = (screenSize.x * 0.45f) * g_Config::OOFRadius;
         float radiusY = (screenSize.y * 0.45f) * g_Config::OOFRadius;
 
@@ -79,24 +92,20 @@ namespace g_ESP {
         drawPos.x = screenCenter.x + sinf(relativeAngle) * radiusX;
         drawPos.y = screenCenter.y - cosf(relativeAngle) * radiusY;
 
-        // 计算呼吸效果的 Alpha
         static float breathTime = 0.0f;
         breathTime += ImGui::GetIO().DeltaTime;
 
-        // 根据距离调整呼吸速度：距离越近，速度越快
-        float maxDistance = 10000.0f; // 最大检测距离
+        float maxDistance = 1000.0f;
         float distanceRatio = 1.0f - std::clamp(distance3D / maxDistance, 0.0f, 1.0f);
-        float dynamicSpeed = g_Config::OOFBreathSpeed * (1.0f + distanceRatio * 3.0f); // 最多快4倍
+        float dynamicSpeed = g_Config::OOFBreathSpeed * (1.0f + distanceRatio * 2.0f);
 
-        float breathCycle = sinf(breathTime * dynamicSpeed) * 0.5f + 0.5f; // 0.0 到 1.0
+        float breathCycle = sinf(breathTime * dynamicSpeed) * 0.5f + 0.5f;
         float alphaValue = g_Config::OOFMinAlpha + (g_Config::OOFMaxAlpha - g_Config::OOFMinAlpha) * breathCycle;
 
-        // 应用 Alpha 到颜色
         ImVec4 baseColor = *(ImVec4*)g_Config::OOFColor;
         baseColor.w = alphaValue;
         ImU32 col = ImGui::ColorConvertFloat4ToU32(baseColor);
 
-        // 渲染三角形（不添加轮廓）
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
         float size = g_Config::OOFSize;
 
@@ -107,7 +116,6 @@ namespace g_ESP {
 
         drawList->AddTriangleFilled(p1, p2, p3, col);
 
-        // 渲染文本信息（严防溢出）
         float textOffsetY = size + 5.0f;
         for (const auto& flag : flags) {
             ImVec2 textSize = ImGui::CalcTextSize(flag.text.c_str());
@@ -120,9 +128,8 @@ namespace g_ESP {
         }
     }
 
-    // --- 以下是原有的函数 ---
-
-    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale) {
+    // DrawBox 修改：添加 bTestOnly 参数
+    BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale, bool bTestOnly) {
         BoxRect rect;
         if (!entity || entity->bHidden) return rect;
         auto PC = GetLocalPC();
@@ -143,7 +150,8 @@ namespace g_ESP {
             rect.bottomRight = ImVec2(screenTop.X + width / 2.0f, screenBottom.Y);
             rect.valid = true;
 
-            if (a > 0.1f) {
+            // 只有在不是测试模式且 alpha > 0 时才绘制
+            if (!bTestOnly && a > 0.1f) {
                 ImDrawList* drawList = ImGui::GetBackgroundDrawList();
                 drawList->AddRect(ImVec2(rect.topLeft.x - 1, rect.topLeft.y - 1),
                     ImVec2(rect.bottomRight.x + 1, rect.bottomRight.y + 1),
