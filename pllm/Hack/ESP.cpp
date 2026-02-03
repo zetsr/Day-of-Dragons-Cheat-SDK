@@ -1,5 +1,5 @@
-#include "../Minimal-D3D12-Hook-ImGui-1.0.0/Main/mdx12_api.h"
-#include "../CppSDK/SDK.hpp"
+#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
 #include <cmath>
@@ -16,7 +16,6 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
-    // 获取玩家关系
     RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS) {
         if (!targetPS || !localPS) return RelationType::Enemy;
 
@@ -25,12 +24,10 @@ namespace g_ESP {
 
         if (!targetDragonPS || !localDragonPS) return RelationType::Enemy;
 
-        // 检查 GroupID (队友)
         if (targetDragonPS->GroupID != 0 && targetDragonPS->GroupID == localDragonPS->GroupID) {
             return RelationType::Team;
         }
 
-        // 检查 ClanID (氏族成员)
         if (targetDragonPS->ClanID != 0 && targetDragonPS->ClanID == localDragonPS->ClanID) {
             return RelationType::Clan;
         }
@@ -38,7 +35,6 @@ namespace g_ESP {
         return RelationType::Enemy;
     }
 
-    // Flag 管理器实现
     void FlagManager::AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos) {
         if (!rect.valid || text.empty()) return;
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
@@ -57,7 +53,6 @@ namespace g_ESP {
         drawList->AddText(drawPos, color, text.c_str());
     }
 
-    // OOF 核心逻辑实现
     void DrawOutOfFOV(SDK::AActor* entity, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags) {
         if (!entity || !LocalPC || !LocalPC->Pawn) return;
 
@@ -128,7 +123,6 @@ namespace g_ESP {
         }
     }
 
-    // DrawBox 修改：添加 bTestOnly 参数
     BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale, bool bTestOnly) {
         BoxRect rect;
         if (!entity || entity->bHidden) return rect;
@@ -150,7 +144,6 @@ namespace g_ESP {
             rect.bottomRight = ImVec2(screenTop.X + width / 2.0f, screenBottom.Y);
             rect.valid = true;
 
-            // 只有在不是测试模式且 alpha > 0 时才绘制
             if (!bTestOnly && a > 0.1f) {
                 ImDrawList* drawList = ImGui::GetBackgroundDrawList();
                 drawList->AddRect(ImVec2(rect.topLeft.x - 1, rect.topLeft.y - 1),

@@ -1,5 +1,5 @@
-#include "../Minimal-D3D12-Hook-ImGui-1.0.0/Main/mdx12_api.h"
-#include "../CppSDK/SDK.hpp"
+#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
 #include "DrawESP.h"
@@ -25,17 +25,14 @@ namespace g_DrawESP {
             SDK::APlayerState* PS = PlayerArray[i];
             if (!PS || !PS->PawnPrivate || PS->PawnPrivate == LocalPC->Pawn) continue;
 
-            auto TargetActor = reinterpret_cast<SDK::AActor*>(PS->PawnPrivate);
-            auto BaseChar = reinterpret_cast<SDK::AChar_Parent_All_C*>(TargetActor);
+            SDK::AActor* TargetActor = reinterpret_cast<SDK::AActor*>(PS->PawnPrivate);
+            SDK::AChar_Parent_All_C* BaseChar = reinterpret_cast<SDK::AChar_Parent_All_C*>(TargetActor);
             if (!BaseChar || BaseChar->IsDead) continue;
 
-            auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(TargetActor);
+            SDK::AChar_Parent_Player_C* PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(TargetActor);
             if (!PlayerChar) continue;
-
-            // 确定关系类型
             g_ESP::RelationType relation = g_ESP::GetPlayerRelation(PS, LocalPS);
 
-            // 根据关系选择配置
             bool bDrawBox, bDrawHealthBar, bDrawName, bDrawSpecies, bDrawGrowth, bDrawDistance;
             float* BoxColor;
             float* NameColor;
@@ -64,7 +61,7 @@ namespace g_DrawESP {
                 bDrawDistance = g_Config::bDrawDistanceClan;
                 DistanceColor = g_Config::DistanceColorClan;
                 break;
-            default: // Enemy
+            default:
                 bDrawBox = g_Config::bDrawBox;
                 BoxColor = g_Config::BoxColor;
                 bDrawHealthBar = g_Config::bDrawHealthBar;
@@ -84,7 +81,6 @@ namespace g_DrawESP {
             if (bProjected && bInScreenBounds) {
                 g_ESP::FlagManager flagMgr;
 
-                // 绘制盒子 - 如果没启用，使用 bTestOnly=true 只获取信息
                 g_ESP::BoxRect rect = g_ESP::DrawBox(TargetActor,
                     BoxColor[0] * 255, BoxColor[1] * 255,
                     BoxColor[2] * 255, BoxColor[3] * 255, 0.5f, !bDrawBox);
