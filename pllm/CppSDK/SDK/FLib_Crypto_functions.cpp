@@ -265,8 +265,9 @@ void UFLib_Crypto_C::Decode_ServerPvP(int32 ServerTypeCode, class UObject* __Wor
 // bool*                                   DisableTOD                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   DisableWeather                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   DisableRespawns                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   DisableEggSaves                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UFLib_Crypto_C::Decode_Session(const class FString& SessionString, class UObject* __WorldContext, bool* IsDOGs, bool* IsRoleplay, bool* UsesFriendlist, bool* HasGroupDamage, bool* AdminTags, bool* PlayerTags, bool* ChatClanTags, bool* NormalizedStats, bool* SpeciesGroups, bool* NoGrowth, bool* HatchlingBounties, int32* ServerType, int32* MapCode, bool* NoGlobalChat, int32* Clans, int32* ClanMemberCap, int32* MaxLatency, bool* DisableNesting, int32* GrowthScale, bool* IsSurvival, bool* DisableTOD, bool* DisableWeather, bool* DisableRespawns)
+void UFLib_Crypto_C::Decode_Session(const class FString& SessionString, class UObject* __WorldContext, bool* IsDOGs, bool* IsRoleplay, bool* UsesFriendlist, bool* HasGroupDamage, bool* AdminTags, bool* PlayerTags, bool* ChatClanTags, bool* NormalizedStats, bool* SpeciesGroups, bool* NoGrowth, bool* HatchlingBounties, int32* ServerType, int32* MapCode, bool* NoGlobalChat, int32* Clans, int32* ClanMemberCap, int32* MaxLatency, bool* DisableNesting, int32* GrowthScale, bool* IsSurvival, bool* DisableTOD, bool* DisableWeather, bool* DisableRespawns, bool* DisableEggSaves)
 {
 	static class UFunction* Func = nullptr;
 
@@ -348,6 +349,9 @@ void UFLib_Crypto_C::Decode_Session(const class FString& SessionString, class UO
 
 	if (DisableRespawns != nullptr)
 		*DisableRespawns = Parms.DisableRespawns;
+
+	if (DisableEggSaves != nullptr)
+		*DisableEggSaves = Parms.DisableEggSaves;
 }
 
 
@@ -565,10 +569,11 @@ void UFLib_Crypto_C::Encode_ServerPvP(Enum_ServerType ServerType, class UObject*
 // bool                                    DisableTOD                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    DisableWeather                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    DisableRespawns                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    DisableEggSaves                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FString*                          SessionString                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UFLib_Crypto_C::Encode_Session(bool IsDOGs, bool IsRoleplay, bool UsesFriendlist, bool HasGroupDamage, bool AdminTags, bool PlayerTags, bool ChatClanTags, bool NormalizedStats, bool SameSpeciesGroups, bool NoGrowth, bool HatchlingBounties, int32 ServerType, int32 MapCode, bool NoGlobalChat, int32 Clans, int32 ClanMemberCap, int32 PlayerLatency, bool DisableNesting, int32 GrowthRateScale, bool IsSurvival, bool DisableTOD, bool DisableWeather, bool DisableRespawns, class UObject* __WorldContext, class FString* SessionString)
+void UFLib_Crypto_C::Encode_Session(bool IsDOGs, bool IsRoleplay, bool UsesFriendlist, bool HasGroupDamage, bool AdminTags, bool PlayerTags, bool ChatClanTags, bool NormalizedStats, bool SameSpeciesGroups, bool NoGrowth, bool HatchlingBounties, int32 ServerType, int32 MapCode, bool NoGlobalChat, int32 Clans, int32 ClanMemberCap, int32 PlayerLatency, bool DisableNesting, int32 GrowthRateScale, bool IsSurvival, bool DisableTOD, bool DisableWeather, bool DisableRespawns, bool DisableEggSaves, class UObject* __WorldContext, class FString* SessionString)
 {
 	static class UFunction* Func = nullptr;
 
@@ -600,6 +605,7 @@ void UFLib_Crypto_C::Encode_Session(bool IsDOGs, bool IsRoleplay, bool UsesFrien
 	Parms.DisableTOD = DisableTOD;
 	Parms.DisableWeather = DisableWeather;
 	Parms.DisableRespawns = DisableRespawns;
+	Parms.DisableEggSaves = DisableEggSaves;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

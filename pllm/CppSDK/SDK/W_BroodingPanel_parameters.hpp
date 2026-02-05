@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "Enum_EggGender_structs.hpp"
 
 
@@ -19,68 +18,53 @@ namespace SDK::Params
 {
 
 // Function W_BroodingPanel.W_BroodingPanel_C.ExecuteUbergraph_W_BroodingPanel
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct W_BroodingPanel_C_ExecuteUbergraph_W_BroodingPanel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADragonsPC_C*                           CallFunc_Get_Dragons_Player_Controller_Pure_DragonsPlayerController; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_1;       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_CustomEvent_EggIndex;                       // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_EggGender                                K2Node_CustomEvent_EggGender;                      // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_2;       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_2;            // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADragonsPS_C*                           K2Node_CustomEvent_DragonsPS;                      // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ADragonsPS_C*                           CallFunc_Get_Dragons_Player_State__Local__Pure_DragonsPlayerState; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_3;       // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_3;            // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_4;       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_4;            // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable;                                // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Temp_byte_Variable_1;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable_2;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADragonsPS_C*                           K2Node_CustomEvent_DragonsPS;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ADragonsPS_C*                           CallFunc_Get_Dragons_Player_State__Local__Pure_DragonsPlayerState; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ADragonsPC_C*                           CallFunc_Get_Dragons_Player_Controller_Pure_DragonsPlayerController; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_1;                           // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_2;                           // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_W_BroodingPanel_C_ExecuteUbergraph_W_BroodingPanel;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.Get_Egg1L_Visibility
-// 0x0007 (0x0007 - 0x0000)
-struct W_BroodingPanel_C_Get_Egg1L_Visibility final
+// Function W_BroodingPanel.W_BroodingPanel_C.Get_B_EggL0_bIsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct W_BroodingPanel_C_Get_B_EggL0_bIsEnabled final
 {
 public:
-	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Temp_byte_Variable_2;                              // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_Get_Egg1L_Visibility;
+DUMPER7_ASSERTS_W_BroodingPanel_C_Get_B_EggL0_bIsEnabled;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.Get_Egg2R_Visibility
-// 0x0007 (0x0007 - 0x0000)
-struct W_BroodingPanel_C_Get_Egg2R_Visibility final
+// Function W_BroodingPanel.W_BroodingPanel_C.Get_B_EggR1_bIsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct W_BroodingPanel_C_Get_B_EggR1_bIsEnabled final
 {
 public:
-	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Temp_byte_Variable_2;                              // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_Get_Egg2R_Visibility;
+DUMPER7_ASSERTS_W_BroodingPanel_C_Get_B_EggR1_bIsEnabled;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_1L
+// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_L0
 // 0x0370 (0x0370 - 0x0000)
-struct W_BroodingPanel_C_GetBrush_1L final
+struct W_BroodingPanel_C_GetBrush_L0 final
 {
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
@@ -94,11 +78,11 @@ public:
 	uint8                                         Pad_291[0xF];                                      // 0x0291(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_Select_Default;                             // 0x02A0(0x00D0)()
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_GetBrush_1L;
+DUMPER7_ASSERTS_W_BroodingPanel_C_GetBrush_L0;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_2R
+// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_R1
 // 0x0370 (0x0370 - 0x0000)
-struct W_BroodingPanel_C_GetBrush_2R final
+struct W_BroodingPanel_C_GetBrush_R1 final
 {
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
@@ -112,11 +96,11 @@ public:
 	uint8                                         Pad_291[0xF];                                      // 0x0291(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_Select_Default;                             // 0x02A0(0x00D0)()
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_GetBrush_2R;
+DUMPER7_ASSERTS_W_BroodingPanel_C_GetBrush_R1;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_1L
+// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_L0
 // 0x005C (0x005C - 0x0000)
-struct W_BroodingPanel_C_GetColorAndOpacity_1L final
+struct W_BroodingPanel_C_GetColorAndOpacity_L0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
@@ -129,11 +113,11 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0048(0x0014)()
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_GetColorAndOpacity_1L;
+DUMPER7_ASSERTS_W_BroodingPanel_C_GetColorAndOpacity_L0;
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_2R
+// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_R1
 // 0x005C (0x005C - 0x0000)
-struct W_BroodingPanel_C_GetColorAndOpacity_2R final
+struct W_BroodingPanel_C_GetColorAndOpacity_R1 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
@@ -146,7 +130,7 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0048(0x0014)()
 };
-DUMPER7_ASSERTS_W_BroodingPanel_C_GetColorAndOpacity_2R;
+DUMPER7_ASSERTS_W_BroodingPanel_C_GetColorAndOpacity_R1;
 
 // Function W_BroodingPanel.W_BroodingPanel_C.SendEggInvite
 // 0x0008 (0x0008 - 0x0000)
@@ -156,16 +140,6 @@ public:
 	class ADragonsPS_C*                           DragonsPS;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_W_BroodingPanel_C_SendEggInvite;
-
-// Function W_BroodingPanel.W_BroodingPanel_C.ShowInviteMenu
-// 0x0002 (0x0002 - 0x0000)
-struct W_BroodingPanel_C_ShowInviteMenu final
-{
-public:
-	uint8                                         EggIndex;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_EggGender                                EggGender;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_W_BroodingPanel_C_ShowInviteMenu;
 
 }
 

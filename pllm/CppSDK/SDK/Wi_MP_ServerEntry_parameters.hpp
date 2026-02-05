@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,7 +52,8 @@ public:
 	bool                                          CallFunc_Decode_Session_DisableTOD;                // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Decode_Session_DisableWeather;            // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Decode_Session_DisableRespawns;           // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Decode_Session_DisableEggSaves;           // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Temp_string_Variable;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Decode_Map_MapName;                       // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	Enum_ServerType                               CallFunc_Decode_ServerPvP_ServerType;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -226,7 +227,8 @@ public:
 	bool                                          CallFunc_Decode_Session_DisableTOD;                // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Decode_Session_DisableWeather;            // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Decode_Session_DisableRespawns;           // 0x0057(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_ServerType                               CallFunc_Decode_ServerPvP_ServerType;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Decode_Session_DisableEggSaves;           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_ServerType                               CallFunc_Decode_ServerPvP_ServerType;              // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Wi_MP_ServerEntry_C_Get_ServerName_ToolTipWidget;
 

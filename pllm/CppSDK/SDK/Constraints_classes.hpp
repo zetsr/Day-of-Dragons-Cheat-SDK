@@ -13,39 +13,13 @@
 #include "MovieScene_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "AnimationCore_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AnimationCore_structs.hpp"
 #include "Constraints_structs.hpp"
 
 
 namespace SDK
 {
-
-// Class Constraints.ConstraintsManager
-// 0x0020 (0x0048 - 0x0028)
-class UConstraintsManager final : public UObject
-{
-public:
-	FMulticastSparseDelegateProperty_             OnConstraintAdded_BP;                              // 0x0028(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnConstraintRemoved_BP;                            // 0x0029(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0xE];                                       // 0x002A(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UTickableConstraint*>            Constraints;                                       // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ConstraintsManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ConstraintsManager")
-	}
-	static class UConstraintsManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UConstraintsManager>();
-	}
-};
-DUMPER7_ASSERTS_UConstraintsManager;
 
 // Class Constraints.TransformableHandle
 // 0x0030 (0x0058 - 0x0028)
@@ -70,6 +44,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UTransformableHandle;
+
+// Class Constraints.TransformableComponentHandle
+// 0x0010 (0x0068 - 0x0058)
+class UTransformableComponentHandle final : public UTransformableHandle
+{
+public:
+	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0058(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TransformableComponentHandle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TransformableComponentHandle")
+	}
+	static class UTransformableComponentHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTransformableComponentHandle>();
+	}
+};
+DUMPER7_ASSERTS_UTransformableComponentHandle;
 
 // Class Constraints.ConstraintsActor
 // 0x0008 (0x0298 - 0x0290)
@@ -119,6 +117,32 @@ public:
 };
 DUMPER7_ASSERTS_UTickableConstraint;
 
+// Class Constraints.ConstraintsManager
+// 0x0020 (0x0048 - 0x0028)
+class UConstraintsManager final : public UObject
+{
+public:
+	FMulticastSparseDelegateProperty_             OnConstraintAdded_BP;                              // 0x0028(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnConstraintRemoved_BP;                            // 0x0029(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0xE];                                       // 0x002A(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UTickableConstraint*>            Constraints;                                       // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConstraintsManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConstraintsManager")
+	}
+	static class UConstraintsManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UConstraintsManager>();
+	}
+};
+DUMPER7_ASSERTS_UConstraintsManager;
+
 // Class Constraints.ConstraintsScriptingLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UConstraintsScriptingLibrary final : public UBlueprintFunctionLibrary
@@ -148,30 +172,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UConstraintsScriptingLibrary;
-
-// Class Constraints.TransformableComponentHandle
-// 0x0010 (0x0068 - 0x0058)
-class UTransformableComponentHandle final : public UTransformableHandle
-{
-public:
-	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0058(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SocketName;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TransformableComponentHandle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TransformableComponentHandle")
-	}
-	static class UTransformableComponentHandle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTransformableComponentHandle>();
-	}
-};
-DUMPER7_ASSERTS_UTransformableComponentHandle;
 
 // Class Constraints.TickableTransformConstraint
 // 0x0020 (0x0090 - 0x0070)

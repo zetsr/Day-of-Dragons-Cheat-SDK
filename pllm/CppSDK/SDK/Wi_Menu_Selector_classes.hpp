@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "AutoSettings_classes.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK

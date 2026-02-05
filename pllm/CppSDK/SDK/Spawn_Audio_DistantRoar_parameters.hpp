@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_Species_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FMODStudio_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

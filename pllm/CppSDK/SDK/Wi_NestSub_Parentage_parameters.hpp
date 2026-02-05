@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Struct_StatRecessives_structs.hpp"
-#include "Enum_Species_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Struct_Lineage_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
+#include "Struct_StatRecessives_structs.hpp"
 
 
 namespace SDK::Params

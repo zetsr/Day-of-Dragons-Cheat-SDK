@@ -10,40 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
-#include "GameplayTasks_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameplayTasks_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class GameplayTasks.GameplayTaskResource
-// 0x0010 (0x0038 - 0x0028)
-class UGameplayTaskResource : public UObject
+// Class GameplayTasks.GameplayTaskOwnerInterface
+// 0x0000 (0x0000 - 0x0000)
+class IGameplayTaskOwnerInterface final
 {
-public:
-	int32                                         ManualResourceID;                                  // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int8                                          AutoResourceID;                                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bManuallySetID : 1;                                // 0x0030(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameplayTaskResource")
+		STATIC_CLASS_IMPL("GameplayTaskOwnerInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameplayTaskResource")
+		STATIC_NAME_IMPL(L"GameplayTaskOwnerInterface")
 	}
-	static class UGameplayTaskResource* GetDefaultObj()
+	static class IGameplayTaskOwnerInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGameplayTaskResource>();
+		return GetDefaultObjImpl<IGameplayTaskOwnerInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_UGameplayTaskResource;
+DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
 
 // Class GameplayTasks.GameplayTask
 // 0x0040 (0x0068 - 0x0028)
@@ -146,34 +148,32 @@ public:
 };
 DUMPER7_ASSERTS_UGameplayTasksComponent;
 
-// Class GameplayTasks.GameplayTaskOwnerInterface
-// 0x0000 (0x0000 - 0x0000)
-class IGameplayTaskOwnerInterface final
+// Class GameplayTasks.GameplayTaskResource
+// 0x0010 (0x0038 - 0x0028)
+class UGameplayTaskResource : public UObject
 {
+public:
+	int32                                         ManualResourceID;                                  // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int8                                          AutoResourceID;                                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bManuallySetID : 1;                                // 0x0030(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameplayTaskOwnerInterface")
+		STATIC_CLASS_IMPL("GameplayTaskResource")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameplayTaskOwnerInterface")
+		STATIC_NAME_IMPL(L"GameplayTaskResource")
 	}
-	static class IGameplayTaskOwnerInterface* GetDefaultObj()
+	static class UGameplayTaskResource* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IGameplayTaskOwnerInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UGameplayTaskResource>();
 	}
 };
-DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
+DUMPER7_ASSERTS_UGameplayTaskResource;
 
 // Class GameplayTasks.GameplayTask_ClaimResource
 // 0x0000 (0x0068 - 0x0068)

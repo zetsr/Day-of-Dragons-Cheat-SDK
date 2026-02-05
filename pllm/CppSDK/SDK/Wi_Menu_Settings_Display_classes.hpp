@@ -10,31 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Wi_Parent_Menu_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C
-// 0x0038 (0x02C8 - 0x0290)
+// 0x0050 (0x02E0 - 0x0290)
 class UWi_Menu_Settings_Display_C final : public UWi_Parent_Menu_C
 {
 public:
-	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar;                          // 0x0290(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_1;                        // 0x0298(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_3;                        // 0x02A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_4;                        // 0x02A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_125;                      // 0x02B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_Slider_CVar_C*                 Wi_Menu_Slider_CVar_1;                             // 0x02B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWi_Menu_Slider_CVarInput_C*            Wi_Menu_Slider_CVarInput_1;                        // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Wi_Menu_Settings_Display_C;         // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Header_SteamDeck;                                  // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar;                          // 0x02A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_1;                        // 0x02A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_3;                        // 0x02B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_4;                        // 0x02B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_CVar_125;                      // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_DisplayList_CVar_C*            Wi_Menu_DisplayList_SteamDeck;                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_Slider_CVar_C*                 Wi_Menu_Slider_CVar_1;                             // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_Menu_Slider_CVarInput_C*            Wi_Menu_Slider_CVarInput_1;                        // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_Wi_Menu_Settings_Display(int32 EntryPoint);
 	bool GetbIsEnabled();
 	bool GetbIsEnabled_0();
 	bool GetbIsEnabled_1();
 	ESlateVisibility GetVisibility_0();
+	void RunPreSetupFunctions();
 
 public:
 	static class UClass* StaticClass()

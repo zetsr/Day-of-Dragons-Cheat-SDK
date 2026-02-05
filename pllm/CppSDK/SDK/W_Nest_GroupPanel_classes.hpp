@@ -27,11 +27,9 @@ public:
 	class UWi_Nest_EggInviteMenu_C*               Wi_Nest_EggInviteMenu;                             // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void Destruct();
 	void ExecuteUbergraph_W_Nest_GroupPanel(int32 EntryPoint);
 	struct FSlateBrush Get_BG_Background();
-	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

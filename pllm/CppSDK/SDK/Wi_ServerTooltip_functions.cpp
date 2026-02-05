@@ -377,6 +377,26 @@ class FText UWi_ServerTooltip_C::Get_TextContent_41_Text()
 }
 
 
+// Function Wi_ServerTooltip.Wi_ServerTooltip_C.Get_TextContent_43_Text
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UWi_ServerTooltip_C::Get_TextContent_43_Text()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_ServerTooltip_C", "Get_TextContent_43_Text");
+
+	Params::Wi_ServerTooltip_C_Get_TextContent_43_Text Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Wi_ServerTooltip.Wi_ServerTooltip_C.Get_TextContent_5_Text
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

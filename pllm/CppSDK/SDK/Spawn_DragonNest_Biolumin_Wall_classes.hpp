@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Spawn_DragonNest_Biolumin_Wall.Spawn_DragonNest_Biolumin_Wall_C
-// 0x0008 (0x08A0 - 0x0898)
+// 0x0008 (0x08A8 - 0x08A0)
 class ASpawn_DragonNest_Biolumin_Wall_C final : public ASpawn_DragonNest_Biolumin_C
 {
 public:
-	class UStaticMeshComponent*                   WallNest;                                          // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   WallNest;                                          // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

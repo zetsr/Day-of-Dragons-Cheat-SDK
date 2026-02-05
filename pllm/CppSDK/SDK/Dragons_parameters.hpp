@@ -80,6 +80,18 @@ public:
 };
 DUMPER7_ASSERTS_DragonsFunctionLibrary_LogPrint;
 
+// Function Dragons.DragonsFunctionLibrary.LogPrintAsync
+// 0x0020 (0x0020 - 0x0000)
+struct DragonsFunctionLibrary_LogPrintAsync final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InString;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintWarning;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DragonsFunctionLibrary_LogPrintAsync;
+
 // Function Dragons.DragonsFunctionLibrary.NameKey
 // 0x0010 (0x0010 - 0x0000)
 struct DragonsFunctionLibrary_NameKey final

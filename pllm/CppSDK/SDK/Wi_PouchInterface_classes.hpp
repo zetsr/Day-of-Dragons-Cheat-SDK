@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Enum_EggWidgetStatus_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "Struct_PlayerEggInfo_structs.hpp"
+#include "Enum_EggWidgetStatus_structs.hpp"
+#include "UMG_classes.hpp"
 #include "Enum_EggGender_structs.hpp"
 
 
@@ -29,12 +29,12 @@ public:
 	class UW_BroodingPanel_C*                     W_BroodingPanel;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ADragonsPC_C*                           PlayerController;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AChar_Dragon_BroodWatcher_C*            PlayerBroodWatcher;                                // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasEgg1;                                           // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          HasEggL0;                                          // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_2A1[0xF];                                      // 0x02A1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_PlayerEggInfo                  Egg1;                                              // 0x02B0(0x01C0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          HasEgg2;                                           // 0x0470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FStruct_PlayerEggInfo                  EggL0;                                             // 0x02B0(0x01C0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          HasEggR1;                                          // 0x0470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_471[0xF];                                      // 0x0471(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_PlayerEggInfo                  Egg2;                                              // 0x0480(0x01C0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FStruct_PlayerEggInfo                  EggR1;                                             // 0x0480(0x01C0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();

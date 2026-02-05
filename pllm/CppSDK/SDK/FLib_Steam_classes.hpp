@@ -32,6 +32,7 @@ public:
 	static void Get_DLC_ID_As_Enum(const int32& DLCID, class UObject* __WorldContext, Enum_SteamDLCs* DLC);
 	static void Get_DLC_ID_Biolumin_Dragon(class UObject* __WorldContext, int32* AppId);
 	static void Get_DLC_ID_Blitz_Striker_Amphithere(class UObject* __WorldContext, int32* AppId);
+	static void Get_DLC_ID_Brindle_Skin(class UObject* __WorldContext, int32* AppId);
 	static void Get_DLC_ID_BWD_Emote_Pack(class UObject* __WorldContext, int32* AppId);
 	static void Get_DLC_ID_Creator_Skin(class UObject* __WorldContext, int32* AppId);
 	static void Get_DLC_ID_Dark_Elemental_Skin(class UObject* __WorldContext, int32* AppId);
@@ -57,6 +58,7 @@ public:
 	static void Get_Steam_PlayerName_From_Player_Controller(class APlayerController* PlayerController, class UObject* __WorldContext, class FString* PlayerName);
 	static void Get_Steam64_ID_From_Player_Controller(class APlayerController* PlayerController, class UObject* __WorldContext, class FString* Steam64_ID);
 	static void Get_Steam64_ID_From_Player_Controller__Pure_(class APlayerController* PlayerController, class UObject* __WorldContext, class FString* Steam64_ID);
+	static void Get_Uses_Steam_Deck(class UObject* __WorldContext, bool* Return);
 	static void Get_Valid_Unique_Net_ID_From_Player_Controller(class APlayerController* PlayerController, class UObject* __WorldContext, bool* IsValidNetID, struct FBPUniqueNetId* UniqueNetId);
 	static void Is_Valid_Steam_ID(const class FString& Steam_64_ID, class UObject* __WorldContext, bool* IsValid);
 	static void Open_Steam_DLC_Store_URL(Enum_SteamDLCs DLC, class UObject* __WorldContext);

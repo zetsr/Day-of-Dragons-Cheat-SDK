@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "Char_Parent_AI_Dynamic_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Char_Parent_AI_Dynamic_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_AI_ThornbackCrawler.Char_AI_ThornbackCrawler_C
-// 0x0040 (0x0900 - 0x08C0)
+// 0x0040 (0x0910 - 0x08D0)
 class AChar_AI_ThornbackCrawler_C final : public AChar_Parent_AI_Dynamic_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_AI_ThornbackCrawler_C;         // 0x08C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFMODAudioComponent*                    MontageSFX;                                        // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NestLocation;                                      // 0x08D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FVector                                SpawnLocation;                                     // 0x08E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_AI_ThornbackCrawler_C;         // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFMODAudioComponent*                    MontageSFX;                                        // 0x08D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NestLocation;                                      // 0x08E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                SpawnLocation;                                     // 0x08F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplySkin();

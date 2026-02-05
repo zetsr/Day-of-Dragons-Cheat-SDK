@@ -29,8 +29,11 @@ public:
 	static void ClampFloatMaximum(double Value, double Max, class UObject* __WorldContext, double* float_0);
 	static void ClampFloatMinimum(double Value, double Min, class UObject* __WorldContext, double* float_0);
 	static void ClampFloatToZero(double Value, class UObject* __WorldContext, double* float_0);
+	static void Convert_1_Month_01(int32 Month, class UObject* __WorldContext, class FString* ZeroMonth);
+	static void Decode_String_To_Time(const class FString& StringDateTime, class UObject* __WorldContext, struct FDateTime* DateTime);
 	static void Direction_Times_Distance_Vector(const struct FVector& Vector, double Distance__in_Meters_, class UObject* __WorldContext, struct FVector* EndPoint);
 	static void DoubleByteToFloatPercent(uint8 Byte, class UObject* __WorldContext, double* Percent);
+	static void Encode_Time_To_String(const struct FDateTime& DateTime, class UObject* __WorldContext, class FString* UTCNowString);
 	static void FloatAddMultiplier(double Constant__X_, double Multiplier__Y_, class UObject* __WorldContext, double* _X___Y____X);
 	static void FloatAsPercentage(double float_0, class UObject* __WorldContext, int32* Percent);
 	static void FloatIsGreaterButLessThan(double Value, double Min, double Max, class UObject* __WorldContext, bool* Return);
@@ -46,10 +49,10 @@ public:
 	static void NotZeroNegative(double Value, class UObject* __WorldContext, double* float_0);
 	static void NotZeroPositive(double Value, class UObject* __WorldContext, double* float_0);
 	static void String_To_Bool(const class FString& String, class UObject* __WorldContext, bool* Bool);
+	static void Time_Less_Time(const struct FDateTime& Time_A, const struct FDateTime& Time_B, class UObject* __WorldContext, struct FTimespan* Timespan);
 	static void Time_Minus_Time(const struct FDateTime& Time_A, const struct FDateTime& Time_B, class UObject* __WorldContext, struct FTimespan* Timespan);
 	static void Time_Minus_Timespan(const struct FDateTime& Time, const struct FTimespan& Timespan, class UObject* __WorldContext, struct FDateTime* DateTime);
-	static void Time_Plus_Time(const struct FDateTime& Time, const struct FTimespan& Timespan, class UObject* __WorldContext, struct FDateTime* DateTime);
-	static void Time_Plus_Timespan(const struct FDateTime& Time_A, const struct FDateTime& Time_B, class UObject* __WorldContext, struct FTimespan* Timespan);
+	static void Time_Plus_Timespan(const struct FDateTime& Time, const struct FTimespan& Timespan, class UObject* __WorldContext, struct FDateTime* DateTime);
 	static void Time_Total_TimeMS(int32 Hour, int32 Minute, int32 Second, int32 Millisecond, class UObject* __WorldContext, int32* TotalMS);
 
 public:

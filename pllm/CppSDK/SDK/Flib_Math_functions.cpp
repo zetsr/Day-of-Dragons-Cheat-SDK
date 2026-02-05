@@ -232,6 +232,58 @@ void UFlib_Math_C::ClampFloatToZero(double Value, class UObject* __WorldContext,
 }
 
 
+// Function Flib_Math.Flib_Math_C.Convert 1 Month 01
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Month                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString*                          ZeroMonth                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UFlib_Math_C::Convert_1_Month_01(int32 Month, class UObject* __WorldContext, class FString* ZeroMonth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Flib_Math_C", "Convert 1 Month 01");
+
+	Params::Flib_Math_C_Convert_1_Month_01 Parms{};
+
+	Parms.Month = Month;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (ZeroMonth != nullptr)
+		*ZeroMonth = std::move(Parms.ZeroMonth);
+}
+
+
+// Function Flib_Math.Flib_Math_C.Decode String To Time
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    StringDateTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FDateTime*                       DateTime                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UFlib_Math_C::Decode_String_To_Time(const class FString& StringDateTime, class UObject* __WorldContext, struct FDateTime* DateTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Flib_Math_C", "Decode String To Time");
+
+	Params::Flib_Math_C_Decode_String_To_Time Parms{};
+
+	Parms.StringDateTime = std::move(StringDateTime);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (DateTime != nullptr)
+		*DateTime = std::move(Parms.DateTime);
+}
+
+
 // Function Flib_Math.Flib_Math_C.Direction Times Distance Vector
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -283,6 +335,32 @@ void UFlib_Math_C::DoubleByteToFloatPercent(uint8 Byte, class UObject* __WorldCo
 
 	if (Percent != nullptr)
 		*Percent = Parms.Percent;
+}
+
+
+// Function Flib_Math.Flib_Math_C.Encode Time To String
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FDateTime&                 DateTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString*                          UTCNowString                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UFlib_Math_C::Encode_Time_To_String(const struct FDateTime& DateTime, class UObject* __WorldContext, class FString* UTCNowString)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Flib_Math_C", "Encode Time To String");
+
+	Params::Flib_Math_C_Encode_Time_To_String Parms{};
+
+	Parms.DateTime = std::move(DateTime);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (UTCNowString != nullptr)
+		*UTCNowString = std::move(Parms.UTCNowString);
 }
 
 
@@ -708,6 +786,34 @@ void UFlib_Math_C::String_To_Bool(const class FString& String, class UObject* __
 }
 
 
+// Function Flib_Math.Flib_Math_C.Time Less Time
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FDateTime&                 Time_A                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 Time_B                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTimespan*                       Timespan                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UFlib_Math_C::Time_Less_Time(const struct FDateTime& Time_A, const struct FDateTime& Time_B, class UObject* __WorldContext, struct FTimespan* Timespan)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Flib_Math_C", "Time Less Time");
+
+	Params::Flib_Math_C_Time_Less_Time Parms{};
+
+	Parms.Time_A = std::move(Time_A);
+	Parms.Time_B = std::move(Time_B);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Timespan != nullptr)
+		*Timespan = std::move(Parms.Timespan);
+}
+
+
 // Function Flib_Math.Flib_Math_C.Time Minus Time
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -764,7 +870,7 @@ void UFlib_Math_C::Time_Minus_Timespan(const struct FDateTime& Time, const struc
 }
 
 
-// Function Flib_Math.Flib_Math_C.Time Plus Time
+// Function Flib_Math.Flib_Math_C.Time Plus Timespan
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // const struct FDateTime&                 Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -772,14 +878,14 @@ void UFlib_Math_C::Time_Minus_Timespan(const struct FDateTime& Time, const struc
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FDateTime*                       DateTime                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UFlib_Math_C::Time_Plus_Time(const struct FDateTime& Time, const struct FTimespan& Timespan, class UObject* __WorldContext, struct FDateTime* DateTime)
+void UFlib_Math_C::Time_Plus_Timespan(const struct FDateTime& Time, const struct FTimespan& Timespan, class UObject* __WorldContext, struct FDateTime* DateTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Flib_Math_C", "Time Plus Time");
+		Func = StaticClass()->GetFunction("Flib_Math_C", "Time Plus Timespan");
 
-	Params::Flib_Math_C_Time_Plus_Time Parms{};
+	Params::Flib_Math_C_Time_Plus_Timespan Parms{};
 
 	Parms.Time = std::move(Time);
 	Parms.Timespan = std::move(Timespan);
@@ -789,34 +895,6 @@ void UFlib_Math_C::Time_Plus_Time(const struct FDateTime& Time, const struct FTi
 
 	if (DateTime != nullptr)
 		*DateTime = std::move(Parms.DateTime);
-}
-
-
-// Function Flib_Math.Flib_Math_C.Time Plus Timespan
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FDateTime&                 Time_A                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 Time_B                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimespan*                       Timespan                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UFlib_Math_C::Time_Plus_Timespan(const struct FDateTime& Time_A, const struct FDateTime& Time_B, class UObject* __WorldContext, struct FTimespan* Timespan)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Flib_Math_C", "Time Plus Timespan");
-
-	Params::Flib_Math_C_Time_Plus_Timespan Parms{};
-
-	Parms.Time_A = std::move(Time_A);
-	Parms.Time_B = std::move(Time_B);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Timespan != nullptr)
-		*Timespan = std::move(Parms.Timespan);
 }
 
 

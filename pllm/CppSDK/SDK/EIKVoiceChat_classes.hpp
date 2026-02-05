@@ -82,7 +82,7 @@ class UEVIK_Functions final : public UBlueprintFunctionLibrary
 {
 public:
 	static void ConnectVoiceChat(const class UObject* WorldContextObject, const TDelegate<void(bool bWasSuccess, EEVIKResultCodes Result)>& Result);
-	static void EOSRoomToken(const class FString& VoiceRoomName, const class FString& PlayerName, const class FString& ClientIp, const TDelegate<void(bool bWasSuccess, const class FString& RoomData)>& Result);
+	static void EOSRoomToken(const class FString& VoiceRoomName, const class FString& PlayerName, const class FString& ClientIP, const TDelegate<void(bool bWasSuccess, const class FString& RoomData)>& Result);
 	static TArray<class FString> GetAllRooms(const class UObject* WorldContextObject);
 	static TArray<struct FDeviceEVIKSettings> GetInputMethods(const class UObject* WorldContextObject);
 	static TArray<struct FDeviceEVIKSettings> GetOutputMethods(const class UObject* WorldContextObject);

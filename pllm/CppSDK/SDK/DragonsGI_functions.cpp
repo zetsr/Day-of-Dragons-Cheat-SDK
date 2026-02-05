@@ -739,6 +739,26 @@ void UDragonsGI_C::Completed_3B3A7AC04A055B44003EAEAD93EAD1DC(class USaveGame* S
 }
 
 
+// Function DragonsGI.DragonsGI_C.ConfigureSteamDeck
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDragonsGI_C::ConfigureSteamDeck(int32 NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "ConfigureSteamDeck");
+
+	Params::DragonsGI_C_ConfigureSteamDeck Parms{};
+
+	Parms.NewValue = NewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsGI.DragonsGI_C.EnhanceNightVision
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -930,6 +950,27 @@ void UDragonsGI_C::FSR_SharpnessCallback(float NewValue)
 	Parms.NewValue = NewValue;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DragonsGI.DragonsGI_C.Get Is Egg Saving Enabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   CanSaveEggsLocally                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDragonsGI_C::Get_Is_Egg_Saving_Enabled(bool* CanSaveEggsLocally)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "Get Is Egg Saving Enabled");
+
+	Params::DragonsGI_C_Get_Is_Egg_Saving_Enabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CanSaveEggsLocally != nullptr)
+		*CanSaveEggsLocally = Parms.CanSaveEggsLocally;
 }
 
 
@@ -1457,6 +1498,20 @@ void UDragonsGI_C::OnFailure_2353981948E3DE1E8D0EE4920A2C86D2()
 }
 
 
+// Function DragonsGI.DragonsGI_C.OnFailure_5E40DD394F11E9308626849897A39463
+// (BlueprintCallable, BlueprintEvent)
+
+void UDragonsGI_C::OnFailure_5E40DD394F11E9308626849897A39463()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "OnFailure_5E40DD394F11E9308626849897A39463");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function DragonsGI.DragonsGI_C.OnFailure_62F12365433AFD1681DB1FA8B55E7743
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1520,20 +1575,6 @@ void UDragonsGI_C::OnFailure_799D85DC440F1FD20C65CFA2A1C9A3D7()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("DragonsGI_C", "OnFailure_799D85DC440F1FD20C65CFA2A1C9A3D7");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DragonsGI.DragonsGI_C.OnFailure_79C00D4F439B4A1DDD88D58C63101865
-// (BlueprintCallable, BlueprintEvent)
-
-void UDragonsGI_C::OnFailure_79C00D4F439B4A1DDD88D58C63101865()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DragonsGI_C", "OnFailure_79C00D4F439B4A1DDD88D58C63101865");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1604,6 +1645,20 @@ void UDragonsGI_C::OnSuccess_2353981948E3DE1E8D0EE4920A2C86D2()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("DragonsGI_C", "OnSuccess_2353981948E3DE1E8D0EE4920A2C86D2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DragonsGI.DragonsGI_C.OnSuccess_5E40DD394F11E9308626849897A39463
+// (BlueprintCallable, BlueprintEvent)
+
+void UDragonsGI_C::OnSuccess_5E40DD394F11E9308626849897A39463()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "OnSuccess_5E40DD394F11E9308626849897A39463");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1694,20 +1749,6 @@ void UDragonsGI_C::OnSuccess_799D85DC440F1FD20C65CFA2A1C9A3D7()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("DragonsGI_C", "OnSuccess_799D85DC440F1FD20C65CFA2A1C9A3D7");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DragonsGI.DragonsGI_C.OnSuccess_79C00D4F439B4A1DDD88D58C63101865
-// (BlueprintCallable, BlueprintEvent)
-
-void UDragonsGI_C::OnSuccess_79C00D4F439B4A1DDD88D58C63101865()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DragonsGI_C", "OnSuccess_79C00D4F439B4A1DDD88D58C63101865");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

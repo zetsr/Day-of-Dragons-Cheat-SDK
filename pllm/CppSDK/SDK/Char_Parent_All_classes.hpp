@@ -10,28 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "Enum_Species_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
-#include "Struct_StatModifiers_structs.hpp"
 #include "Enum_Temperature_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
+#include "Struct_StatModifiers_structs.hpp"
 #include "Enum_StatusEffects_structs.hpp"
 #include "Enum_AppliedDamage_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_Diet_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_All.Char_Parent_All_C
-// 0x0210 (0x0840 - 0x0630)
+// 0x0220 (0x0850 - 0x0630)
 class AChar_Parent_All_C : public ACharacter
 {
 public:
@@ -143,6 +143,8 @@ public:
 	ETickingGroup                                 ActorTickGroup;                                    // 0x0831(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_832[0x6];                                      // 0x0832(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SavedSkinEmissive;                                 // 0x0838(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SavedEmissiveBaseHue;                              // 0x0840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SavedEmissiveStaticHue;                            // 0x0848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddBioluminescence(class AChar_Parent_Player_C* PlayerInstigator);

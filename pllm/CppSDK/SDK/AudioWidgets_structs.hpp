@@ -39,21 +39,25 @@ public:
 };
 DUMPER7_ASSERTS_FAudioTextBoxStyle;
 
-// ScriptStruct AudioWidgets.AudioRadialSliderStyle
-// 0x0158 (0x0160 - 0x0008)
-struct FAudioRadialSliderStyle final : public FSlateWidgetStyle
+// ScriptStruct AudioWidgets.AudioSliderStyle
+// 0x0748 (0x0750 - 0x0008)
+struct FAudioSliderStyle final : public FSlateWidgetStyle
 {
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0010(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            CenterBackgroundColor;                             // 0x0110(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderBarColor;                                    // 0x0124(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderProgressColor;                               // 0x0138(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         LabelPadding;                                      // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultSliderRadius;                               // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_154[0xC];                                      // 0x0154(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSliderStyle                           SliderStyle;                                       // 0x0010(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0510(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            WidgetBackgroundImage;                             // 0x0610(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderBackgroundColor;                             // 0x06E0(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6F4[0x4];                                      // 0x06F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SliderBackgroundSize;                              // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LabelPadding;                                      // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderBarColor;                                    // 0x070C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderThumbColor;                                  // 0x0720(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            WidgetBackgroundColor;                             // 0x0734(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_748[0x8];                                      // 0x0748(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAudioRadialSliderStyle;
+DUMPER7_ASSERTS_FAudioSliderStyle;
 
 // ScriptStruct AudioWidgets.MeterChannelInfo
 // 0x000C (0x000C - 0x0000)
@@ -95,25 +99,21 @@ public:
 };
 DUMPER7_ASSERTS_FAudioMeterStyle;
 
-// ScriptStruct AudioWidgets.AudioSliderStyle
-// 0x0748 (0x0750 - 0x0008)
-struct FAudioSliderStyle final : public FSlateWidgetStyle
+// ScriptStruct AudioWidgets.AudioRadialSliderStyle
+// 0x0158 (0x0160 - 0x0008)
+struct FAudioRadialSliderStyle final : public FSlateWidgetStyle
 {
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSliderStyle                           SliderStyle;                                       // 0x0010(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0510(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            WidgetBackgroundImage;                             // 0x0610(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderBackgroundColor;                             // 0x06E0(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6F4[0x4];                                      // 0x06F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SliderBackgroundSize;                              // 0x06F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LabelPadding;                                      // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderBarColor;                                    // 0x070C(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            SliderThumbColor;                                  // 0x0720(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateColor                            WidgetBackgroundColor;                             // 0x0734(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_748[0x8];                                      // 0x0748(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioTextBoxStyle                     TextBoxStyle;                                      // 0x0010(0x0100)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            CenterBackgroundColor;                             // 0x0110(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderBarColor;                                    // 0x0124(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateColor                            SliderProgressColor;                               // 0x0138(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         LabelPadding;                                      // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultSliderRadius;                               // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_154[0xC];                                      // 0x0154(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAudioSliderStyle;
+DUMPER7_ASSERTS_FAudioRadialSliderStyle;
 
 }
 

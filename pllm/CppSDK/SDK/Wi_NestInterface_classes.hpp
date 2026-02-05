@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Lineage_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Struct_StatModifiers_structs.hpp"
-#include "Enum_Species_structs.hpp"
 #include "Struct_StatRecessives_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
+#include "Struct_StatModifiers_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Struct_Lineage_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
 
 
@@ -25,7 +25,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Wi_NestInterface.Wi_NestInterface_C
-// 0x02E0 (0x0560 - 0x0280)
+// 0x02E8 (0x0568 - 0x0280)
 class UWi_NestInterface_C final : public UUserWidget
 {
 public:
@@ -51,7 +51,7 @@ public:
 	Enum_CreatureLevels                           SpeciesClass;                                      // 0x02FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Pad_2FE[0x2];                                      // 0x02FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ADragonsPC_C*                           ViewerPlayerController;                            // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AChar_Parent_Player_C*                  ViewerPlayerCharacter;                             // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AChar_Parent_Dragonkind_C*              ViewerPlayerCharacter;                             // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FStruct_Lineage                        Sire_Lineage;                                      // 0x0310(0x0114)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FStruct_Lineage                        Dame_Lineage;                                      // 0x0424(0x0114)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	Enum_Species                                  Sire_Species;                                      // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
@@ -60,6 +60,7 @@ public:
 	struct FStruct_StatRecessives                 Dame_Recessive_Genes;                              // 0x054C(0x0012)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Sire_Skin_Rec;                                     // 0x055E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	uint8                                         Dame_Skin_Rec;                                     // 0x055F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         BroodFlagIndex;                                    // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();

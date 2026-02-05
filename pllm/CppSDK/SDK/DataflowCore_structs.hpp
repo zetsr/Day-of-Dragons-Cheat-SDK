@@ -27,6 +27,15 @@ public:
 };
 DUMPER7_ASSERTS_FDataflowNode;
 
+// ScriptStruct DataflowCore.DataflowConnection
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FDataflowConnection
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowConnection;
+
 // ScriptStruct DataflowCore.DataflowSelection
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FDataflowSelection
@@ -36,12 +45,12 @@ public:
 };
 DUMPER7_ASSERTS_FDataflowSelection;
 
-// ScriptStruct DataflowCore.DataflowTransformSelection
+// ScriptStruct DataflowCore.DataflowVertexSelection
 // 0x0000 (0x0020 - 0x0020)
-struct FDataflowTransformSelection final : public FDataflowSelection
+struct FDataflowVertexSelection final : public FDataflowSelection
 {
 };
-DUMPER7_ASSERTS_FDataflowTransformSelection;
+DUMPER7_ASSERTS_FDataflowVertexSelection;
 
 // ScriptStruct DataflowCore.DataflowTerminalNode
 // 0x0000 (0x00E8 - 0x00E8)
@@ -57,22 +66,6 @@ struct FDataflowFaceSelection final : public FDataflowSelection
 };
 DUMPER7_ASSERTS_FDataflowFaceSelection;
 
-// ScriptStruct DataflowCore.DataflowVertexSelection
-// 0x0000 (0x0020 - 0x0020)
-struct FDataflowVertexSelection final : public FDataflowSelection
-{
-};
-DUMPER7_ASSERTS_FDataflowVertexSelection;
-
-// ScriptStruct DataflowCore.DataflowConnection
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FDataflowConnection
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDataflowConnection;
-
 // ScriptStruct DataflowCore.DataflowInput
 // 0x0008 (0x0048 - 0x0040)
 struct FDataflowInput final : public FDataflowConnection
@@ -81,6 +74,13 @@ public:
 	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataflowInput;
+
+// ScriptStruct DataflowCore.DataflowTransformSelection
+// 0x0000 (0x0020 - 0x0020)
+struct FDataflowTransformSelection final : public FDataflowSelection
+{
+};
+DUMPER7_ASSERTS_FDataflowTransformSelection;
 
 // ScriptStruct DataflowCore.DataflowOutput
 // 0x0028 (0x0068 - 0x0040)

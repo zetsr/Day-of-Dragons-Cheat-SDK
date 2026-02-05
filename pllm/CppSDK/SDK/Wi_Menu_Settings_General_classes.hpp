@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "Wi_Parent_Menu_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

@@ -1037,8 +1037,9 @@ void UPhysicsFlight_C::ResetServerFlightGates()
 // Parameters:
 // bool                                    ShouldFly                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    WantsHover                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UsedSpaceToFly_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover)
+void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover, bool UsedSpaceToFly_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1049,6 +1050,7 @@ void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover)
 
 	Parms.ShouldFly = ShouldFly;
 	Parms.WantsHover = WantsHover;
+	Parms.UsedSpaceToFly_0 = UsedSpaceToFly_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

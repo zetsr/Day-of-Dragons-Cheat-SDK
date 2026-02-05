@@ -269,6 +269,30 @@ void UFLib_Steam_C::Get_DLC_ID_Blitz_Striker_Amphithere(class UObject* __WorldCo
 }
 
 
+// Function FLib_Steam.FLib_Steam_C.Get DLC ID Brindle Skin
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32*                                  AppId                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFLib_Steam_C::Get_DLC_ID_Brindle_Skin(class UObject* __WorldContext, int32* AppId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("FLib_Steam_C", "Get DLC ID Brindle Skin");
+
+	Params::FLib_Steam_C_Get_DLC_ID_Brindle_Skin Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (AppId != nullptr)
+		*AppId = Parms.AppId;
+}
+
+
 // Function FLib_Steam.FLib_Steam_C.Get DLC ID BWD Emote Pack
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -876,6 +900,30 @@ void UFLib_Steam_C::Get_Steam64_ID_From_Player_Controller__Pure_(class APlayerCo
 
 	if (Steam64_ID != nullptr)
 		*Steam64_ID = std::move(Parms.Steam64_ID);
+}
+
+
+// Function FLib_Steam.FLib_Steam_C.Get Uses Steam Deck
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFLib_Steam_C::Get_Uses_Steam_Deck(class UObject* __WorldContext, bool* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("FLib_Steam_C", "Get Uses Steam Deck");
+
+	Params::FLib_Steam_C_Get_Uses_Steam_Deck Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
 }
 
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Unlockables_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
+#include "Enum_Unlockables_structs.hpp"
 #include "SCUE5_structs.hpp"
 
 

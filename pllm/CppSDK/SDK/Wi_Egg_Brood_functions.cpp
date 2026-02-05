@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.BndEvt__Wi_Egg_Brood_GenderBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWi_Egg_Brood_C::BndEvt__Wi_Egg_Brood_GenderBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "BndEvt__Wi_Egg_Brood_GenderBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.BndEvt__Wi_Egg_Status_InviteBtn_Female_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -199,6 +213,26 @@ struct FSlateBrush UWi_Egg_Brood_C::Get_EggGenderImage_Brush()
 }
 
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggGenderImage_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Egg_Brood_C::Get_EggGenderImage_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_EggGenderImage_ToolTipWidget");
+
+	Params::Wi_Egg_Brood_C_Get_EggGenderImage_ToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggImage_Brush
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -212,6 +246,26 @@ struct FSlateBrush UWi_Egg_Brood_C::Get_EggImage_Brush()
 		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_EggImage_Brush");
 
 	Params::Wi_Egg_Brood_C_Get_EggImage_Brush Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggMutationImage_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Egg_Brood_C::Get_EggMutationImage_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_EggMutationImage_ToolTipWidget");
+
+	Params::Wi_Egg_Brood_C_Get_EggMutationImage_ToolTipWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -256,6 +310,86 @@ struct FSlateBrush UWi_Egg_Brood_C::Get_EggSpeciesImage_Brush()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggSpeciesImage_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Egg_Brood_C::Get_EggSpeciesImage_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_EggSpeciesImage_ToolTipWidget");
+
+	Params::Wi_Egg_Brood_C_Get_EggSpeciesImage_ToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_GenderBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Egg_Brood_C::Get_GenderBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_GenderBtn_bIsEnabled");
+
+	Params::Wi_Egg_Brood_C_Get_GenderBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_SaveEggCheck_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Egg_Brood_C::Get_SaveEggCheck_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "Get_SaveEggCheck_ToolTipWidget");
+
+	Params::Wi_Egg_Brood_C_Get_SaveEggCheck_ToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Egg_Brood_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "PreConstruct");
+
+	Params::Wi_Egg_Brood_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

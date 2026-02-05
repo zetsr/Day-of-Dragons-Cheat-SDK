@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Struct_InventoryItemsStatic_structs.hpp"
 #include "EnumQuest__QuestLineTracker_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
-#include "Struct_InventoryItemsStatic_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "IrisCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "IrisCore_structs.hpp"
 
 
 namespace SDK

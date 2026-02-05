@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Enum_EggGender_structs.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
+#include "Enum_EggGender_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Enum_Elements_structs.hpp"
 
 
@@ -30,18 +30,42 @@ public:
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_CycleCritText;
 
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.ExecuteUbergraph_Wi_Egg_Brood
-// 0x0080 (0x0080 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct Wi_Egg_Brood_C_ExecuteUbergraph_Wi_Egg_Brood final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_EggWidgetStatus                          Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
 	class FText                                   Temp_text_Variable_1;                              // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0018)()
-	class FText                                   K2Node_CustomEvent_Text;                           // 0x0050(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0068(0x0018)()
+	bool                                          Temp_bool_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0018)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0058(0x0018)()
+	Enum_EggGender                                Temp_byte_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable_1;                              // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable_2;                              // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable_3;                              // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable_4;                              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0076(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0077(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable_4;                              // 0x0078(0x0018)()
+	bool                                          K2Node_Select_Default;                             // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggWidgetStatus                          Temp_byte_Variable_5;                              // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_CustomEvent_Text;                           // 0x0098(0x0018)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x00B0(0x0018)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x00D0(0x0018)()
+	Enum_EggGender                                K2Node_Select_Default_3;                           // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_ExecuteUbergraph_Wi_Egg_Brood;
 
@@ -116,6 +140,22 @@ public:
 };
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggGenderImage_Brush;
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggGenderImage_ToolTipWidget
+// 0x0078 (0x0078 - 0x0000)
+struct Wi_Egg_Brood_C_Get_EggGenderImage_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	Enum_EggGender                                Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0010(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0018)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0018)()
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x0060(0x0018)()
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggGenderImage_ToolTipWidget;
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggImage_Brush
 // 0x02E0 (0x02E0 - 0x0000)
 struct Wi_Egg_Brood_C_Get_EggImage_Brush final
@@ -155,6 +195,27 @@ public:
 };
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggImage_Brush;
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggMutationImage_ToolTipWidget
+// 0x00A8 (0x00A8 - 0x0000)
+struct Wi_Egg_Brood_C_Get_EggMutationImage_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	Enum_EggWidgetStatus                          Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable;                              // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_1;                            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_2;                            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0048(0x0018)()
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0078(0x0018)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x0090(0x0018)()
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggMutationImage_ToolTipWidget;
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggMutationImage_Visibility
 // 0x0005 (0x0005 - 0x0000)
 struct Wi_Egg_Brood_C_Get_EggMutationImage_Visibility final
@@ -186,6 +247,54 @@ public:
 };
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggSpeciesImage_Brush;
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_EggSpeciesImage_ToolTipWidget
+// 0x0038 (0x0038 - 0x0000)
+struct Wi_Egg_Brood_C_Get_EggSpeciesImage_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_EggSpeciesImage_ToolTipWidget;
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_GenderBtn_bIsEnabled
+// 0x0008 (0x0008 - 0x0000)
+struct Wi_Egg_Brood_C_Get_GenderBtn_bIsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_EggWidgetStatus                          Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_GenderBtn_bIsEnabled;
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.Get_SaveEggCheck_ToolTipWidget
+// 0x0028 (0x0028 - 0x0000)
+struct Wi_Egg_Brood_C_Get_SaveEggCheck_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)(ConstParm)
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_Get_SaveEggCheck_ToolTipWidget;
+
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct Wi_Egg_Brood_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Egg_Brood_C_PreConstruct;
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.SetCritStatusText
 // 0x0018 (0x0018 - 0x0000)
 struct Wi_Egg_Brood_C_SetCritStatusText final
@@ -210,11 +319,22 @@ public:
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_SetPouchStatusText;
 
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.SetUIbyEggStatus
-// 0x0001 (0x0001 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct Wi_Egg_Brood_C_SetUIbyEggStatus final
 {
 public:
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_Select_Default;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default_1;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Wi_Egg_Brood_C_SetUIbyEggStatus;
 

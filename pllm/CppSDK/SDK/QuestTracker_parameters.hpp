@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EnumQuest_MythOfTheMimikor_structs.hpp"
 #include "EnumQuest_BroodWatcher_structs.hpp"
 #include "EnumQuest__QuestLineTracker_structs.hpp"
-#include "EnumQuest_MythOfTheMimikor_structs.hpp"
 #include "EnumQuest_WintersGift_structs.hpp"
 #include "StructQuest_Progress_structs.hpp"
 

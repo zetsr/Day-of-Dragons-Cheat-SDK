@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function W_Nest_GroupPanel.W_Nest_GroupPanel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UW_Nest_GroupPanel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_Nest_GroupPanel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function W_Nest_GroupPanel.W_Nest_GroupPanel_C.Destruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -82,26 +68,6 @@ struct FSlateBrush UW_Nest_GroupPanel_C::Get_BG_Background()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function W_Nest_GroupPanel.W_Nest_GroupPanel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UW_Nest_GroupPanel_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_Nest_GroupPanel_C", "PreConstruct");
-
-	Params::W_Nest_GroupPanel_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

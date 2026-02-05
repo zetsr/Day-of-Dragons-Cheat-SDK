@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "EnumQuest__QuestLineTracker_structs.hpp"
 #include "UMG_classes.hpp"
 #include "EnumQuest_EventStatus_structs.hpp"
-#include "EnumQuest__QuestLineTracker_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 

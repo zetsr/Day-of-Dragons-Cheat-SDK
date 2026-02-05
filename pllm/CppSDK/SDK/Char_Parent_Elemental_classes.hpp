@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Char_Parent_Player_classes.hpp"
 #include "Enum_TempTolerance_structs.hpp"
 #include "Enum_AppliedDamage_structs.hpp"
 #include "Enum_StatusEffects_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Char_Parent_Player_classes.hpp"
 #include "Enum_Temperature_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
@@ -25,13 +25,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_Elemental.Char_Parent_Elemental_C
-// 0x0020 (0x0CF0 - 0x0CD0)
+// 0x0020 (0x0D00 - 0x0CE0)
 class AChar_Parent_Elemental_C : public AChar_Parent_Player_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_Elemental_C;            // 0x0CD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPDA_ElementalData_C*                   ElementalData;                                     // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ADragonsPS_C*                           As_Dragons_PS;                                     // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_Elemental_C;            // 0x0CE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPDA_ElementalData_C*                   ElementalData;                                     // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ADragonsPS_C*                           As_Dragons_PS;                                     // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyBioluminescence();

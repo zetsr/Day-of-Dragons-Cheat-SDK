@@ -10,41 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "Struct_RecentTarget_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Char_Parent_Drake_classes.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
+#include "Struct_RecentTarget_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Char_Parent_Drake_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Drake_AcidSpitter.Char_Drake_AcidSpitter_C
-// 0x0070 (0x1160 - 0x10F0)
+// 0x0070 (0x1170 - 0x1100)
 class AChar_Drake_AcidSpitter_C final : public AChar_Parent_Drake_C
 {
 public:
-	uint8                                         Pad_10E3[0x5];                                     // 0x10E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Drake_AcidSpitter_C;           // 0x10E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          WeaponBite;                                        // 0x10F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         ToggleEmissiveOff_EmissivePower_E4B2ACCA42CEA80EF0905689A026D4A4; // 0x10F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ToggleEmissiveOff__Direction_E4B2ACCA42CEA80EF0905689A026D4A4; // 0x10FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10FD[0x3];                                     // 0x10FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ToggleEmissiveOff;                                 // 0x1100(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         ToggleEmissiveOn_EmissivePower_AC92A3E240230194B5E7A7BE7296F745; // 0x1108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ToggleEmissiveOn__Direction_AC92A3E240230194B5E7A7BE7296F745; // 0x110C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10F5[0x3];                                     // 0x10F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Drake_AcidSpitter_C;           // 0x10F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          WeaponBite;                                        // 0x1100(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         ToggleEmissiveOff_EmissivePower_E4B2ACCA42CEA80EF0905689A026D4A4; // 0x1108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ToggleEmissiveOff__Direction_E4B2ACCA42CEA80EF0905689A026D4A4; // 0x110C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_110D[0x3];                                     // 0x110D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ToggleEmissiveOn;                                  // 0x1110(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool IsCharging)> ChargeUp;                                        // 0x1118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsDecayingBiteOnCooldown;                          // 0x1128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDecayingBiteActive;                              // 0x1129(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDecayingBiteActivating;                          // 0x112A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112B[0x5];                                     // 0x112B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         BiteActors;                                        // 0x1130(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FStruct_RecentTarget                   RecentTarget;                                      // 0x1140(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     ToggleEmissiveOff;                                 // 0x1110(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         ToggleEmissiveOn_EmissivePower_AC92A3E240230194B5E7A7BE7296F745; // 0x1118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ToggleEmissiveOn__Direction_AC92A3E240230194B5E7A7BE7296F745; // 0x111C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111D[0x3];                                     // 0x111D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ToggleEmissiveOn;                                  // 0x1120(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool IsCharging)> ChargeUp;                                        // 0x1128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsDecayingBiteOnCooldown;                          // 0x1138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDecayingBiteActive;                              // 0x1139(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDecayingBiteActivating;                          // 0x113A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_113B[0x5];                                     // 0x113B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         BiteActors;                                        // 0x1140(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FStruct_RecentTarget                   RecentTarget;                                      // 0x1150(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AllBite();

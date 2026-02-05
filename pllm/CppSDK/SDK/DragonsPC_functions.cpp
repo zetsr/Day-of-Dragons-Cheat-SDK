@@ -645,12 +645,12 @@ void ADragonsPC_C::ClearStoredCharacter()
 // Function DragonsPC.DragonsPC_C.ClientCreatePouchInterface
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    HasEgg1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FStruct_PlayerEggInfo&     Egg1                                                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    HasEgg2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FStruct_PlayerEggInfo&     Egg2                                                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HasEggL0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStruct_PlayerEggInfo&     EggL0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HasEggR1                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FStruct_PlayerEggInfo&     EggR1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ADragonsPC_C::ClientCreatePouchInterface(bool HasEgg1, const struct FStruct_PlayerEggInfo& Egg1, bool HasEgg2, const struct FStruct_PlayerEggInfo& Egg2)
+void ADragonsPC_C::ClientCreatePouchInterface(bool HasEggL0, const struct FStruct_PlayerEggInfo& EggL0, bool HasEggR1, const struct FStruct_PlayerEggInfo& EggR1)
 {
 	static class UFunction* Func = nullptr;
 
@@ -659,10 +659,10 @@ void ADragonsPC_C::ClientCreatePouchInterface(bool HasEgg1, const struct FStruct
 
 	Params::DragonsPC_C_ClientCreatePouchInterface Parms{};
 
-	Parms.HasEgg1 = HasEgg1;
-	Parms.Egg1 = std::move(Egg1);
-	Parms.HasEgg2 = HasEgg2;
-	Parms.Egg2 = std::move(Egg2);
+	Parms.HasEggL0 = HasEggL0;
+	Parms.EggL0 = std::move(EggL0);
+	Parms.HasEggR1 = HasEggR1;
+	Parms.EggR1 = std::move(EggR1);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2343,6 +2343,30 @@ void ADragonsPC_C::LogPrintAdminCmdToPlayer(class ADragonsPS_C* DragonsPlayerSta
 }
 
 
+// Function DragonsPC.DragonsPC_C.LogPrintChatLog
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsSenderAdmin                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsWhisper                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    chat                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::LogPrintChatLog(bool IsSenderAdmin, bool IsWhisper, const class FString& chat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "LogPrintChatLog");
+
+	Params::DragonsPC_C_LogPrintChatLog Parms{};
+
+	Parms.IsSenderAdmin = IsSenderAdmin;
+	Parms.IsWhisper = IsWhisper;
+	Parms.chat = std::move(chat);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsPC.DragonsPC_C.LogPrintPlayerKill
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2914,6 +2938,28 @@ void ADragonsPC_C::PrintCurrentQuest()
 }
 
 
+// Function DragonsPC.DragonsPC_C.PrivateChat
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    SteamID_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::PrivateChat(const class FString& SteamID_0, const class FString& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "PrivateChat");
+
+	Params::DragonsPC_C_PrivateChat Parms{};
+
+	Parms.SteamID_0 = std::move(SteamID_0);
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsPC.DragonsPC_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -3392,8 +3438,9 @@ void ADragonsPC_C::RequestKickPlayer(class ADragonsPS_C* PlayerState_0)
 // (Net, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ASpawn_DragonNest_C*              DragonNest                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AChar_Parent_Dragonkind_C*        RequestingActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ADragonsPC_C::RequestNestInterface(class ASpawn_DragonNest_C* DragonNest)
+void ADragonsPC_C::RequestNestInterface(class ASpawn_DragonNest_C* DragonNest, class AChar_Parent_Dragonkind_C* RequestingActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3403,6 +3450,7 @@ void ADragonsPC_C::RequestNestInterface(class ASpawn_DragonNest_C* DragonNest)
 	Params::DragonsPC_C_RequestNestInterface Parms{};
 
 	Parms.DragonNest = DragonNest;
+	Parms.RequestingActor = RequestingActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -3453,6 +3501,32 @@ void ADragonsPC_C::RespawnAsEgg()
 		Func = Class->GetFunction("DragonsPC_C", "RespawnAsEgg");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DragonsPC.DragonsPC_C.RespawnFromBroodPouch
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AChar_Dragon_BroodWatcher_C*      BroodWatcherInviter                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   SpawnLocation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShouldKillOld                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AChar_Parent_Dragonkind_C*        DragonInvitee                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::RespawnFromBroodPouch(class AChar_Dragon_BroodWatcher_C* BroodWatcherInviter, const struct FVector& SpawnLocation_0, bool ShouldKillOld, class AChar_Parent_Dragonkind_C* DragonInvitee)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "RespawnFromBroodPouch");
+
+	Params::DragonsPC_C_RespawnFromBroodPouch Parms{};
+
+	Parms.BroodWatcherInviter = BroodWatcherInviter;
+	Parms.SpawnLocation_0 = std::move(SpawnLocation_0);
+	Parms.ShouldKillOld = ShouldKillOld;
+	Parms.DragonInvitee = DragonInvitee;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -4345,6 +4419,32 @@ void ADragonsPC_C::ToggleTags(const class FString& Key)
 	Parms.Key = std::move(Key);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DragonsPC.DragonsPC_C.TraceForSafeSpawn
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   SpawnLocation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   AlternateLocation                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         SafeLocation                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::TraceForSafeSpawn(const struct FVector& SpawnLocation_0, const struct FVector& AlternateLocation, struct FVector* SafeLocation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "TraceForSafeSpawn");
+
+	Params::DragonsPC_C_TraceForSafeSpawn Parms{};
+
+	Parms.SpawnLocation_0 = std::move(SpawnLocation_0);
+	Parms.AlternateLocation = std::move(AlternateLocation);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SafeLocation != nullptr)
+		*SafeLocation = std::move(Parms.SafeLocation);
 }
 
 

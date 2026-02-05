@@ -17,50 +17,6 @@
 namespace SDK
 {
 
-// Class AudioExtensions.AudioParameterControllerInterface
-// 0x0000 (0x0000 - 0x0000)
-class IAudioParameterControllerInterface final
-{
-public:
-	void ResetParameters();
-	void SetBoolArrayParameter(class FName InName, const TArray<bool>& InValue);
-	void SetBoolParameter(class FName InName, bool InBool);
-	void SetFloatArrayParameter(class FName InName, const TArray<float>& InValue);
-	void SetFloatParameter(class FName InName, float InFloat);
-	void SetIntArrayParameter(class FName InName, const TArray<int32>& InValue);
-	void SetIntParameter(class FName InName, int32 inInt);
-	void SetObjectArrayParameter(class FName InName, const TArray<class UObject*>& InValue);
-	void SetObjectParameter(class FName InName, class UObject* InValue);
-	void SetParameters_Blueprint(const TArray<struct FAudioParameter>& InParameters);
-	void SetStringArrayParameter(class FName InName, const TArray<class FString>& InValue);
-	void SetStringParameter(class FName InName, const class FString& InValue);
-	void SetTriggerParameter(class FName InName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioParameterControllerInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioParameterControllerInterface")
-	}
-	static class IAudioParameterControllerInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IAudioParameterControllerInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IAudioParameterControllerInterface;
-
 // Class AudioExtensions.SoundfieldEncodingSettingsBase
 // 0x0000 (0x0028 - 0x0028)
 class USoundfieldEncodingSettingsBase : public UObject
@@ -160,6 +116,50 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UOcclusionPluginSourceSettingsBase;
+
+// Class AudioExtensions.AudioParameterControllerInterface
+// 0x0000 (0x0000 - 0x0000)
+class IAudioParameterControllerInterface final
+{
+public:
+	void ResetParameters();
+	void SetBoolArrayParameter(class FName InName, const TArray<bool>& InValue);
+	void SetBoolParameter(class FName InName, bool InBool);
+	void SetFloatArrayParameter(class FName InName, const TArray<float>& InValue);
+	void SetFloatParameter(class FName InName, float InFloat);
+	void SetIntArrayParameter(class FName InName, const TArray<int32>& InValue);
+	void SetIntParameter(class FName InName, int32 inInt);
+	void SetObjectArrayParameter(class FName InName, const TArray<class UObject*>& InValue);
+	void SetObjectParameter(class FName InName, class UObject* InValue);
+	void SetParameters_Blueprint(const TArray<struct FAudioParameter>& InParameters);
+	void SetStringArrayParameter(class FName InName, const TArray<class FString>& InValue);
+	void SetStringParameter(class FName InName, const class FString& InValue);
+	void SetTriggerParameter(class FName InName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioParameterControllerInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioParameterControllerInterface")
+	}
+	static class IAudioParameterControllerInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IAudioParameterControllerInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IAudioParameterControllerInterface;
 
 // Class AudioExtensions.AudioCodecEncoderSettings
 // 0x0008 (0x0030 - 0x0028)

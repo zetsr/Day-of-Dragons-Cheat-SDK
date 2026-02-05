@@ -149,21 +149,6 @@ public:
 };
 DUMPER7_ASSERTS_FFMODAssetLookupRow;
 
-// ScriptStruct FMODStudio.FMODPlatformSettings
-// 0x0060 (0x0060 - 0x0000)
-struct FFMODPlatformSettings final
-{
-public:
-	int32                                         RealChannelCount;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SampleRate;                                        // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFMODSpeakerMode                              SpeakerMode;                                       // 0x0008(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFMODOutput                                   OutputType;                                        // 0x0009(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CustomPoolSize;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<EFMODCodec, int32>                       Codecs;                                            // 0x0010(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFMODPlatformSettings;
-
 // ScriptStruct FMODStudio.FMODAttenuationDetails
 // 0x000C (0x000C - 0x0000)
 struct FFMODAttenuationDetails final
@@ -233,6 +218,21 @@ public:
 	int32                                         XBoxOne;                                           // 0x0010(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCustomPoolSizes;
+
+// ScriptStruct FMODStudio.FMODPlatformSettings
+// 0x0060 (0x0060 - 0x0000)
+struct FFMODPlatformSettings final
+{
+public:
+	int32                                         RealChannelCount;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SampleRate;                                        // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFMODSpeakerMode                              SpeakerMode;                                       // 0x0008(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFMODOutput                                   OutputType;                                        // 0x0009(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CustomPoolSize;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<EFMODCodec, int32>                       Codecs;                                            // 0x0010(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFMODPlatformSettings;
 
 // ScriptStruct FMODStudio.FMODProjectLocale
 // 0x0028 (0x0028 - 0x0000)

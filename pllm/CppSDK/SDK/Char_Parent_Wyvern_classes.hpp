@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_Wyvern.Char_Parent_Wyvern_C
-// 0x0000 (0x10F0 - 0x10F0)
+// 0x0000 (0x1100 - 0x1100)
 class AChar_Parent_Wyvern_C : public AChar_Parent_Dragonkind_C
 {
 public:
-	uint8                                         Pad_10E3[0x5];                                     // 0x10E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicsMovementGrabOffset_C*           PhysicsMovementGrabOffset;                         // 0x10E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10F5[0x3];                                     // 0x10F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicsMovementGrabOffset_C*           PhysicsMovementGrabOffset;                         // 0x10F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnRep_ReplicatedFlightData();

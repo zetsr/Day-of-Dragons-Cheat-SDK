@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "Wi_Parent_Menu_classes.hpp"
+#include "UMG_structs.hpp"
 #include "Enum_ServerListStatus_structs.hpp"
 
 

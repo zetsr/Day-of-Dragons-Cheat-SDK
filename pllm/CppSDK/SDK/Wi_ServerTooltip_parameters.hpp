@@ -276,6 +276,20 @@ public:
 };
 DUMPER7_ASSERTS_Wi_ServerTooltip_C_Get_TextContent_41_Text;
 
+// Function Wi_ServerTooltip.Wi_ServerTooltip_C.Get_TextContent_43_Text
+// 0x0068 (0x0068 - 0x0000)
+struct Wi_ServerTooltip_C_Get_TextContent_43_Text final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
+	class FText                                   K2Node_Select_Default;                             // 0x0050(0x0018)()
+};
+DUMPER7_ASSERTS_Wi_ServerTooltip_C_Get_TextContent_43_Text;
+
 // Function Wi_ServerTooltip.Wi_ServerTooltip_C.Get_TextContent_5_Text
 // 0x00A0 (0x00A0 - 0x0000)
 struct Wi_ServerTooltip_C_Get_TextContent_5_Text final

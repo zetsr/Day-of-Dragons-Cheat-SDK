@@ -30,6 +30,7 @@ public:
 	void Construct();
 	void Destruct();
 	void ExecuteUbergraph_Wi_Parent_Menu(int32 EntryPoint);
+	void RunPreSetupFunctions();
 
 public:
 	static class UClass* StaticClass()

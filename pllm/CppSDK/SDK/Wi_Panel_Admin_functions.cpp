@@ -393,6 +393,20 @@ void UWi_Panel_Admin_C::BndEvt__Wi_Panel_Admin_MutePlyr_K2Node_ComponentBoundEve
 }
 
 
+// Function Wi_Panel_Admin.Wi_Panel_Admin_C.BndEvt__Wi_Panel_Admin_PMBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWi_Panel_Admin_C::BndEvt__Wi_Panel_Admin_PMBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Panel_Admin_C", "BndEvt__Wi_Panel_Admin_PMBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Wi_Panel_Admin.Wi_Panel_Admin_C.BndEvt__Wi_Panel_Admin_ProtectBtn_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

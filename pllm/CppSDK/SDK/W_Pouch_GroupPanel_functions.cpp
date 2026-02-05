@@ -84,25 +84,5 @@ struct FSlateBrush UW_Pouch_GroupPanel_C::Get_BG_Background()
 	return Parms.ReturnValue;
 }
 
-
-// Function W_Pouch_GroupPanel.W_Pouch_GroupPanel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UW_Pouch_GroupPanel_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_Pouch_GroupPanel_C", "PreConstruct");
-
-	Params::W_Pouch_GroupPanel_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
 }
 

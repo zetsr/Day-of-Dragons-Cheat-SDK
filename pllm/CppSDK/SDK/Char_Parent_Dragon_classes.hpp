@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_Dragon.Char_Parent_Dragon_C
-// 0x0000 (0x10F0 - 0x10F0)
+// 0x0000 (0x1100 - 0x1100)
 #pragma pack(push, 0x1)
 class alignas(0x10) AChar_Parent_Dragon_C : public AChar_Parent_Dragonkind_C
 {

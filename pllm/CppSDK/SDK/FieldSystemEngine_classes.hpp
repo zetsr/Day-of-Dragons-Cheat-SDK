@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "FieldSystemEngine_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Chaos_structs.hpp"
+#include "FieldSystemEngine_structs.hpp"
 
 
 namespace SDK
@@ -43,78 +43,6 @@ public:
 };
 DUMPER7_ASSERTS_AFieldSystemActor;
 
-// Class FieldSystemEngine.FieldNodeBase
-// 0x0000 (0x00A0 - 0x00A0)
-class UFieldNodeBase : public UActorComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FieldNodeBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FieldNodeBase")
-	}
-	static class UFieldNodeBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFieldNodeBase>();
-	}
-};
-DUMPER7_ASSERTS_UFieldNodeBase;
-
-// Class FieldSystemEngine.FieldNodeInt
-// 0x0000 (0x00A0 - 0x00A0)
-class UFieldNodeInt : public UFieldNodeBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FieldNodeInt")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FieldNodeInt")
-	}
-	static class UFieldNodeInt* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFieldNodeInt>();
-	}
-};
-DUMPER7_ASSERTS_UFieldNodeInt;
-
-// Class FieldSystemEngine.RadialIntMask
-// 0x0030 (0x00D0 - 0x00A0)
-class URadialIntMask final : public UFieldNodeInt
-{
-public:
-	float                                         Radius;                                            // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Position;                                          // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InteriorValue;                                     // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ExteriorValue;                                     // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESetMaskConditionType                         SetMaskCondition;                                  // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class URadialIntMask* SetRadialIntMask(float Radius_0, const struct FVector& Position_0, int32 InteriorValue_0, int32 ExteriorValue_0, ESetMaskConditionType SetMaskConditionIn);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RadialIntMask")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RadialIntMask")
-	}
-	static class URadialIntMask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URadialIntMask>();
-	}
-};
-DUMPER7_ASSERTS_URadialIntMask;
-
 // Class FieldSystemEngine.FieldSystem
 // 0x0010 (0x0038 - 0x0028)
 class UFieldSystem final : public UObject
@@ -137,54 +65,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFieldSystem;
-
-// Class FieldSystemEngine.FieldNodeVector
-// 0x0000 (0x00A0 - 0x00A0)
-class UFieldNodeVector : public UFieldNodeBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FieldNodeVector")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FieldNodeVector")
-	}
-	static class UFieldNodeVector* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFieldNodeVector>();
-	}
-};
-DUMPER7_ASSERTS_UFieldNodeVector;
-
-// Class FieldSystemEngine.UniformVector
-// 0x0020 (0x00C0 - 0x00A0)
-class UUniformVector final : public UFieldNodeVector
-{
-public:
-	float                                         Magnitude;                                         // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Direction;                                         // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	class UUniformVector* SetUniformVector(float Magnitude_0, const struct FVector& Direction_0);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UniformVector")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UniformVector")
-	}
-	static class UUniformVector* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUniformVector>();
-	}
-};
-DUMPER7_ASSERTS_UUniformVector;
 
 // Class FieldSystemEngine.FieldSystemComponent
 // 0x00D0 (0x0640 - 0x0570)
@@ -332,6 +212,46 @@ public:
 };
 DUMPER7_ASSERTS_UFieldSystemMetaDataFilter;
 
+// Class FieldSystemEngine.FieldNodeBase
+// 0x0000 (0x00A0 - 0x00A0)
+class UFieldNodeBase : public UActorComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FieldNodeBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FieldNodeBase")
+	}
+	static class UFieldNodeBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFieldNodeBase>();
+	}
+};
+DUMPER7_ASSERTS_UFieldNodeBase;
+
+// Class FieldSystemEngine.FieldNodeInt
+// 0x0000 (0x00A0 - 0x00A0)
+class UFieldNodeInt : public UFieldNodeBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FieldNodeInt")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FieldNodeInt")
+	}
+	static class UFieldNodeInt* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFieldNodeInt>();
+	}
+};
+DUMPER7_ASSERTS_UFieldNodeInt;
+
 // Class FieldSystemEngine.FieldNodeFloat
 // 0x0000 (0x00A0 - 0x00A0)
 class UFieldNodeFloat : public UFieldNodeBase
@@ -351,6 +271,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFieldNodeFloat;
+
+// Class FieldSystemEngine.FieldNodeVector
+// 0x0000 (0x00A0 - 0x00A0)
+class UFieldNodeVector : public UFieldNodeBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FieldNodeVector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FieldNodeVector")
+	}
+	static class UFieldNodeVector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFieldNodeVector>();
+	}
+};
+DUMPER7_ASSERTS_UFieldNodeVector;
 
 // Class FieldSystemEngine.UniformInteger
 // 0x0008 (0x00A8 - 0x00A0)
@@ -378,6 +318,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUniformInteger;
+
+// Class FieldSystemEngine.RadialIntMask
+// 0x0030 (0x00D0 - 0x00A0)
+class URadialIntMask final : public UFieldNodeInt
+{
+public:
+	float                                         Radius;                                            // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Position;                                          // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InteriorValue;                                     // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ExteriorValue;                                     // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESetMaskConditionType                         SetMaskCondition;                                  // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class URadialIntMask* SetRadialIntMask(float Radius_0, const struct FVector& Position_0, int32 InteriorValue_0, int32 ExteriorValue_0, ESetMaskConditionType SetMaskConditionIn);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RadialIntMask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RadialIntMask")
+	}
+	static class URadialIntMask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URadialIntMask>();
+	}
+};
+DUMPER7_ASSERTS_URadialIntMask;
 
 // Class FieldSystemEngine.UniformScalar
 // 0x0008 (0x00A8 - 0x00A0)
@@ -568,6 +540,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNoiseField;
+
+// Class FieldSystemEngine.UniformVector
+// 0x0020 (0x00C0 - 0x00A0)
+class UUniformVector final : public UFieldNodeVector
+{
+public:
+	float                                         Magnitude;                                         // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Direction;                                         // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	class UUniformVector* SetUniformVector(float Magnitude_0, const struct FVector& Direction_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UniformVector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UniformVector")
+	}
+	static class UUniformVector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUniformVector>();
+	}
+};
+DUMPER7_ASSERTS_UUniformVector;
 
 // Class FieldSystemEngine.RadialVector
 // 0x0020 (0x00C0 - 0x00A0)

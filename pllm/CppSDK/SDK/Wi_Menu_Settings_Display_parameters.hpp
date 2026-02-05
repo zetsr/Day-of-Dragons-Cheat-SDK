@@ -16,6 +16,16 @@
 namespace SDK::Params
 {
 
+// Function Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C.ExecuteUbergraph_Wi_Menu_Settings_Display
+// 0x0008 (0x0008 - 0x0000)
+struct Wi_Menu_Settings_Display_C_ExecuteUbergraph_Wi_Menu_Settings_Display final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsCVarRegistered_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Menu_Settings_Display_C_ExecuteUbergraph_Wi_Menu_Settings_Display;
+
 // Function Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C.GetbIsEnabled
 // 0x0018 (0x0018 - 0x0000)
 struct Wi_Menu_Settings_Display_C_GetbIsEnabled final

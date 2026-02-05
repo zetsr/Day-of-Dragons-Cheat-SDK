@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CinematicCamera_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CinematicCamera_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -145,18 +145,6 @@ public:
 };
 DUMPER7_ASSERTS_FDatasmithImportInfo;
 
-// ScriptStruct DatasmithContent.DatasmithStaticMeshImportOptions
-// 0x0004 (0x0004 - 0x0000)
-struct FDatasmithStaticMeshImportOptions final
-{
-public:
-	EDatasmithImportLightmapMin                   MinLightmapResolution;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDatasmithImportLightmapMax                   MaxLightmapResolution;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGenerateLightmapUVs;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemoveDegenerates;                                // 0x0003(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDatasmithStaticMeshImportOptions;
-
 // ScriptStruct DatasmithContent.DatasmithCameraLookatTrackingSettingsTemplate
 // 0x0038 (0x0038 - 0x0000)
 struct FDatasmithCameraLookatTrackingSettingsTemplate final
@@ -188,29 +176,6 @@ public:
 };
 DUMPER7_ASSERTS_FDatasmithCameraLensSettingsTemplate;
 
-// ScriptStruct DatasmithContent.DatasmithTessellationOptions
-// 0x0010 (0x0010 - 0x0000)
-struct FDatasmithTessellationOptions
-{
-public:
-	float                                         ChordTolerance;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxEdgeLength;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NormalTolerance;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDatasmithCADStitchingTechnique               StitchingTechnique;                                // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDatasmithTessellationOptions;
-
-// ScriptStruct DatasmithContent.DatasmithRetessellationOptions
-// 0x0004 (0x0014 - 0x0010)
-struct FDatasmithRetessellationOptions final : public FDatasmithTessellationOptions
-{
-public:
-	EDatasmithCADRetessellationRule               RetessellationRule;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDatasmithRetessellationOptions;
-
 // ScriptStruct DatasmithContent.DatasmithCameraFocusSettingsTemplate
 // 0x0008 (0x0008 - 0x0000)
 struct FDatasmithCameraFocusSettingsTemplate final
@@ -221,15 +186,6 @@ public:
 	float                                         ManualFocusDistance;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDatasmithCameraFocusSettingsTemplate;
-
-// ScriptStruct DatasmithContent.DatasmithAssetImportOptions
-// 0x0008 (0x0008 - 0x0000)
-struct FDatasmithAssetImportOptions final
-{
-public:
-	class FName                                   PackagePath;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDatasmithAssetImportOptions;
 
 // ScriptStruct DatasmithContent.DatasmithPostProcessSettingsTemplate
 // 0x0040 (0x0040 - 0x0000)
@@ -257,6 +213,27 @@ public:
 };
 DUMPER7_ASSERTS_FDatasmithPostProcessSettingsTemplate;
 
+// ScriptStruct DatasmithContent.DatasmithAssetImportOptions
+// 0x0008 (0x0008 - 0x0000)
+struct FDatasmithAssetImportOptions final
+{
+public:
+	class FName                                   PackagePath;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDatasmithAssetImportOptions;
+
+// ScriptStruct DatasmithContent.DatasmithStaticMeshImportOptions
+// 0x0004 (0x0004 - 0x0000)
+struct FDatasmithStaticMeshImportOptions final
+{
+public:
+	EDatasmithImportLightmapMin                   MinLightmapResolution;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDatasmithImportLightmapMax                   MaxLightmapResolution;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenerateLightmapUVs;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemoveDegenerates;                                // 0x0003(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDatasmithStaticMeshImportOptions;
+
 // ScriptStruct DatasmithContent.DatasmithReimportOptions
 // 0x0002 (0x0002 - 0x0000)
 struct FDatasmithReimportOptions final
@@ -283,6 +260,29 @@ public:
 	struct FDatasmithStaticMeshImportOptions      StaticMeshOptions;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDatasmithImportBaseOptions;
+
+// ScriptStruct DatasmithContent.DatasmithTessellationOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FDatasmithTessellationOptions
+{
+public:
+	float                                         ChordTolerance;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxEdgeLength;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NormalTolerance;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDatasmithCADStitchingTechnique               StitchingTechnique;                                // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDatasmithTessellationOptions;
+
+// ScriptStruct DatasmithContent.DatasmithRetessellationOptions
+// 0x0004 (0x0014 - 0x0010)
+struct FDatasmithRetessellationOptions final : public FDatasmithTessellationOptions
+{
+public:
+	EDatasmithCADRetessellationRule               RetessellationRule;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDatasmithRetessellationOptions;
 
 // ScriptStruct DatasmithContent.DatasmithStaticParameterSetTemplate
 // 0x0050 (0x0050 - 0x0000)

@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
+#include "Enum_InputModes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Enum_HUD_Style_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
 #include "Enum_TimeOfDay_structs.hpp"
-#include "Enum_HUD_Style_structs.hpp"
-#include "Enum_InputModes_structs.hpp"
 #include "Enum_IconSize_structs.hpp"
+#include "NetCore_structs.hpp"
 #include "SCUE5_structs.hpp"
 #include "FMODStudio_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
 #include "Enum_KickReason_structs.hpp"
-#include "NetCore_structs.hpp"
 
 
 namespace SDK
@@ -74,7 +74,8 @@ public:
 	bool                                          bDisableDayNightCycle;                             // 0x024E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDisableEAC;                                       // 0x024F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDisableRespawns;                                  // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDisableEggSaving;                                 // 0x0251(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_252[0x6];                                      // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 sWorldMap;                                         // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 sServerMOTD;                                       // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 sServerDiscord;                                    // 0x0278(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash)
@@ -203,6 +204,7 @@ public:
 	void ClearLoadingThrobber();
 	void ClearWhiteDragonRef();
 	void Completed_3B3A7AC04A055B44003EAEAD93EAD1DC(class USaveGame* SaveGame, bool bSuccess);
+	void ConfigureSteamDeck(int32 NewValue);
 	void EnhanceNightVision(bool IsUsingNV);
 	void ExecuteUbergraph_DragonsGI(int32 EntryPoint);
 	void ExitToMenu();
@@ -213,6 +215,7 @@ public:
 	void FSR_FrameGenCallBack(int32 NewValue);
 	void FSR_QualityCallback(int32 NewValue);
 	void FSR_SharpnessCallback(float NewValue);
+	void Get_Is_Egg_Saving_Enabled(bool* CanSaveEggsLocally);
 	void Get_Server_Daily_Restart_Time(bool* ShouldAutoRestart, double* RestartInSeconds);
 	void Get_ClanMaxSize(int32* MaxClanSize);
 	void Get_FlagHatchlingKillers(bool* FlagKillers);
@@ -240,22 +243,22 @@ public:
 	void OnFail_E8CE3CB146D6C3AD1E614B9A71B85BA0();
 	void OnFailure_1AAC8D3F489EBE872B0BE99AF1E8BF2E();
 	void OnFailure_2353981948E3DE1E8D0EE4920A2C86D2();
+	void OnFailure_5E40DD394F11E9308626849897A39463();
 	void OnFailure_62F12365433AFD1681DB1FA8B55E7743(const class FString& AuthToken);
 	void OnFailure_64EDC064489F64ABB2BDEB8D8D9DEAB7(const TArray<struct FBlueprintSessionResult>& Results);
 	void OnFailure_684BB6144D689C6DF3BDF3A6B973CD73();
 	void OnFailure_799D85DC440F1FD20C65CFA2A1C9A3D7();
-	void OnFailure_79C00D4F439B4A1DDD88D58C63101865();
 	void OnFailure_AA9B05614B137471EC014E801291838A();
 	void OnFailure_CA2896EF4514C37232A28AADEB991865();
 	void OnSettingsChanged();
 	void OnSuccess_1AAC8D3F489EBE872B0BE99AF1E8BF2E();
 	void OnSuccess_2353981948E3DE1E8D0EE4920A2C86D2();
+	void OnSuccess_5E40DD394F11E9308626849897A39463();
 	void OnSuccess_62F12365433AFD1681DB1FA8B55E7743(const class FString& AuthToken);
 	void OnSuccess_64EDC064489F64ABB2BDEB8D8D9DEAB7(const TArray<struct FBlueprintSessionResult>& Results);
 	void OnSuccess_6624D93D4A24B0336475FC9CD252A3E8(const struct FEIK_ProductUserId& ProductUserId_0, const class FString& Error);
 	void OnSuccess_684BB6144D689C6DF3BDF3A6B973CD73();
 	void OnSuccess_799D85DC440F1FD20C65CFA2A1C9A3D7();
-	void OnSuccess_79C00D4F439B4A1DDD88D58C63101865();
 	void OnSuccess_AA9B05614B137471EC014E801291838A();
 	void OnSuccess_CA2896EF4514C37232A28AADEB991865();
 	void OnSuccess_E7AE7CA54F11784CD2AF6897A3E6F07B();

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Enum_MapRegion_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EnumQuest__QuestLineTracker_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
 
 
 namespace SDK

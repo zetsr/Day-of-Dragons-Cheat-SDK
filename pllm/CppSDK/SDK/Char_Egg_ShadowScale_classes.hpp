@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Egg_ShadowScale.Char_Egg_ShadowScale_C
-// 0x0000 (0x1110 - 0x1110)
+// 0x0000 (0x1120 - 0x1120)
 class AChar_Egg_ShadowScale_C final : public AChar_Parent_Egg_C
 {
 public:

@@ -10,81 +10,81 @@
 
 #include "Basic.hpp"
 
-#include "Char_Parent_Dragon_classes.hpp"
-#include "Struct_RecentTarget_structs.hpp"
-#include "Engine_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
+#include "Struct_RecentTarget_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "Char_Parent_Dragon_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Dragon_ShadowScale.Char_Dragon_ShadowScale_C
-// 0x0140 (0x1230 - 0x10F0)
+// 0x0140 (0x1240 - 0x1100)
 class AChar_Dragon_ShadowScale_C final : public AChar_Parent_Dragon_C
 {
 public:
-	uint8                                         Pad_10E3[0x5];                                     // 0x10E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Dragon_ShadowScale_C;          // 0x10E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          WeaponBite;                                        // 0x10F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPhysicsFlight_C*                       PhysicsFlight;                                     // 0x10F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPhysicsMovementGrabOffset_C*           PhysicsMovementGrabOffset;                         // 0x1100(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         ChargeShotFX_Time_9FAB2F204742C84033D3B997B0CFEAFF; // 0x1108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ChargeShotFX_ChargeLevel_9FAB2F204742C84033D3B997B0CFEAFF; // 0x110C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ChargeShotFX__Direction_9FAB2F204742C84033D3B997B0CFEAFF; // 0x1110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1111[0x7];                                     // 0x1111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ChargeShotFX;                                      // 0x1118(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         NV_Fade_Fade_E4D75E3F40775FA3BDF3FCB2B25BBFC1;     // 0x1120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            NV_Fade__Direction_E4D75E3F40775FA3BDF3FCB2B25BBFC1; // 0x1124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1125[0x3];                                     // 0x1125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     NV_Fade;                                           // 0x1128(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         MovementFade_Cloak_7F057DC749564050532A079FCBE9C106; // 0x1130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            MovementFade__Direction_7F057DC749564050532A079FCBE9C106; // 0x1134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10F5[0x3];                                     // 0x10F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Dragon_ShadowScale_C;          // 0x10F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          WeaponBite;                                        // 0x1100(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPhysicsFlight_C*                       PhysicsFlight;                                     // 0x1108(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPhysicsMovementGrabOffset_C*           PhysicsMovementGrabOffset;                         // 0x1110(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         ChargeShotFX_Time_9FAB2F204742C84033D3B997B0CFEAFF; // 0x1118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ChargeShotFX_ChargeLevel_9FAB2F204742C84033D3B997B0CFEAFF; // 0x111C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ChargeShotFX__Direction_9FAB2F204742C84033D3B997B0CFEAFF; // 0x1120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1121[0x7];                                     // 0x1121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ChargeShotFX;                                      // 0x1128(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         NV_Fade_Fade_E4D75E3F40775FA3BDF3FCB2B25BBFC1;     // 0x1130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            NV_Fade__Direction_E4D75E3F40775FA3BDF3FCB2B25BBFC1; // 0x1134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1135[0x3];                                     // 0x1135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     MovementFade;                                      // 0x1138(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CloakUnfade_Cloak_9E7A5C5441CD61568C5330B742AE8667; // 0x1140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            CloakUnfade__Direction_9E7A5C5441CD61568C5330B742AE8667; // 0x1144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     NV_Fade;                                           // 0x1138(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         MovementFade_Cloak_7F057DC749564050532A079FCBE9C106; // 0x1140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            MovementFade__Direction_7F057DC749564050532A079FCBE9C106; // 0x1144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1145[0x3];                                     // 0x1145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     CloakUnfade;                                       // 0x1148(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         ShadowUncloak_Cloak_531CEAFD43EB81811A1D6497611CE88E; // 0x1150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ShadowUncloak__Direction_531CEAFD43EB81811A1D6497611CE88E; // 0x1154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     MovementFade;                                      // 0x1148(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CloakUnfade_Cloak_9E7A5C5441CD61568C5330B742AE8667; // 0x1150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            CloakUnfade__Direction_9E7A5C5441CD61568C5330B742AE8667; // 0x1154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1155[0x3];                                     // 0x1155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ShadowUncloak;                                     // 0x1158(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CloakFade_Cloak_B04FF7A44D804289F2CC5D8AE42215B6;  // 0x1160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            CloakFade__Direction_B04FF7A44D804289F2CC5D8AE42215B6; // 0x1164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     CloakUnfade;                                       // 0x1158(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         ShadowUncloak_Cloak_531CEAFD43EB81811A1D6497611CE88E; // 0x1160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ShadowUncloak__Direction_531CEAFD43EB81811A1D6497611CE88E; // 0x1164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1165[0x3];                                     // 0x1165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     CloakFade;                                         // 0x1168(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         ShadowCloak_Cloak_BA969FED4F7AEBF0EA0939BE428302AC; // 0x1170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ShadowCloak__Direction_BA969FED4F7AEBF0EA0939BE428302AC; // 0x1174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     ShadowUncloak;                                     // 0x1168(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CloakFade_Cloak_B04FF7A44D804289F2CC5D8AE42215B6;  // 0x1170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            CloakFade__Direction_B04FF7A44D804289F2CC5D8AE42215B6; // 0x1174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1175[0x3];                                     // 0x1175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ShadowCloak;                                       // 0x1178(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               ShadowCloakMaterial;                               // 0x1180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMat_Body;                                         // 0x1188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMat_Wings;                                        // 0x1190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMat_Eyes;                                         // 0x1198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMat_Other;                                        // 0x11A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsShadowCloaked;                                   // 0x11A8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCloakOnCooldown;                                 // 0x11A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCloaking;                                        // 0x11AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ConstructMatsFinished;                             // 0x11AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11AC[0x4];                                     // 0x11AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ShineyVisibility;                                  // 0x11B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        NV_FadeFloat;                                      // 0x11B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   AttackKey;                                         // 0x11C0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          IsChargingShot;                                    // 0x11D8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          ChargedShotFired;                                  // 0x11D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11DA[0x6];                                     // 0x11DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ChargedScalesTime;                                 // 0x11E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ChargeExhaustion;                                  // 0x11E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DidUncloak;                                        // 0x11E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTimelineComponent*                     CloakFade;                                         // 0x1178(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         ShadowCloak_Cloak_BA969FED4F7AEBF0EA0939BE428302AC; // 0x1180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ShadowCloak__Direction_BA969FED4F7AEBF0EA0939BE428302AC; // 0x1184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1185[0x3];                                     // 0x1185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ShadowCloak;                                       // 0x1188(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               ShadowCloakMaterial;                               // 0x1190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMat_Body;                                         // 0x1198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMat_Wings;                                        // 0x11A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMat_Eyes;                                         // 0x11A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMat_Other;                                        // 0x11B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsShadowCloaked;                                   // 0x11B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCloakOnCooldown;                                 // 0x11B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCloaking;                                        // 0x11BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ConstructMatsFinished;                             // 0x11BB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11BC[0x4];                                     // 0x11BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ShineyVisibility;                                  // 0x11C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NV_FadeFloat;                                      // 0x11C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   AttackKey;                                         // 0x11D0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          IsChargingShot;                                    // 0x11E8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChargedShotFired;                                  // 0x11E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11EA[0x6];                                     // 0x11EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SavedCloakAmountParam;                             // 0x11F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SavedVisibilityFadeAmountParam;                    // 0x11F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         BiteActors;                                        // 0x1200(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FStruct_RecentTarget                   RecentTarget;                                      // 0x1210(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ChargedScalesTime;                                 // 0x11F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChargeExhaustion;                                  // 0x11F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DidUncloak;                                        // 0x11F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11FA[0x6];                                     // 0x11FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SavedCloakAmountParam;                             // 0x1200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SavedVisibilityFadeAmountParam;                    // 0x1208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         BiteActors;                                        // 0x1210(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FStruct_RecentTarget                   RecentTarget;                                      // 0x1220(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AllBite();

@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "Struct_FlightData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_StatMutations_structs.hpp"
-#include "Struct_FlightData_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass PhysicsFlight.PhysicsFlight_C
-// 0x0160 (0x0200 - 0x00A0)
+// 0x0168 (0x0208 - 0x00A0)
 class UPhysicsFlight_C final : public UActorComponent
 {
 public:
@@ -64,6 +64,7 @@ public:
 	double                                        TimeSinceLastUpdate;                               // 0x01E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              FlightDataTimeStamp;                               // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              BeginFlyTimeStamp;                                 // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          UsedSpaceToFly;                                    // 0x0200(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AirBoostPressed(const struct FKey& Key);
@@ -125,7 +126,7 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void ResetLocalFlightGates();
 	void ResetServerFlightGates();
-	void Server_SimulateFlight(bool ShouldFly, bool WantsHover);
+	void Server_SimulateFlight(bool ShouldFly, bool WantsHover, bool UsedSpaceToFly_0);
 	void ServerApplyAirBrake(bool ApplyAirBrake_0);
 	void ServerJumpHover();
 	void ServerReplicateFlightData(const struct FStruct_FlightData& FlightDataStruct);

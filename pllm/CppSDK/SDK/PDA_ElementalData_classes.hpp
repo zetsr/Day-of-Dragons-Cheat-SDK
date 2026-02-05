@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_Elements_structs.hpp"
-#include "Enum_Diet_structs.hpp"
-#include "Enum_TempTolerance_structs.hpp"
-#include "Enum_Kinds_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
-#include "Enum_Family_structs.hpp"
 #include "Enum_Species_structs.hpp"
+#include "Enum_Kinds_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Enum_Elements_structs.hpp"
+#include "Enum_TempTolerance_structs.hpp"
+#include "Enum_Family_structs.hpp"
+#include "Enum_Diet_structs.hpp"
 #include "Enum_Mitigations_structs.hpp"
 #include "Enum_Vitals_structs.hpp"
 
@@ -131,7 +131,7 @@ public:
 	void GetPhysicsDamping(double* LinearDamping_0, double* AngularDamping_0);
 
 	void ConvertByteToPercent(uint8 Byte, double* Percent) const;
-	void GetAllSpeedValues(double* walk, double* trot, double* run, double* Swim, double* Fly) const;
+	void GetAllSpeedValues(double* Walk, double* trot, double* run, double* Swim, double* Fly) const;
 	void GetAllVitals(double* BaseHealth_0, double* BaseArmor_0, double* BaseStamina_0, double* BaseBile_0, double* BaseHunger_0, double* BaseThirst_0, double* BaseTorpor_0) const;
 	void GetBaseCrits(double* CritChance_0, double* CritEvasion_0, double* CritDamage_0, double* CritReduction_0) const;
 	void GetBaseMitigationsByte(uint8* MitBlunt, uint8* MitPierce, uint8* MitFire, uint8* MitFrost, uint8* MitAcid, uint8* MitVenom, uint8* MitPlasma, uint8* MitElectricity) const;

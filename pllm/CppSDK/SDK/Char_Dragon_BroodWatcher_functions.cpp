@@ -17,6 +17,48 @@
 namespace SDK
 {
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.AddEgg
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FStruct_PlayerEggInfo&     Egg                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   EggIncubationPercent                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::AddEgg(const struct FStruct_PlayerEggInfo& Egg, uint8 EggIncubationPercent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "AddEgg");
+
+	Params::Char_Dragon_BroodWatcher_C_AddEgg Parms{};
+
+	Parms.Egg = std::move(Egg);
+	Parms.EggIncubationPercent = EggIncubationPercent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.AddEggToInvitePool
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::AddEggToInvitePool(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "AddEggToInvitePool");
+
+	Params::Char_Dragon_BroodWatcher_C_AddEggToInvitePool Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.AllGlideJump
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -137,12 +179,13 @@ void AChar_Dragon_BroodWatcher_C::BndEvt__Char_Dragon_FlameStalker_WeaponSwipe_K
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // uint8                                   CritAttempts                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   CritSuccesses                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 CritChance                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 SuperCritChance                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 FailChance                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 CritFailChance                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::CalculateAllBroodingCrits(uint8 CritAttempts, double* CritChance, double* SuperCritChance, double* FailChance, double* CritFailChance)
+void AChar_Dragon_BroodWatcher_C::CalculateAllBroodingCrits(uint8 CritAttempts, uint8 CritSuccesses, double* CritChance, double* SuperCritChance, double* FailChance, double* CritFailChance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -152,6 +195,7 @@ void AChar_Dragon_BroodWatcher_C::CalculateAllBroodingCrits(uint8 CritAttempts, 
 	Params::Char_Dragon_BroodWatcher_C_CalculateAllBroodingCrits Parms{};
 
 	Parms.CritAttempts = CritAttempts;
+	Parms.CritSuccesses = CritSuccesses;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -173,9 +217,10 @@ void AChar_Dragon_BroodWatcher_C::CalculateAllBroodingCrits(uint8 CritAttempts, 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // uint8                                   CritAttempts                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   CritSuccesses                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // uint8*                                  CritChance                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::CalculateBroodCritChance(uint8 CritAttempts, uint8* CritChance)
+void AChar_Dragon_BroodWatcher_C::CalculateBroodCritChance(uint8 CritAttempts, uint8 CritSuccesses, uint8* CritChance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -185,6 +230,7 @@ void AChar_Dragon_BroodWatcher_C::CalculateBroodCritChance(uint8 CritAttempts, u
 	Params::Char_Dragon_BroodWatcher_C_CalculateBroodCritChance Parms{};
 
 	Parms.CritAttempts = CritAttempts;
+	Parms.CritSuccesses = CritSuccesses;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -241,21 +287,135 @@ void AChar_Dragon_BroodWatcher_C::ClientDispatchCraftTxtEvent(uint8 EventID, con
 }
 
 
-// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ClientUpdateBroodEggs
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ClientSaveEgg
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<struct FStruct_PlayerEggInfo>&Eggs                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FStruct_PlayerEggInfo&     EggInfo                                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 ExpirationDate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::ClientUpdateBroodEggs(const TArray<struct FStruct_PlayerEggInfo>& Eggs)
+void AChar_Dragon_BroodWatcher_C::ClientSaveEgg(const struct FStruct_PlayerEggInfo& EggInfo, const struct FDateTime& ExpirationDate, const class FString& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ClientUpdateBroodEggs");
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ClientSaveEgg");
 
-	Params::Char_Dragon_BroodWatcher_C_ClientUpdateBroodEggs Parms{};
+	Params::Char_Dragon_BroodWatcher_C_ClientSaveEgg Parms{};
 
-	Parms.Eggs = std::move(Eggs);
+	Parms.EggInfo = std::move(EggInfo);
+	Parms.ExpirationDate = std::move(ExpirationDate);
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.Completed_24A56AC347359928442D9997A22EEA95
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::Completed_24A56AC347359928442D9997A22EEA95(class USaveGame* SaveGame, bool bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Completed_24A56AC347359928442D9997A22EEA95");
+
+	Params::Char_Dragon_BroodWatcher_C_Completed_24A56AC347359928442D9997A22EEA95 Parms{};
+
+	Parms.SaveGame = SaveGame;
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.Completed_4D2C24484E625F0F024287AEF5CF196B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::Completed_4D2C24484E625F0F024287AEF5CF196B(class USaveGame* SaveGame, bool bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Completed_4D2C24484E625F0F024287AEF5CF196B");
+
+	Params::Char_Dragon_BroodWatcher_C_Completed_4D2C24484E625F0F024287AEF5CF196B Parms{};
+
+	Parms.SaveGame = SaveGame;
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.Completed_CDF12E984F6091E1ED5ECCB451F09D6D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::Completed_CDF12E984F6091E1ED5ECCB451F09D6D(class USaveGame* SaveGame, bool bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Completed_CDF12E984F6091E1ED5ECCB451F09D6D");
+
+	Params::Char_Dragon_BroodWatcher_C_Completed_CDF12E984F6091E1ED5ECCB451F09D6D Parms{};
+
+	Parms.SaveGame = SaveGame;
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.Completed_F155A0A941B08411B4BC0183DE5F896E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::Completed_F155A0A941B08411B4BC0183DE5F896E(class USaveGame* SaveGame, bool bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Completed_F155A0A941B08411B4BC0183DE5F896E");
+
+	Params::Char_Dragon_BroodWatcher_C_Completed_F155A0A941B08411B4BC0183DE5F896E Parms{};
+
+	Parms.SaveGame = SaveGame;
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.Completed_F4687B864555BAF0CD05DDA0E23249E5
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::Completed_F4687B864555BAF0CD05DDA0E23249E5(class USaveGame* SaveGame, bool bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Completed_F4687B864555BAF0CD05DDA0E23249E5");
+
+	Params::Char_Dragon_BroodWatcher_C_Completed_F4687B864555BAF0CD05DDA0E23249E5 Parms{};
+
+	Parms.SaveGame = SaveGame;
+	Parms.bSuccess = bSuccess;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -286,6 +446,44 @@ Enum_GeneticGrades AChar_Dragon_BroodWatcher_C::ConvertGenes(int32 CritResult, i
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.DeleteBroodPouch
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::DeleteBroodPouch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "DeleteBroodPouch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.DiscardEgg
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Deleting                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsEgg2                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceLocalSave                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::DiscardEgg(bool Deleting, bool IsEgg2, bool ForceLocalSave)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "DiscardEgg");
+
+	Params::Char_Dragon_BroodWatcher_C_DiscardEgg Parms{};
+
+	Parms.Deleting = Deleting;
+	Parms.IsEgg2 = IsEgg2;
+	Parms.ForceLocalSave = ForceLocalSave;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ExecuteUbergraph_Char_Dragon_BroodWatcher
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -309,10 +507,9 @@ void AChar_Dragon_BroodWatcher_C::ExecuteUbergraph_Char_Dragon_BroodWatcher(int3
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetBroodPouch
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool*                                   HasEggs                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<struct FStruct_PlayerEggInfo>*   BroodingPouchEggs_0                                    (Parm, OutParm)
 
-void AChar_Dragon_BroodWatcher_C::GetBroodPouch(bool* HasEggs, TArray<struct FStruct_PlayerEggInfo>* BroodingPouchEggs_0)
+void AChar_Dragon_BroodWatcher_C::GetBroodPouch(TArray<struct FStruct_PlayerEggInfo>* BroodingPouchEggs_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -323,11 +520,32 @@ void AChar_Dragon_BroodWatcher_C::GetBroodPouch(bool* HasEggs, TArray<struct FSt
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (HasEggs != nullptr)
-		*HasEggs = Parms.HasEggs;
-
 	if (BroodingPouchEggs_0 != nullptr)
 		*BroodingPouchEggs_0 = std::move(Parms.BroodingPouchEggs_0);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetBroodPouchEgg
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FStruct_PlayerEggInfo*           Egg                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::GetBroodPouchEgg(int32 Index_0, struct FStruct_PlayerEggInfo* Egg)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "GetBroodPouchEgg");
+
+	Params::Char_Dragon_BroodWatcher_C_GetBroodPouchEgg Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Egg != nullptr)
+		*Egg = std::move(Parms.Egg);
 }
 
 
@@ -357,6 +575,31 @@ void AChar_Dragon_BroodWatcher_C::GetDamageModifiers(double InDamage, Enum_Appli
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetEggLoadDirectories
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString*                          EggL0                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          EggR1                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::GetEggLoadDirectories(class FString* EggL0, class FString* EggR1)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "GetEggLoadDirectories");
+
+	Params::Char_Dragon_BroodWatcher_C_GetEggLoadDirectories Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (EggL0 != nullptr)
+		*EggL0 = std::move(Parms.EggL0);
+
+	if (EggR1 != nullptr)
+		*EggR1 = std::move(Parms.EggR1);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetElementBileCost
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -382,10 +625,11 @@ void AChar_Dragon_BroodWatcher_C::GetElementBileCost(uint8* BileCost)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // uint8                                   CritAttempts                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   CritSuccesses                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  CritValue                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // uint8*                                  EventID                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::GetNewGeneValue(uint8 CritAttempts, int32* CritValue, uint8* EventID)
+void AChar_Dragon_BroodWatcher_C::GetNewGeneValue(uint8 CritAttempts, uint8 CritSuccesses, int32* CritValue, uint8* EventID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -395,6 +639,7 @@ void AChar_Dragon_BroodWatcher_C::GetNewGeneValue(uint8 CritAttempts, int32* Cri
 	Params::Char_Dragon_BroodWatcher_C_GetNewGeneValue Parms{};
 
 	Parms.CritAttempts = CritAttempts;
+	Parms.CritSuccesses = CritSuccesses;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -403,6 +648,27 @@ void AChar_Dragon_BroodWatcher_C::GetNewGeneValue(uint8 CritAttempts, int32* Cri
 
 	if (EventID != nullptr)
 		*EventID = Parms.EventID;
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetPouchSaveDirectory
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString*                          PouchSave                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::GetPouchSaveDirectory(class FString* PouchSave)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "GetPouchSaveDirectory");
+
+	Params::Char_Dragon_BroodWatcher_C_GetPouchSaveDirectory Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PouchSave != nullptr)
+		*PouchSave = std::move(Parms.PouchSave);
 }
 
 
@@ -474,6 +740,27 @@ void AChar_Dragon_BroodWatcher_C::GetStamRegenMultipliers(int32* RegenMultiplier
 
 	if (RegenMultiplier != nullptr)
 		*RegenMultiplier = Parms.RegenMultiplier;
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetTotalCarriedEggs
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// uint8*                                  Eggs                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::GetTotalCarriedEggs(uint8* Eggs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "GetTotalCarriedEggs");
+
+	Params::Char_Dragon_BroodWatcher_C_GetTotalCarriedEggs Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Eggs != nullptr)
+		*Eggs = Parms.Eggs;
 }
 
 
@@ -582,6 +869,20 @@ void AChar_Dragon_BroodWatcher_C::IncreaseHunger()
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.IncubateEggs
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::IncubateEggs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "IncubateEggs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.InpActEvt_Attack2_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
@@ -619,6 +920,78 @@ void AChar_Dragon_BroodWatcher_C::InpActEvt_Attack_K2Node_InputActionEvent_0(con
 	Parms.Key = std::move(Key);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.InpActEvt_Special_K2Node_InputActionEvent_2
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::InpActEvt_Special_K2Node_InputActionEvent_2(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "InpActEvt_Special_K2Node_InputActionEvent_2");
+
+	Params::Char_Dragon_BroodWatcher_C_InpActEvt_Special_K2Node_InputActionEvent_2 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.InterpPouchEmissive
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::InterpPouchEmissive()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "InterpPouchEmissive");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.IsEggAvailable
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    IsEggTwoR1                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsAvailable                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::IsEggAvailable(bool IsEggTwoR1, bool* IsAvailable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "IsEggAvailable");
+
+	Params::Char_Dragon_BroodWatcher_C_IsEggAvailable Parms{};
+
+	Parms.IsEggTwoR1 = IsEggTwoR1;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsAvailable != nullptr)
+		*IsAvailable = Parms.IsAvailable;
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.LoadBroodPouch
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::LoadBroodPouch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "LoadBroodPouch");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -746,6 +1119,26 @@ void AChar_Dragon_BroodWatcher_C::OnBlendOut_45BA59314E10CB3E47E6A19C6BBA884E(cl
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnBlendOut_5E1ED5504941B6D74BAC268F2EA93C3E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnBlendOut_5E1ED5504941B6D74BAC268F2EA93C3E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnBlendOut_5E1ED5504941B6D74BAC268F2EA93C3E");
+
+	Params::Char_Dragon_BroodWatcher_C_OnBlendOut_5E1ED5504941B6D74BAC268F2EA93C3E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnBlendOut_977E1ACF4EB9DB9761904AA70C9B60CB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -759,6 +1152,26 @@ void AChar_Dragon_BroodWatcher_C::OnBlendOut_977E1ACF4EB9DB9761904AA70C9B60CB(cl
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnBlendOut_977E1ACF4EB9DB9761904AA70C9B60CB");
 
 	Params::Char_Dragon_BroodWatcher_C_OnBlendOut_977E1ACF4EB9DB9761904AA70C9B60CB Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnBlendOut_CB3373E142304A0AC5DE22960B19387D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnBlendOut_CB3373E142304A0AC5DE22960B19387D(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnBlendOut_CB3373E142304A0AC5DE22960B19387D");
+
+	Params::Char_Dragon_BroodWatcher_C_OnBlendOut_CB3373E142304A0AC5DE22960B19387D Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -803,6 +1216,20 @@ void AChar_Dragon_BroodWatcher_C::OnBlendOut_DB2FD6C5454834C97C8757830A80F316(cl
 	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnCharacterDeath(Server)
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::OnCharacterDeath_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnCharacterDeath(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -866,6 +1293,26 @@ void AChar_Dragon_BroodWatcher_C::OnCompleted_45BA59314E10CB3E47E6A19C6BBA884E(c
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnCompleted_5E1ED5504941B6D74BAC268F2EA93C3E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnCompleted_5E1ED5504941B6D74BAC268F2EA93C3E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnCompleted_5E1ED5504941B6D74BAC268F2EA93C3E");
+
+	Params::Char_Dragon_BroodWatcher_C_OnCompleted_5E1ED5504941B6D74BAC268F2EA93C3E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnCompleted_977E1ACF4EB9DB9761904AA70C9B60CB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -879,6 +1326,26 @@ void AChar_Dragon_BroodWatcher_C::OnCompleted_977E1ACF4EB9DB9761904AA70C9B60CB(c
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnCompleted_977E1ACF4EB9DB9761904AA70C9B60CB");
 
 	Params::Char_Dragon_BroodWatcher_C_OnCompleted_977E1ACF4EB9DB9761904AA70C9B60CB Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnCompleted_CB3373E142304A0AC5DE22960B19387D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnCompleted_CB3373E142304A0AC5DE22960B19387D(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnCompleted_CB3373E142304A0AC5DE22960B19387D");
+
+	Params::Char_Dragon_BroodWatcher_C_OnCompleted_CB3373E142304A0AC5DE22960B19387D Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -986,6 +1453,26 @@ void AChar_Dragon_BroodWatcher_C::OnInterrupted_45BA59314E10CB3E47E6A19C6BBA884E
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnInterrupted_5E1ED5504941B6D74BAC268F2EA93C3E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnInterrupted_5E1ED5504941B6D74BAC268F2EA93C3E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnInterrupted_5E1ED5504941B6D74BAC268F2EA93C3E");
+
+	Params::Char_Dragon_BroodWatcher_C_OnInterrupted_5E1ED5504941B6D74BAC268F2EA93C3E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnInterrupted_977E1ACF4EB9DB9761904AA70C9B60CB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -999,6 +1486,26 @@ void AChar_Dragon_BroodWatcher_C::OnInterrupted_977E1ACF4EB9DB9761904AA70C9B60CB
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnInterrupted_977E1ACF4EB9DB9761904AA70C9B60CB");
 
 	Params::Char_Dragon_BroodWatcher_C_OnInterrupted_977E1ACF4EB9DB9761904AA70C9B60CB Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnInterrupted_CB3373E142304A0AC5DE22960B19387D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnInterrupted_CB3373E142304A0AC5DE22960B19387D(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnInterrupted_CB3373E142304A0AC5DE22960B19387D");
+
+	Params::Char_Dragon_BroodWatcher_C_OnInterrupted_CB3373E142304A0AC5DE22960B19387D Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -1174,6 +1681,26 @@ void AChar_Dragon_BroodWatcher_C::OnNotifyBegin_45BA59314E10CB3E47E6A19C6BBA884E
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyBegin_5E1ED5504941B6D74BAC268F2EA93C3E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnNotifyBegin_5E1ED5504941B6D74BAC268F2EA93C3E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyBegin_5E1ED5504941B6D74BAC268F2EA93C3E");
+
+	Params::Char_Dragon_BroodWatcher_C_OnNotifyBegin_5E1ED5504941B6D74BAC268F2EA93C3E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyBegin_977E1ACF4EB9DB9761904AA70C9B60CB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1187,6 +1714,26 @@ void AChar_Dragon_BroodWatcher_C::OnNotifyBegin_977E1ACF4EB9DB9761904AA70C9B60CB
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyBegin_977E1ACF4EB9DB9761904AA70C9B60CB");
 
 	Params::Char_Dragon_BroodWatcher_C_OnNotifyBegin_977E1ACF4EB9DB9761904AA70C9B60CB Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyBegin_CB3373E142304A0AC5DE22960B19387D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnNotifyBegin_CB3373E142304A0AC5DE22960B19387D(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyBegin_CB3373E142304A0AC5DE22960B19387D");
+
+	Params::Char_Dragon_BroodWatcher_C_OnNotifyBegin_CB3373E142304A0AC5DE22960B19387D Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -1294,6 +1841,26 @@ void AChar_Dragon_BroodWatcher_C::OnNotifyEnd_45BA59314E10CB3E47E6A19C6BBA884E(c
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyEnd_5E1ED5504941B6D74BAC268F2EA93C3E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnNotifyEnd_5E1ED5504941B6D74BAC268F2EA93C3E(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyEnd_5E1ED5504941B6D74BAC268F2EA93C3E");
+
+	Params::Char_Dragon_BroodWatcher_C_OnNotifyEnd_5E1ED5504941B6D74BAC268F2EA93C3E Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyEnd_977E1ACF4EB9DB9761904AA70C9B60CB
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1307,6 +1874,26 @@ void AChar_Dragon_BroodWatcher_C::OnNotifyEnd_977E1ACF4EB9DB9761904AA70C9B60CB(c
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyEnd_977E1ACF4EB9DB9761904AA70C9B60CB");
 
 	Params::Char_Dragon_BroodWatcher_C_OnNotifyEnd_977E1ACF4EB9DB9761904AA70C9B60CB Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.OnNotifyEnd_CB3373E142304A0AC5DE22960B19387D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::OnNotifyEnd_CB3373E142304A0AC5DE22960B19387D(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "OnNotifyEnd_CB3373E142304A0AC5DE22960B19387D");
+
+	Params::Char_Dragon_BroodWatcher_C_OnNotifyEnd_CB3373E142304A0AC5DE22960B19387D Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -1354,23 +1941,21 @@ void AChar_Dragon_BroodWatcher_C::OnNotifyEnd_DB2FD6C5454834C97C8757830A80F316(c
 }
 
 
-// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ReceiveAsyncPhysicsTick
-// (Event, Public, BlueprintEvent)
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.PickupEgg
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   SimSeconds                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ASpawn_DragonNest_C*              Nest                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::ReceiveAsyncPhysicsTick(float DeltaSeconds, float SimSeconds)
+void AChar_Dragon_BroodWatcher_C::PickupEgg(class ASpawn_DragonNest_C* Nest)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ReceiveAsyncPhysicsTick");
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "PickupEgg");
 
-	Params::Char_Dragon_BroodWatcher_C_ReceiveAsyncPhysicsTick Parms{};
+	Params::Char_Dragon_BroodWatcher_C_PickupEgg Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
-	Parms.SimSeconds = SimSeconds;
+	Parms.Nest = Nest;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1410,6 +1995,104 @@ void AChar_Dragon_BroodWatcher_C::ReceiveHit(class UPrimitiveComponent* MyComp, 
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.RemoteTick
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::RemoteTick(double DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "RemoteTick");
+
+	Params::Char_Dragon_BroodWatcher_C_RemoteTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.RemoveEgg
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceLocalSave                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::RemoveEgg(int32 Index_0, bool ForceLocalSave)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "RemoveEgg");
+
+	Params::Char_Dragon_BroodWatcher_C_RemoveEgg Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.ForceLocalSave = ForceLocalSave;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.RemoveEggFromInvitePool
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::RemoveEggFromInvitePool(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "RemoveEggFromInvitePool");
+
+	Params::Char_Dragon_BroodWatcher_C_RemoveEggFromInvitePool Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.RequestDiscardEgg
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsEgg2                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    WantsLocalSave                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::RequestDiscardEgg(bool IsEgg2, bool WantsLocalSave)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "RequestDiscardEgg");
+
+	Params::Char_Dragon_BroodWatcher_C_RequestDiscardEgg Parms{};
+
+	Parms.IsEgg2 = IsEgg2;
+	Parms.WantsLocalSave = WantsLocalSave;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.SaveBroodPouch
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::SaveBroodPouch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "SaveBroodPouch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerAttemptEnhanceStat
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1432,6 +2115,62 @@ void AChar_Dragon_BroodWatcher_C::ServerAttemptEnhanceStat(uint8 EggIndex, uint8
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerBeginPlay
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::ServerBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ServerBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerBroodInteraction
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASpawn_DragonNest_C*              Nest                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::ServerBroodInteraction(class ASpawn_DragonNest_C* Nest)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ServerBroodInteraction");
+
+	Params::Char_Dragon_BroodWatcher_C_ServerBroodInteraction Parms{};
+
+	Parms.Nest = Nest;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerChangeEggGender
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsRightEgg2R1                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewGender                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::ServerChangeEggGender(bool IsRightEgg2R1, bool NewGender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ServerChangeEggGender");
+
+	Params::Char_Dragon_BroodWatcher_C_ServerChangeEggGender Parms{};
+
+	Parms.IsRightEgg2R1 = IsRightEgg2R1;
+	Parms.NewGender = NewGender;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerGlideJump
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
@@ -1446,15 +2185,55 @@ void AChar_Dragon_BroodWatcher_C::ServerGlideJump()
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerOnPossessed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::ServerOnPossessed(class AController* Controller_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ServerOnPossessed");
+
+	Params::Char_Dragon_BroodWatcher_C_ServerOnPossessed Parms{};
+
+	Parms.Controller_0 = Controller_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.ServerRequestPouchInterface
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ADragonsPC_C*                     Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Dragon_BroodWatcher_C::ServerRequestPouchInterface()
+void AChar_Dragon_BroodWatcher_C::ServerRequestPouchInterface(class ADragonsPC_C* Target)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "ServerRequestPouchInterface");
+
+	Params::Char_Dragon_BroodWatcher_C_ServerRequestPouchInterface Parms{};
+
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.SetPouchEmission
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AChar_Dragon_BroodWatcher_C::SetPouchEmission()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "SetPouchEmission");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1546,6 +2325,32 @@ void AChar_Dragon_BroodWatcher_C::Timeline_0__UpdateFunc()
 		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "Timeline_0__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.TraceForSafeSpawn
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   SpawnLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   AlternateLocation                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         SafeLocation                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::TraceForSafeSpawn(const struct FVector& SpawnLocation, const struct FVector& AlternateLocation, struct FVector* SafeLocation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "TraceForSafeSpawn");
+
+	Params::Char_Dragon_BroodWatcher_C_TraceForSafeSpawn Parms{};
+
+	Parms.SpawnLocation = std::move(SpawnLocation);
+	Parms.AlternateLocation = std::move(AlternateLocation);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SafeLocation != nullptr)
+		*SafeLocation = std::move(Parms.SafeLocation);
 }
 
 }

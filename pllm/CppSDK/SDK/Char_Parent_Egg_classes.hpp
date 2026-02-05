@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_Egg.Char_Parent_Egg_C
-// 0x0020 (0x1110 - 0x10F0)
+// 0x0020 (0x1120 - 0x1100)
 #pragma pack(push, 0x1)
 class alignas(0x10) AChar_Parent_Egg_C : public AChar_Parent_Dragonkind_C
 {
 public:
-	uint8                                         Pad_10E3[0x5];                                     // 0x10E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_Egg_C;                  // 0x10E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          IsHatched;                                         // 0x10F0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldHatch;                                       // 0x10F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldSpawnGlowing;                                // 0x10F2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_10F3[0x5];                                     // 0x10F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 RPName;                                            // 0x10F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	uint8                                         Pad_10F5[0x3];                                     // 0x10F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_Egg_C;                  // 0x10F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          IsHatched;                                         // 0x1100(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldHatch;                                       // 0x1101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldSpawnGlowing;                                // 0x1102(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_1103[0x5];                                     // 0x1103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 RPName;                                            // 0x1108(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AnimateHatch();

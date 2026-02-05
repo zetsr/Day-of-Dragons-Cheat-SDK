@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Enum_ServerType_structs.hpp"
-#include "Engine_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 
 
 namespace SDK

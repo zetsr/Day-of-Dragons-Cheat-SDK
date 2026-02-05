@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params

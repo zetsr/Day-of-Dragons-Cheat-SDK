@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Spawn_DragonNest_AcidSpitter.Spawn_DragonNest_AcidSpitter_C
-// 0x0000 (0x0898 - 0x0898)
+// 0x0000 (0x08A0 - 0x08A0)
 class ASpawn_DragonNest_AcidSpitter_C final : public ASpawn_DragonNest_C
 {
 public:

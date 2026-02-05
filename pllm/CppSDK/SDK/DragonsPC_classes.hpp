@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Dragons_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Struct_Destination_structs.hpp"
-#include "Enum_PlayerCharacter_structs.hpp"
 #include "Struct_SavePlayerData_structs.hpp"
-#include "Enum_ChatChannel_structs.hpp"
-#include "Struct_EmitterTimeLoc_structs.hpp"
 #include "Struct_AdminPlayerArrayInfo_structs.hpp"
+#include "Enum_ChatChannel_structs.hpp"
+#include "Enum_PlayerCharacter_structs.hpp"
+#include "Struct_EmitterTimeLoc_structs.hpp"
 #include "FMODStudio_structs.hpp"
-#include "Enum_MapRegion_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
+#include "Dragons_classes.hpp"
+#include "Enum_MapRegion_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
 #include "Enum_KickReason_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_Species_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "Enum_Unlockables_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "Enum_ItemRarity_structs.hpp"
 
 
@@ -189,7 +189,7 @@ public:
 	void CheckPawnStreamLevel(class APawn* PawnPending_0, class FName* StreamLevel);
 	void ClanAnnouncement(const class FString& Message);
 	void ClearStoredCharacter();
-	void ClientCreatePouchInterface(bool HasEgg1, const struct FStruct_PlayerEggInfo& Egg1, bool HasEgg2, const struct FStruct_PlayerEggInfo& Egg2);
+	void ClientCreatePouchInterface(bool HasEggL0, const struct FStruct_PlayerEggInfo& EggL0, bool HasEggR1, const struct FStruct_PlayerEggInfo& EggR1);
 	void ClientReceivePlayerArrayStruct(const TArray<struct FStruct_AdminPlayerArrayInfo>& Struct);
 	void CloseDialogue();
 	void Completed_09DCD32941DCE3EF6DD2DC954234B9E7(class USaveGame* SaveGame, bool bSuccess);
@@ -278,6 +278,7 @@ public:
 	void LoadSave(bool IsRespawning);
 	void LogPrintAdminCmdActivity(const class FString& ActivityName);
 	void LogPrintAdminCmdToPlayer(class ADragonsPS_C* DragonsPlayerState, const class FString& CommandName);
+	void LogPrintChatLog(bool IsSenderAdmin, bool IsWhisper, const class FString& chat);
 	void LogPrintPlayerKill(class ADragonsPS_C* DragonsPlayerState, const class FString& Info);
 	void LoopAdminPlayerArrayInfo(TArray<struct FStruct_AdminPlayerArrayInfo>* StructArray);
 	void LoopSpawnFireLocations(TArray<struct FVector>& Locations, int32 MaxSpawns, double ToleranceInCM);
@@ -308,6 +309,7 @@ public:
 	void PortTravelPawn();
 	void PrepShowAdminPanel();
 	void PrintCurrentQuest();
+	void PrivateChat(const class FString& SteamID_0, const class FString& Message);
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveLocalChat(const class FString& User, bool IsAdmin_0, bool IsDev_0, const class FString& Message, bool IsJrakhonic);
@@ -336,10 +338,11 @@ public:
 	void RequestBanPlayer(class ADragonsPS_C* PlayerState_0);
 	void RequestClearCorpses();
 	void RequestKickPlayer(class ADragonsPS_C* PlayerState_0);
-	void RequestNestInterface(class ASpawn_DragonNest_C* DragonNest);
+	void RequestNestInterface(class ASpawn_DragonNest_C* DragonNest, class AChar_Parent_Dragonkind_C* RequestingActor);
 	void RequestNumPlayers();
 	void Respawn(bool ShouldDeleteRespawn);
 	void RespawnAsEgg();
+	void RespawnFromBroodPouch(class AChar_Dragon_BroodWatcher_C* BroodWatcherInviter, const struct FVector& SpawnLocation_0, bool ShouldKillOld, class AChar_Parent_Dragonkind_C* DragonInvitee);
 	void RespawnStoredCharacter();
 	void RestorePlayerCharacter(class ADragonsPS_C* DragonsPS);
 	void RestorePlayerData(const struct FVector& NewLocation, const struct FStruct_SavePlayerData& PlayerData, struct FStruct_SavePlayerData* PlayerDataNewLoc);
@@ -388,6 +391,7 @@ public:
 	void ToggleFlagPVP();
 	void ToggleImmunity(bool ForceOn, bool ForceOff);
 	void ToggleTags(const class FString& Key);
+	void TraceForSafeSpawn(const struct FVector& SpawnLocation_0, const struct FVector& AlternateLocation, struct FVector* SafeLocation);
 	void TryAddBroodQuestCount();
 	void TryAddBroodUnlockProgress();
 	void TryUnlockBroodWatcher();

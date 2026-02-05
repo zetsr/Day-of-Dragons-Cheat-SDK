@@ -59,6 +59,54 @@ void ADragonsPS_C::AcceptEggInvite()
 }
 
 
+// Function DragonsPS.DragonsPS_C.CheckIfSteamIdInSameClan
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FName                             OtherSteamID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsClanmate                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPS_C::CheckIfSteamIdInSameClan(class FName OtherSteamID, bool* IsClanmate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPS_C", "CheckIfSteamIdInSameClan");
+
+	Params::DragonsPS_C_CheckIfSteamIdInSameClan Parms{};
+
+	Parms.OtherSteamID = OtherSteamID;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsClanmate != nullptr)
+		*IsClanmate = Parms.IsClanmate;
+}
+
+
+// Function DragonsPS.DragonsPS_C.CheckIfSteamIdInSameGroup
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FName                             OtherSteamID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsGrouped                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPS_C::CheckIfSteamIdInSameGroup(class FName OtherSteamID, bool* IsGrouped)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPS_C", "CheckIfSteamIdInSameGroup");
+
+	Params::DragonsPS_C_CheckIfSteamIdInSameGroup Parms{};
+
+	Parms.OtherSteamID = OtherSteamID;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsGrouped != nullptr)
+		*IsGrouped = Parms.IsGrouped;
+}
+
+
 // Function DragonsPS.DragonsPS_C.ClanCmdKick
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -680,6 +728,28 @@ void ADragonsPS_C::NotifyOwnerClanCreated(bool Success, class FName Prompt)
 }
 
 
+// Function DragonsPS.DragonsPS_C.OnBroodDiscardEgg_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   EggLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AChar_Dragon_BroodWatcher_C*      BroodWatcher                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPS_C::OnBroodDiscardEgg_Event(const struct FVector& EggLocation, class AChar_Dragon_BroodWatcher_C* BroodWatcher)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPS_C", "OnBroodDiscardEgg_Event");
+
+	Params::DragonsPS_C_OnBroodDiscardEgg_Event Parms{};
+
+	Parms.EggLocation = std::move(EggLocation);
+	Parms.BroodWatcher = BroodWatcher;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsPS.DragonsPS_C.OnRep_ClanID
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1071,8 +1141,9 @@ void ADragonsPS_C::SendClanInvite(class ADragonsPS_C* DragonsPlayerState)
 // bool                                    OverrideGender                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    NewGender                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // uint8                                   EggIndex                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsFromPouch                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ADragonsPS_C::SendEggInvite(class ADragonsPS_C* DragonsPS, bool OverrideGender, bool NewGender, uint8 EggIndex)
+void ADragonsPS_C::SendEggInvite(class ADragonsPS_C* DragonsPS, bool OverrideGender, bool NewGender, uint8 EggIndex, bool IsFromPouch)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1085,6 +1156,7 @@ void ADragonsPS_C::SendEggInvite(class ADragonsPS_C* DragonsPS, bool OverrideGen
 	Parms.OverrideGender = OverrideGender;
 	Parms.NewGender = NewGender;
 	Parms.EggIndex = EggIndex;
+	Parms.IsFromPouch = IsFromPouch;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

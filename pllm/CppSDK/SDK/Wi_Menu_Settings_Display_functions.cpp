@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C.ExecuteUbergraph_Wi_Menu_Settings_Display
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Menu_Settings_Display_C::ExecuteUbergraph_Wi_Menu_Settings_Display(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Menu_Settings_Display_C", "ExecuteUbergraph_Wi_Menu_Settings_Display");
+
+	Params::Wi_Menu_Settings_Display_C_ExecuteUbergraph_Wi_Menu_Settings_Display Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C.GetbIsEnabled
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -94,6 +114,20 @@ ESlateVisibility UWi_Menu_Settings_Display_C::GetVisibility_0()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Menu_Settings_Display.Wi_Menu_Settings_Display_C.RunPreSetupFunctions
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWi_Menu_Settings_Display_C::RunPreSetupFunctions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Menu_Settings_Display_C", "RunPreSetupFunctions");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

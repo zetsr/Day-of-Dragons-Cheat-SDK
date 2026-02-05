@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Wi_Egg_Status.Wi_Egg_Status_C.BndEvt__Wi_Egg_Status_FlagEggBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWi_Egg_Status_C::BndEvt__Wi_Egg_Status_FlagEggBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Status_C", "BndEvt__Wi_Egg_Status_FlagEggBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Wi_Egg_Status.Wi_Egg_Status_C.BndEvt__Wi_Egg_Status_InviteBtn_Female_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -140,6 +154,46 @@ struct FSlateBrush UWi_Egg_Status_C::Get_EggImage_Brush()
 		Func = Class->GetFunction("Wi_Egg_Status_C", "Get_EggImage_Brush");
 
 	Params::Wi_Egg_Status_C_Get_EggImage_Brush Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Status.Wi_Egg_Status_C.Get_FlagEggBtn_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Egg_Status_C::Get_FlagEggBtn_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Status_C", "Get_FlagEggBtn_ToolTipWidget");
+
+	Params::Wi_Egg_Status_C_Get_FlagEggBtn_ToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Egg_Status.Wi_Egg_Status_C.Get_FlagL_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWi_Egg_Status_C::Get_FlagL_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Status_C", "Get_FlagL_Visibility");
+
+	Params::Wi_Egg_Status_C_Get_FlagL_Visibility Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

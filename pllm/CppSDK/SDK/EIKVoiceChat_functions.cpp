@@ -118,10 +118,10 @@ void UEVIK_Functions::ConnectVoiceChat(const class UObject* WorldContextObject, 
 // Parameters:
 // const class FString&                    VoiceRoomName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    PlayerName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ClientIp                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ClientIP                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(bool bWasSuccess, const class FString& RoomData)>&Result                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UEVIK_Functions::EOSRoomToken(const class FString& VoiceRoomName, const class FString& PlayerName, const class FString& ClientIp, const TDelegate<void(bool bWasSuccess, const class FString& RoomData)>& Result)
+void UEVIK_Functions::EOSRoomToken(const class FString& VoiceRoomName, const class FString& PlayerName, const class FString& ClientIP, const TDelegate<void(bool bWasSuccess, const class FString& RoomData)>& Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -132,7 +132,7 @@ void UEVIK_Functions::EOSRoomToken(const class FString& VoiceRoomName, const cla
 
 	Parms.VoiceRoomName = std::move(VoiceRoomName);
 	Parms.PlayerName = std::move(PlayerName);
-	Parms.ClientIp = std::move(ClientIp);
+	Parms.ClientIP = std::move(ClientIP);
 	Parms.Result = Result;
 
 	auto Flgs = Func->FunctionFlags;

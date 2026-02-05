@@ -25,17 +25,6 @@ public:
 };
 DUMPER7_ASSERTS_FTrackRenderData;
 
-// ScriptStruct GeometryCache.NiagaraGeometryCacheReference
-// 0x0038 (0x0038 - 0x0000)
-struct FNiagaraGeometryCacheReference final
-{
-public:
-	class UGeometryCache*                         GeometryCache;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNiagaraUserParameterBinding           GeometryCacheUserParamBinding;                     // 0x0008(0x0020)(Edit, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FNiagaraGeometryCacheReference;
-
 // ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
 // 0x000C (0x000C - 0x0000)
 struct alignas(0x04) FGeometryCacheMeshBatchInfo final
@@ -62,6 +51,17 @@ public:
 	uint8                                         Pad_0[0xC8];                                       // 0x0000(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGeometryCacheMeshData;
+
+// ScriptStruct GeometryCache.NiagaraGeometryCacheReference
+// 0x0038 (0x0038 - 0x0000)
+struct FNiagaraGeometryCacheReference final
+{
+public:
+	class UGeometryCache*                         GeometryCache;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNiagaraUserParameterBinding           GeometryCacheUserParamBinding;                     // 0x0008(0x0020)(Edit, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FNiagaraGeometryCacheReference;
 
 }
 

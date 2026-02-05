@@ -78,5 +78,19 @@ void UWi_Parent_Menu_C::ExecuteUbergraph_Wi_Parent_Menu(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function Wi_Parent_Menu.Wi_Parent_Menu_C.RunPreSetupFunctions
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWi_Parent_Menu_C::RunPreSetupFunctions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Parent_Menu_C", "RunPreSetupFunctions");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

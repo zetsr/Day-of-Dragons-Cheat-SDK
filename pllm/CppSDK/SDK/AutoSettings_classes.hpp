@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 #include "AutoSettings_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 

@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Wyvern_SingeCrest.Char_Wyvern_SingeCrest_C
-// 0x0030 (0x1120 - 0x10F0)
+// 0x0030 (0x1130 - 0x1100)
 class AChar_Wyvern_SingeCrest_C final : public AChar_Parent_Wyvern_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Wyvern_SingeCrest_C;           // 0x10F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          UseLookAt;                                         // 0x10F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10F9[0x7];                                     // 0x10F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LookAtPoint;                                       // 0x1100(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MembraneMorphMultiplier;                           // 0x1118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Wyvern_SingeCrest_C;           // 0x1100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseLookAt;                                         // 0x1108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1109[0x7];                                     // 0x1109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LookAtPoint;                                       // 0x1110(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MembraneMorphMultiplier;                           // 0x1128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Char_Wyvern_SingeCrest(int32 EntryPoint);

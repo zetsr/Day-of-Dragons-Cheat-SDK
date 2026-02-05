@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AdvancedEffectFeaturesNoCustomDepth_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "AdvancedEffectFeatures_structs.hpp"
+#include "AdvancedEffectFeaturesNoCustomDepth_structs.hpp"
 #include "LOOKCGStruct_structs.hpp"
+#include "AdvancedEffectFeatures_structs.hpp"
 
 
 namespace SDK::Params

@@ -12,13 +12,14 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C
-// 0x00A0 (0x0320 - 0x0280)
+// 0x00B0 (0x0330 - 0x0280)
 class UWi_Pouch_EggEnhancementSheet_C final : public UUserWidget
 {
 public:
@@ -42,8 +43,13 @@ public:
 	class UButton*                                ToxinTolerBtn;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                VenomResistBtn;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                WaterRetentBtn;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWi_PouchInterface_C*                   BroodingPouch;                                     // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTryAgain;                                       // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCritEvenPossible;                                // 0x0329(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRightEggR1;                                      // 0x032A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void AddDelay();
 	void BndEvt__Wi_Pouch_EggEnhancementSheet_AcidResistBtn_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Wi_Pouch_EggEnhancementSheet_BileProdBtn_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Wi_Pouch_EggEnhancementSheet_BiteForceBtn_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature();
@@ -65,7 +71,28 @@ public:
 	void Construct();
 	void Destruct();
 	void ExecuteUbergraph_Wi_Pouch_EggEnhancementSheet(int32 EntryPoint);
+	bool Get_AcidResistBtn_bIsEnabled();
 	struct FSlateBrush Get_BG_Background();
+	bool Get_BileProdBtn_bIsEnabled();
+	bool Get_BiteForceBtn_bIsEnabled();
+	bool Get_EnduranceBtn_bIsEnabled();
+	bool Get_FireResistBtn_bIsEnabled();
+	bool Get_FrostResistBtn_bIsEnabled();
+	bool Get_ImpactResistBtn_bIsEnabled();
+	bool Get_LifeExpectBtn_bIsEnabled();
+	bool Get_LightningResistBtn_bIsEnabled();
+	bool Get_NutrientAbsorbBtn_bIsEnabled();
+	bool Get_PierceResistBtn_bIsEnabled();
+	bool Get_PlasmaResistBtn_bIsEnabled();
+	bool Get_PowerBtn_bIsEnabled();
+	bool Get_ScaleThickBtn_bIsEnabled();
+	bool Get_StrengthBtn_bIsEnabled();
+	bool Get_ToxinTolerBtn_bIsEnabled();
+	bool Get_VenomResistBtn_bIsEnabled();
+	bool Get_WaterRetentBtn_bIsEnabled();
+	void GetBQStat(Enum_GeneticGrades* OverallQuality);
+	void GetEggStats(uint8 StatIndex, Enum_GeneticGrades* Stat);
+	void GetIsCritPossible(bool* Return);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:

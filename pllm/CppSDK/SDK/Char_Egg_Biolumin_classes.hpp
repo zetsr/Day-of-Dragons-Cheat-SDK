@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Egg_Biolumin.Char_Egg_Biolumin_C
-// 0x0020 (0x1130 - 0x1110)
+// 0x0020 (0x1140 - 0x1120)
 class AChar_Egg_Biolumin_C final : public AChar_Parent_Egg_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Egg_Biolumin_C;                // 0x1108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   EmbryoMesh;                                        // 0x1110(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         TimelineOpacity_Time_90FEE1124D8B3B225BF8CA807D16B680; // 0x1118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            TimelineOpacity__Direction_90FEE1124D8B3B225BF8CA807D16B680; // 0x111C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111D[0x3];                                     // 0x111D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     TimelineOpacity;                                   // 0x1120(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Egg_Biolumin_C;                // 0x1118(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   EmbryoMesh;                                        // 0x1120(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         TimelineOpacity_Time_90FEE1124D8B3B225BF8CA807D16B680; // 0x1128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            TimelineOpacity__Direction_90FEE1124D8B3B225BF8CA807D16B680; // 0x112C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_112D[0x3];                                     // 0x112D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     TimelineOpacity;                                   // 0x1130(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimateHatch();

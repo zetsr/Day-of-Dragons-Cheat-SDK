@@ -114,6 +114,7 @@ public:
 	static class FString FloatKey();
 	static class FString Int32Key();
 	static void LogPrint(class UObject* WorldContextObject, const class FString& InString, bool bPrintWarning);
+	static void LogPrintAsync(class UObject* WorldContextObject, const class FString& InString, bool bPrintWarning);
 	static class FString NameKey();
 	static class FString RotatorKey();
 	static void ShutDown();

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "Slate_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -28,14 +28,16 @@ enum class EBindingCaptureMode : uint8
 	EBindingCaptureMode_MAX                  = 2,
 };
 
-// ScriptStruct AutoSettingsInput.MappingGroupLink
-// 0x0010 (0x0010 - 0x0000)
-struct FMappingGroupLink final
+// ScriptStruct AutoSettingsInput.KeyScale
+// 0x0020 (0x0020 - 0x0000)
+struct FKeyScale final
 {
 public:
-	TArray<int32>                                 MappingGroups;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMappingGroupLink;
+DUMPER7_ASSERTS_FKeyScale;
 
 // ScriptStruct AutoSettingsInput.CapturedInput
 // 0x0028 (0x0028 - 0x0000)
@@ -82,16 +84,14 @@ public:
 };
 DUMPER7_ASSERTS_FKeyGroup;
 
-// ScriptStruct AutoSettingsInput.KeyScale
-// 0x0020 (0x0020 - 0x0000)
-struct FKeyScale final
+// ScriptStruct AutoSettingsInput.MappingGroupLink
+// 0x0010 (0x0010 - 0x0000)
+struct FMappingGroupLink final
 {
 public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 MappingGroups;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKeyScale;
+DUMPER7_ASSERTS_FMappingGroupLink;
 
 // ScriptStruct AutoSettingsInput.AxisAssociation
 // 0x0050 (0x0050 - 0x0000)

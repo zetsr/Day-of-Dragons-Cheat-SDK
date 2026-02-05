@@ -107,19 +107,19 @@ void UW_BroodingPanel_C::ExecuteUbergraph_W_BroodingPanel(int32 EntryPoint)
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.Get_Egg1L_Visibility
+// Function W_BroodingPanel.W_BroodingPanel_C.Get_B_EggL0_bIsEnabled
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UW_BroodingPanel_C::Get_Egg1L_Visibility()
+bool UW_BroodingPanel_C::Get_B_EggL0_bIsEnabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "Get_Egg1L_Visibility");
+		Func = Class->GetFunction("W_BroodingPanel_C", "Get_B_EggL0_bIsEnabled");
 
-	Params::W_BroodingPanel_C_Get_Egg1L_Visibility Parms{};
+	Params::W_BroodingPanel_C_Get_B_EggL0_bIsEnabled Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -127,19 +127,19 @@ ESlateVisibility UW_BroodingPanel_C::Get_Egg1L_Visibility()
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.Get_Egg2R_Visibility
+// Function W_BroodingPanel.W_BroodingPanel_C.Get_B_EggR1_bIsEnabled
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UW_BroodingPanel_C::Get_Egg2R_Visibility()
+bool UW_BroodingPanel_C::Get_B_EggR1_bIsEnabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "Get_Egg2R_Visibility");
+		Func = Class->GetFunction("W_BroodingPanel_C", "Get_B_EggR1_bIsEnabled");
 
-	Params::W_BroodingPanel_C_Get_Egg2R_Visibility Parms{};
+	Params::W_BroodingPanel_C_Get_B_EggR1_bIsEnabled Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -147,19 +147,19 @@ ESlateVisibility UW_BroodingPanel_C::Get_Egg2R_Visibility()
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_1L
+// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_L0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FSlateBrush UW_BroodingPanel_C::GetBrush_1L()
+struct FSlateBrush UW_BroodingPanel_C::GetBrush_L0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "GetBrush_1L");
+		Func = Class->GetFunction("W_BroodingPanel_C", "GetBrush_L0");
 
-	Params::W_BroodingPanel_C_GetBrush_1L Parms{};
+	Params::W_BroodingPanel_C_GetBrush_L0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -167,19 +167,19 @@ struct FSlateBrush UW_BroodingPanel_C::GetBrush_1L()
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_2R
+// Function W_BroodingPanel.W_BroodingPanel_C.GetBrush_R1
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateBrush                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FSlateBrush UW_BroodingPanel_C::GetBrush_2R()
+struct FSlateBrush UW_BroodingPanel_C::GetBrush_R1()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "GetBrush_2R");
+		Func = Class->GetFunction("W_BroodingPanel_C", "GetBrush_R1");
 
-	Params::W_BroodingPanel_C_GetBrush_2R Parms{};
+	Params::W_BroodingPanel_C_GetBrush_R1 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -187,19 +187,19 @@ struct FSlateBrush UW_BroodingPanel_C::GetBrush_2R()
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_1L
+// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_L0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FSlateColor UW_BroodingPanel_C::GetColorAndOpacity_1L()
+struct FSlateColor UW_BroodingPanel_C::GetColorAndOpacity_L0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "GetColorAndOpacity_1L");
+		Func = Class->GetFunction("W_BroodingPanel_C", "GetColorAndOpacity_L0");
 
-	Params::W_BroodingPanel_C_GetColorAndOpacity_1L Parms{};
+	Params::W_BroodingPanel_C_GetColorAndOpacity_L0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -207,19 +207,19 @@ struct FSlateColor UW_BroodingPanel_C::GetColorAndOpacity_1L()
 }
 
 
-// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_2R
+// Function W_BroodingPanel.W_BroodingPanel_C.GetColorAndOpacity_R1
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FSlateColor                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FSlateColor UW_BroodingPanel_C::GetColorAndOpacity_2R()
+struct FSlateColor UW_BroodingPanel_C::GetColorAndOpacity_R1()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "GetColorAndOpacity_2R");
+		Func = Class->GetFunction("W_BroodingPanel_C", "GetColorAndOpacity_R1");
 
-	Params::W_BroodingPanel_C_GetColorAndOpacity_2R Parms{};
+	Params::W_BroodingPanel_C_GetColorAndOpacity_R1 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -242,28 +242,6 @@ void UW_BroodingPanel_C::SendEggInvite(class ADragonsPS_C* DragonsPS)
 	Params::W_BroodingPanel_C_SendEggInvite Parms{};
 
 	Parms.DragonsPS = DragonsPS;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_BroodingPanel.W_BroodingPanel_C.ShowInviteMenu
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// uint8                                   EggIndex                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// Enum_EggGender                          EggGender                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UW_BroodingPanel_C::ShowInviteMenu(uint8 EggIndex, Enum_EggGender EggGender)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_BroodingPanel_C", "ShowInviteMenu");
-
-	Params::W_BroodingPanel_C_ShowInviteMenu Parms{};
-
-	Parms.EggIndex = EggIndex;
-	Parms.EggGender = EggGender;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Enum_PlayerCharacter_structs.hpp"
-#include "Struct_Lineage_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "Struct_StatMutations_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
 #include "Struct_StatRecessives_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_PlayerCharacter_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
+#include "Struct_StatMutations_structs.hpp"
+#include "Struct_Lineage_structs.hpp"
 
 
 namespace SDK
@@ -69,6 +69,8 @@ public:
 	uint8                                         ShimmerSlider_133_C3D5E075404F46AE9513B6A36A48F60F; // 0x0213(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         StaticEmissiveSlider_136_9F3A7A494A5E7E7CA47A169494EDE8D9; // 0x0214(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         SkinPattern_139_4C6C92764B584CA3A3C8518D2DA70735;  // 0x0215(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         EmissiveStaticHue_143_1383B79B4E1F1795D40F6F8F74794E86; // 0x0216(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         EmissiveBaseHue_144_ED3D8FCB433B0E38596C5CBA94E7027A; // 0x0217(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FStruct_SavePlayerData;
 

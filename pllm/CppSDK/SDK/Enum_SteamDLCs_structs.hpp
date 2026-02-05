@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_SteamDLCs.Enum_SteamDLCs
-// NumValues: 0x0017
+// NumValues: 0x0018
 enum class Enum_SteamDLCs : uint8
 {
 	NewEnumerator0                           = 0,
@@ -40,7 +40,8 @@ enum class Enum_SteamDLCs : uint8
 	NewEnumerator18                          = 19,
 	NewEnumerator19                          = 20,
 	NewEnumerator20                          = 21,
-	Enum_MAX                                 = 22,
+	NewEnumerator22                          = 22,
+	Enum_MAX                                 = 23,
 };
 
 }

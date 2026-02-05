@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Enum_ServerType_structs.hpp"
-#include "Enum_MapRegion_structs.hpp"
-#include "Enum_PlayerTitles_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_KickReason_structs.hpp"
-#include "Struct_ClanRegister_structs.hpp"
-#include "Struct_InvitationSocial_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
+#include "Struct_InvitationSocial_structs.hpp"
+#include "Struct_ClanRegister_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
 #include "Struct_InvitationEgg_structs.hpp"
+#include "Enum_PlayerTitles_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
 
 
 namespace SDK
@@ -82,6 +82,8 @@ public:
 	void AcceptedClanInvite();
 	void AcceptedGroupInvite();
 	void AcceptEggInvite();
+	void CheckIfSteamIdInSameClan(class FName OtherSteamID, bool* IsClanmate);
+	void CheckIfSteamIdInSameGroup(class FName OtherSteamID, bool* IsGrouped);
 	void ClanCmdKick(class FName PlayerId_0);
 	void ClanDemoteCmd(class FName SteamID_0);
 	void ClanDisbandCmd();
@@ -115,6 +117,7 @@ public:
 	void NotifyEggInvite(const struct FStruct_InvitationEgg& PendingEggInvite_0);
 	void NotifyGroupInvite(const struct FStruct_InvitationSocial& PendingGroupInvite_0);
 	void NotifyOwnerClanCreated(bool Success, class FName Prompt);
+	void OnBroodDiscardEgg_Event(const struct FVector& EggLocation, class AChar_Dragon_BroodWatcher_C* BroodWatcher);
 	void OnRep_ClanID();
 	void OnRep_ForceNoClan();
 	void OnRep_GroupID();
@@ -138,7 +141,7 @@ public:
 	void SavePlayerInfoNow();
 	void SendClanChatData(const class FString& MessageData);
 	void SendClanInvite(class ADragonsPS_C* DragonsPlayerState);
-	void SendEggInvite(class ADragonsPS_C* DragonsPS, bool OverrideGender, bool NewGender, uint8 EggIndex);
+	void SendEggInvite(class ADragonsPS_C* DragonsPS, bool OverrideGender, bool NewGender, uint8 EggIndex, bool IsFromPouch);
 	void SendGroupChatData(const class FString& MessageData);
 	void SendGroupInvite(class ADragonsPS_C* DragonsPS);
 	void ServerBeginPlay();

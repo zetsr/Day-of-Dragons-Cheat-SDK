@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Species_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

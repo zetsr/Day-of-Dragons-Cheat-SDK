@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Lineage_structs.hpp"
-#include "Struct_SkinRecipes_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "Struct_StatModifiers_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "Enum_Elements_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Struct_PlayerEggInfo_structs.hpp"
+#include "Struct_SkinRecipes_structs.hpp"
+#include "Struct_StatModifiers_structs.hpp"
+#include "Enum_CreatureLevels_structs.hpp"
 #include "Struct_StatRecessives_structs.hpp"
-#include "Struct_PiebaldRecipes_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
+#include "Struct_PlayerEggInfo_structs.hpp"
+#include "Struct_Lineage_structs.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
 #include "Enum_Temperature_structs.hpp"
+#include "Struct_PiebaldRecipes_structs.hpp"
 #include "Enum_Species_structs.hpp"
-#include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_SkinRarity_structs.hpp"
-#include "Enum_Elements_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
 
 
@@ -34,7 +34,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Spawn_DragonNest.Spawn_DragonNest_C
-// 0x0608 (0x0898 - 0x0290)
+// 0x0610 (0x08A0 - 0x0290)
 class ASpawn_DragonNest_C : public AActor
 {
 public:
@@ -135,6 +135,8 @@ public:
 	bool                                          IsWet;                                             // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7F1[0x7];                                      // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_PiebaldRecipes                 PiebaldRecipes;                                    // 0x07F8(0x00A0)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	uint8                                         FlaggedEgg;                                        // 0x0898(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsEggPickupInProgress;                             // 0x0899(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Spawn_DragonNest_TemperatureWeatherStatus_K2Node_ComponentBoundEvent_0_Temperature_Cold__DelegateSignature();
@@ -155,18 +157,22 @@ public:
 	void ChooseRandomSkinMutation(uint8* SkinID);
 	void ChooseSkin(uint8 DameSkin, uint8 SireSkin, uint8 DameSkinRsv, uint8 SireSkinRsv, uint8* EggDominantSkin, uint8* EggRecessiveSkin, bool* IsPatterned, bool* HasMutation);
 	void ClampToA(uint8 InByte, Enum_GeneticGrades* NewParam);
+	void ClearEggPickupInProgress();
 	void ConvertMutationToIconic(uint8 InSkin, uint8* OutSkin);
 	void CraftEgg(int32 EggIndex);
+	void DelayNextEggPickup();
 	void DestroyThisNest();
 	void DigMound(class AAct_EggMound_C* EggMound);
 	void DisplayTooltip();
 	void ExecuteUbergraph_Spawn_DragonNest(int32 EntryPoint);
 	void GestationChecker();
+	void GetBroodEgg(struct FStruct_PlayerEggInfo* EggInfo, uint8* EggIncubationPercent);
 	void GetChanceWeight(Enum_GeneticGrades EggBloodlineQuality, double* ChanceWeight);
 	void GetCreatureLevel(Enum_CreatureLevels* CreatureLevel);
 	void GetDameInfo(Enum_Species* Species, struct FStruct_StatModifiers* DameStats_0, struct FStruct_StatRecessives* DameRecessives_0, bool* DameDominance_0, class FString* DameName, uint8* DameSkinIndex_0, Enum_GrowthStage* DameGrowth_0, class FName* DameID, struct FGuid* DameCUID, uint8* DameSkinRecessive, struct FStruct_Lineage* DameLineage);
 	struct FTransform GetEggSpawnTransform(int32 EggIndex);
 	void GetGene(Enum_GeneticGrades DameGene, Enum_GeneticGrades SireGene, bool PerfectBloodlines, Enum_GeneticGrades EggQuality, bool UseOldMethod, Enum_GeneticGrades* OutGeneDom, Enum_GeneticGrades* OutGeneRsv);
+	void GetIsEggPickupInProgress(bool* Return);
 	void GetIsSkinMutation(uint8 SkinID, bool* IsMutation);
 	void GetNextAvailableEgg(bool UseIndex, int32 EggIndex, struct FStruct_PlayerEggInfo* EggInfo);
 	void GetNumEggsAvailable(int32* EggsAvailable);
@@ -206,6 +212,7 @@ public:
 	void ResetDefaultRotation();
 	void SelfDestructTimer();
 	void ServerOnElementDamage(Enum_Elements DamageType);
+	void SetEggPickupInProgress();
 	void SetNestHealth();
 	void SetWetStatus(bool IsWet_0);
 	void StartGestationTimer();
@@ -217,6 +224,7 @@ public:
 	void Timer4Event();
 	void TryDestroyCorpse();
 	void TryDrop();
+	void TryFlagEggForBrood(uint8 Index_0);
 	void TryLaunchCharacter(const struct FVector& LaunchVelocity, bool XY_Override, bool Z_Override);
 	void TryPickup(class AChar_Parent_Player_C* Player);
 	void UnpauseAllIncubationProgress();

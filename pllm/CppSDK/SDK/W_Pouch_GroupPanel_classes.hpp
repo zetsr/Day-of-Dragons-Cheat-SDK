@@ -31,7 +31,6 @@ public:
 	void Destruct();
 	void ExecuteUbergraph_W_Pouch_GroupPanel(int32 EntryPoint);
 	struct FSlateBrush Get_BG_Background();
-	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

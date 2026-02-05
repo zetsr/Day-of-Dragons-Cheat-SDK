@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Enum_PlayerCharacter_structs.hpp"
-#include "UMG_classes.hpp"
 #include "Enum_Elements_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Enum_Diet_structs.hpp"
+#include "UMG_classes.hpp"
+#include "Enum_PlayerCharacter_structs.hpp"
 #include "Enum_Family_structs.hpp"
 
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Enum_AiGrowth_structs.hpp"
 
 

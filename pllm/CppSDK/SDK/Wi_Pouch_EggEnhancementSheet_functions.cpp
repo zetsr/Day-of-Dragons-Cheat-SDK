@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.AddDelay
+// (BlueprintCallable, BlueprintEvent)
+
+void UWi_Pouch_EggEnhancementSheet_C::AddDelay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "AddDelay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.BndEvt__Wi_Pouch_EggEnhancementSheet_AcidResistBtn_K2Node_ComponentBoundEvent_17_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -317,6 +331,26 @@ void UWi_Pouch_EggEnhancementSheet_C::ExecuteUbergraph_Wi_Pouch_EggEnhancementSh
 }
 
 
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_AcidResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_AcidResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_AcidResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_AcidResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_BG_Background
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -334,6 +368,412 @@ struct FSlateBrush UWi_Pouch_EggEnhancementSheet_C::Get_BG_Background()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_BileProdBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_BileProdBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_BileProdBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_BileProdBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_BiteForceBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_BiteForceBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_BiteForceBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_BiteForceBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_EnduranceBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_EnduranceBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_EnduranceBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_EnduranceBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_FireResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_FireResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_FireResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_FireResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_FrostResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_FrostResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_FrostResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_FrostResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_ImpactResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_ImpactResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_ImpactResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_ImpactResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_LifeExpectBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_LifeExpectBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_LifeExpectBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_LifeExpectBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_LightningResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_LightningResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_LightningResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_LightningResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_NutrientAbsorbBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_NutrientAbsorbBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_NutrientAbsorbBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_NutrientAbsorbBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_PierceResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_PierceResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_PierceResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_PierceResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_PlasmaResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_PlasmaResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_PlasmaResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_PlasmaResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_PowerBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_PowerBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_PowerBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_PowerBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_ScaleThickBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_ScaleThickBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_ScaleThickBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_ScaleThickBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_StrengthBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_StrengthBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_StrengthBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_StrengthBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_ToxinTolerBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_ToxinTolerBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_ToxinTolerBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_ToxinTolerBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_VenomResistBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_VenomResistBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_VenomResistBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_VenomResistBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.Get_WaterRetentBtn_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWi_Pouch_EggEnhancementSheet_C::Get_WaterRetentBtn_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "Get_WaterRetentBtn_bIsEnabled");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_Get_WaterRetentBtn_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.GetBQStat
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// Enum_GeneticGrades*                     OverallQuality                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Pouch_EggEnhancementSheet_C::GetBQStat(Enum_GeneticGrades* OverallQuality)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "GetBQStat");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_GetBQStat Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OverallQuality != nullptr)
+		*OverallQuality = Parms.OverallQuality;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.GetEggStats
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// uint8                                   StatIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_GeneticGrades*                     Stat                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Pouch_EggEnhancementSheet_C::GetEggStats(uint8 StatIndex, Enum_GeneticGrades* Stat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "GetEggStats");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_GetEggStats Parms{};
+
+	Parms.StatIndex = StatIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Stat != nullptr)
+		*Stat = Parms.Stat;
+}
+
+
+// Function Wi_Pouch_EggEnhancementSheet.Wi_Pouch_EggEnhancementSheet_C.GetIsCritPossible
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Pouch_EggEnhancementSheet_C::GetIsCritPossible(bool* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Pouch_EggEnhancementSheet_C", "GetIsCritPossible");
+
+	Params::Wi_Pouch_EggEnhancementSheet_C_GetIsCritPossible Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
 }
 
 

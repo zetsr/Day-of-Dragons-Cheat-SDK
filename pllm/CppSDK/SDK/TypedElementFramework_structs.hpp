@@ -14,15 +14,6 @@
 namespace SDK
 {
 
-// ScriptStruct TypedElementFramework.TypedElementDataStorageTag
-// 0x0001 (0x0001 - 0x0000)
-struct FTypedElementDataStorageTag
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementDataStorageTag;
-
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FScriptTypedElementHandle final
@@ -40,6 +31,15 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementDataStorageColumn;
+
+// ScriptStruct TypedElementFramework.TypedElementDataStorageTag
+// 0x0001 (0x0001 - 0x0000)
+struct FTypedElementDataStorageTag
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementDataStorageTag;
 
 // ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
 // 0x0008 (0x0008 - 0x0000)

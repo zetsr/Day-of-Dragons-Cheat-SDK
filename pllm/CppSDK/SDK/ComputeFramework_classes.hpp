@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ComputeFramework_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ComputeFramework_structs.hpp"
 
 
 namespace SDK
@@ -38,6 +38,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UComputeDataInterface;
+
+// Class ComputeFramework.ComputeKernel
+// 0x0010 (0x0038 - 0x0028)
+class UComputeKernel final : public UObject
+{
+public:
+	class UComputeKernelSource*                   KernelSource;                                      // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         KernelFlags;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComputeKernel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComputeKernel")
+	}
+	static class UComputeKernel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComputeKernel>();
+	}
+};
+DUMPER7_ASSERTS_UComputeKernel;
 
 // Class ComputeFramework.ComputeDataProvider
 // 0x0000 (0x0028 - 0x0028)
@@ -111,31 +136,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UComputeKernelFromText;
-
-// Class ComputeFramework.ComputeKernel
-// 0x0010 (0x0038 - 0x0028)
-class UComputeKernel final : public UObject
-{
-public:
-	class UComputeKernelSource*                   KernelSource;                                      // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         KernelFlags;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComputeKernel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComputeKernel")
-	}
-	static class UComputeKernel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComputeKernel>();
-	}
-};
-DUMPER7_ASSERTS_UComputeKernel;
 
 // Class ComputeFramework.ComputeGraph
 // 0x0068 (0x0090 - 0x0028)

@@ -17,12 +17,11 @@ namespace SDK::Params
 {
 
 // Function W_Pouch_GroupPanel.W_Pouch_GroupPanel_C.ExecuteUbergraph_W_Pouch_GroupPanel
-// 0x0008 (0x0008 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct W_Pouch_GroupPanel_C_ExecuteUbergraph_W_Pouch_GroupPanel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_W_Pouch_GroupPanel_C_ExecuteUbergraph_W_Pouch_GroupPanel;
 
@@ -35,15 +34,6 @@ public:
 	struct FSlateBrush                            CallFunc_GetSkins_PanelMedium_SlateBrush;          // 0x00D0(0x00D0)()
 };
 DUMPER7_ASSERTS_W_Pouch_GroupPanel_C_Get_BG_Background;
-
-// Function W_Pouch_GroupPanel.W_Pouch_GroupPanel_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct W_Pouch_GroupPanel_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_W_Pouch_GroupPanel_C_PreConstruct;
 
 }
 

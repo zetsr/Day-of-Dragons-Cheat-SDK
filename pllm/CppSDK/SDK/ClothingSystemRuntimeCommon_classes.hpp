@@ -12,38 +12,12 @@
 
 #include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
-#include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ClothingSystemRuntimeCommon_structs.hpp"
 
 
 namespace SDK
 {
-
-// Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
-// 0x0140 (0x0168 - 0x0028)
-class UClothLODDataCommon_Legacy final : public UObject
-{
-public:
-	class UClothPhysicalMeshDataBase_Legacy*      PhysicalMeshData;                                  // 0x0028(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FClothPhysicalMeshData                 ClothPhysicalMeshData;                             // 0x0030(0x00D8)(NativeAccessSpecifierPublic)
-	struct FClothCollisionData                    CollisionData;                                     // 0x0108(0x0040)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_148[0x20];                                     // 0x0148(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ClothLODDataCommon_Legacy")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ClothLODDataCommon_Legacy")
-	}
-	static class UClothLODDataCommon_Legacy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothLODDataCommon_Legacy>();
-	}
-};
-DUMPER7_ASSERTS_UClothLODDataCommon_Legacy;
 
 // Class ClothingSystemRuntimeCommon.ClothConfigCommon
 // 0x0000 (0x0028 - 0x0028)
@@ -65,26 +39,6 @@ public:
 };
 DUMPER7_ASSERTS_UClothConfigCommon;
 
-// Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon
-// 0x0000 (0x0028 - 0x0028)
-class UClothSharedConfigCommon : public UClothConfigCommon
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ClothSharedConfigCommon")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ClothSharedConfigCommon")
-	}
-	static class UClothSharedConfigCommon* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothSharedConfigCommon>();
-	}
-};
-DUMPER7_ASSERTS_UClothSharedConfigCommon;
-
 // Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
 // 0x0000 (0x0028 - 0x0028)
 class UClothingAssetCustomData final : public UObject
@@ -104,6 +58,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UClothingAssetCustomData;
+
+// Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon
+// 0x0000 (0x0028 - 0x0028)
+class UClothSharedConfigCommon : public UClothConfigCommon
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothSharedConfigCommon")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothSharedConfigCommon")
+	}
+	static class UClothSharedConfigCommon* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothSharedConfigCommon>();
+	}
+};
+DUMPER7_ASSERTS_UClothSharedConfigCommon;
 
 // Class ClothingSystemRuntimeCommon.ClothingAssetCommon
 // 0x00A8 (0x00F0 - 0x0048)
@@ -135,6 +109,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UClothingAssetCommon;
+
+// Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
+// 0x0140 (0x0168 - 0x0028)
+class UClothLODDataCommon_Legacy final : public UObject
+{
+public:
+	class UClothPhysicalMeshDataBase_Legacy*      PhysicalMeshData;                                  // 0x0028(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FClothPhysicalMeshData                 ClothPhysicalMeshData;                             // 0x0030(0x00D8)(NativeAccessSpecifierPublic)
+	struct FClothCollisionData                    CollisionData;                                     // 0x0108(0x0040)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_148[0x20];                                     // 0x0148(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothLODDataCommon_Legacy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothLODDataCommon_Legacy")
+	}
+	static class UClothLODDataCommon_Legacy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothLODDataCommon_Legacy>();
+	}
+};
+DUMPER7_ASSERTS_UClothLODDataCommon_Legacy;
 
 }
 

@@ -196,6 +196,35 @@ void UDragonsFunctionLibrary::LogPrint(class UObject* WorldContextObject, const 
 }
 
 
+// Function Dragons.DragonsFunctionLibrary.LogPrintAsync
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintWarning                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDragonsFunctionLibrary::LogPrintAsync(class UObject* WorldContextObject, const class FString& InString, bool bPrintWarning)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DragonsFunctionLibrary", "LogPrintAsync");
+
+	Params::DragonsFunctionLibrary_LogPrintAsync Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InString = std::move(InString);
+	Parms.bPrintWarning = bPrintWarning;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Dragons.DragonsFunctionLibrary.NameKey
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:

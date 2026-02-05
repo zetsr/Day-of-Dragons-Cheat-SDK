@@ -403,6 +403,20 @@ void ASpawn_DragonNest_C::ClampToA(uint8 InByte, Enum_GeneticGrades* NewParam)
 }
 
 
+// Function Spawn_DragonNest.Spawn_DragonNest_C.ClearEggPickupInProgress
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ASpawn_DragonNest_C::ClearEggPickupInProgress()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "ClearEggPickupInProgress");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Spawn_DragonNest.Spawn_DragonNest_C.ConvertMutationToIconic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -444,6 +458,20 @@ void ASpawn_DragonNest_C::CraftEgg(int32 EggIndex)
 	Parms.EggIndex = EggIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Spawn_DragonNest.Spawn_DragonNest_C.DelayNextEggPickup
+// (BlueprintCallable, BlueprintEvent)
+
+void ASpawn_DragonNest_C::DelayNextEggPickup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "DelayNextEggPickup");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -526,6 +554,31 @@ void ASpawn_DragonNest_C::GestationChecker()
 		Func = Class->GetFunction("Spawn_DragonNest_C", "GestationChecker");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Spawn_DragonNest.Spawn_DragonNest_C.GetBroodEgg
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FStruct_PlayerEggInfo*           EggInfo                                                (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8*                                  EggIncubationPercent                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASpawn_DragonNest_C::GetBroodEgg(struct FStruct_PlayerEggInfo* EggInfo, uint8* EggIncubationPercent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "GetBroodEgg");
+
+	Params::Spawn_DragonNest_C_GetBroodEgg Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (EggInfo != nullptr)
+		*EggInfo = std::move(Parms.EggInfo);
+
+	if (EggIncubationPercent != nullptr)
+		*EggIncubationPercent = Parms.EggIncubationPercent;
 }
 
 
@@ -691,6 +744,27 @@ void ASpawn_DragonNest_C::GetGene(Enum_GeneticGrades DameGene, Enum_GeneticGrade
 
 	if (OutGeneRsv != nullptr)
 		*OutGeneRsv = Parms.OutGeneRsv;
+}
+
+
+// Function Spawn_DragonNest.Spawn_DragonNest_C.GetIsEggPickupInProgress
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASpawn_DragonNest_C::GetIsEggPickupInProgress(bool* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "GetIsEggPickupInProgress");
+
+	Params::Spawn_DragonNest_C_GetIsEggPickupInProgress Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
 }
 
 
@@ -1430,6 +1504,20 @@ void ASpawn_DragonNest_C::ServerOnElementDamage(Enum_Elements DamageType)
 }
 
 
+// Function Spawn_DragonNest.Spawn_DragonNest_C.SetEggPickupInProgress
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ASpawn_DragonNest_C::SetEggPickupInProgress()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "SetEggPickupInProgress");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Spawn_DragonNest.Spawn_DragonNest_C.SetNestHealth
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1587,6 +1675,26 @@ void ASpawn_DragonNest_C::TryDrop()
 		Func = Class->GetFunction("Spawn_DragonNest_C", "TryDrop");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Spawn_DragonNest.Spawn_DragonNest_C.TryFlagEggForBrood
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASpawn_DragonNest_C::TryFlagEggForBrood(uint8 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spawn_DragonNest_C", "TryFlagEggForBrood");
+
+	Params::Spawn_DragonNest_C_TryFlagEggForBrood Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

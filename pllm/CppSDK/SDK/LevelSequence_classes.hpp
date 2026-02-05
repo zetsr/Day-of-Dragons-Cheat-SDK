@@ -10,18 +10,54 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
-#include "UMG_classes.hpp"
 #include "LevelSequence_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class LevelSequence.LevelSequence
+// 0x01B8 (0x0220 - 0x0068)
+class ULevelSequence : public UMovieSceneSequence
+{
+public:
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieScene*                            MovieScene;                                        // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLevelSequenceObjectReferenceMap       ObjectReferences;                                  // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
+	struct FLevelSequenceBindingReferences        BindingReferences;                                 // 0x00C8(0x00F0)(Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FLevelSequenceObject> PossessedObjects;                               // 0x01B8(0x0050)(Deprecated, Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0210(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+
+public:
+	class UObject* CopyMetaData(class UObject* InMetadata);
+	class UObject* FindOrAddMetaDataByClass(TSubclassOf<class UObject> InClass);
+	void RemoveMetaDataByClass(TSubclassOf<class UObject> InClass);
+
+	class UObject* FindMetaDataByClass(TSubclassOf<class UObject> InClass) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LevelSequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelSequence")
+	}
+	static class ULevelSequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelSequence>();
+	}
+};
+DUMPER7_ASSERTS_ULevelSequence;
 
 // Class LevelSequence.LevelSequenceActor
 // 0x0078 (0x0308 - 0x0290)
@@ -80,42 +116,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ALevelSequenceActor;
-
-// Class LevelSequence.LevelSequence
-// 0x01B8 (0x0220 - 0x0068)
-class ULevelSequence : public UMovieSceneSequence
-{
-public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScene*                            MovieScene;                                        // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLevelSequenceObjectReferenceMap       ObjectReferences;                                  // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
-	struct FLevelSequenceBindingReferences        BindingReferences;                                 // 0x00C8(0x00F0)(Protected, NativeAccessSpecifierProtected)
-	TMap<class FString, struct FLevelSequenceObject> PossessedObjects;                               // 0x01B8(0x0050)(Deprecated, Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0210(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-
-public:
-	class UObject* CopyMetaData(class UObject* InMetadata);
-	class UObject* FindOrAddMetaDataByClass(TSubclassOf<class UObject> InClass);
-	void RemoveMetaDataByClass(TSubclassOf<class UObject> InClass);
-
-	class UObject* FindMetaDataByClass(TSubclassOf<class UObject> InClass) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelSequence")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelSequence")
-	}
-	static class ULevelSequence* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULevelSequence>();
-	}
-};
-DUMPER7_ASSERTS_ULevelSequence;
 
 // Class LevelSequence.DefaultLevelSequenceInstanceData
 // 0x0078 (0x00A0 - 0x0028)

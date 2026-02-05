@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Enum_PlayerCharacter_structs.hpp"
-#include "Enum_MapRegion_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
 #include "Enum_Gender_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
+#include "Enum_PlayerCharacter_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 
 
 namespace SDK

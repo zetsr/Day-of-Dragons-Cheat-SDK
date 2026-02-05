@@ -3378,6 +3378,20 @@ void AChar_Parent_Dragonkind_C::OnReceiveDamage(bool IsHealDmg, bool ShouldYelp,
 }
 
 
+// Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.OnRep_BaseEmissiveHueValue
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Parent_Dragonkind_C::OnRep_BaseEmissiveHueValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "OnRep_BaseEmissiveHueValue");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.OnRep_BleedStacks
 // (BlueprintCallable, BlueprintEvent)
 
@@ -3485,6 +3499,20 @@ void AChar_Parent_Dragonkind_C::OnRep_SkinOverride()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "OnRep_SkinOverride");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.OnRep_StaticEmissiveHueValue
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Parent_Dragonkind_C::OnRep_StaticEmissiveHueValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "OnRep_StaticEmissiveHueValue");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -4036,6 +4064,28 @@ void AChar_Parent_Dragonkind_C::ServerEndPlay()
 }
 
 
+// Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.ServerFlagEggForBrood
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ASpawn_DragonNest_C*              Nest                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// uint8                                   EggIndex                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Parent_Dragonkind_C::ServerFlagEggForBrood(class ASpawn_DragonNest_C* Nest, uint8 EggIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "ServerFlagEggForBrood");
+
+	Params::Char_Parent_Dragonkind_C_ServerFlagEggForBrood Parms{};
+
+	Parms.Nest = Nest;
+	Parms.EggIndex = EggIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.ServerKeepAwakeCarriedActor
 // (BlueprintCallable, BlueprintEvent)
 
@@ -4225,6 +4275,46 @@ void AChar_Parent_Dragonkind_C::SetDamageStatusEffects(bool ShouldBleed, bool Sh
 	Parms.ShouldDecay = ShouldDecay;
 	Parms.ShouldBurn = ShouldBurn;
 	Parms.ShouldStun = ShouldStun;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.SetEmissiveBaseHueValue
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Parent_Dragonkind_C::SetEmissiveBaseHueValue(uint8 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "SetEmissiveBaseHueValue");
+
+	Params::Char_Parent_Dragonkind_C_SetEmissiveBaseHueValue Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.SetEmissiveStaticHueValue
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Parent_Dragonkind_C::SetEmissiveStaticHueValue(uint8 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "SetEmissiveStaticHueValue");
+
+	Params::Char_Parent_Dragonkind_C_SetEmissiveStaticHueValue Parms{};
+
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

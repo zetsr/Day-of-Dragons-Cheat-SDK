@@ -20,11 +20,17 @@ namespace SDK::Params
 {
 
 // Function Wi_Egg_Status.Wi_Egg_Status_C.ExecuteUbergraph_Wi_Egg_Status
-// 0x0004 (0x0004 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct Wi_Egg_Status_C_ExecuteUbergraph_Wi_Egg_Status final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Wi_Egg_Status_C_ExecuteUbergraph_Wi_Egg_Status;
 
@@ -76,6 +82,36 @@ public:
 	double                                        CallFunc_MapRangeClamped_Value_ImplicitCast;       // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Wi_Egg_Status_C_Get_EggImage_Brush;
+
+// Function Wi_Egg_Status.Wi_Egg_Status_C.Get_FlagEggBtn_ToolTipWidget
+// 0x0078 (0x0078 - 0x0000)
+struct Wi_Egg_Status_C_Get_FlagEggBtn_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	Enum_EggWidgetStatus                          Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0010(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0018)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0018)()
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x0060(0x0018)()
+};
+DUMPER7_ASSERTS_Wi_Egg_Status_C_Get_FlagEggBtn_ToolTipWidget;
+
+// Function Wi_Egg_Status.Wi_Egg_Status_C.Get_FlagL_Visibility
+// 0x0006 (0x0006 - 0x0000)
+struct Wi_Egg_Status_C_Get_FlagL_Visibility final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Egg_Status_C_Get_FlagL_Visibility;
 
 // Function Wi_Egg_Status.Wi_Egg_Status_C.Get_InviteBtn_bIsEnabled
 // 0x0001 (0x0001 - 0x0000)
