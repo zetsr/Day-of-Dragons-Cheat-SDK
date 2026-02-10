@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SCUE5_structs.hpp"
-#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Struct_BroodWatcherEggTracker_structs.hpp"
+#include "SCUE5_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Struct_PlayerEggInfo_structs.hpp"
 
 
 namespace SDK

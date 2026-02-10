@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
+#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Enum_YawDirection_structs.hpp"
-#include "InputCore_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 #include "Struct_BroodWatcherEggTracker_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
-#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
+#include "Enum_YawDirection_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "Char_Parent_Dragon_classes.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "Enum_AppliedDamage_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
 
 
 namespace SDK
@@ -95,6 +95,7 @@ public:
 	void ExecuteUbergraph_Char_Dragon_BroodWatcher(int32 EntryPoint);
 	void GetBroodPouch(TArray<struct FStruct_PlayerEggInfo>* BroodingPouchEggs_0);
 	void GetBroodPouchEgg(int32 Index_0, struct FStruct_PlayerEggInfo* Egg);
+	void GetCritFailValue(uint8 Attempts, uint8 Successes, int32* Result, double* SuccessRate);
 	void GetDamageModifiers(double InDamage, Enum_AppliedDamage DamageSource, double* OutDamage);
 	void GetEggLoadDirectories(class FString* EggL0, class FString* EggR1);
 	void GetElementBileCost(uint8* BileCost);

@@ -1,14 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: 名为 dllmain.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 Hack\dllmain.cpp, Minimal-D3D12-Hook-ImGui-1.0.2\Main\dllmain.cpp。
-  dllmain.cpp
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Basic.hpp(845,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
   DrawESP.cpp
 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Basic.hpp(845,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,2): warning C4309: “初始化”: 截断常量值
@@ -19,65 +9,11 @@ C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_
 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,2): warning C4309: “初始化”: 截断常量值
 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-  DrawImGui.cpp
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Basic.hpp(845,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-  ESP.cpp
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Basic.hpp(845,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(68,72): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(70,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(71,24): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(73,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(74,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(75,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(141,26): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(143,72): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(143,47): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(144,79): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\Hack\ESP.cpp(144,51): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-  SDK_Impl.cpp
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Basic.hpp(845,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(3522,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(5811,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6035,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,2): warning C4309: “初始化”: 截断常量值
-C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\CppSDK\SDK\Engine_structs.hpp(6150,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_impl_dx12.cpp
-  imgui_impl_win32.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  dllmain.cpp
-  hook.cpp
-  input.cpp
-  mdx12_globals.cpp
-  render.cpp
-  setup_imgui.cpp
 x64\Release\dllmain.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
     正在创建库 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\x64\Release\pllm.lib 和对象 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\x64\Release\pllm.exp
   正在生成代码
-  2612 of 2621 functions (99.7%) were compiled, the rest were copied from previous compilation.
-    49 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  1 of 2682 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    50 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   pllm.vcxproj -> C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\pllm\x64\Release\pllm.dll

@@ -8,7 +8,7 @@
 namespace g_ESP {
     SDK::APlayerController* GetLocalPC() {
         SDK::UWorld* World = SDK::UWorld::GetWorld();
-        if (!World || !World->OwningGameInstance || World->OwningGameInstance->LocalPlayers.Num() == 0) return nullptr;
+        if (!World || !World->OwningGameInstance || !World->OwningGameInstance->LocalPlayers || World->OwningGameInstance->LocalPlayers.Num() == 0 || !World->OwningGameInstance->LocalPlayers[0]) return nullptr;
         return World->OwningGameInstance->LocalPlayers[0]->PlayerController;
     }
 
@@ -54,7 +54,7 @@ namespace g_ESP {
     }
 
     void DrawOutOfFOV(SDK::AActor* entity, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags) {
-        if (!entity || !LocalPC || !LocalPC->Pawn) return;
+        if (!entity || !LocalPC || !LocalPC->Pawn || !LocalPC->PlayerCameraManager) return;
 
         ImGuiIO& io = ImGui::GetIO();
         ImVec2 screenSize = io.DisplaySize;
@@ -182,14 +182,38 @@ namespace g_ESP {
     }
 
     void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a) {
-        if (!rect.valid) return;
-        auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(entity);
-        if (!PlayerChar || !PlayerChar->PlayerName.IsValid()) return;
-        std::string nameStr = PlayerChar->PlayerName.ToString();
+        if (!rect.valid || !entity) return;
+
+        // 使用 FString 初始化默认显示内容
+        SDK::FString fName = L"未知生物";
+
+        // 1. 尝试作为玩家处理
+        if (entity->IsA(SDK::AChar_Parent_Player_C::StaticClass())) {
+            auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(entity);
+            if (PlayerChar && PlayerChar->PlayerName.IsValid()) {
+                fName = PlayerChar->PlayerName;
+            }
+        }
+        // 2. 否则作为 AI 处理
+        else {
+            auto BaseChar = reinterpret_cast<SDK::AChar_Parent_All_C*>(entity);
+            if (BaseChar) {
+                switch (BaseChar->BiologicalSpecies) {
+                case SDK::Enum_Species::NewEnumerator11: fName = L"小龙虾"; break;
+                case SDK::Enum_Species::NewEnumerator12: fName = L"螃蟹"; break;
+                case SDK::Enum_Species::NewEnumerator17: fName = L"鳄鱼"; break;
+                default: fName = L"AI生物"; break;
+                }
+            }
+        }
+
+        std::string utf8Name = fName.ToString();
+
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
-        ImVec2 textSize = ImGui::CalcTextSize(nameStr.c_str());
+        ImVec2 textSize = ImGui::CalcTextSize(utf8Name.c_str());
         ImVec2 textPos = ImVec2(rect.topLeft.x + (rect.bottomRight.x - rect.topLeft.x) / 2.0f - textSize.x / 2.0f, rect.topLeft.y - textSize.y - 5.0f);
-        drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), ToImColor(0, 0, 0, a), nameStr.c_str());
-        drawList->AddText(textPos, ToImColor(r, g, b, a), nameStr.c_str());
+
+        drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), ToImColor(0, 0, 0, a), utf8Name.c_str());
+        drawList->AddText(textPos, ToImColor(r, g, b, a), utf8Name.c_str());
     }
 }

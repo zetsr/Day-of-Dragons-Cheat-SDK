@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "EnumQuest_EventStatus_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EnumQuest_EventStatus_structs.hpp"
 
 
 namespace SDK::Params

@@ -1240,6 +1240,26 @@ void UDragonsGI_C::GetPlayerSaveDirectory(const class FString& PlayerId, class F
 }
 
 
+// Function DragonsGI.DragonsGI_C.GlobalEmissiveMultiplierEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDragonsGI_C::GlobalEmissiveMultiplierEvent(float NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "GlobalEmissiveMultiplierEvent");
+
+	Params::DragonsGI_C_GlobalEmissiveMultiplierEvent Parms{};
+
+	Parms.NewValue = NewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsGI.DragonsGI_C.HandleNetworkError
 // (Event, Public, BlueprintEvent)
 // Parameters:

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Elements_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Spawn_DragonNest_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_Elements_structs.hpp"
 
 
 namespace SDK

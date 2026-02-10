@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SCUE5_structs.hpp"
+#include "Enum_Unlockables_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_Unlockables_structs.hpp"
 
 
 namespace SDK

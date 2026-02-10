@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Enum_AI_PerceptionSenses_structs.hpp"
 #include "Engine_structs.hpp"
 #include "DragonsAIC_classes.hpp"
-#include "Enum_AI_PerceptionSenses_structs.hpp"
 
 
 namespace SDK

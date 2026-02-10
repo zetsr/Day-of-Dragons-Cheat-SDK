@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Enum_GrowthStage_structs.hpp"
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "Anim_Biolumin_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "DragonIKPlugin_structs.hpp"
 #include "Enum_MontageBlendTypes_structs.hpp"
+#include "DragonIKPlugin_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
 #include "Dragons_classes.hpp"

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Char_Parent_AI_Dynamic_classes.hpp"
 #include "Engine_structs.hpp"
+#include "Char_Parent_AI_Dynamic_classes.hpp"
 #include "CoreUObject_structs.hpp"
 
 

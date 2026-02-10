@@ -396,6 +396,20 @@ void UPhysicsFlight_C::CheckFlightStamina()
 }
 
 
+// Function PhysicsFlight.PhysicsFlight_C.CheckIfBoostPressed
+// (BlueprintCallable, BlueprintEvent)
+
+void UPhysicsFlight_C::CheckIfBoostPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PhysicsFlight_C", "CheckIfBoostPressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PhysicsFlight.PhysicsFlight_C.Debug_PrintFlightData
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -924,15 +938,21 @@ void UPhysicsFlight_C::OnRep_IsSimulatingFlight()
 
 // Function PhysicsFlight.PhysicsFlight_C.OnStoppedFlying
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   CapturedVelocity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::OnStoppedFlying()
+void UPhysicsFlight_C::OnStoppedFlying(const struct FVector& CapturedVelocity)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PhysicsFlight_C", "OnStoppedFlying");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::PhysicsFlight_C_OnStoppedFlying Parms{};
+
+	Parms.CapturedVelocity = std::move(CapturedVelocity);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1037,9 +1057,8 @@ void UPhysicsFlight_C::ResetServerFlightGates()
 // Parameters:
 // bool                                    ShouldFly                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    WantsHover                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UsedSpaceToFly_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover, bool UsedSpaceToFly_0)
+void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1050,7 +1069,6 @@ void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover, bo
 
 	Parms.ShouldFly = ShouldFly;
 	Parms.WantsHover = WantsHover;
-	Parms.UsedSpaceToFly_0 = UsedSpaceToFly_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1194,15 +1212,21 @@ void UPhysicsFlight_C::SettingsChanged_Event()
 
 // Function PhysicsFlight.PhysicsFlight_C.SyncFlightVelocity
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   CapturedVelocity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::SyncFlightVelocity()
+void UPhysicsFlight_C::SyncFlightVelocity(const struct FVector& CapturedVelocity)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PhysicsFlight_C", "SyncFlightVelocity");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::PhysicsFlight_C_SyncFlightVelocity Parms{};
+
+	Parms.CapturedVelocity = std::move(CapturedVelocity);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

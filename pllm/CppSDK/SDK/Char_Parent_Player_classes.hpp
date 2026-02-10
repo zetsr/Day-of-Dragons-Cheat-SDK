@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "Enum_StatMutations_structs.hpp"
-#include "Enum_StatusEffects_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Struct_StatMutations_structs.hpp"
-#include "Enum_MapRegion_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_StatusEffects_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_PlayerCharacter_structs.hpp"
-#include "Enum_Temperature_structs.hpp"
 #include "Enum_TemperatureOverride_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SCUE5_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
+#include "Enum_Temperature_structs.hpp"
 #include "Char_Parent_All_classes.hpp"
-#include "Enum_AppliedDamage_structs.hpp"
 #include "Enum_TempTolerance_structs.hpp"
+#include "Enum_AppliedDamage_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
-#include "Enum_Species_structs.hpp"
 #include "Enum_ClockRotation_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 
@@ -378,7 +378,6 @@ public:
 	void RequestServerTryPickupActor(class AActor* Actor);
 	void ResetBonfireTemperature();
 	void ResetCamera();
-	void ResetEmoteWheel();
 	void ResetLocalTemperature();
 	void ResetPlayerViewTarget();
 	void ResetServerUnpossess();
@@ -426,6 +425,7 @@ public:
 	void TryLaunchCharacter(const struct FVector& LaunchVelocity, bool XY_Override, bool Z_Override);
 	void TryOverrideTemperature(Enum_TemperatureOverride TempOverride);
 	void TryPlayEmote(class FName FunctionName);
+	void UnlockEmoteWheel();
 	void UserConstructionScript();
 
 	void GetCreatureWeight(double* Weight) const;

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Enum_EggWidgetStatus_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_EggGender_structs.hpp"
-#include "Enum_Elements_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "Enum_EggWidgetStatus_structs.hpp"
-#include "Enum_Species_structs.hpp"
+#include "Enum_Elements_structs.hpp"
 
 
 namespace SDK
@@ -59,6 +59,8 @@ public:
 	class FString                                 FailTT;                                            // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 CritFailTT;                                        // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsRightEggR1;                                      // 0x0370(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Crit_Successes;                                    // 0x0371(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Crit_Attempts;                                     // 0x0372(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Wi_Egg_Brood_GenderBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
@@ -80,6 +82,7 @@ public:
 	class UWidget* Get_EggSpeciesImage_ToolTipWidget();
 	bool Get_GenderBtn_bIsEnabled();
 	class UWidget* Get_SaveEggCheck_ToolTipWidget();
+	void GetCritFailValue(uint8 Attempts, uint8 Successes, int32* Result, double* SuccessRate);
 	void PreConstruct(bool IsDesignTime);
 	void SetCritStatusText(const class FText& InText);
 	void SetPouchStatusText(bool IsEgg2);

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Dmg_Basic_classes.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "Enum_DmgTypes_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK

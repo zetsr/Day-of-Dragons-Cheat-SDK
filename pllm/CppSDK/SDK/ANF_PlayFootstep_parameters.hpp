@@ -12,8 +12,8 @@
 
 #include "PhysicsCore_structs.hpp"
 #include "Enum_FootStepSoundType_structs.hpp"
-#include "Enum_Species_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

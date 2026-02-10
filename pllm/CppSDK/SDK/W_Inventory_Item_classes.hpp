@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Struct_InventoryItemsReplicated_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Enum_ItemGrantType_structs.hpp"
+#include "Enum_ItemRarity_structs.hpp"
+#include "Struct_InventoryItemsReplicated_structs.hpp"
 #include "SCUE5_structs.hpp"
 #include "UMG_classes.hpp"
-#include "Enum_ItemRarity_structs.hpp"
+#include "Enum_ItemGrantType_structs.hpp"
 
 
 namespace SDK

@@ -549,6 +549,36 @@ void AChar_Dragon_BroodWatcher_C::GetBroodPouchEgg(int32 Index_0, struct FStruct
 }
 
 
+// Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetCritFailValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// uint8                                   Attempts                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   Successes                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 SuccessRate                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AChar_Dragon_BroodWatcher_C::GetCritFailValue(uint8 Attempts, uint8 Successes, int32* Result, double* SuccessRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Dragon_BroodWatcher_C", "GetCritFailValue");
+
+	Params::Char_Dragon_BroodWatcher_C_GetCritFailValue Parms{};
+
+	Parms.Attempts = Attempts;
+	Parms.Successes = Successes;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	if (SuccessRate != nullptr)
+		*SuccessRate = Parms.SuccessRate;
+}
+
+
 // Function Char_Dragon_BroodWatcher.Char_Dragon_BroodWatcher_C.GetDamageModifiers
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

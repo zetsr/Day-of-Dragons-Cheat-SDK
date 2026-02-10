@@ -111,13 +111,13 @@ void UPDA_ElementalData_C::ConvertByteToPercent(uint8 Byte, double* Percent) con
 // Function PDA_ElementalData.PDA_ElementalData_C.GetAllSpeedValues
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// double*                                 Walk                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 walk                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 trot                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 run                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 Swim                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 Fly                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPDA_ElementalData_C::GetAllSpeedValues(double* Walk, double* trot, double* run, double* Swim, double* Fly) const
+void UPDA_ElementalData_C::GetAllSpeedValues(double* walk, double* trot, double* run, double* Swim, double* Fly) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -128,8 +128,8 @@ void UPDA_ElementalData_C::GetAllSpeedValues(double* Walk, double* trot, double*
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Walk != nullptr)
-		*Walk = Parms.Walk;
+	if (walk != nullptr)
+		*walk = Parms.walk;
 
 	if (trot != nullptr)
 		*trot = Parms.trot;

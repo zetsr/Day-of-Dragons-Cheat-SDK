@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
-#include "Enum_AiGrowth_structs.hpp"
 #include "Struct_StatMutations_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_DmgTypes_structs.hpp"
+#include "Enum_AiGrowth_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_CreatureLevels_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_CreatureLevels_structs.hpp"
 #include "Engine_structs.hpp"
 
 

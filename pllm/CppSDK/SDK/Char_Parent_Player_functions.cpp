@@ -3690,20 +3690,6 @@ void AChar_Parent_Player_C::ResetCamera()
 }
 
 
-// Function Char_Parent_Player.Char_Parent_Player_C.ResetEmoteWheel
-// (BlueprintCallable, BlueprintEvent)
-
-void AChar_Parent_Player_C::ResetEmoteWheel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Char_Parent_Player_C", "ResetEmoteWheel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Char_Parent_Player.Char_Parent_Player_C.ResetLocalTemperature
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -4507,6 +4493,20 @@ void AChar_Parent_Player_C::TryPlayEmote(class FName FunctionName)
 	Parms.FunctionName = FunctionName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Parent_Player.Char_Parent_Player_C.UnlockEmoteWheel
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Parent_Player_C::UnlockEmoteWheel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Parent_Player_C", "UnlockEmoteWheel");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

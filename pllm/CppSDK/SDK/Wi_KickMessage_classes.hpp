@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_KickReason_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
 #include "UMG_classes.hpp"
 
 

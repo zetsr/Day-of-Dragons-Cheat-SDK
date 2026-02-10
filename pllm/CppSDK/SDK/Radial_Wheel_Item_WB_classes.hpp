@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Radial_Wheel_Item_Struct_structs.hpp"
 #include "Radial_Wheel_Slot_Struct_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Radial_Wheel_Item_Struct_structs.hpp"
 #include "UMG_classes.hpp"
 
 

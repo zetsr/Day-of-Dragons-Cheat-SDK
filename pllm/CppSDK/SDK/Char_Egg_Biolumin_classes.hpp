@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Char_Parent_Egg_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Struct_Destination_structs.hpp"
-#include "Struct_SavePlayerData_structs.hpp"
-#include "Struct_AdminPlayerArrayInfo_structs.hpp"
-#include "Enum_ChatChannel_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_PlayerCharacter_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
+#include "Struct_Destination_structs.hpp"
+#include "Enum_PlayerTitles_structs.hpp"
+#include "Enum_ChatChannel_structs.hpp"
+#include "Struct_AdminPlayerArrayInfo_structs.hpp"
+#include "Struct_SavePlayerData_structs.hpp"
 #include "Struct_EmitterTimeLoc_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
 #include "FMODStudio_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Dragons_classes.hpp"
-#include "Enum_MapRegion_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
-#include "Enum_PlayerTitles_structs.hpp"
 #include "Enum_KickReason_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_Species_structs.hpp"
 #include "Enum_Unlockables_structs.hpp"
 #include "CommonInput_structs.hpp"
 #include "Enum_ItemRarity_structs.hpp"
@@ -154,6 +154,7 @@ public:
 	class UWi_ContainerUI_C*                      ContainerUI;                                       // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FString                                 EpicID;                                            // 0x0DC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         InviteToEggIndex;                                  // 0x0DD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBeingRebornFromPouch;                            // 0x0DDC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AbortShutdownSequence();

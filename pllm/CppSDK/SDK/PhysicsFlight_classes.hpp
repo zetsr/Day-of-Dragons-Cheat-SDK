@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Struct_FlightData_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
+#include "Struct_FlightData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_GrowthStage_structs.hpp"
 
 
 namespace SDK
@@ -65,6 +65,8 @@ public:
 	struct FDateTime                              FlightDataTimeStamp;                               // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              BeginFlyTimeStamp;                                 // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsedSpaceToFly;                                    // 0x0200(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanBeAutoLanded;                                   // 0x0201(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          QueuedBrakeIsPressed;                              // 0x0202(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AirBoostPressed(const struct FKey& Key);
@@ -91,6 +93,7 @@ public:
 	void CheckBoostFlightSpeed();
 	void CheckDisableBoost();
 	void CheckFlightStamina();
+	void CheckIfBoostPressed();
 	void Debug_PrintFlightData();
 	void DoFly();
 	void ExecuteUbergraph_PhysicsFlight(int32 EntryPoint);
@@ -119,14 +122,14 @@ public:
 	void OnRep_FlightData();
 	void OnRep_IsHovering();
 	void OnRep_IsSimulatingFlight();
-	void OnStoppedFlying();
+	void OnStoppedFlying(const struct FVector& CapturedVelocity);
 	void PeerTick();
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveTick(float DeltaSeconds);
 	void ResetLocalFlightGates();
 	void ResetServerFlightGates();
-	void Server_SimulateFlight(bool ShouldFly, bool WantsHover, bool UsedSpaceToFly_0);
+	void Server_SimulateFlight(bool ShouldFly, bool WantsHover);
 	void ServerApplyAirBrake(bool ApplyAirBrake_0);
 	void ServerJumpHover();
 	void ServerReplicateFlightData(const struct FStruct_FlightData& FlightDataStruct);
@@ -135,7 +138,7 @@ public:
 	void ServerWantsHover(bool WantsToHover);
 	void Set_HoverYaw();
 	void SettingsChanged_Event();
-	void SyncFlightVelocity();
+	void SyncFlightVelocity(const struct FVector& CapturedVelocity);
 	void ToggleFlight_Event(bool ShouldFly);
 	void WantsFlightHit_Event(const struct FVector& NormalImpulse);
 

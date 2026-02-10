@@ -12,9 +12,9 @@
 
 #include "Struct_Lineage_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "Enum_Species_structs.hpp"
 #include "Enum_FamilyRelation_structs.hpp"
 #include "Struct_SkinData_structs.hpp"
+#include "Enum_Species_structs.hpp"
 
 
 namespace SDK::Params

@@ -373,6 +373,36 @@ class UWidget* UWi_Egg_Brood_C::Get_SaveEggCheck_ToolTipWidget()
 }
 
 
+// Function Wi_Egg_Brood.Wi_Egg_Brood_C.GetCritFailValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// uint8                                   Attempts                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   Successes                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 SuccessRate                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_Egg_Brood_C::GetCritFailValue(uint8 Attempts, uint8 Successes, int32* Result, double* SuccessRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Egg_Brood_C", "GetCritFailValue");
+
+	Params::Wi_Egg_Brood_C_GetCritFailValue Parms{};
+
+	Parms.Attempts = Attempts;
+	Parms.Successes = Successes;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	if (SuccessRate != nullptr)
+		*SuccessRate = Parms.SuccessRate;
+}
+
+
 // Function Wi_Egg_Brood.Wi_Egg_Brood_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
