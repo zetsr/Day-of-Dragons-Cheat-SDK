@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_ServerType_structs.hpp"
 #include "Enum_KickReason_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 
 
 namespace SDK::Params

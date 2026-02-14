@@ -12,8 +12,8 @@
 
 #include "Wi_Parent_Menu_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "Enum_ServerListStatus_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK

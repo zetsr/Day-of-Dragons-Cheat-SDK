@@ -157,14 +157,14 @@ void UPDA_DragonData_C::ConvertByteToPercent(uint8 Byte, double* Percent) const
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // double*                                 stalk                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double*                                 walk                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 Walk                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 trot                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 run                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 sprint                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 Swim                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double*                                 Fly                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPDA_DragonData_C::GetAllSpeedValues(double* stalk, double* walk, double* trot, double* run, double* sprint, double* Swim, double* Fly) const
+void UPDA_DragonData_C::GetAllSpeedValues(double* stalk, double* Walk, double* trot, double* run, double* sprint, double* Swim, double* Fly) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -178,8 +178,8 @@ void UPDA_DragonData_C::GetAllSpeedValues(double* stalk, double* walk, double* t
 	if (stalk != nullptr)
 		*stalk = Parms.stalk;
 
-	if (walk != nullptr)
-		*walk = Parms.walk;
+	if (Walk != nullptr)
+		*Walk = Parms.Walk;
 
 	if (trot != nullptr)
 		*trot = Parms.trot;

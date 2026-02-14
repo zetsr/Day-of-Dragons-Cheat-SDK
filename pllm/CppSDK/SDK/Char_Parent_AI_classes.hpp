@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Enum_AiGrowth_structs.hpp"
-#include "Enum_StatusEffects_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Char_Parent_All_classes.hpp"
-#include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_AppliedDamage_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_CreatureLevels_structs.hpp"
+#include "Enum_StatusEffects_structs.hpp"
+#include "Enum_AppliedDamage_structs.hpp"
 
 
 namespace SDK

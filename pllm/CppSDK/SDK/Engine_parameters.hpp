@@ -32198,16 +32198,16 @@ public:
 };
 DUMPER7_ASSERTS_KismetMathLibrary_ProjectPointOnToPlane;
 
-// Function Engine.KismetMathLibrary.ProjectVectorOntoPlane
+// Function Engine.KismetMathLibrary.ProjectVectorOnToPlane
 // 0x0048 (0x0048 - 0x0000)
-struct KismetMathLibrary_ProjectVectorOntoPlane final
+struct KismetMathLibrary_ProjectVectorOnToPlane final
 {
 public:
 	struct FVector                                V;                                                 // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                PlaneNormal;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetMathLibrary_ProjectVectorOntoPlane;
+DUMPER7_ASSERTS_KismetMathLibrary_ProjectVectorOnToPlane;
 
 // Function Engine.KismetMathLibrary.ProjectVectorOnToVector
 // 0x0048 (0x0048 - 0x0000)
@@ -33001,9 +33001,9 @@ public:
 };
 DUMPER7_ASSERTS_KismetMathLibrary_RGBLinearToHSV;
 
-// Function Engine.KismetMathLibrary.RGBtoHSV
+// Function Engine.KismetMathLibrary.RGBToHSV
 // 0x0020 (0x0020 - 0x0000)
-struct KismetMathLibrary_RGBtoHSV final
+struct KismetMathLibrary_RGBToHSV final
 {
 public:
 	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -33012,7 +33012,7 @@ public:
 	float                                         V;                                                 // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         A;                                                 // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetMathLibrary_RGBtoHSV;
+DUMPER7_ASSERTS_KismetMathLibrary_RGBToHSV;
 
 // Function Engine.KismetMathLibrary.RGBToHSV_Vector
 // 0x0020 (0x0020 - 0x0000)

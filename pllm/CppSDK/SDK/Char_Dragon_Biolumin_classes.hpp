@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Char_Parent_Dragon_classes.hpp"
 #include "Engine_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "SCUE5_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Char_Parent_Dragon_classes.hpp"
 #include "Enum_EmotesDragon_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK

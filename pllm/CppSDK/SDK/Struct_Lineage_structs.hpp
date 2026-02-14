@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_Species_structs.hpp"
-#include "Struct_StatModifiers_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struct_StatModifiers_structs.hpp"
 
 
 namespace SDK

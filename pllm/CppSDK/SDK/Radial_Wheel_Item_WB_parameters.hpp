@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Radial_Wheel_Slot_Struct_structs.hpp"
-#include "Radial_Wheel_Item_Struct_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Radial_Wheel_Item_Struct_structs.hpp"
 #include "FMODStudio_structs.hpp"
 
 

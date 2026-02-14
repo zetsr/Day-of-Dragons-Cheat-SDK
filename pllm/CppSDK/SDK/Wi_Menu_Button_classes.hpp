@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Menu_ButtonStyle_structs.hpp"
-#include "Struct_Menu_LabelStyle_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Wi_Parent_Menu_classes.hpp"
 #include "Engine_structs.hpp"
+#include "Struct_Menu_LabelStyle_structs.hpp"
+#include "Struct_Menu_ButtonStyle_structs.hpp"
 #include "Struct_Menu_ButtonSound_structs.hpp"
 
 

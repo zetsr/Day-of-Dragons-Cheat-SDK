@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Enum_CreatureLevels_structs.hpp"
+#include "Enum_Elements_structs.hpp"
 #include "Enum_Kinds_structs.hpp"
 #include "Enum_Diet_structs.hpp"
-#include "Enum_Elements_structs.hpp"
-#include "Enum_CreatureLevels_structs.hpp"
-#include "Engine_classes.hpp"
 #include "Enum_Species_structs.hpp"
 #include "Enum_AiGrowth_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

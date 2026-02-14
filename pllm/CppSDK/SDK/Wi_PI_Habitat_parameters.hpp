@@ -12,11 +12,11 @@
 
 #include "Enum_Temperature_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Enum_TemperatureUI_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Enum_TimeOfDay_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
-#include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

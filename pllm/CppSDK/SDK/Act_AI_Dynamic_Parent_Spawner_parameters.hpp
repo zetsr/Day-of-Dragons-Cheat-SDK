@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Struct_DynamicAI_SpawnerMemory_structs.hpp"
+#include "Enum_AiGrowth_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_AiGrowth_structs.hpp"
+#include "Struct_DynamicAI_SpawnerMemory_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
 
 

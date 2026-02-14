@@ -66,6 +66,18 @@
     <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\mdx12_api.h">
       <Filter>Minimal-D3D12-Hook-ImGui-1.0.2\Main</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\DisplayInfo.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\Util.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\GuiStyle.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\Fonts.h">
+      <Filter>Minimal-D3D12-Hook-ImGui-1.0.2\Main</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hack\dllmain.cpp">
@@ -103,9 +115,6 @@
     </ClCompile>
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_widgets.cpp">
       <Filter>Minimal-D3D12-Hook-ImGui-1.0.2\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\dllmain.cpp">
-      <Filter>Minimal-D3D12-Hook-ImGui-1.0.2\Main</Filter>
     </ClCompile>
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\hook.cpp">
       <Filter>Minimal-D3D12-Hook-ImGui-1.0.2\Main</Filter>

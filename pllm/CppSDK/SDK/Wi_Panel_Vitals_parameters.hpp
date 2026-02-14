@@ -12,9 +12,9 @@
 
 #include "SlateCore_structs.hpp"
 #include "Enum_Vitals_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

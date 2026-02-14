@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Enum_AiGrowth_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_DmgTypes_structs.hpp"
-#include "Enum_AiGrowth_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Struct_BroodWatcherEggTracker_structs.hpp"
+#include "Struct_PlayerEggInfo_structs.hpp"
 #include "SCUE5_structs.hpp"
 
 

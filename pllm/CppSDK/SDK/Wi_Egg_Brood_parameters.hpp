@@ -12,9 +12,9 @@
 
 #include "SlateCore_structs.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Enum_EggGender_structs.hpp"
 #include "Enum_Elements_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
