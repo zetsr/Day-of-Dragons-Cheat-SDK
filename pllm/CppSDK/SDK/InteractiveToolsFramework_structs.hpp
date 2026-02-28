@@ -270,6 +270,16 @@ enum class ESceneSnapQueryTargetType : uint8
 	ESceneSnapQueryTargetType_MAX            = 8,
 };
 
+// ScriptStruct InteractiveToolsFramework.GizmoFloatParameterChange
+// 0x0008 (0x0008 - 0x0000)
+struct FGizmoFloatParameterChange final
+{
+public:
+	float                                         InitialValue;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentValue;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGizmoFloatParameterChange;
+
 // ScriptStruct InteractiveToolsFramework.GizmoVec2ParameterChange
 // 0x0020 (0x0020 - 0x0000)
 struct FGizmoVec2ParameterChange final
@@ -291,6 +301,17 @@ public:
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGizmoElementColorAttribute;
+
+// ScriptStruct InteractiveToolsFramework.GizmoElementLineRenderStateAttributes
+// 0x003C (0x003C - 0x0000)
+struct FGizmoElementLineRenderStateAttributes final
+{
+public:
+	struct FGizmoElementColorAttribute            LineColor;                                         // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FGizmoElementColorAttribute            HoverLineColor;                                    // 0x0014(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FGizmoElementColorAttribute            InteractLineColor;                                 // 0x0028(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGizmoElementLineRenderStateAttributes;
 
 // ScriptStruct InteractiveToolsFramework.GizmoElementMaterialAttribute
 // 0x000C (0x000C - 0x0000)
@@ -316,27 +337,6 @@ public:
 	struct FGizmoElementColorAttribute            InteractVertexColor;                               // 0x004C(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGizmoElementMeshRenderStateAttributes;
-
-// ScriptStruct InteractiveToolsFramework.GizmoElementLineRenderStateAttributes
-// 0x003C (0x003C - 0x0000)
-struct FGizmoElementLineRenderStateAttributes final
-{
-public:
-	struct FGizmoElementColorAttribute            LineColor;                                         // 0x0000(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FGizmoElementColorAttribute            HoverLineColor;                                    // 0x0014(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FGizmoElementColorAttribute            InteractLineColor;                                 // 0x0028(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGizmoElementLineRenderStateAttributes;
-
-// ScriptStruct InteractiveToolsFramework.GizmoFloatParameterChange
-// 0x0008 (0x0008 - 0x0000)
-struct FGizmoFloatParameterChange final
-{
-public:
-	float                                         InitialValue;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentValue;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGizmoFloatParameterChange;
 
 // ScriptStruct InteractiveToolsFramework.BrushStampData
 // 0x0128 (0x0128 - 0x0000)

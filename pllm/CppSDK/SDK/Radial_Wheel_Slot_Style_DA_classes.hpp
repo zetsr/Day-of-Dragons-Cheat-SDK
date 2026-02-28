@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Radial_Wheel_Slot_Type_Enum_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 

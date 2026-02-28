@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
+#include "Struct_SkinData_structs.hpp"
 #include "Enum_SpawnButtonLabels_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_PlayerCharacter_structs.hpp"
-#include "Struct_SkinData_structs.hpp"
-#include "Enum_Gender_structs.hpp"
 #include "Enum_Unlockables_structs.hpp"
+#include "Enum_PlayerCharacter_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Enum_Gender_structs.hpp"
 #include "Struct_CharScreenInfo_structs.hpp"
 #include "Enum_Kinds_structs.hpp"
 #include "Engine_structs.hpp"
@@ -117,8 +117,10 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_2;                               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetIconicSkinIndex_IconicSkinIndex;       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Check_Steam_DLC_Ownership_HasDLC;         // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Check_Steam_DLC_Ownership_HasDLC_1;       // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetIconicSkinIndex_IconicSkinIndex;       // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E3[0x1];                                       // 0x00E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "Enum_Unlockables_structs.hpp"
-#include "Enum_PlayerTitles_structs.hpp"
-#include "Struct_GroupMemberList_structs.hpp"
 #include "OnlineSubsystemEIK_structs.hpp"
 #include "Enum_PlayerCharacter_structs.hpp"
+#include "Enum_PlayerTitles_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_MapRegion_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
+#include "Struct_GroupMemberList_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 
 

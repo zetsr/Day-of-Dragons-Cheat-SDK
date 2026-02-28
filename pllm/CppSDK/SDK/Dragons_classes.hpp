@@ -12,10 +12,44 @@
 
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Dragons_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class Dragons.DragonsPlayerController
+// 0x0130 (0x0980 - 0x0850)
+class ADragonsPlayerController : public APlayerController
+{
+public:
+	class FString                                 NetAddress;                                        // 0x0850(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SignatureKeyRPC;                                   // 0x0860(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_870[0x8];                                      // 0x0870(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         AntiCheatPadding[0x100];                           // 0x0878(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_978[0x8];                                      // 0x0978(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Client_ForceCloseSession();
+	class FString GetNetAddress();
+	void OnSecurityViolationReported(ESecurityViolationType ViolationType, const class FString& ViolationDetails);
+	void Server_ReportSecurityViolation(ESecurityViolationType ViolationType, const class FString& Details);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DragonsPlayerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DragonsPlayerController")
+	}
+	static class ADragonsPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADragonsPlayerController>();
+	}
+};
+DUMPER7_ASSERTS_ADragonsPlayerController;
 
 // Class Dragons.AdminSpectatorPawn
 // 0x0000 (0x0340 - 0x0340)
@@ -103,6 +137,53 @@ public:
 };
 DUMPER7_ASSERTS_UDragonsAnimInstance;
 
+// Class Dragons.DragonsPlayerState
+// 0x0100 (0x04A8 - 0x03A8)
+class ADragonsPlayerState : public APlayerState
+{
+public:
+	uint8                                         AntiCheatPadding[0x100];                           // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DragonsPlayerState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DragonsPlayerState")
+	}
+	static class ADragonsPlayerState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADragonsPlayerState>();
+	}
+};
+DUMPER7_ASSERTS_ADragonsPlayerState;
+
+// Class Dragons.DragonsCharacter
+// 0x0100 (0x0730 - 0x0630)
+class ADragonsCharacter : public ACharacter
+{
+public:
+	uint8                                         AntiCheatPadding[0x100];                           // 0x0628(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_728[0x8];                                      // 0x0728(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DragonsCharacter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DragonsCharacter")
+	}
+	static class ADragonsCharacter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADragonsCharacter>();
+	}
+};
+DUMPER7_ASSERTS_ADragonsCharacter;
+
 // Class Dragons.DragonsFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UDragonsFunctionLibrary final : public UBlueprintFunctionLibrary
@@ -112,6 +193,8 @@ public:
 	static class FString ByteKey();
 	static class FString ColorKey();
 	static class FString FloatKey();
+	static int32 GetCurrentMemoryPaddingSize();
+	static class FString GetNetworkSalt();
 	static class FString Int32Key();
 	static void LogPrint(class UObject* WorldContextObject, const class FString& InString, bool bPrintWarning);
 	static void LogPrintAsync(class UObject* WorldContextObject, const class FString& InString, bool bPrintWarning);
@@ -141,6 +224,33 @@ public:
 };
 DUMPER7_ASSERTS_UDragonsFunctionLibrary;
 
+// Class Dragons.DragonsGameInstance
+// 0x0008 (0x01C8 - 0x01C0)
+class UDragonsGameInstance : public UGameInstance
+{
+public:
+	bool                                          bIsEncryptionEnabled;                              // 0x01C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool IsNetworkEncryptionActive() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DragonsGameInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DragonsGameInstance")
+	}
+	static class UDragonsGameInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDragonsGameInstance>();
+	}
+};
+DUMPER7_ASSERTS_UDragonsGameInstance;
+
 // Class Dragons.DragonsGameSession
 // 0x0000 (0x02A8 - 0x02A8)
 class ADragonsGameSession final : public AGameSession
@@ -160,33 +270,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ADragonsGameSession;
-
-// Class Dragons.DragonsPlayerController
-// 0x0020 (0x0870 - 0x0850)
-class ADragonsPlayerController : public APlayerController
-{
-public:
-	class FString                                 NetAddress;                                        // 0x0850(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SignatureKeyRPC;                                   // 0x0860(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	class FString GetNetAddress();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DragonsPlayerController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DragonsPlayerController")
-	}
-	static class ADragonsPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ADragonsPlayerController>();
-	}
-};
-DUMPER7_ASSERTS_ADragonsPlayerController;
 
 // Class Dragons.SteamFunctionsLibrary
 // 0x0000 (0x0028 - 0x0028)

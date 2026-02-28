@@ -17,6 +17,99 @@
 namespace SDK
 {
 
+// Function Dragons.DragonsPlayerController.Client_ForceCloseSession
+// (Net, NetReliable, Native, Event, Protected, NetClient, BlueprintCallable)
+
+void ADragonsPlayerController::Client_ForceCloseSession()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPlayerController", "Client_ForceCloseSession");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Dragons.DragonsPlayerController.GetNetAddress
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString ADragonsPlayerController::GetNetAddress()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPlayerController", "GetNetAddress");
+
+	Params::DragonsPlayerController_GetNetAddress Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Dragons.DragonsPlayerController.OnSecurityViolationReported
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// ESecurityViolationType                  ViolationType                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ViolationDetails                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ADragonsPlayerController::OnSecurityViolationReported(ESecurityViolationType ViolationType, const class FString& ViolationDetails)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPlayerController", "OnSecurityViolationReported");
+
+	Params::DragonsPlayerController_OnSecurityViolationReported Parms{};
+
+	Parms.ViolationType = ViolationType;
+	Parms.ViolationDetails = std::move(ViolationDetails);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Dragons.DragonsPlayerController.Server_ReportSecurityViolation
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// ESecurityViolationType                  ViolationType                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Details                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ADragonsPlayerController::Server_ReportSecurityViolation(ESecurityViolationType ViolationType, const class FString& Details)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPlayerController", "Server_ReportSecurityViolation");
+
+	Params::DragonsPlayerController_Server_ReportSecurityViolation Parms{};
+
+	Parms.ViolationType = ViolationType;
+	Parms.Details = std::move(Details);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Dragons.AdminSpectatorPawn.SetSpectateSpeed
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -130,6 +223,56 @@ class FString UDragonsFunctionLibrary::FloatKey()
 		Func = StaticClass()->GetFunction("DragonsFunctionLibrary", "FloatKey");
 
 	Params::DragonsFunctionLibrary_FloatKey Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Dragons.DragonsFunctionLibrary.GetCurrentMemoryPaddingSize
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UDragonsFunctionLibrary::GetCurrentMemoryPaddingSize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DragonsFunctionLibrary", "GetCurrentMemoryPaddingSize");
+
+	Params::DragonsFunctionLibrary_GetCurrentMemoryPaddingSize Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Dragons.DragonsFunctionLibrary.GetNetworkSalt
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UDragonsFunctionLibrary::GetNetworkSalt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DragonsFunctionLibrary", "GetNetworkSalt");
+
+	Params::DragonsFunctionLibrary_GetNetworkSalt Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -444,19 +587,19 @@ class FString UDragonsFunctionLibrary::VectorKey()
 }
 
 
-// Function Dragons.DragonsPlayerController.GetNetAddress
-// (Native, Public, BlueprintCallable)
+// Function Dragons.DragonsGameInstance.IsNetworkEncryptionActive
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString ADragonsPlayerController::GetNetAddress()
+bool UDragonsGameInstance::IsNetworkEncryptionActive() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DragonsPlayerController", "GetNetAddress");
+		Func = Class->GetFunction("DragonsGameInstance", "IsNetworkEncryptionActive");
 
-	Params::DragonsPlayerController_GetNetAddress Parms{};
+	Params::DragonsGameInstance_IsNetworkEncryptionActive Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Struct_FlightData_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_StatMutations_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Struct_FlightData_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK
@@ -67,6 +67,7 @@ public:
 	bool                                          UsedSpaceToFly;                                    // 0x0200(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanBeAutoLanded;                                   // 0x0201(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          QueuedBrakeIsPressed;                              // 0x0202(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WantsHover;                                        // 0x0203(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AirBoostPressed(const struct FKey& Key);
@@ -94,6 +95,7 @@ public:
 	void CheckDisableBoost();
 	void CheckFlightStamina();
 	void CheckIfBoostPressed();
+	void CheckIfBrakePressed();
 	void Debug_PrintFlightData();
 	void DoFly();
 	void ExecuteUbergraph_PhysicsFlight(int32 EntryPoint);
@@ -106,11 +108,9 @@ public:
 	void Get_IsApplyingBrake(bool* IsApplyingBrake);
 	void Get_IsHovering(bool* IsHovering_0);
 	void Get_IsSimulatingFlightPhysics(bool* IsSimulatingFlightPhysics);
-	void InpActEvt_AirBoost_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpActEvt_AirBoost_K2Node_InputActionEvent_4(const struct FKey& Key);
 	void InpActEvt_AirBrake_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_AirBrake_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void InpActEvt_Fly_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void InpActEvt_Fly_K2Node_InputActionEvent_3(const struct FKey& Key);
 	void InpActEvt_Hover_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void LocalTick();
 	void OnBlendOut_FA266B134AEE6EB86AE10E96A6A1DE05(class FName NotifyName);
@@ -129,7 +129,7 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void ResetLocalFlightGates();
 	void ResetServerFlightGates();
-	void Server_SimulateFlight(bool ShouldFly, bool WantsHover);
+	void Server_SimulateFlight(bool ShouldFly, bool WantsHover_0);
 	void ServerApplyAirBrake(bool ApplyAirBrake_0);
 	void ServerJumpHover();
 	void ServerReplicateFlightData(const struct FStruct_FlightData& FlightDataStruct);
@@ -139,6 +139,7 @@ public:
 	void Set_HoverYaw();
 	void SettingsChanged_Event();
 	void SyncFlightVelocity(const struct FVector& CapturedVelocity);
+	void TellServerApplyAirBrake(bool ApplyAirBrake_0);
 	void ToggleFlight_Event(bool ShouldFly);
 	void WantsFlightHit_Event(const struct FVector& NormalImpulse);
 

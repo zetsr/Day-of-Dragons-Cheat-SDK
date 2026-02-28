@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Chaos_structs.hpp"
 #include "GeometryCollectionEngine_structs.hpp"
-#include "DataflowCore_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "DataflowCore_structs.hpp"
 
 
 namespace SDK
@@ -296,6 +296,21 @@ enum class ESelectSubjectTypeEnum : uint8
 	Dataflow_SelectSubjectType_Centroid      = 2,
 	Dataflow_Max                             = 3,
 };
+
+// ScriptStruct GeometryCollectionNodes.MakeBoxDataflowNode
+// 0x00A0 (0x0188 - 0x00E8)
+struct FMakeBoxDataflowNode final : public FDataflowNode
+{
+public:
+	EMakeBoxDataTypeEnum                          DataType;                                          // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Min;                                               // 0x00F0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Max;                                               // 0x0108(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Center;                                            // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Size;                                              // 0x0138(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   Box;                                               // 0x0150(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMakeBoxDataflowNode;
 
 // ScriptStruct GeometryCollectionNodes.GeometryCollectionTerminalDataflowNode
 // 0x00D0 (0x01B8 - 0x00E8)
@@ -1142,21 +1157,6 @@ public:
 	TArray<struct FVector>                        Points;                                            // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMakePointsDataflowNode;
-
-// ScriptStruct GeometryCollectionNodes.MakeBoxDataflowNode
-// 0x00A0 (0x0188 - 0x00E8)
-struct FMakeBoxDataflowNode final : public FDataflowNode
-{
-public:
-	EMakeBoxDataTypeEnum                          DataType;                                          // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Min;                                               // 0x00F0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Max;                                               // 0x0108(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Center;                                            // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Size;                                              // 0x0138(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   Box;                                               // 0x0150(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMakeBoxDataflowNode;
 
 // ScriptStruct GeometryCollectionNodes.MakeSphereDataflowNode
 // 0x0040 (0x0128 - 0x00E8)

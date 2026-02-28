@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UDW_WOV_State_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UDS_RandomWeatherTiming_structs.hpp"
-#include "UDS_TemperatureType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UDS_and_UDW_State_structs.hpp"
 #include "RandomWeatherVariation_State_structs.hpp"
+#include "UDS_RandomWeatherTiming_structs.hpp"
+#include "UDS_and_UDW_State_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UDS_TemperatureType_structs.hpp"
+#include "UDW_WOV_State_structs.hpp"
 #include "UDW_WeatherState_Structure_structs.hpp"
 #include "UDS_Particle_Collision_Mode_structs.hpp"
 #include "UDS_Season_structs.hpp"
@@ -1264,7 +1264,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Daily_Season_Update;
 struct Ultra_Dynamic_Weather_C_DLWE_Active_Update final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1422,9 +1422,9 @@ public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0163(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0163(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue_1;    // 0x0165(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue_1;    // 0x0165(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0166(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0167(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_Tick_Delta_Seconds_ImplicitCast; // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2790,7 +2790,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Random_Value_in_Float_Range_Structure_Out; // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2914,7 +2914,7 @@ public:
 	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UNiagaraComponent* PSystem)> K2Node_CreateDelegate_OutputDelegate;          // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -2971,7 +2971,7 @@ public:
 	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UNiagaraComponent* PSystem)> K2Node_CreateDelegate_OutputDelegate;          // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -3001,7 +3001,7 @@ public:
 	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UNiagaraComponent* PSystem)> K2Node_CreateDelegate_OutputDelegate;          // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -3016,7 +3016,7 @@ public:
 	struct FTransform                             Temp_struct_Variable_1;                            // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue;                 // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UNiagaraComponent* PSystem)> K2Node_CreateDelegate_OutputDelegate;          // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -3065,7 +3065,7 @@ public:
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -3319,9 +3319,9 @@ public:
 };
 DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Report_Removed_Radial_Storm;
 
-// Function Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C.Runtime Or Initializing
+// Function Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C.Runtime or Initializing
 // 0x0004 (0x0004 - 0x0000)
-struct Ultra_Dynamic_Weather_C_Runtime_Or_Initializing final
+struct Ultra_Dynamic_Weather_C_Runtime_or_Initializing final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3329,7 +3329,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Runtime_Or_Initializing;
+DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Runtime_or_Initializing;
 
 // Function Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C.Screen Droplets Periodic Updates
 // 0x0258 (0x0258 - 0x0000)
@@ -3888,7 +3888,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Static_Properties___Dust;
 struct Ultra_Dynamic_Weather_C_Static_Properties___Heat_Distortion final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4101,7 +4101,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Static_Properties___Rainbow;
 struct Ultra_Dynamic_Weather_C_Static_Properties___Screen_Droplets final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4129,7 +4129,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Static_Properties___Screen_Droplets;
 struct Ultra_Dynamic_Weather_C_Static_Properties___Screen_Frost final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4142,7 +4142,7 @@ public:
 	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D_1;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue_1;    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue_1;    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -4739,7 +4739,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Update_Fog_Particle_Parameters;
 struct Ultra_Dynamic_Weather_C_Update_Heat_Distortion final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FInterpTo_Constant_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4756,7 +4756,7 @@ struct Ultra_Dynamic_Weather_C_Update_Lightning_Flash_Light final
 {
 public:
 	double                                        Overall_Intensity;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4934,7 +4934,7 @@ DUMPER7_ASSERTS_Ultra_Dynamic_Weather_C_Update_Post_Process_Wind_Fog;
 struct Ultra_Dynamic_Weather_C_Update_Rainbow final
 {
 public:
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4966,7 +4966,7 @@ struct Ultra_Dynamic_Weather_C_Update_Screen_Droplets final
 {
 public:
 	double                                        Direct_Exposure_of_Camera_to_Rain;                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -5205,9 +5205,9 @@ public:
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Set_Location_Mapping_Vector4;             // 0x0200(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue;      // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue_1;    // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Runtime_Or_Initializing_ReturnValue_2;    // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue;      // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue_1;    // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Runtime_or_Initializing_ReturnValue_2;    // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_213[0x5];                                      // 0x0213(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_Canvas_Brush_Size_Out_2;                  // 0x0218(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Canvas_Brush_Location_Out_2;              // 0x0228(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

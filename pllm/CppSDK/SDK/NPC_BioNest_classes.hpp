@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "NPC_Parent_Quest_classes.hpp"
 #include "Engine_structs.hpp"
+#include "NPC_Parent_Quest_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass NPC_BioNest.NPC_BioNest_C
-// 0x0020 (0x04C0 - 0x04A0)
+// 0x0020 (0x04C8 - 0x04A8)
 class ANPC_BioNest_C final : public ANPC_Parent_Quest_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_BioNest_C;                      // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FTimerHandle                           EggReadyTimer;                                     // 0x04A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         EggsAvailable;                                     // 0x04B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AACT_BioNest_C*                         BioNestRef;                                        // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_NPC_BioNest_C;                      // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FTimerHandle                           EggReadyTimer;                                     // 0x04B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         EggsAvailable;                                     // 0x04B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AACT_BioNest_C*                         BioNestRef;                                        // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_NPC_BioNest(int32 EntryPoint);

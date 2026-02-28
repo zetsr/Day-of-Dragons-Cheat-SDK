@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_ClanRegister_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Struct_ClanRegister_structs.hpp"
 
 
 namespace SDK

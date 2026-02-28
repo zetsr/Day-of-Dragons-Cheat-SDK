@@ -61,6 +61,15 @@ public:
 };
 DUMPER7_ASSERTS_FTransformNoScale;
 
+// ScriptStruct AnimationCore.FABRIKChainLink
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FFABRIKChainLink final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFABRIKChainLink;
+
 // ScriptStruct AnimationCore.FilterOptionPerAxis
 // 0x0003 (0x0003 - 0x0000)
 struct FFilterOptionPerAxis final
@@ -193,6 +202,17 @@ public:
 };
 DUMPER7_ASSERTS_FConstraintData;
 
+// ScriptStruct AnimationCore.Axis
+// 0x0020 (0x0020 - 0x0000)
+struct FAxis final
+{
+public:
+	struct FVector                                Axis;                                              // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInLocalSpace;                                     // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAxis;
+
 // ScriptStruct AnimationCore.ConstraintDescriptionEx
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FConstraintDescriptionEx
@@ -222,26 +242,6 @@ public:
 	uint8                                         Pad_0[0xE0];                                       // 0x0000(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCCDIKChainLink;
-
-// ScriptStruct AnimationCore.FABRIKChainLink
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FFABRIKChainLink final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFABRIKChainLink;
-
-// ScriptStruct AnimationCore.Axis
-// 0x0020 (0x0020 - 0x0000)
-struct FAxis final
-{
-public:
-	struct FVector                                Axis;                                              // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInLocalSpace;                                     // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAxis;
 
 // ScriptStruct AnimationCore.NodeChain
 // 0x0010 (0x0010 - 0x0000)

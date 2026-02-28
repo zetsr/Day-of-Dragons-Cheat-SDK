@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Enum_Mitigations_structs.hpp"
 #include "UMG_classes.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
-#include "Enum_Mitigations_structs.hpp"
 
 
 namespace SDK

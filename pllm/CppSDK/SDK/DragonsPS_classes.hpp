@@ -10,73 +10,73 @@
 
 #include "Basic.hpp"
 
-#include "Enum_MapRegion_structs.hpp"
-#include "Struct_InvitationEgg_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "Struct_InvitationSocial_structs.hpp"
-#include "Enum_ChatChannel_structs.hpp"
-#include "Struct_ClanRegister_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
-#include "Enum_KickReason_structs.hpp"
+#include "Enum_MapRegion_structs.hpp"
+#include "Struct_ClanRegister_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Struct_InvitationEgg_structs.hpp"
+#include "Enum_ChatChannel_structs.hpp"
+#include "Dragons_classes.hpp"
+#include "Struct_InvitationSocial_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass DragonsPS.DragonsPS_C
-// 0x0180 (0x0528 - 0x03A8)
-class ADragonsPS_C final : public APlayerState
+// 0x0180 (0x0628 - 0x04A8)
+class ADragonsPS_C final : public ADragonsPlayerState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FName                                   SteamID;                                           // 0x03B8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 SteamName;                                         // 0x03C0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 ClanName;                                          // 0x03D0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	uint8                                         ClanID;                                            // 0x03E0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         GroupID;                                           // 0x03E1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E2[0x6];                                      // 0x03E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& UserName, bool IsAdmin, bool IsDev, const class FString& Message, Enum_ChatChannel Channel)> DispatchGroupChat; // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const class FString& UserName, bool IsAdmin, bool IsDev, const class FString& Message, bool IsBroadcast, Enum_ChatChannel Channel)> DispatchClanChat; // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          Administrator;                                     // 0x0408(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHidden;                                          // 0x0409(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasClanInvitePending;                              // 0x040A(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasGroupInvitePending;                             // 0x040B(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasEggInvitePending;                               // 0x040C(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_InvitationSocial               PendingClanInvite;                                 // 0x0410(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FStruct_InvitationSocial               PendingGroupInvite;                                // 0x041C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const struct FStruct_InvitationSocial& PendingClanInvite)> ReceivedClanInvite; // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FStruct_InvitationSocial& PendingGroupInvite)> ReceivedGroupInvite; // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class ADragonsGS_C*                           DragonsGameState;                                  // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UDragonsGI_C*                           DragonsGameInstance;                               // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ADragonsGM_C*                           DragonsGameMode;                                   // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const class FString& PromptMessage)> DispatchSocialPrompt;         // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FStruct_ClanRegister& ClanInfo)> DispatchClanInfo;    // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          ClanCreateInProgress;                              // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool WasCreated, class FName Message)> DispatchClanCreated;        // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          Dev;                                               // 0x0498(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_499[0x7];                                      // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FStruct_InvitationEgg& EggInvitation)> ReceivedEggInvite; // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FStruct_InvitationEgg                  PendingEggInvite;                                  // 0x04B0(0x0014)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMuted;                                           // 0x04C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C5[0x3];                                      // 0x04C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USave_PlayerPresence_C*                 PlayerOnlineSave;                                  // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ADragonsPC_C*                           PlayerController;                                  // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<int32>                                 PingHistory;                                       // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MinPing;                                           // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxPing;                                           // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              UpdateClanStatus;                                  // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          ForceNoClan;                                       // 0x0500(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	Enum_MapRegion                                CurrentBiome;                                      // 0x0501(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_PlayerTitles                             ActivePlayerTitle;                                 // 0x0502(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503[0x5];                                      // 0x0503(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<Enum_PlayerTitles>                     AvailablePlayerTitles;                             // 0x0508(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	double                                        GroupX;                                            // 0x0518(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GroupY;                                            // 0x0520(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FName                                   SteamID;                                           // 0x04B8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SteamName;                                         // 0x04C0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 ClanName;                                          // 0x04D0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	uint8                                         ClanID;                                            // 0x04E0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         GroupID;                                           // 0x04E1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E2[0x6];                                      // 0x04E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& UserName, bool IsAdmin, bool IsDev, const class FString& Message, Enum_ChatChannel Channel)> DispatchGroupChat; // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& UserName, bool IsAdmin, bool IsDev, const class FString& Message, bool IsBroadcast, Enum_ChatChannel Channel)> DispatchClanChat; // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          Administrator;                                     // 0x0508(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHidden;                                          // 0x0509(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasClanInvitePending;                              // 0x050A(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasGroupInvitePending;                             // 0x050B(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEggInvitePending;                               // 0x050C(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_InvitationSocial               PendingClanInvite;                                 // 0x0510(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_InvitationSocial               PendingGroupInvite;                                // 0x051C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const struct FStruct_InvitationSocial& PendingClanInvite)> ReceivedClanInvite; // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FStruct_InvitationSocial& PendingGroupInvite)> ReceivedGroupInvite; // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class ADragonsGS_C*                           DragonsGameState;                                  // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UDragonsGI_C*                           DragonsGameInstance;                               // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ADragonsGM_C*                           DragonsGameMode;                                   // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const class FString& PromptMessage)> DispatchSocialPrompt;         // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FStruct_ClanRegister& ClanInfo)> DispatchClanInfo;    // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          ClanCreateInProgress;                              // 0x0580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool WasCreated, class FName Message)> DispatchClanCreated;        // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          Dev;                                               // 0x0598(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_599[0x7];                                      // 0x0599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FStruct_InvitationEgg& EggInvitation)> ReceivedEggInvite; // 0x05A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FStruct_InvitationEgg                  PendingEggInvite;                                  // 0x05B0(0x0014)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMuted;                                           // 0x05C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C5[0x3];                                      // 0x05C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USave_PlayerPresence_C*                 PlayerOnlineSave;                                  // 0x05C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ADragonsPC_C*                           PlayerController;                                  // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 PingHistory;                                       // 0x05D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MinPing;                                           // 0x05E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxPing;                                           // 0x05EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              UpdateClanStatus;                                  // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          ForceNoClan;                                       // 0x0600(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	Enum_MapRegion                                CurrentBiome;                                      // 0x0601(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_PlayerTitles                             ActivePlayerTitle;                                 // 0x0602(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_603[0x5];                                      // 0x0603(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<Enum_PlayerTitles>                     AvailablePlayerTitles;                             // 0x0608(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	double                                        GroupX;                                            // 0x0618(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroupY;                                            // 0x0620(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AcceptedClanInvite();

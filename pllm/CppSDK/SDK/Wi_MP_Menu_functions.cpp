@@ -37,6 +37,42 @@ void UWi_MP_Menu_C::BndEvt__Wi_MP_Menu_EditableText_NameFilter_K2Node_ComponentB
 }
 
 
+// Function Wi_MP_Menu.Wi_MP_Menu_C.BndEvt__Wi_MP_Menu_IP_K2Node_ComponentBoundEvent_4_OnEditableTextCommittedEvent__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWi_MP_Menu_C::BndEvt__Wi_MP_Menu_IP_K2Node_ComponentBoundEvent_4_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_MP_Menu_C", "BndEvt__Wi_MP_Menu_IP_K2Node_ComponentBoundEvent_4_OnEditableTextCommittedEvent__DelegateSignature");
+
+	Params::Wi_MP_Menu_C_BndEvt__Wi_MP_Menu_IP_K2Node_ComponentBoundEvent_4_OnEditableTextCommittedEvent__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+	Parms.CommitMethod = CommitMethod;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Wi_MP_Menu.Wi_MP_Menu_C.BndEvt__Wi_MP_Menu_JoinIP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWi_MP_Menu_C::BndEvt__Wi_MP_Menu_JoinIP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_MP_Menu_C", "BndEvt__Wi_MP_Menu_JoinIP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Wi_MP_Menu.Wi_MP_Menu_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

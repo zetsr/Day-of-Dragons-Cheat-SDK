@@ -2742,6 +2742,28 @@ void ADragonsPC_C::OnPlayerTeleported()
 }
 
 
+// Function DragonsPC.DragonsPC_C.OnSecurityViolationReported
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// ESecurityViolationType                  ViolationType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ViolationDetails                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::OnSecurityViolationReported(ESecurityViolationType ViolationType, const class FString& ViolationDetails)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "OnSecurityViolationReported");
+
+	Params::DragonsPC_C_OnSecurityViolationReported Parms{};
+
+	Parms.ViolationType = ViolationType;
+	Parms.ViolationDetails = std::move(ViolationDetails);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsPC.DragonsPC_C.OnSendMessageToServer_Event
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -3699,8 +3721,9 @@ void ADragonsPC_C::SendChat(const class FString& Message, Enum_ChatChannel Chann
 // Parameters:
 // bool                                    LogOnly                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ADragonsPC_C::SendServerSystemWarning(bool LogOnly, const class FString& Message)
+void ADragonsPC_C::SendServerSystemWarning(bool LogOnly, const class FString& Message, const class FString& Key)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3711,6 +3734,7 @@ void ADragonsPC_C::SendServerSystemWarning(bool LogOnly, const class FString& Me
 
 	Parms.LogOnly = LogOnly;
 	Parms.Message = std::move(Message);
+	Parms.Key = std::move(Key);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

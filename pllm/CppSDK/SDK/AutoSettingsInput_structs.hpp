@@ -28,17 +28,6 @@ enum class EBindingCaptureMode : uint8
 	EBindingCaptureMode_MAX                  = 2,
 };
 
-// ScriptStruct AutoSettingsInput.KeyScale
-// 0x0020 (0x0020 - 0x0000)
-struct FKeyScale final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKeyScale;
-
 // ScriptStruct AutoSettingsInput.CapturedInput
 // 0x0028 (0x0028 - 0x0000)
 struct FCapturedInput final
@@ -49,6 +38,16 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCapturedInput;
+
+// ScriptStruct AutoSettingsInput.KeyFriendlyName
+// 0x0030 (0x0030 - 0x0000)
+struct FKeyFriendlyName final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   FriendlyName;                                      // 0x0018(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKeyFriendlyName;
 
 // ScriptStruct AutoSettingsInput.KeyIconPair
 // 0x0020 (0x0020 - 0x0000)
@@ -84,6 +83,17 @@ public:
 };
 DUMPER7_ASSERTS_FKeyGroup;
 
+// ScriptStruct AutoSettingsInput.KeyScale
+// 0x0020 (0x0020 - 0x0000)
+struct FKeyScale final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKeyScale;
+
 // ScriptStruct AutoSettingsInput.MappingGroupLink
 // 0x0010 (0x0010 - 0x0000)
 struct FMappingGroupLink final
@@ -104,16 +114,6 @@ public:
 	TArray<struct FKeyScale>                      BooleanKeys;                                       // 0x0040(0x0010)(ZeroConstructor, Config, Deprecated, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAxisAssociation;
-
-// ScriptStruct AutoSettingsInput.KeyFriendlyName
-// 0x0030 (0x0030 - 0x0000)
-struct FKeyFriendlyName final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   FriendlyName;                                      // 0x0018(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKeyFriendlyName;
 
 // ScriptStruct AutoSettingsInput.ConfigActionKeyMapping
 // 0x0008 (0x0030 - 0x0028)

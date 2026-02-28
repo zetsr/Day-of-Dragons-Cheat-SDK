@@ -14,12 +14,35 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
-#include "AnimationCore_structs.hpp"
 #include "Constraints_structs.hpp"
+#include "AnimationCore_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class Constraints.ConstraintsActor
+// 0x0008 (0x0298 - 0x0290)
+class AConstraintsActor final : public AActor
+{
+public:
+	class UConstraintsManager*                    ConstraintsManager;                                // 0x0290(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConstraintsActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConstraintsActor")
+	}
+	static class AConstraintsActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AConstraintsActor>();
+	}
+};
+DUMPER7_ASSERTS_AConstraintsActor;
 
 // Class Constraints.TransformableHandle
 // 0x0030 (0x0058 - 0x0028)
@@ -44,53 +67,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UTransformableHandle;
-
-// Class Constraints.TransformableComponentHandle
-// 0x0010 (0x0068 - 0x0058)
-class UTransformableComponentHandle final : public UTransformableHandle
-{
-public:
-	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0058(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SocketName;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TransformableComponentHandle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TransformableComponentHandle")
-	}
-	static class UTransformableComponentHandle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTransformableComponentHandle>();
-	}
-};
-DUMPER7_ASSERTS_UTransformableComponentHandle;
-
-// Class Constraints.ConstraintsActor
-// 0x0008 (0x0298 - 0x0290)
-class AConstraintsActor final : public AActor
-{
-public:
-	class UConstraintsManager*                    ConstraintsManager;                                // 0x0290(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ConstraintsActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ConstraintsActor")
-	}
-	static class AConstraintsActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AConstraintsActor>();
-	}
-};
-DUMPER7_ASSERTS_AConstraintsActor;
 
 // Class Constraints.TickableConstraint
 // 0x0048 (0x0070 - 0x0028)
@@ -172,6 +148,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UConstraintsScriptingLibrary;
+
+// Class Constraints.TransformableComponentHandle
+// 0x0010 (0x0068 - 0x0058)
+class UTransformableComponentHandle final : public UTransformableHandle
+{
+public:
+	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0058(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TransformableComponentHandle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TransformableComponentHandle")
+	}
+	static class UTransformableComponentHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTransformableComponentHandle>();
+	}
+};
+DUMPER7_ASSERTS_UTransformableComponentHandle;
 
 // Class Constraints.TickableTransformConstraint
 // 0x0020 (0x0090 - 0x0070)

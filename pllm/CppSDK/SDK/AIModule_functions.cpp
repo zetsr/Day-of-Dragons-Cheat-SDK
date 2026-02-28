@@ -97,107 +97,220 @@ EAIRequestPriority UPawnAction::GetActionPriority()
 }
 
 
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Function AIModule.PawnAction_BlueprintBase.ActionFinished
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  ResultingActorsSet                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EPawnActionResult                       WithResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet) const
+void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideActorsSet");
+		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionFinished");
 
-	Params::EnvQueryContext_BlueprintBase_ProvideActorsSet Parms{};
+	Params::PawnAction_BlueprintBase_ActionFinished Parms{};
 
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.WithResult = WithResult;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingActorsSet != nullptr)
-		*ResultingActorsSet = std::move(Parms.ResultingActorsSet);
 }
 
 
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Function AIModule.PawnAction_BlueprintBase.ActionPause
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>*                 ResultingLocationSet                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet) const
+void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideLocationsSet");
+		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionPause");
 
-	Params::EnvQueryContext_BlueprintBase_ProvideLocationsSet Parms{};
+	Params::PawnAction_BlueprintBase_ActionPause Parms{};
 
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
+	Parms.ControlledPawn = ControlledPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingLocationSet != nullptr)
-		*ResultingLocationSet = std::move(Parms.ResultingLocationSet);
 }
 
 
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Function AIModule.PawnAction_BlueprintBase.ActionResume
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor**                          ResultingActor                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor) const
+void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleActor");
+		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionResume");
 
-	Params::EnvQueryContext_BlueprintBase_ProvideSingleActor Parms{};
+	Params::PawnAction_BlueprintBase_ActionResume Parms{};
 
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
+	Parms.ControlledPawn = ControlledPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingActor != nullptr)
-		*ResultingActor = Parms.ResultingActor;
 }
 
 
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
-// (Event, Public, HasOutParams, HasDefaults, BlueprintEvent, Const)
+// Function AIModule.PawnAction_BlueprintBase.ActionStart
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         ResultingLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation) const
+void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleLocation");
+		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionStart");
 
-	Params::EnvQueryContext_BlueprintBase_ProvideSingleLocation Parms{};
+	Params::PawnAction_BlueprintBase_ActionStart Parms{};
 
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.PawnAction_BlueprintBase.ActionTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionTick");
+
+	Params::PawnAction_BlueprintBase_ActionTick Parms{};
+
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BrainComponent.RestartLogic
+// (Native, Public, BlueprintCallable)
+
+void UBrainComponent::RestartLogic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BrainComponent", "RestartLogic");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.BrainComponent.StartLogic
+// (Native, Public, BlueprintCallable)
+
+void UBrainComponent::StartLogic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BrainComponent", "StartLogic");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.BrainComponent.StopLogic
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Reason                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBrainComponent::StopLogic(const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BrainComponent", "StopLogic");
+
+	Params::BrainComponent_StopLogic Parms{};
+
+	Parms.Reason = std::move(Reason);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (ResultingLocation != nullptr)
-		*ResultingLocation = std::move(Parms.ResultingLocation);
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.BrainComponent.IsPaused
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBrainComponent::IsPaused() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BrainComponent", "IsPaused");
+
+	Params::BrainComponent_IsPaused Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.BrainComponent.IsRunning
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBrainComponent::IsRunning() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BrainComponent", "IsRunning");
+
+	Params::BrainComponent_IsRunning Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -225,6 +338,322 @@ void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& Requ
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "PerformConditionCheck");
+
+	Params::BTDecorator_BlueprintBase_PerformConditionCheck Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "PerformConditionCheckAI");
+
+	Params::BTDecorator_BlueprintBase_PerformConditionCheckAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBTNodeResult                           NodeResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeResult NodeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionFinish");
+
+	Params::BTDecorator_BlueprintBase_ReceiveExecutionFinish Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+	Parms.NodeResult = NodeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EBTNodeResult                           NodeResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, EBTNodeResult NodeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionFinishAI");
+
+	Params::BTDecorator_BlueprintBase_ReceiveExecutionFinishAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.NodeResult = NodeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionStart");
+
+	Params::BTDecorator_BlueprintBase_ReceiveExecutionStart Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionStartAI");
+
+	Params::BTDecorator_BlueprintBase_ReceiveExecutionStartAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverActivated");
+
+	Params::BTDecorator_BlueprintBase_ReceiveObserverActivated Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverActivatedAI");
+
+	Params::BTDecorator_BlueprintBase_ReceiveObserverActivatedAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverDeactivated");
+
+	Params::BTDecorator_BlueprintBase_ReceiveObserverDeactivated Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverDeactivatedAI");
+
+	Params::BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveTick
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveTick");
+
+	Params::BTDecorator_BlueprintBase_ReceiveTick Parms{};
+
+	Parms.OwnerActor = OwnerActor;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveTickAI");
+
+	Params::BTDecorator_BlueprintBase_ReceiveTickAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "IsDecoratorExecutionActive");
+
+	Params::BTDecorator_BlueprintBase_IsDecoratorExecutionActive Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTDecorator_BlueprintBase", "IsDecoratorObserverActive");
+
+	Params::BTDecorator_BlueprintBase_IsDecoratorObserverActive Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -345,110 +774,6 @@ bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, EAIReque
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.PawnAction_BlueprintBase.ActionFinished
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EPawnActionResult                       WithResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionFinished");
-
-	Params::PawnAction_BlueprintBase_ActionFinished Parms{};
-
-	Parms.ControlledPawn = ControlledPawn;
-	Parms.WithResult = WithResult;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.PawnAction_BlueprintBase.ActionPause
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionPause");
-
-	Params::PawnAction_BlueprintBase_ActionPause Parms{};
-
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.PawnAction_BlueprintBase.ActionResume
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionResume");
-
-	Params::PawnAction_BlueprintBase_ActionResume Parms{};
-
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.PawnAction_BlueprintBase.ActionStart
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionStart");
-
-	Params::PawnAction_BlueprintBase_ActionStart Parms{};
-
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.PawnAction_BlueprintBase.ActionTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PawnAction_BlueprintBase", "ActionTick");
-
-	Params::PawnAction_BlueprintBase_ActionTick Parms{};
-
-	Parms.ControlledPawn = ControlledPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1075,119 +1400,6 @@ void UAISystem::AILoggingVerbose()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.BrainComponent.RestartLogic
-// (Native, Public, BlueprintCallable)
-
-void UBrainComponent::RestartLogic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BrainComponent", "RestartLogic");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.BrainComponent.StartLogic
-// (Native, Public, BlueprintCallable)
-
-void UBrainComponent::StartLogic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BrainComponent", "StartLogic");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.BrainComponent.StopLogic
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Reason                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBrainComponent::StopLogic(const class FString& Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BrainComponent", "StopLogic");
-
-	Params::BrainComponent_StopLogic Parms{};
-
-	Parms.Reason = std::move(Reason);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.BrainComponent.IsPaused
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBrainComponent::IsPaused() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BrainComponent", "IsPaused");
-
-	Params::BrainComponent_IsPaused Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.BrainComponent.IsRunning
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBrainComponent::IsRunning() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BrainComponent", "IsRunning");
-
-	Params::BrainComponent_IsRunning Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -2749,322 +2961,6 @@ void UBTFunctionLibrary::StopUsingExternalEvent(class UBTNode* NodeOwner)
 }
 
 
-// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "PerformConditionCheck");
-
-	Params::BTDecorator_BlueprintBase_PerformConditionCheck Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "PerformConditionCheckAI");
-
-	Params::BTDecorator_BlueprintBase_PerformConditionCheckAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBTNodeResult                           NodeResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeResult NodeResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionFinish");
-
-	Params::BTDecorator_BlueprintBase_ReceiveExecutionFinish Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-	Parms.NodeResult = NodeResult;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EBTNodeResult                           NodeResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, EBTNodeResult NodeResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionFinishAI");
-
-	Params::BTDecorator_BlueprintBase_ReceiveExecutionFinishAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-	Parms.NodeResult = NodeResult;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionStart");
-
-	Params::BTDecorator_BlueprintBase_ReceiveExecutionStart Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveExecutionStartAI");
-
-	Params::BTDecorator_BlueprintBase_ReceiveExecutionStartAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverActivated");
-
-	Params::BTDecorator_BlueprintBase_ReceiveObserverActivated Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverActivatedAI");
-
-	Params::BTDecorator_BlueprintBase_ReceiveObserverActivatedAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverDeactivated");
-
-	Params::BTDecorator_BlueprintBase_ReceiveObserverDeactivated Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveObserverDeactivatedAI");
-
-	Params::BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveTick
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AActor*                           OwnerActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveTick");
-
-	Params::BTDecorator_BlueprintBase_ReceiveTick Parms{};
-
-	Parms.OwnerActor = OwnerActor;
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APawn*                            ControlledPawn                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "ReceiveTickAI");
-
-	Params::BTDecorator_BlueprintBase_ReceiveTickAI Parms{};
-
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "IsDecoratorExecutionActive");
-
-	Params::BTDecorator_BlueprintBase_IsDecoratorExecutionActive Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTDecorator_BlueprintBase", "IsDecoratorObserverActive");
-
-	Params::BTDecorator_BlueprintBase_IsDecoratorObserverActive Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AIModule.BTService_BlueprintBase.ReceiveActivation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -4008,6 +3904,110 @@ void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstan
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  ResultingActorsSet                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideActorsSet");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideActorsSet Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingActorsSet != nullptr)
+		*ResultingActorsSet = std::move(Parms.ResultingActorsSet);
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>*                 ResultingLocationSet                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideLocationsSet");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideLocationsSet Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingLocationSet != nullptr)
+		*ResultingLocationSet = std::move(Parms.ResultingLocationSet);
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor**                          ResultingActor                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleActor");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideSingleActor Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingActor != nullptr)
+		*ResultingActor = Parms.ResultingActor;
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
+// (Event, Public, HasOutParams, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         ResultingLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleLocation");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideSingleLocation Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingLocation != nullptr)
+		*ResultingLocation = std::move(Parms.ResultingLocation);
 }
 
 

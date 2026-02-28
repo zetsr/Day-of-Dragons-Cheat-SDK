@@ -14,9 +14,9 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ModelingComponents_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "GeometryFramework_classes.hpp"
 #include "Engine_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 

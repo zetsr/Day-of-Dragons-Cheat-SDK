@@ -9,36 +9,12 @@
 // FORWARD DECLARATIONS
 
 
-namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
-
 namespace SM_DragonEgg_Skeleton_AnimBP { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
-namespace Anim_BroodWatcher
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace SMPA_Biolumin
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace Anim_InfernoRavager
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
 
 namespace Anim_ShadowScale
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace Anim_BlitzStriker
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -50,13 +26,19 @@ namespace Anim_Biolumin
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace SM_ThornbackCrawler_AnimBP
+namespace SMPA_Biolumin
 {
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace Anim_FlameStalker
+namespace Anim_AcidSpitter
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace Anim_BroodWatcher
 {
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
@@ -68,7 +50,25 @@ namespace NPC_Biolumin_AnimBP
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace Anim_AcidSpitter
+namespace SM_ThornbackCrawler_AnimBP
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace Anim_InfernoRavager
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace Anim_FlameStalker
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace Anim_BlitzStriker
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

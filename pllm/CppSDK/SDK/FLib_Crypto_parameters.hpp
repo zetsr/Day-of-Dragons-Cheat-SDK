@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Enum_ServerType_structs.hpp"
 #include "SCUE5_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
 
 
 namespace SDK::Params

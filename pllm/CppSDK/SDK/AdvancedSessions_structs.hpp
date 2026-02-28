@@ -156,23 +156,14 @@ public:
 };
 DUMPER7_ASSERTS_FBPFriendInfo;
 
-// ScriptStruct AdvancedSessions.SessionsSearchSetting
-// 0x0030 (0x0030 - 0x0000)
-struct alignas(0x08) FSessionsSearchSetting final
+// ScriptStruct AdvancedSessions.SessionPropertyKeyPair
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FSessionPropertyKeyPair final
 {
 public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionsSearchSetting;
-
-// ScriptStruct AdvancedSessions.BPUserOnlineAccount
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FBPUserOnlineAccount final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBPUserOnlineAccount;
+DUMPER7_ASSERTS_FSessionPropertyKeyPair;
 
 // ScriptStruct AdvancedSessions.BPOnlineUser
 // 0x0040 (0x0040 - 0x0000)
@@ -194,14 +185,23 @@ public:
 };
 DUMPER7_ASSERTS_FBPOnlineRecentPlayer;
 
-// ScriptStruct AdvancedSessions.SessionPropertyKeyPair
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FSessionPropertyKeyPair final
+// ScriptStruct AdvancedSessions.BPUserOnlineAccount
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FBPUserOnlineAccount final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionPropertyKeyPair;
+DUMPER7_ASSERTS_FBPUserOnlineAccount;
+
+// ScriptStruct AdvancedSessions.SessionsSearchSetting
+// 0x0030 (0x0030 - 0x0000)
+struct alignas(0x08) FSessionsSearchSetting final
+{
+public:
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSessionsSearchSetting;
 
 }
 

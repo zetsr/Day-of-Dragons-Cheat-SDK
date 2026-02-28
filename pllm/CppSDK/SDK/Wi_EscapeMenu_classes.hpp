@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_MenuSettingNav_structs.hpp"
-#include "Wi_Parent_Menu_classes.hpp"
 #include "Engine_structs.hpp"
+#include "Wi_Parent_Menu_classes.hpp"
 
 
 namespace SDK

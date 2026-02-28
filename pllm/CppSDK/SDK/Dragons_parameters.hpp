@@ -10,9 +10,42 @@
 
 #include "Basic.hpp"
 
+#include "Dragons_structs.hpp"
+
 
 namespace SDK::Params
 {
+
+// Function Dragons.DragonsPlayerController.GetNetAddress
+// 0x0010 (0x0010 - 0x0000)
+struct DragonsPlayerController_GetNetAddress final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DragonsPlayerController_GetNetAddress;
+
+// Function Dragons.DragonsPlayerController.OnSecurityViolationReported
+// 0x0018 (0x0018 - 0x0000)
+struct DragonsPlayerController_OnSecurityViolationReported final
+{
+public:
+	ESecurityViolationType                        ViolationType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ViolationDetails;                                  // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DragonsPlayerController_OnSecurityViolationReported;
+
+// Function Dragons.DragonsPlayerController.Server_ReportSecurityViolation
+// 0x0018 (0x0018 - 0x0000)
+struct DragonsPlayerController_Server_ReportSecurityViolation final
+{
+public:
+	ESecurityViolationType                        ViolationType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Details;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DragonsPlayerController_Server_ReportSecurityViolation;
 
 // Function Dragons.AdminSpectatorPawn.SetSpectateSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -58,6 +91,24 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DragonsFunctionLibrary_FloatKey;
+
+// Function Dragons.DragonsFunctionLibrary.GetCurrentMemoryPaddingSize
+// 0x0004 (0x0004 - 0x0000)
+struct DragonsFunctionLibrary_GetCurrentMemoryPaddingSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DragonsFunctionLibrary_GetCurrentMemoryPaddingSize;
+
+// Function Dragons.DragonsFunctionLibrary.GetNetworkSalt
+// 0x0010 (0x0010 - 0x0000)
+struct DragonsFunctionLibrary_GetNetworkSalt final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DragonsFunctionLibrary_GetNetworkSalt;
 
 // Function Dragons.DragonsFunctionLibrary.Int32Key
 // 0x0010 (0x0010 - 0x0000)
@@ -164,14 +215,14 @@ public:
 };
 DUMPER7_ASSERTS_DragonsFunctionLibrary_VectorKey;
 
-// Function Dragons.DragonsPlayerController.GetNetAddress
-// 0x0010 (0x0010 - 0x0000)
-struct DragonsPlayerController_GetNetAddress final
+// Function Dragons.DragonsGameInstance.IsNetworkEncryptionActive
+// 0x0001 (0x0001 - 0x0000)
+struct DragonsGameInstance_IsNetworkEncryptionActive final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DragonsPlayerController_GetNetAddress;
+DUMPER7_ASSERTS_DragonsGameInstance_IsNetworkEncryptionActive;
 
 // Function Dragons.SteamFunctionsLibrary.BIsAppInstalled
 // 0x0008 (0x0008 - 0x0000)

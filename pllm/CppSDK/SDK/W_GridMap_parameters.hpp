@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Slate_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Slate_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
 #include "SlateCore_structs.hpp"
 

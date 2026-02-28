@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Elemental_Thunder.Char_Elemental_Thunder_C
-// 0x0000 (0x0D00 - 0x0D00)
+// 0x0000 (0x0E00 - 0x0E00)
 class AChar_Elemental_Thunder_C final : public AChar_Parent_Elemental_C
 {
 public:

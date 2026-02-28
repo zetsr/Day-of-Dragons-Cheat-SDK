@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Struct_AdminPlayerListData_structs.hpp"
 #include "UMG_structs.hpp"
-#include "Enum_Gender_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Struct_AdminPlayerArrayInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struct_AdminPlayerArrayInfo_structs.hpp"
+#include "Struct_AdminPlayerListData_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Enum_Gender_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -569,6 +569,17 @@ public:
 	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0018)()
 };
 DUMPER7_ASSERTS_Wi_Panel_Admin_C_Get_PlayerSelectedID_Text_0;
+
+// Function Wi_Panel_Admin.Wi_Panel_Admin_C.Get_PMBtn_ToolTipWidget
+// 0x0028 (0x0028 - 0x0000)
+struct Wi_Panel_Admin_C_Get_PMBtn_ToolTipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)(ConstParm)
+	class UWi_BasicTooltip_C*                     CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Wi_Panel_Admin_C_Get_PMBtn_ToolTipWidget;
 
 // Function Wi_Panel_Admin.Wi_Panel_Admin_C.Get_PortBtn_ToolTipWidget_0
 // 0x0010 (0x0010 - 0x0000)

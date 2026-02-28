@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "Struct_ClanRegister_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Struct_ClanMemberList_structs.hpp"
-#include "Struct_ClanRegister_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 

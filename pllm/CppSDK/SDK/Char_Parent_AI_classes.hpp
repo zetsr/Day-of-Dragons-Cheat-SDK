@@ -10,33 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "Enum_AiGrowth_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Char_Parent_All_classes.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
-#include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_StatusEffects_structs.hpp"
 #include "Enum_AppliedDamage_structs.hpp"
+#include "Enum_StatusEffects_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_AiGrowth_structs.hpp"
+#include "Char_Parent_All_classes.hpp"
+#include "Enum_CreatureLevels_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_AI.Char_Parent_AI_C
-// 0x0020 (0x0870 - 0x0850)
+// 0x0020 (0x0970 - 0x0950)
 class AChar_Parent_AI_C : public AChar_Parent_All_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_AI_C;                   // 0x0850(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          IsPlayableAI;                                      // 0x0858(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_859[0x7];                                      // 0x0859(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPDA_AIData_C*                          AI_Data;                                           // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	Enum_AiGrowth                                 SpawnSize;                                         // 0x0868(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverrideSpawnSize;                                 // 0x0869(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	Enum_AiGrowth                                 SpawnSizeOverride;                                 // 0x086A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          IsMontagePlaying;                                  // 0x086B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldDisableLootGeneration;                       // 0x086C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          PreventRootMontage;                                // 0x086D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_AI_C;                   // 0x0950(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          IsPlayableAI;                                      // 0x0958(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_959[0x7];                                      // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPDA_AIData_C*                          AI_Data;                                           // 0x0960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	Enum_AiGrowth                                 SpawnSize;                                         // 0x0968(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OverrideSpawnSize;                                 // 0x0969(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	Enum_AiGrowth                                 SpawnSizeOverride;                                 // 0x096A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          IsMontagePlaying;                                  // 0x096B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldDisableLootGeneration;                       // 0x096C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          PreventRootMontage;                                // 0x096D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyCreatureDamage(Enum_AppliedDamage AppliedDamage, class UClass* DamageTypeClass, bool UseRadialDamage, class AActor* SingleDamagedActor, const struct FVector& RadialDamageOrigin, double RadialDamageRadius, bool RadialIgnoreChannelPrevention, ECollisionChannel RadialDamagePreventionChannel, const TArray<class AActor*>& RadialIgnoreActors);

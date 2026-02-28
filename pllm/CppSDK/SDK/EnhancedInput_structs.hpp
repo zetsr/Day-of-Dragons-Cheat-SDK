@@ -162,17 +162,24 @@ public:
 };
 DUMPER7_ASSERTS_FPlayerMappableKeyOptions;
 
-// ScriptStruct EnhancedInput.InputComboStepData
-// 0x0010 (0x0010 - 0x0000)
-struct FInputComboStepData final
+// ScriptStruct EnhancedInput.EnhancedActionKeyMapping
+// 0x0098 (0x0098 - 0x0000)
+struct FEnhancedActionKeyMapping final
 {
 public:
-	class UInputAction*                           ComboStepAction;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ComboStepCompletionStates;                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TimeToPressKey;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerMappableKeyOptions              PlayerMappableOptions;                             // 0x0000(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0040(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0050(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UInputAction*                           Action;                                            // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   Key;                                               // 0x0068(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bShouldBeIgnored : 1;                              // 0x0080(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EPlayerMappableKeySettingBehaviors            SettingBehavior;                                   // 0x0081(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayerMappableKeySettings*             PlayerMappableKeySettings;                         // 0x0088(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bIsPlayerMappable : 1;                             // 0x0090(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInputComboStepData;
+DUMPER7_ASSERTS_FEnhancedActionKeyMapping;
 
 // ScriptStruct EnhancedInput.InputActionValue
 // 0x0020 (0x0020 - 0x0000)
@@ -205,25 +212,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPlayerMappableKeySlot;
-
-// ScriptStruct EnhancedInput.EnhancedActionKeyMapping
-// 0x0098 (0x0098 - 0x0000)
-struct FEnhancedActionKeyMapping final
-{
-public:
-	struct FPlayerMappableKeyOptions              PlayerMappableOptions;                             // 0x0000(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0040(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0050(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UInputAction*                           Action;                                            // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   Key;                                               // 0x0068(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bShouldBeIgnored : 1;                              // 0x0080(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	EPlayerMappableKeySettingBehaviors            SettingBehavior;                                   // 0x0081(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayerMappableKeySettings*             PlayerMappableKeySettings;                         // 0x0088(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bIsPlayerMappable : 1;                             // 0x0090(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEnhancedActionKeyMapping;
 
 // ScriptStruct EnhancedInput.BlueprintEnhancedInputActionBinding
 // 0x0018 (0x0018 - 0x0000)
@@ -298,6 +286,18 @@ public:
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBlueprintInputDebugKeyDelegateBinding;
+
+// ScriptStruct EnhancedInput.InputComboStepData
+// 0x0010 (0x0010 - 0x0000)
+struct FInputComboStepData final
+{
+public:
+	class UInputAction*                           ComboStepAction;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ComboStepCompletionStates;                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TimeToPressKey;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInputComboStepData;
 
 // ScriptStruct EnhancedInput.InputCancelAction
 // 0x0010 (0x0010 - 0x0000)

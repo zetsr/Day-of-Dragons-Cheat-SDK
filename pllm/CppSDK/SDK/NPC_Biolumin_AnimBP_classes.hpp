@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "NPC_Biolumin_AnimBP_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 
 

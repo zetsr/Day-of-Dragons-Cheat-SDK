@@ -838,6 +838,47 @@ enum class EMatchType : uint8
 	MT_MAX                                   = 2,
 };
 
+// ScriptStruct OnlineSubsystemEIK.EIKUniqueNetId
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FEIKUniqueNetId final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIKUniqueNetId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CatalogItemId
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Ecom_CatalogItemId final
+{
+public:
+	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Ecom_CatalogItemId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_ItemOwnership
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_Ecom_ItemOwnership final
+{
+public:
+	struct FEIK_Ecom_CatalogItemId                ID;                                                // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EEIK_EOwnershipStatus                         OwnershipStatus;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x1F];                                      // 0x0019(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Ecom_ItemOwnership;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Achievement
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Achievement final
+{
+public:
+	class FString                                 ID;                                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Progress;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Achievement;
+
 // ScriptStruct OnlineSubsystemEIK.EIK_EpicAccountId
 // 0x0018 (0x0018 - 0x0000)
 struct FEIK_EpicAccountId final
@@ -847,6 +888,49 @@ public:
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_EpicAccountId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CheckoutEntry
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_Ecom_CheckoutEntry final
+{
+public:
+	struct FEIK_Ecom_CatalogItemId                OfferId;                                           // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Ecom_CheckoutEntry;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CheckoutOptions
+// 0x0040 (0x0040 - 0x0000)
+struct FEIK_Ecom_CheckoutOptions final
+{
+public:
+	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 OverrideCatalogNamespace;                          // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntryCount;                                        // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FEIK_Ecom_CheckoutEntry>        Entries;                                           // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_Ecom_CheckoutOptions;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_ProductUserId
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_ProductUserId final
+{
+public:
+	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_ProductUserId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_RTCAdmin_UserToken
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_RTCAdmin_UserToken final
+{
+public:
+	struct FEIK_ProductUserId                     ProductUserId;                                     // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 Token;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_RTCAdmin_UserToken;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Auth_PinGrantInfo
 // 0x0060 (0x0060 - 0x0000)
@@ -886,47 +970,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Auth_LoginCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CatalogItemId
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Ecom_CatalogItemId final
-{
-public:
-	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Ecom_CatalogItemId;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipTokenOptions
-// 0x0038 (0x0038 - 0x0000)
-struct FEIK_Ecom_QueryOwnershipTokenOptions final
-{
-public:
-	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<struct FEIK_Ecom_CatalogItemId>        CatalogItemIds;                                    // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 CatalogNamespace;                                  // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipTokenOptions;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_ProductUserId
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_ProductUserId final
-{
-public:
-	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_ProductUserId;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_RTCAdmin_UserToken
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_RTCAdmin_UserToken final
-{
-public:
-	struct FEIK_ProductUserId                     ProductUserId;                                     // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FString                                 Token;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_RTCAdmin_UserToken;
-
 // ScriptStruct OnlineSubsystemEIK.ExternalAccountIdAndType
 // 0x0030 (0x0030 - 0x0000)
 struct FExternalAccountIdAndType final
@@ -960,52 +1003,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Stats;
 
-// ScriptStruct OnlineSubsystemEIK.ClientData
-// 0x0018 (0x0018 - 0x0000)
-struct FClientData final
-{
-public:
-	class APlayerController*                      ControllerRef;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FClientData;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Sessions_AttributeData
-// 0x0038 (0x0038 - 0x0000)
-struct FEIK_Sessions_AttributeData final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         ValueAsInt64;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValueAsString;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bValueAsBool;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ValueAsDouble;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_EAttributeType                           ValueType;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Sessions_AttributeData;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Achievement
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Achievement final
-{
-public:
-	class FString                                 ID;                                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Progress;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Achievement;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_HLobbyModification
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FEIK_HLobbyModification final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_HLobbyModification;
-
 // ScriptStruct OnlineSubsystemEIK.EIKAttribute
 // 0x0020 (0x0020 - 0x0000)
 struct FEIKAttribute final
@@ -1020,37 +1017,32 @@ public:
 };
 DUMPER7_ASSERTS_FEIKAttribute;
 
-// ScriptStruct OnlineSubsystemEIK.CreateSessionExtraSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FCreateSessionExtraSettings final
+// ScriptStruct OnlineSubsystemEIK.EIK_OnlineSessionSettings
+// 0x0080 (0x0080 - 0x0000)
+struct FEIK_OnlineSessionSettings final
 {
 public:
-	bool                                          bIsLANMatch;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumberOfPrivateConnections;                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPublicConnections;                              // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPrivateConnections;                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldAdvertise;                                  // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowJoinInProgress;                              // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERegionInfo                                   Region;                                            // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePresence;                                      // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinViaPresence;                             // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinViaPresenceFriendsOnly;                  // 0x000D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnforceSanctions;                                 // 0x000E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsLANMatch;                                       // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDedicated;                                      // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsesStats;                                        // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInvites;                                     // 0x000D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsesPresence;                                     // 0x000E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinViaPresence;                             // 0x000F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinViaPresenceFriendsOnly;                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAntiCheatProtected;                               // 0x0011(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLobbiesIfAvailable;                            // 0x0012(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLobbiesVoiceChatIfAvailable;                   // 0x0013(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SessionIdOverride;                                 // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BuildUniqueId;                                     // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, struct FEIKAttribute>     SessionSettings;                                   // 0x0030(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCreateSessionExtraSettings;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Auth_LinkAccountCallbackInfo
-// 0x0098 (0x0098 - 0x0000)
-struct FEIK_Auth_LinkAccountCallbackInfo final
-{
-public:
-	EEIK_Result                                   ResultCode;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEIK_Auth_PinGrantInfo                 PinGrantInfo;                                      // 0x0020(0x0060)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEIK_EpicAccountId                     SelectedAccountId;                                 // 0x0080(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_Auth_LinkAccountCallbackInfo;
+DUMPER7_ASSERTS_FEIK_OnlineSessionSettings;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_AchievementDescription
 // 0x0070 (0x0070 - 0x0000)
@@ -1137,28 +1129,34 @@ public:
 };
 DUMPER7_ASSERTS_FSessionFindStruct;
 
-// ScriptStruct OnlineSubsystemEIK.MessageData
-// 0x0048 (0x0048 - 0x0000)
-struct FMessageData final
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_HTransaction
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FEIK_Ecom_HTransaction final
 {
 public:
-	int32                                         TicketId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Message;                                           // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SenderName;                                        // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SenderEmail;                                       // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Timestamp;                                         // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMessageData;
+DUMPER7_ASSERTS_FEIK_Ecom_HTransaction;
 
-// ScriptStruct OnlineSubsystemEIK.EIKUniqueNetId
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FEIKUniqueNetId final
+// ScriptStruct OnlineSubsystemEIK.SupportTicketResponseData
+// 0x00C0 (0x00C0 - 0x0000)
+struct FSupportTicketResponseData final
 {
 public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 prod_name;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 prod_slug;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Guid;                                              // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 sender_name;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 sender_email;                                      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Subject;                                           // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Message;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 error_code;                                        // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 system_os;                                         // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 system_antimalware;                                // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 system_other;                                      // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Timestamp;                                         // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIKUniqueNetId;
+DUMPER7_ASSERTS_FSupportTicketResponseData;
 
 // ScriptStruct OnlineSubsystemEIK.DedicatedServerSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -1170,24 +1168,6 @@ public:
 	int32                                         PortInfo;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDedicatedServerSettings;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Achievements_DefinitionV2
-// 0x0090 (0x0090 - 0x0000)
-struct FEIK_Achievements_DefinitionV2 final
-{
-public:
-	class FString                                 AchievementId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnlockedDisplayName;                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnlockedDescription;                               // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LockedDisplayName;                                 // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LockedDescription;                                 // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FlavorText;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UnlockedIconURL;                                   // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LockedIconURL;                                     // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsHidden;                                         // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Achievements_DefinitionV2;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_RTCAudio_AudioBuffer
 // 0x0020 (0x0020 - 0x0000)
@@ -1202,63 +1182,29 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_RTCAudio_AudioBuffer;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_SandboxId
+// ScriptStruct OnlineSubsystemEIK.EIK_Connect_Credentials
 // 0x0018 (0x0018 - 0x0000)
-struct FEIK_Ecom_SandboxId final
+struct FEIK_Connect_Credentials final
 {
 public:
-	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Token;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_EExternalCredentialType                  Type;                                              // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_Ecom_SandboxId;
+DUMPER7_ASSERTS_FEIK_Connect_Credentials;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipBySandboxIdsOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_Ecom_QueryOwnershipBySandboxIdsOptions final
+// ScriptStruct OnlineSubsystemEIK.EIK_Auth_LinkAccountCallbackInfo
+// 0x0098 (0x0098 - 0x0000)
+struct FEIK_Auth_LinkAccountCallbackInfo final
 {
 public:
-	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<struct FEIK_Ecom_SandboxId>            SandboxIds;                                        // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	EEIK_Result                                   ResultCode;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEIK_Auth_PinGrantInfo                 PinGrantInfo;                                      // 0x0020(0x0060)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEIK_EpicAccountId                     SelectedAccountId;                                 // 0x0080(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipBySandboxIdsOptions;
-
-// ScriptStruct OnlineSubsystemEIK.CreateLobbySettings
-// 0x0038 (0x0038 - 0x0000)
-struct FCreateLobbySettings final
-{
-public:
-	bool                                          bIsLANMatch;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInvites;                                     // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumberOfPrivateConnections;                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAdvertise;                                  // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinInProgress;                              // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERegionInfo                                   Region;                                            // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseVoiceChat;                                     // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePresence;                                      // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BucketID;                                          // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportHostMigration;                             // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableJoinViaID;                                  // 0x0021(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LobbyIDOverride;                                   // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCreateLobbySettings;
-
-// ScriptStruct OnlineSubsystemEIK.ConversationData
-// 0x0070 (0x0070 - 0x0000)
-struct FConversationData final
-{
-public:
-	class FString                                 Guid;                                              // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Subject;                                           // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Message;                                           // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SenderName;                                        // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SenderEmail;                                       // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Timestamp;                                         // 0x0050(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FMessageData>                   Messages;                                          // 0x0060(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FConversationData;
+DUMPER7_ASSERTS_FEIK_Auth_LinkAccountCallbackInfo;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Auth_VerifyIdTokenCallbackInfo
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1282,6 +1228,16 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Auth_VerifyIdTokenCallbackInfo;
 
+// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardRanksOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_Leaderboards_QueryLeaderboardRanksOptions final
+{
+public:
+	class FString                                 LeaderboardId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardRanksOptions;
+
 // ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CheckoutCallbackInfo
 // 0x0030 (0x0030 - 0x0000)
 struct FEIK_Ecom_CheckoutCallbackInfo final
@@ -1294,15 +1250,29 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_CheckoutCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CheckoutEntry
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_Ecom_CheckoutEntry final
+// ScriptStruct OnlineSubsystemEIK.MessageData
+// 0x0048 (0x0048 - 0x0000)
+struct FMessageData final
 {
 public:
-	struct FEIK_Ecom_CatalogItemId                OfferId;                                           // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         TicketId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Message;                                           // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SenderName;                                        // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SenderEmail;                                       // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Timestamp;                                         // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Ecom_CheckoutEntry;
+DUMPER7_ASSERTS_FMessageData;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_SandboxId
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Ecom_SandboxId final
+{
+public:
+	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Ecom_SandboxId;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Ecom_SandboxIdItemOwnership
 // 0x0030 (0x0030 - 0x0000)
@@ -1328,16 +1298,70 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipBySandboxIdsCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_ItemOwnership
-// 0x0038 (0x0038 - 0x0000)
-struct FEIK_Ecom_ItemOwnership final
+// ScriptStruct OnlineSubsystemEIK.EIK_Auth_Credentials
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_Auth_Credentials final
 {
 public:
-	struct FEIK_Ecom_CatalogItemId                ID;                                                // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EEIK_EOwnershipStatus                         OwnershipStatus;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x1F];                                      // 0x0019(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Token;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_ELoginCredentialType                     Type;                                              // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_EExternalCredentialType                  ExternalType;                                      // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_Ecom_ItemOwnership;
+DUMPER7_ASSERTS_FEIK_Auth_Credentials;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_AttributeData
+// 0x0058 (0x0058 - 0x0000)
+struct FEIK_Lobby_AttributeData final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ValueAsInt64;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValueAsString;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValueAsBool;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ValueAsDouble;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_EAttributeType                           ValueType;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x27];                                      // 0x0031(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Lobby_AttributeData;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_Attribute
+// 0x0078 (0x0078 - 0x0000)
+struct FEIK_Lobby_Attribute final
+{
+public:
+	struct FEIK_Lobby_AttributeData               Data;                                              // 0x0000(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EEIK_ELobbyAttributeVisibility                Visibility;                                        // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x1F];                                      // 0x0059(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Lobby_Attribute;
+
+// ScriptStruct OnlineSubsystemEIK.ClientData
+// 0x0018 (0x0018 - 0x0000)
+struct FClientData final
+{
+public:
+	class APlayerController*                      ControllerRef;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FClientData;
+
+// ScriptStruct OnlineSubsystemEIK.ConversationData
+// 0x0070 (0x0070 - 0x0000)
+struct FConversationData final
+{
+public:
+	class FString                                 Guid;                                              // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Subject;                                           // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Message;                                           // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SenderName;                                        // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SenderEmail;                                       // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Timestamp;                                         // 0x0050(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMessageData>                   Messages;                                          // 0x0060(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FConversationData;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipCallbackInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -1351,17 +1375,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Connect_Credentials
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Connect_Credentials final
-{
-public:
-	class FString                                 Token;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_EExternalCredentialType                  Type;                                              // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Connect_Credentials;
-
 // ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipTokenCallbackInfo
 // 0x0030 (0x0030 - 0x0000)
 struct FEIK_Ecom_QueryOwnershipTokenCallbackInfo final
@@ -1374,29 +1387,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipTokenCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Sanctions_PlayerSanction
-// 0x0030 (0x0030 - 0x0000)
-struct FEIK_Sanctions_PlayerSanction final
-{
-public:
-	int64                                         TimePlaced;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         TimeExpires;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Action;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReferenceId;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_Sanctions_PlayerSanction;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_LeaderboardUserScore
-// 0x0038 (0x0038 - 0x0000)
-struct FEIK_Leaderboards_LeaderboardUserScore final
-{
-public:
-	struct FEIK_ProductUserId                     UserId;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Score;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x1C];                                      // 0x001C(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Leaderboards_LeaderboardUserScore;
-
 // ScriptStruct OnlineSubsystemEIK.EIK_LobbyId
 // 0x0018 (0x0018 - 0x0000)
 struct FEIK_LobbyId final
@@ -1406,30 +1396,6 @@ public:
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_LobbyId;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_UserScoresQueryStatInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Leaderboards_UserScoresQueryStatInfo final
-{
-public:
-	class FString                                 StatName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_ELeaderboardAggregation                  Aggregation;                                       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Leaderboards_UserScoresQueryStatInfo;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardUserScoresOptions
-// 0x0048 (0x0048 - 0x0000)
-struct FEIK_Leaderboards_QueryLeaderboardUserScoresOptions final
-{
-public:
-	TArray<struct FEIK_ProductUserId>             UserIds;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FEIK_Leaderboards_UserScoresQueryStatInfo> StatInfo;                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int64                                         StartTime;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         EndTime;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardUserScoresOptions;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_RTC_Option
 // 0x0020 (0x0020 - 0x0000)
@@ -1450,6 +1416,18 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_UI_EventId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Auth_LoginOptions
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_Auth_LoginOptions final
+{
+public:
+	struct FEIK_Auth_Credentials                  Credentials;                                       // 0x0000(0x0028)(BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         ScopeFlags;                                        // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         LoginFlags;                                        // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_Auth_LoginOptions;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_P2P_SocketId
 // 0x0010 (0x0010 - 0x0000)
@@ -1474,15 +1452,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_FriendData;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_NotificationId
-// 0x0008 (0x0008 - 0x0000)
-struct FEIK_NotificationId final
-{
-public:
-	int64                                         NotificationId;                                    // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_NotificationId;
-
 // ScriptStruct OnlineSubsystemEIK.EIK_P2P_OnIncomingPacketQueueFullInfo
 // 0x0030 (0x0030 - 0x0000)
 struct FEIK_P2P_OnIncomingPacketQueueFullInfo final
@@ -1505,6 +1474,17 @@ public:
 	class FString                                 ProductUserId;                                     // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FProductUserIdAndEpicId;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardDefinitionsOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_Leaderboards_QueryLeaderboardDefinitionsOptions final
+{
+public:
+	int64                                         StartTime;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         EndTime;                                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardDefinitionsOptions;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_RTC_ParticipantMetadata
 // 0x0038 (0x0038 - 0x0000)
@@ -1533,33 +1513,26 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_RTC_ParticipantStatusChangedCallbackInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_LocalRTCOptions
-// 0x0008 (0x0008 - 0x0000)
-struct FEIK_Lobby_LocalRTCOptions final
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipOptions
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_Ecom_QueryOwnershipOptions final
 {
 public:
-	int32                                         Flags;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseManualAudioInput;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseManualAudioOutput;                             // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLocalAudioDeviceInputStartsMuted;                 // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FEIK_Ecom_CatalogItemId>        CatalogItemIds;                                    // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 CatalogNamespace;                                  // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Lobby_LocalRTCOptions;
+DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipOptions;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_JoinLobbyByIdOptions
-// 0x0040 (0x0040 - 0x0000)
-struct FEIK_Lobby_JoinLobbyByIdOptions final
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipBySandboxIdsOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FEIK_Ecom_QueryOwnershipBySandboxIdsOptions final
 {
 public:
-	struct FEIK_LobbyId                           LobbyID;                                           // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0018(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bPresenceEnabled;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEIK_Lobby_LocalRTCOptions             LobbyRTCOptions;                                   // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bCrossplayOptOut;                                  // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FEIK_Ecom_SandboxId>            SandboxIds;                                        // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Lobby_JoinLobbyByIdOptions;
+DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipBySandboxIdsOptions;
 
 // ScriptStruct OnlineSubsystemEIK.EIKCopyAuthToken
 // 0x0020 (0x0020 - 0x0000)
@@ -1570,6 +1543,29 @@ public:
 	class FString                                 IdToken_JWT;                                       // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEIKCopyAuthToken;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryEntitlementsOptions
+// 0x0030 (0x0030 - 0x0000)
+struct FEIK_Ecom_QueryEntitlementsOptions final
+{
+public:
+	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class FString>                         EntitlementNames;                                  // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIncludeRedeemed;                                  // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Ecom_QueryEntitlementsOptions;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Stats_IngestData
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Stats_IngestData final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IngestAmount;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Stats_IngestData;
 
 // ScriptStruct OnlineSubsystemEIK.EIKLeaderboardValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1582,15 +1578,15 @@ public:
 };
 DUMPER7_ASSERTS_FEIKLeaderboardValue;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardRanksOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_Leaderboards_QueryLeaderboardRanksOptions final
+// ScriptStruct OnlineSubsystemEIK.EIK_Connect_UserLoginInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FEIK_Connect_UserLoginInfo final
 {
 public:
-	class FString                                 LeaderboardId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 DisplayName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NsaTokenId;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardRanksOptions;
+DUMPER7_ASSERTS_FEIK_Connect_UserLoginInfo;
 
 // ScriptStruct OnlineSubsystemEIK.EIKExtendedLeaderboardValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1603,44 +1599,27 @@ public:
 };
 DUMPER7_ASSERTS_FEIKExtendedLeaderboardValue;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_LobbyDetails_MemberInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FEIK_LobbyDetails_MemberInfo final
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CatalogOfferId
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Ecom_CatalogOfferId final
 {
 public:
-	struct FEIK_ProductUserId                     UserId;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Platform;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowsCrossplay;                                  // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x1B];                                      // 0x001D(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 OfferId;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_LobbyDetails_MemberInfo;
+DUMPER7_ASSERTS_FEIK_Ecom_CatalogOfferId;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_OnlineSessionSettings
-// 0x0080 (0x0080 - 0x0000)
-struct FEIK_OnlineSessionSettings final
+// ScriptStruct OnlineSubsystemEIK.EIK_Sanctions_PlayerSanction
+// 0x0030 (0x0030 - 0x0000)
+struct FEIK_Sanctions_PlayerSanction final
 {
 public:
-	int32                                         NumPublicConnections;                              // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPrivateConnections;                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAdvertise;                                  // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinInProgress;                              // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLANMatch;                                       // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDedicated;                                      // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsesStats;                                        // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInvites;                                     // 0x000D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsesPresence;                                     // 0x000E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinViaPresence;                             // 0x000F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowJoinViaPresenceFriendsOnly;                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAntiCheatProtected;                               // 0x0011(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseLobbiesIfAvailable;                            // 0x0012(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseLobbiesVoiceChatIfAvailable;                   // 0x0013(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SessionIdOverride;                                 // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BuildUniqueId;                                     // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, struct FEIKAttribute>     SessionSettings;                                   // 0x0030(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+	int64                                         TimePlaced;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         TimeExpires;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Action;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReferenceId;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_OnlineSessionSettings;
+DUMPER7_ASSERTS_FEIK_Sanctions_PlayerSanction;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_CurrentSessionInfo
 // 0x00F0 (0x00F0 - 0x0000)
@@ -1668,70 +1647,28 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_CurrentSessionInfo;
 
-// ScriptStruct OnlineSubsystemEIK.SupportTicketResponseData
-// 0x00C0 (0x00C0 - 0x0000)
-struct FSupportTicketResponseData final
-{
-public:
-	class FString                                 prod_name;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 prod_slug;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Guid;                                              // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 sender_name;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 sender_email;                                      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Subject;                                           // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Message;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 error_code;                                        // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 system_os;                                         // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 system_antimalware;                                // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 system_other;                                      // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Timestamp;                                         // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSupportTicketResponseData;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Auth_Credentials
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_Auth_Credentials final
-{
-public:
-	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Token;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_ELoginCredentialType                     Type;                                              // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_EExternalCredentialType                  ExternalType;                                      // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Auth_Credentials;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Auth_LoginOptions
+// ScriptStruct OnlineSubsystemEIK.CreateLobbySettings
 // 0x0038 (0x0038 - 0x0000)
-struct FEIK_Auth_LoginOptions final
+struct FCreateLobbySettings final
 {
 public:
-	struct FEIK_Auth_Credentials                  Credentials;                                       // 0x0000(0x0028)(BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         ScopeFlags;                                        // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         LoginFlags;                                        // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLANMatch;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInvites;                                     // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumberOfPrivateConnections;                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldAdvertise;                                  // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinInProgress;                              // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERegionInfo                                   Region;                                            // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseVoiceChat;                                     // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePresence;                                      // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BucketID;                                          // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportHostMigration;                             // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableJoinViaID;                                  // 0x0021(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LobbyIDOverride;                                   // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Auth_LoginOptions;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_PresenceModification_DataRecordId
-// 0x0020 (0x0020 - 0x0000)
-struct FEIK_PresenceModification_DataRecordId final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_PresenceModification_DataRecordId;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Connect_UserLoginInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FEIK_Connect_UserLoginInfo final
-{
-public:
-	class FString                                 DisplayName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NsaTokenId;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEIK_Connect_UserLoginInfo;
+DUMPER7_ASSERTS_FCreateLobbySettings;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_PartyExtraSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -1746,52 +1683,72 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_PartyExtraSettings;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CheckoutOptions
-// 0x0040 (0x0040 - 0x0000)
-struct FEIK_Ecom_CheckoutOptions final
+// ScriptStruct OnlineSubsystemEIK.CreateSessionExtraSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FCreateSessionExtraSettings final
 {
 public:
-	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FString                                 OverrideCatalogNamespace;                          // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EntryCount;                                        // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FEIK_Ecom_CheckoutEntry>        Entries;                                           // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIsLANMatch;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumberOfPrivateConnections;                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldAdvertise;                                  // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinInProgress;                              // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERegionInfo                                   Region;                                            // 0x000A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePresence;                                      // 0x000B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinViaPresence;                             // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowJoinViaPresenceFriendsOnly;                  // 0x000D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnforceSanctions;                                 // 0x000E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_Ecom_CheckoutOptions;
+DUMPER7_ASSERTS_FCreateSessionExtraSettings;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryEntitlementsOptions
-// 0x0030 (0x0030 - 0x0000)
-struct FEIK_Ecom_QueryEntitlementsOptions final
-{
-public:
-	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class FString>                         EntitlementNames;                                  // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bIncludeRedeemed;                                  // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Ecom_QueryEntitlementsOptions;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipOptions
+// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_QueryOwnershipTokenOptions
 // 0x0038 (0x0038 - 0x0000)
-struct FEIK_Ecom_QueryOwnershipOptions final
+struct FEIK_Ecom_QueryOwnershipTokenOptions final
 {
 public:
 	struct FEIK_EpicAccountId                     LocalUserId;                                       // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
 	TArray<struct FEIK_Ecom_CatalogItemId>        CatalogItemIds;                                    // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 CatalogNamespace;                                  // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipOptions;
+DUMPER7_ASSERTS_FEIK_Ecom_QueryOwnershipTokenOptions;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardDefinitionsOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FEIK_Leaderboards_QueryLeaderboardDefinitionsOptions final
+// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_UserScoresQueryStatInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FEIK_Leaderboards_UserScoresQueryStatInfo final
 {
 public:
-	int64                                         StartTime;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         EndTime;                                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 StatName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_ELeaderboardAggregation                  Aggregation;                                       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardDefinitionsOptions;
+DUMPER7_ASSERTS_FEIK_Leaderboards_UserScoresQueryStatInfo;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_QueryLeaderboardUserScoresOptions
+// 0x0048 (0x0048 - 0x0000)
+struct FEIK_Leaderboards_QueryLeaderboardUserScoresOptions final
+{
+public:
+	TArray<struct FEIK_ProductUserId>             UserIds;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FEIK_Leaderboards_UserScoresQueryStatInfo> StatInfo;                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int64                                         StartTime;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         EndTime;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_Leaderboards_QueryLeaderboardUserScoresOptions;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_LocalRTCOptions
+// 0x0008 (0x0008 - 0x0000)
+struct FEIK_Lobby_LocalRTCOptions final
+{
+public:
+	int32                                         Flags;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseManualAudioInput;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseManualAudioOutput;                             // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLocalAudioDeviceInputStartsMuted;                 // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Lobby_LocalRTCOptions;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Lobby_CreateLobbyOptions
 // 0x0078 (0x0078 - 0x0000)
@@ -1844,6 +1801,21 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Lobby_JoinLobbyOptions;
 
+// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_JoinLobbyByIdOptions
+// 0x0040 (0x0040 - 0x0000)
+struct FEIK_Lobby_JoinLobbyByIdOptions final
+{
+public:
+	struct FEIK_LobbyId                           LobbyID;                                           // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEIK_ProductUserId                     LocalUserId;                                       // 0x0018(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bPresenceEnabled;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEIK_Lobby_LocalRTCOptions             LobbyRTCOptions;                                   // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bCrossplayOptOut;                                  // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Lobby_JoinLobbyByIdOptions;
+
 // ScriptStruct OnlineSubsystemEIK.SupportTicketData
 // 0x0088 (0x0088 - 0x0000)
 struct FSupportTicketData final
@@ -1881,6 +1853,15 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Sessions_CreateSessionModificationOptions;
 
+// ScriptStruct OnlineSubsystemEIK.EIK_NotificationId
+// 0x0008 (0x0008 - 0x0000)
+struct FEIK_NotificationId final
+{
+public:
+	int64                                         NotificationId;                                    // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEIK_NotificationId;
+
 // ScriptStruct OnlineSubsystemEIK.EIK_Connect_IdToken
 // 0x0028 (0x0028 - 0x0000)
 struct FEIK_Connect_IdToken final
@@ -1904,6 +1885,24 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_Connect_ExternalAccountInfo;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Achievements_DefinitionV2
+// 0x0090 (0x0090 - 0x0000)
+struct FEIK_Achievements_DefinitionV2 final
+{
+public:
+	class FString                                 AchievementId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnlockedDisplayName;                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnlockedDescription;                               // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LockedDisplayName;                                 // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LockedDescription;                                 // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FlavorText;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UnlockedIconURL;                                   // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LockedIconURL;                                     // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsHidden;                                         // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Achievements_DefinitionV2;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_Achievements_PlayerStatInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -1999,16 +1998,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_CatalogItem;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CatalogOfferId
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Ecom_CatalogOfferId final
-{
-public:
-	class FString                                 OfferId;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Ecom_CatalogOfferId;
-
 // ScriptStruct OnlineSubsystemEIK.EIK_Ecom_CatalogOffer
 // 0x0140 (0x0140 - 0x0000)
 struct FEIK_Ecom_CatalogOffer final
@@ -2094,15 +2083,6 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Ecom_KeyImageInfo;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Ecom_HTransaction
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FEIK_Ecom_HTransaction final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Ecom_HTransaction;
-
 // ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_Definition
 // 0x0068 (0x0068 - 0x0000)
 struct FEIK_Leaderboards_Definition final
@@ -2131,32 +2111,16 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_Leaderboards_LeaderboardRecord;
 
-// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_AttributeData
-// 0x0058 (0x0058 - 0x0000)
-struct FEIK_Lobby_AttributeData final
+// ScriptStruct OnlineSubsystemEIK.EIK_Leaderboards_LeaderboardUserScore
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_Leaderboards_LeaderboardUserScore final
 {
 public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         ValueAsInt64;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValueAsString;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bValueAsBool;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ValueAsDouble;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEIK_EAttributeType                           ValueType;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x27];                                      // 0x0031(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FEIK_ProductUserId                     UserId;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Score;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x1C];                                      // 0x001C(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEIK_Lobby_AttributeData;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Lobby_Attribute
-// 0x0078 (0x0078 - 0x0000)
-struct FEIK_Lobby_Attribute final
-{
-public:
-	struct FEIK_Lobby_AttributeData               Data;                                              // 0x0000(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EEIK_ELobbyAttributeVisibility                Visibility;                                        // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x1F];                                      // 0x0059(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Lobby_Attribute;
+DUMPER7_ASSERTS_FEIK_Leaderboards_LeaderboardUserScore;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_HLobbySearch
 // 0x0008 (0x0008 - 0x0000)
@@ -2166,6 +2130,15 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_HLobbySearch;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_HLobbyModification
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FEIK_HLobbyModification final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_HLobbyModification;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_LobbyDetailsInfo
 // 0x00C0 (0x00C0 - 0x0000)
@@ -2191,6 +2164,18 @@ public:
 	uint8                                         Pad_68[0x58];                                      // 0x0068(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_LobbyDetailsInfo;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_LobbyDetails_MemberInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_LobbyDetails_MemberInfo final
+{
+public:
+	struct FEIK_ProductUserId                     UserId;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Platform;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowsCrossplay;                                  // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x1B];                                      // 0x001D(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_LobbyDetails_MemberInfo;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_PlayerDataStorage_FileMetadata
 // 0x0060 (0x0060 - 0x0000)
@@ -2257,6 +2242,16 @@ public:
 };
 DUMPER7_ASSERTS_FEIK_HPresenceModification;
 
+// ScriptStruct OnlineSubsystemEIK.EIK_PresenceModification_DataRecordId
+// 0x0020 (0x0020 - 0x0000)
+struct FEIK_PresenceModification_DataRecordId final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_PresenceModification_DataRecordId;
+
 // ScriptStruct OnlineSubsystemEIK.EIK_SessionDetails_Settings
 // 0x0028 (0x0028 - 0x0000)
 struct FEIK_SessionDetails_Settings final
@@ -2317,6 +2312,22 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_HSessionDetails;
+
+// ScriptStruct OnlineSubsystemEIK.EIK_Sessions_AttributeData
+// 0x0038 (0x0038 - 0x0000)
+struct FEIK_Sessions_AttributeData final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ValueAsInt64;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValueAsString;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValueAsBool;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ValueAsDouble;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEIK_EAttributeType                           ValueType;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEIK_Sessions_AttributeData;
 
 // ScriptStruct OnlineSubsystemEIK.EIK_SessionDetails_Attribute
 // 0x0040 (0x0040 - 0x0000)
@@ -2440,17 +2451,6 @@ public:
 	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEIK_RTCAudio_OutputDeviceInformation;
-
-// ScriptStruct OnlineSubsystemEIK.EIK_Stats_IngestData
-// 0x0018 (0x0018 - 0x0000)
-struct FEIK_Stats_IngestData final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         IngestAmount;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEIK_Stats_IngestData;
 
 // ScriptStruct OnlineSubsystemEIK.FileListStruct
 // 0x00A8 (0x00A8 - 0x0000)

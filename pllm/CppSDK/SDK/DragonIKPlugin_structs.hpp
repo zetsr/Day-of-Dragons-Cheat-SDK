@@ -117,114 +117,6 @@ enum class EInterpoRotation_Type_Plugin : uint8
 	ENUM_MAX                                 = 2,
 };
 
-// ScriptStruct DragonIKPlugin.AnimNode_DragonControlBase
-// 0x00B8 (0x00C8 - 0x0010)
-struct FAnimNode_DragonControlBase : public FAnimNode_Base
-{
-public:
-	struct FComponentSpacePoseLink                ComponentPose;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         LODThreshold;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ActualAlpha;                                       // 0x0024(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAnimAlphaInputType                           AlphaInputType;                                    // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlphaBoolEnabled;                                 // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Alpha;                                             // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBias                        AlphaScaleBias;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInputAlphaBoolBlend                   AlphaBoolBlend;                                    // 0x0038(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   AlphaCurveName;                                    // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBiasClamp                   AlphaScaleBiasClamp;                               // 0x0088(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x10];                                      // 0x00B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_DragonControlBase;
-
-// ScriptStruct DragonIKPlugin.AnimNode_DragonFabrikSolver
-// 0x00E8 (0x01B0 - 0x00C8)
-struct FAnimNode_DragonFabrikSolver final : public FAnimNode_DragonControlBase
-{
-public:
-	struct FBoneReference                         TipBone_Input;                                     // 0x00C8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RootBone_Input;                                    // 0x00D8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Precision;                                         // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxIterations;                                     // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Target_Transform;                                  // 0x00F0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_150[0x60];                                     // 0x0150(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_DragonFabrikSolver;
-
-// ScriptStruct DragonIKPlugin.DragonIKTraceKeyValuePair
-// 0x00F8 (0x00F8 - 0x0000)
-struct FDragonIKTraceKeyValuePair final
-{
-public:
-	class FName                                   Key;                                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             hit_result;                                        // 0x0010(0x00E8)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDragonIKTraceKeyValuePair;
-
-// ScriptStruct DragonIKPlugin.ChinaDragonChainLink
-// 0x0170 (0x0170 - 0x0000)
-struct alignas(0x10) FChinaDragonChainLink final
-{
-public:
-	uint8                                         Pad_0[0x170];                                      // 0x0000(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChinaDragonChainLink;
-
-// ScriptStruct DragonIKPlugin.DragonData_ChineseDragonBoneInput
-// 0x0010 (0x0010 - 0x0000)
-struct FDragonData_ChineseDragonBoneInput final
-{
-public:
-	TArray<class FName>                           Custom_Bone_Structure;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDragonData_ChineseDragonBoneInput;
-
-// ScriptStruct DragonIKPlugin.AnimNode_ChineseDragonSolver
-// 0x0208 (0x02D0 - 0x00C8)
-struct FAnimNode_ChineseDragonSolver final : public FAnimNode_DragonControlBase
-{
-public:
-	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          Use_Custom_Bone_Chain;                             // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         TipBone;                                           // 0x00D4(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RootBone;                                          // 0x00E4(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDragonData_ChineseDragonBoneInput     Custom_Bone_Input;                                 // 0x00F8(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             EffectorTransform;                                 // 0x0110(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_170[0x60];                                     // 0x0170(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          Use_Advanced_Strict_Chain_Logic;                   // 0x01D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Fix_Root_in_Place;                                 // 0x01D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Use_ScaleRot_Add_Mode;                             // 0x01D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Interpolation_Is_World;                            // 0x01D3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Interpolation_Speed;                               // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Precision;                                         // 0x01D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CachedEffectorCSTransform;                         // 0x01E0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_240[0x90];                                     // 0x0240(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_ChineseDragonSolver;
-
-// ScriptStruct DragonIKPlugin.DragonData_CustomLimbClamp
-// 0x0010 (0x0010 - 0x0000)
-struct FDragonData_CustomLimbClamp final
-{
-public:
-	TArray<float>                                 Custom_Limb_Clamp_Array;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDragonData_CustomLimbClamp;
-
-// ScriptStruct DragonIKPlugin.DragonData_AimSolver_SkeletonInput
-// 0x0010 (0x0010 - 0x0000)
-struct FDragonData_AimSolver_SkeletonInput final
-{
-public:
-	TArray<class FName>                           Bone_Input;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDragonData_AimSolver_SkeletonInput;
-
 // ScriptStruct DragonIKPlugin.DragonData_FingerData
 // 0x0030 (0x0030 - 0x0000)
 struct FDragonData_FingerData final
@@ -284,6 +176,24 @@ public:
 	TArray<struct FDragonData_FootData>           FeetBones;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDragonData_MultiInput;
+
+// ScriptStruct DragonIKPlugin.DragonData_CustomLimbClamp
+// 0x0010 (0x0010 - 0x0000)
+struct FDragonData_CustomLimbClamp final
+{
+public:
+	TArray<float>                                 Custom_Limb_Clamp_Array;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDragonData_CustomLimbClamp;
+
+// ScriptStruct DragonIKPlugin.DragonData_AimSolver_SkeletonInput
+// 0x0010 (0x0010 - 0x0000)
+struct FDragonData_AimSolver_SkeletonInput final
+{
+public:
+	TArray<class FName>                           Bone_Input;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDragonData_AimSolver_SkeletonInput;
 
 // ScriptStruct DragonIKPlugin.DragonData_ArmsData
 // 0x0200 (0x0200 - 0x0000)
@@ -384,6 +294,26 @@ public:
 	TArray<struct FDragonData_ArmSizeStruct>      CustomArmSizeArray;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDragonData_CustomArmLengths;
+
+// ScriptStruct DragonIKPlugin.AnimNode_DragonControlBase
+// 0x00B8 (0x00C8 - 0x0010)
+struct FAnimNode_DragonControlBase : public FAnimNode_Base
+{
+public:
+	struct FComponentSpacePoseLink                ComponentPose;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         LODThreshold;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ActualAlpha;                                       // 0x0024(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimAlphaInputType                           AlphaInputType;                                    // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlphaBoolEnabled;                                 // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Alpha;                                             // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBias                        AlphaScaleBias;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInputAlphaBoolBlend                   AlphaBoolBlend;                                    // 0x0038(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   AlphaCurveName;                                    // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBiasClamp                   AlphaScaleBiasClamp;                               // 0x0088(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x10];                                      // 0x00B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_DragonControlBase;
 
 // ScriptStruct DragonIKPlugin.AnimNode_DragonAimSolver
 // 0x0C98 (0x0D60 - 0x00C8)
@@ -487,6 +417,62 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_DragonAimSolver;
 
+// ScriptStruct DragonIKPlugin.DragonIKTraceKeyValuePair
+// 0x00F8 (0x00F8 - 0x0000)
+struct FDragonIKTraceKeyValuePair final
+{
+public:
+	class FName                                   Key;                                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             hit_result;                                        // 0x0010(0x00E8)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDragonIKTraceKeyValuePair;
+
+// ScriptStruct DragonIKPlugin.ChinaDragonChainLink
+// 0x0170 (0x0170 - 0x0000)
+struct alignas(0x10) FChinaDragonChainLink final
+{
+public:
+	uint8                                         Pad_0[0x170];                                      // 0x0000(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChinaDragonChainLink;
+
+// ScriptStruct DragonIKPlugin.DragonData_ChineseDragonBoneInput
+// 0x0010 (0x0010 - 0x0000)
+struct FDragonData_ChineseDragonBoneInput final
+{
+public:
+	TArray<class FName>                           Custom_Bone_Structure;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDragonData_ChineseDragonBoneInput;
+
+// ScriptStruct DragonIKPlugin.AnimNode_ChineseDragonSolver
+// 0x0208 (0x02D0 - 0x00C8)
+struct FAnimNode_ChineseDragonSolver final : public FAnimNode_DragonControlBase
+{
+public:
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Use_Custom_Bone_Chain;                             // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         TipBone;                                           // 0x00D4(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RootBone;                                          // 0x00E4(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDragonData_ChineseDragonBoneInput     Custom_Bone_Input;                                 // 0x00F8(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             EffectorTransform;                                 // 0x0110(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_170[0x60];                                     // 0x0170(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Use_Advanced_Strict_Chain_Logic;                   // 0x01D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Fix_Root_in_Place;                                 // 0x01D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Use_ScaleRot_Add_Mode;                             // 0x01D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Interpolation_Is_World;                            // 0x01D3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Interpolation_Speed;                               // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Precision;                                         // 0x01D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CachedEffectorCSTransform;                         // 0x01E0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_240[0x90];                                     // 0x0240(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_ChineseDragonSolver;
+
 // ScriptStruct DragonIKPlugin.SocketDragonReference
 // 0x0070 (0x0070 - 0x0000)
 struct alignas(0x10) FSocketDragonReference final
@@ -511,14 +497,19 @@ public:
 };
 DUMPER7_ASSERTS_FBoneDragonSocketTarget;
 
-// ScriptStruct DragonIKPlugin.DragonData_FeetAlpha_Struct
-// 0x0010 (0x0010 - 0x0000)
-struct FDragonData_FeetAlpha_Struct final
+// ScriptStruct DragonIKPlugin.AnimNode_DragonFabrikSolver
+// 0x00E8 (0x01B0 - 0x00C8)
+struct FAnimNode_DragonFabrikSolver final : public FAnimNode_DragonControlBase
 {
 public:
-	TArray<float>                                 feet_IK_alpha_array;                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         TipBone_Input;                                     // 0x00C8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RootBone_Input;                                    // 0x00D8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Precision;                                         // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxIterations;                                     // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Target_Transform;                                  // 0x00F0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_150[0x60];                                     // 0x0150(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDragonData_FeetAlpha_Struct;
+DUMPER7_ASSERTS_FAnimNode_DragonFabrikSolver;
 
 // ScriptStruct DragonIKPlugin.DragonData_FeetOffset_Struct
 // 0x0010 (0x0010 - 0x0000)
@@ -528,6 +519,15 @@ public:
 	TArray<struct FVector>                        feet_extra_offset_array;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDragonData_FeetOffset_Struct;
+
+// ScriptStruct DragonIKPlugin.DragonData_FeetAlpha_Struct
+// 0x0010 (0x0010 - 0x0000)
+struct FDragonData_FeetAlpha_Struct final
+{
+public:
+	TArray<float>                                 feet_IK_alpha_array;                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDragonData_FeetAlpha_Struct;
 
 // ScriptStruct DragonIKPlugin.DragonData_StickyFeetStruct
 // 0x0020 (0x0020 - 0x0000)

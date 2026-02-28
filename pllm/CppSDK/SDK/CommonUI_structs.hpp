@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
@@ -77,20 +77,6 @@ enum class ETransitionCurve : uint8
 	ETransitionCurve_MAX                     = 7,
 };
 
-// ScriptStruct CommonUI.UITag
-// 0x0000 (0x0008 - 0x0008)
-struct FUITag : public FGameplayTag
-{
-};
-DUMPER7_ASSERTS_FUITag;
-
-// ScriptStruct CommonUI.UIActionTag
-// 0x0000 (0x0008 - 0x0008)
-struct FUIActionTag final : public FUITag
-{
-};
-DUMPER7_ASSERTS_FUIActionTag;
-
 // ScriptStruct CommonUI.CommonNumberFormattingOptions
 // 0x0014 (0x0014 - 0x0000)
 struct FCommonNumberFormattingOptions final
@@ -106,6 +92,24 @@ public:
 };
 DUMPER7_ASSERTS_FCommonNumberFormattingOptions;
 
+// ScriptStruct CommonUI.UITag
+// 0x0000 (0x0008 - 0x0008)
+struct FUITag : public FGameplayTag
+{
+};
+DUMPER7_ASSERTS_FUITag;
+
+// ScriptStruct CommonUI.UIActionKeyMapping
+// 0x0020 (0x0020 - 0x0000)
+struct FUIActionKeyMapping final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HoldTime;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUIActionKeyMapping;
+
 // ScriptStruct CommonUI.CommonRegisteredTabInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FCommonRegisteredTabInfo final
@@ -117,6 +121,13 @@ public:
 	class UWidget*                                ContentInstance;                                   // 0x0010(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCommonRegisteredTabInfo;
+
+// ScriptStruct CommonUI.UIActionTag
+// 0x0000 (0x0008 - 0x0008)
+struct FUIActionTag final : public FUITag
+{
+};
+DUMPER7_ASSERTS_FUIActionTag;
 
 // ScriptStruct CommonUI.CommonInputActionHandlerData
 // 0x0020 (0x0020 - 0x0000)
@@ -180,17 +191,6 @@ public:
 	struct FCommonInputTypeInfo                   TouchInputTypeInfo;                                // 0x0270(0x00F0)(Edit, Protected, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FCommonInputActionDataBase;
-
-// ScriptStruct CommonUI.UIActionKeyMapping
-// 0x0020 (0x0020 - 0x0000)
-struct FUIActionKeyMapping final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HoldTime;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUIActionKeyMapping;
 
 // ScriptStruct CommonUI.UIInputAction
 // 0x0030 (0x0030 - 0x0000)

@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Chaos_structs.hpp"
-#include "TypedElementFramework_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "NetCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "AudioExtensions_structs.hpp"
+#include "TypedElementFramework_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Slate_structs.hpp"
 
@@ -2137,6 +2137,123 @@ public:
 };
 DUMPER7_ASSERTS_SceneComponent_K2_GetComponentToWorld;
 
+// Function Engine.Light.SetAffectTranslucentLighting
+// 0x0001 (0x0001 - 0x0000)
+struct Light_SetAffectTranslucentLighting final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetAffectTranslucentLighting;
+
+// Function Engine.Light.SetBrightness
+// 0x0004 (0x0004 - 0x0000)
+struct Light_SetBrightness final
+{
+public:
+	float                                         NewBrightness;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetBrightness;
+
+// Function Engine.Light.SetCastShadows
+// 0x0001 (0x0001 - 0x0000)
+struct Light_SetCastShadows final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetCastShadows;
+
+// Function Engine.Light.SetEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct Light_SetEnabled final
+{
+public:
+	bool                                          bSetEnabled;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetEnabled;
+
+// Function Engine.Light.SetLightColor
+// 0x0010 (0x0010 - 0x0000)
+struct Light_SetLightColor final
+{
+public:
+	struct FLinearColor                           NewLightColor;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetLightColor;
+
+// Function Engine.Light.SetLightFunctionFadeDistance
+// 0x0004 (0x0004 - 0x0000)
+struct Light_SetLightFunctionFadeDistance final
+{
+public:
+	float                                         NewLightFunctionFadeDistance;                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetLightFunctionFadeDistance;
+
+// Function Engine.Light.SetLightFunctionMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct Light_SetLightFunctionMaterial final
+{
+public:
+	class UMaterialInterface*                     NewLightFunctionMaterial;                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetLightFunctionMaterial;
+
+// Function Engine.Light.SetLightFunctionScale
+// 0x0018 (0x0018 - 0x0000)
+struct Light_SetLightFunctionScale final
+{
+public:
+	struct FVector                                NewLightFunctionScale;                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_SetLightFunctionScale;
+
+// Function Engine.Light.GetBrightness
+// 0x0004 (0x0004 - 0x0000)
+struct Light_GetBrightness final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_GetBrightness;
+
+// Function Engine.Light.GetLightColor
+// 0x0010 (0x0010 - 0x0000)
+struct Light_GetLightColor final
+{
+public:
+	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_GetLightColor;
+
+// Function Engine.Light.IsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct Light_IsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Light_IsEnabled;
+
+// Function Engine.SpotLight.SetInnerConeAngle
+// 0x0004 (0x0004 - 0x0000)
+struct SpotLight_SetInnerConeAngle final
+{
+public:
+	float                                         NewInnerConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpotLight_SetInnerConeAngle;
+
+// Function Engine.SpotLight.SetOuterConeAngle
+// 0x0004 (0x0004 - 0x0000)
+struct SpotLight_SetOuterConeAngle final
+{
+public:
+	float                                         NewOuterConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpotLight_SetOuterConeAngle;
+
 // Function Engine.HUD.AddDebugText
 // 0x0068 (0x0068 - 0x0000)
 struct HUD_AddDebugText final
@@ -2467,29 +2584,6 @@ public:
 	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HUD_Project;
-
-// Function Engine.WorldPartitionSubsystem.IsAllStreamingCompleted
-// 0x0001 (0x0001 - 0x0000)
-struct WorldPartitionSubsystem_IsAllStreamingCompleted final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WorldPartitionSubsystem_IsAllStreamingCompleted;
-
-// Function Engine.WorldPartitionSubsystem.IsStreamingCompleted
-// 0x0020 (0x0020 - 0x0000)
-struct WorldPartitionSubsystem_IsStreamingCompleted final
-{
-public:
-	EWorldPartitionRuntimeCellState               QueryState;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FWorldPartitionStreamingQuerySource> QuerySources;                                 // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bExactState;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WorldPartitionSubsystem_IsStreamingCompleted;
 
 // Function Engine.PrimitiveComponent.AddAngularImpulseInDegrees
 // 0x0028 (0x0028 - 0x0000)
@@ -5113,176 +5207,54 @@ public:
 };
 DUMPER7_ASSERTS_SplineComponent_IsClosedLoop;
 
-// Function Engine.VisualLoggerKismetLibrary.EnableRecording
-// 0x0001 (0x0001 - 0x0000)
-struct VisualLoggerKismetLibrary_EnableRecording final
+// Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation
+// 0x0038 (0x0038 - 0x0000)
+struct SkeletalMeshSocket_InitializeSocketFromLocation final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class USkeletalMeshComponent*           SkelComp;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldNormal;                                       // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_EnableRecording;
+DUMPER7_ASSERTS_SkeletalMeshSocket_InitializeSocketFromLocation;
 
-// Function Engine.VisualLoggerKismetLibrary.LogBox
-// 0x0070 (0x0070 - 0x0000)
-struct VisualLoggerKismetLibrary_LogBox final
+// Function Engine.SkeletalMeshSocket.GetSocketLocation
+// 0x0020 (0x0020 - 0x0000)
+struct SkeletalMeshSocket_GetSocketLocation final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   BoxShape;                                          // 0x0008(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 Text;                                              // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ObjectColor;                                       // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LogCategory;                                       // 0x0060(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddToMessageLog;                                  // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	const class USkeletalMeshComponent*           SkelComp;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogBox;
+DUMPER7_ASSERTS_SkeletalMeshSocket_GetSocketLocation;
 
-// Function Engine.VisualLoggerKismetLibrary.LogLocation
-// 0x0050 (0x0050 - 0x0000)
-struct VisualLoggerKismetLibrary_LogLocation final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Text;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ObjectColor;                                       // 0x0030(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LogCategory;                                       // 0x0044(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddToMessageLog;                                  // 0x004C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogLocation;
-
-// Function Engine.VisualLoggerKismetLibrary.LogSegment
-// 0x0068 (0x0068 - 0x0000)
-struct VisualLoggerKismetLibrary_LogSegment final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SegmentStart;                                      // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SegmentEnd;                                        // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Text;                                              // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ObjectColor;                                       // 0x0048(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Thickness;                                         // 0x0058(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   CategoryName;                                      // 0x005C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddToMessageLog;                                  // 0x0064(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogSegment;
-
-// Function Engine.VisualLoggerKismetLibrary.LogText
-// 0x0028 (0x0028 - 0x0000)
-struct VisualLoggerKismetLibrary_LogText final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Text;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LogCategory;                                       // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddToMessageLog;                                  // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogText;
-
-// Function Engine.VisualLoggerKismetLibrary.RedirectVislog
-// 0x0010 (0x0010 - 0x0000)
-struct VisualLoggerKismetLibrary_RedirectVislog final
-{
-public:
-	class UObject*                                SourceOwner;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                DestinationOwner;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VisualLoggerKismetLibrary_RedirectVislog;
-
-// Function Engine.AnimationCurveIdentifierExtensions.GetName
-// 0x0018 (0x0018 - 0x0000)
-struct AnimationCurveIdentifierExtensions_GetName final
-{
-public:
-	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_GetName;
-
-// Function Engine.AnimationCurveIdentifierExtensions.GetType
-// 0x0014 (0x0014 - 0x0000)
-struct AnimationCurveIdentifierExtensions_GetType final
-{
-public:
-	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERawCurveTrackTypes                           ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_GetType;
-
-// Function Engine.AnimationCurveIdentifierExtensions.IsValid
-// 0x0014 (0x0014 - 0x0000)
-struct AnimationCurveIdentifierExtensions_IsValid final
-{
-public:
-	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_IsValid;
-
-// Function Engine.StreamableRenderAsset.SetForceMipLevelsToBeResident
+// Function Engine.Skeleton.AddCompatibleSkeleton
 // 0x0008 (0x0008 - 0x0000)
-struct StreamableRenderAsset_SetForceMipLevelsToBeResident final
+struct Skeleton_AddCompatibleSkeleton final
 {
 public:
-	float                                         Seconds;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CinematicLODGroupMask;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class USkeleton*                        SourceSkeleton;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamableRenderAsset_SetForceMipLevelsToBeResident;
+DUMPER7_ASSERTS_Skeleton_AddCompatibleSkeleton;
 
-// Function Engine.Texture.Blueprint_GetMemorySize
-// 0x0008 (0x0008 - 0x0000)
-struct Texture_Blueprint_GetMemorySize final
-{
-public:
-	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Texture_Blueprint_GetMemorySize;
-
-// Function Engine.Texture.Blueprint_GetTextureSourceDiskAndMemorySize
+// Function Engine.Skeleton.GetBlendProfile
 // 0x0010 (0x0010 - 0x0000)
-struct Texture_Blueprint_GetTextureSourceDiskAndMemorySize final
+struct Skeleton_GetBlendProfile final
 {
 public:
-	int64                                         OutDiskSize;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         OutMemorySize;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InProfileName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBlendProfile*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Texture_Blueprint_GetTextureSourceDiskAndMemorySize;
+DUMPER7_ASSERTS_Skeleton_GetBlendProfile;
 
-// Function Engine.Texture.ComputeTextureSourceChannelMinMax
-// 0x0024 (0x0024 - 0x0000)
-struct Texture_ComputeTextureSourceChannelMinMax final
-{
-public:
-	struct FLinearColor                           OutColorMin;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           OutColorMax;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_Texture_ComputeTextureSourceChannelMinMax;
-
-// Function Engine.Texture2D.Blueprint_GetSizeX
+// Function Engine.VOIPStatics.SetMicThreshold
 // 0x0004 (0x0004 - 0x0000)
-struct Texture2D_Blueprint_GetSizeX final
+struct VOIPStatics_SetMicThreshold final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InThreshold;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Texture2D_Blueprint_GetSizeX;
-
-// Function Engine.Texture2D.Blueprint_GetSizeY
-// 0x0004 (0x0004 - 0x0000)
-struct Texture2D_Blueprint_GetSizeY final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Texture2D_Blueprint_GetSizeY;
+DUMPER7_ASSERTS_VOIPStatics_SetMicThreshold;
 
 // Function Engine.MeshComponent.PrestreamTextures
 // 0x000C (0x000C - 0x0000)
@@ -6889,66 +6861,772 @@ public:
 };
 DUMPER7_ASSERTS_GameInstance_HandleTravelError;
 
-// Function Engine.AnimNotifyState.GetDefaultTriggerWeightThreshold
+// Function Engine.AnimationAsset.GetPlayLength
 // 0x0004 (0x0004 - 0x0000)
-struct AnimNotifyState_GetDefaultTriggerWeightThreshold final
+struct AnimationAsset_GetPlayLength final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimNotifyState_GetDefaultTriggerWeightThreshold;
+DUMPER7_ASSERTS_AnimationAsset_GetPlayLength;
 
-// Function Engine.AnimNotifyState.GetNotifyName
+// Function Engine.AnimMontage.CreateSlotAnimationAsDynamicMontage_WithBlendSettings
+// 0x0068 (0x0068 - 0x0000)
+struct AnimMontage_CreateSlotAnimationAsDynamicMontage_WithBlendSettings final
+{
+public:
+	class UAnimSequenceBase*                      Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SlotNodeName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMontageBlendSettings                  BlendInSettings;                                   // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMontageBlendSettings                  BlendOutSettings;                                  // 0x0030(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         InPlayRate;                                        // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LoopCount;                                         // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InBlendOutTriggerTime;                             // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimMontage_CreateSlotAnimationAsDynamicMontage_WithBlendSettings;
+
+// Function Engine.AnimMontage.GetBlendInArgs
 // 0x0010 (0x0010 - 0x0000)
-struct AnimNotifyState_GetNotifyName final
+struct AnimMontage_GetBlendInArgs final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAlphaBlendArgs                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimNotifyState_GetNotifyName;
+DUMPER7_ASSERTS_AnimMontage_GetBlendInArgs;
 
-// Function Engine.AnimNotifyState.Received_NotifyBegin
-// 0x0048 (0x0048 - 0x0000)
-struct AnimNotifyState_Received_NotifyBegin final
+// Function Engine.AnimMontage.GetBlendOutArgs
+// 0x0010 (0x0010 - 0x0000)
+struct AnimMontage_GetBlendOutArgs final
 {
 public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalDuration;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAlphaBlendArgs                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyBegin;
+DUMPER7_ASSERTS_AnimMontage_GetBlendOutArgs;
 
-// Function Engine.AnimNotifyState.Received_NotifyEnd
-// 0x0040 (0x0040 - 0x0000)
-struct AnimNotifyState_Received_NotifyEnd final
+// Function Engine.AnimMontage.GetDefaultBlendInTime
+// 0x0004 (0x0004 - 0x0000)
+struct AnimMontage_GetDefaultBlendInTime final
 {
 public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyEnd;
+DUMPER7_ASSERTS_AnimMontage_GetDefaultBlendInTime;
 
-// Function Engine.AnimNotifyState.Received_NotifyTick
-// 0x0048 (0x0048 - 0x0000)
-struct AnimNotifyState_Received_NotifyTick final
+// Function Engine.AnimMontage.GetDefaultBlendOutTime
+// 0x0004 (0x0004 - 0x0000)
+struct AnimMontage_GetDefaultBlendOutTime final
 {
 public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyTick;
+DUMPER7_ASSERTS_AnimMontage_GetDefaultBlendOutTime;
+
+// Function Engine.AnimMontage.GetNumSections
+// 0x0004 (0x0004 - 0x0000)
+struct AnimMontage_GetNumSections final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimMontage_GetNumSections;
+
+// Function Engine.AnimMontage.GetSectionIndex
+// 0x000C (0x000C - 0x0000)
+struct AnimMontage_GetSectionIndex final
+{
+public:
+	class FName                                   InSectionName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimMontage_GetSectionIndex;
+
+// Function Engine.AnimMontage.GetSectionName
+// 0x000C (0x000C - 0x0000)
+struct AnimMontage_GetSectionName final
+{
+public:
+	int32                                         SectionIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimMontage_GetSectionName;
+
+// Function Engine.AnimMontage.IsValidSectionName
+// 0x000C (0x000C - 0x0000)
+struct AnimMontage_IsValidSectionName final
+{
+public:
+	class FName                                   InSectionName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimMontage_IsValidSectionName;
+
+// Function Engine.MovementComponent.K2_MoveUpdatedComponent
+// 0x0120 (0x0120 - 0x0000)
+struct MovementComponent_K2_MoveUpdatedComponent final
+{
+public:
+	struct FVector                                Delta;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               NewRotation;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FHitResult                             OutHit;                                            // 0x0030(0x00E8)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bSweep;                                            // 0x0118(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTeleport;                                         // 0x0119(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x011A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovementComponent_K2_MoveUpdatedComponent;
+
+// Function Engine.MovementComponent.PhysicsVolumeChanged
+// 0x0008 (0x0008 - 0x0000)
+struct MovementComponent_PhysicsVolumeChanged final
+{
+public:
+	class APhysicsVolume*                         NewVolume;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_PhysicsVolumeChanged;
+
+// Function Engine.MovementComponent.SetPlaneConstraintAxisSetting
+// 0x0001 (0x0001 - 0x0000)
+struct MovementComponent_SetPlaneConstraintAxisSetting final
+{
+public:
+	EPlaneConstraintAxisSetting                   NewAxisSetting;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintAxisSetting;
+
+// Function Engine.MovementComponent.SetPlaneConstraintEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MovementComponent_SetPlaneConstraintEnabled final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintEnabled;
+
+// Function Engine.MovementComponent.SetPlaneConstraintFromVectors
+// 0x0030 (0x0030 - 0x0000)
+struct MovementComponent_SetPlaneConstraintFromVectors final
+{
+public:
+	struct FVector                                Forward;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Up;                                                // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintFromVectors;
+
+// Function Engine.MovementComponent.SetPlaneConstraintNormal
+// 0x0018 (0x0018 - 0x0000)
+struct MovementComponent_SetPlaneConstraintNormal final
+{
+public:
+	struct FVector                                PlaneNormal;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintNormal;
+
+// Function Engine.MovementComponent.SetPlaneConstraintOrigin
+// 0x0018 (0x0018 - 0x0000)
+struct MovementComponent_SetPlaneConstraintOrigin final
+{
+public:
+	struct FVector                                PlaneOrigin;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintOrigin;
+
+// Function Engine.MovementComponent.SetUpdatedComponent
+// 0x0008 (0x0008 - 0x0000)
+struct MovementComponent_SetUpdatedComponent final
+{
+public:
+	class USceneComponent*                        NewUpdatedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_SetUpdatedComponent;
+
+// Function Engine.MovementComponent.ConstrainDirectionToPlane
+// 0x0030 (0x0030 - 0x0000)
+struct MovementComponent_ConstrainDirectionToPlane final
+{
+public:
+	struct FVector                                Direction;                                         // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_ConstrainDirectionToPlane;
+
+// Function Engine.MovementComponent.ConstrainLocationToPlane
+// 0x0030 (0x0030 - 0x0000)
+struct MovementComponent_ConstrainLocationToPlane final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_ConstrainLocationToPlane;
+
+// Function Engine.MovementComponent.ConstrainNormalToPlane
+// 0x0030 (0x0030 - 0x0000)
+struct MovementComponent_ConstrainNormalToPlane final
+{
+public:
+	struct FVector                                Normal;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_ConstrainNormalToPlane;
+
+// Function Engine.MovementComponent.GetGravityZ
+// 0x0004 (0x0004 - 0x0000)
+struct MovementComponent_GetGravityZ final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetGravityZ;
+
+// Function Engine.MovementComponent.GetMaxSpeed
+// 0x0004 (0x0004 - 0x0000)
+struct MovementComponent_GetMaxSpeed final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetMaxSpeed;
+
+// Function Engine.MovementComponent.GetPhysicsVolume
+// 0x0008 (0x0008 - 0x0000)
+struct MovementComponent_GetPhysicsVolume final
+{
+public:
+	class APhysicsVolume*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetPhysicsVolume;
+
+// Function Engine.MovementComponent.GetPlaneConstraintAxisSetting
+// 0x0001 (0x0001 - 0x0000)
+struct MovementComponent_GetPlaneConstraintAxisSetting final
+{
+public:
+	EPlaneConstraintAxisSetting                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintAxisSetting;
+
+// Function Engine.MovementComponent.GetPlaneConstraintNormal
+// 0x0018 (0x0018 - 0x0000)
+struct MovementComponent_GetPlaneConstraintNormal final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintNormal;
+
+// Function Engine.MovementComponent.GetPlaneConstraintOrigin
+// 0x0018 (0x0018 - 0x0000)
+struct MovementComponent_GetPlaneConstraintOrigin final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintOrigin;
+
+// Function Engine.MovementComponent.IsExceedingMaxSpeed
+// 0x0008 (0x0008 - 0x0000)
+struct MovementComponent_IsExceedingMaxSpeed final
+{
+public:
+	float                                         MaxSpeed;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovementComponent_IsExceedingMaxSpeed;
+
+// Function Engine.NavMovementComponent.IsCrouching
+// 0x0001 (0x0001 - 0x0000)
+struct NavMovementComponent_IsCrouching final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavMovementComponent_IsCrouching;
+
+// Function Engine.NavMovementComponent.IsFalling
+// 0x0001 (0x0001 - 0x0000)
+struct NavMovementComponent_IsFalling final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavMovementComponent_IsFalling;
+
+// Function Engine.NavMovementComponent.IsFlying
+// 0x0001 (0x0001 - 0x0000)
+struct NavMovementComponent_IsFlying final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavMovementComponent_IsFlying;
+
+// Function Engine.NavMovementComponent.IsMovingOnGround
+// 0x0001 (0x0001 - 0x0000)
+struct NavMovementComponent_IsMovingOnGround final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavMovementComponent_IsMovingOnGround;
+
+// Function Engine.NavMovementComponent.IsSwimming
+// 0x0001 (0x0001 - 0x0000)
+struct NavMovementComponent_IsSwimming final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavMovementComponent_IsSwimming;
+
+// Function Engine.PawnMovementComponent.AddInputVector
+// 0x0020 (0x0020 - 0x0000)
+struct PawnMovementComponent_AddInputVector final
+{
+public:
+	struct FVector                                WorldVector;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForce;                                            // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PawnMovementComponent_AddInputVector;
+
+// Function Engine.PawnMovementComponent.ConsumeInputVector
+// 0x0018 (0x0018 - 0x0000)
+struct PawnMovementComponent_ConsumeInputVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnMovementComponent_ConsumeInputVector;
+
+// Function Engine.PawnMovementComponent.GetLastInputVector
+// 0x0018 (0x0018 - 0x0000)
+struct PawnMovementComponent_GetLastInputVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnMovementComponent_GetLastInputVector;
+
+// Function Engine.PawnMovementComponent.GetPawnOwner
+// 0x0008 (0x0008 - 0x0000)
+struct PawnMovementComponent_GetPawnOwner final
+{
+public:
+	class APawn*                                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnMovementComponent_GetPawnOwner;
+
+// Function Engine.PawnMovementComponent.GetPendingInputVector
+// 0x0018 (0x0018 - 0x0000)
+struct PawnMovementComponent_GetPendingInputVector final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnMovementComponent_GetPendingInputVector;
+
+// Function Engine.PawnMovementComponent.IsMoveInputIgnored
+// 0x0001 (0x0001 - 0x0000)
+struct PawnMovementComponent_IsMoveInputIgnored final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PawnMovementComponent_IsMoveInputIgnored;
+
+// Function Engine.PhysicsConstraintComponent.GetConstrainedComponents
+// 0x0020 (0x0020 - 0x0000)
+struct PhysicsConstraintComponent_GetConstrainedComponents final
+{
+public:
+	class UPrimitiveComponent*                    OutComponent1;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OutBoneName1;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    OutComponent2;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OutBoneName2;                                      // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstrainedComponents;
+
+// Function Engine.PhysicsConstraintComponent.GetConstraint
+// 0x000C (0x000C - 0x0000)
+struct PhysicsConstraintComponent_GetConstraint final
+{
+public:
+	struct FConstraintInstanceAccessor            ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstraint;
+
+// Function Engine.PhysicsConstraintComponent.GetConstraintForce
+// 0x0030 (0x0030 - 0x0000)
+struct PhysicsConstraintComponent_GetConstraintForce final
+{
+public:
+	struct FVector                                OutLinearForce;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutAngularForce;                                   // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstraintForce;
+
+// Function Engine.PhysicsConstraintComponent.IsBroken
+// 0x0001 (0x0001 - 0x0000)
+struct PhysicsConstraintComponent_IsBroken final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_IsBroken;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularBreakable
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularBreakable final
+{
+public:
+	bool                                          bAngularBreakable;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AngularBreakThreshold;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularBreakable;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularDriveMode
+// 0x0001 (0x0001 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularDriveMode final
+{
+public:
+	EAngularDriveMode                             DriveMode;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularDriveMode;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularDriveParams
+// 0x000C (0x000C - 0x0000)
+struct PhysicsConstraintComponent_SetAngularDriveParams final
+{
+public:
+	float                                         PositionStrength;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VelocityStrength;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InForceLimit;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularDriveParams;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularOrientationDrive
+// 0x0002 (0x0002 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularOrientationDrive final
+{
+public:
+	bool                                          bEnableSwingDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableTwistDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularOrientationDrive;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget
+// 0x0018 (0x0018 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularOrientationTarget final
+{
+public:
+	struct FRotator                               InPosTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularOrientationTarget;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularPlasticity
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularPlasticity final
+{
+public:
+	bool                                          bAngularPlasticity;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AngularPlasticityThreshold;                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularPlasticity;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularSwing1Limit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularSwing1Limit final
+{
+public:
+	EAngularConstraintMotion                      MotionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Swing1LimitAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularSwing1Limit;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularSwing2Limit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularSwing2Limit final
+{
+public:
+	EAngularConstraintMotion                      MotionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Swing2LimitAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularSwing2Limit;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularTwistLimit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularTwistLimit final
+{
+public:
+	EAngularConstraintMotion                      ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TwistLimitAngle;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularTwistLimit;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDrive
+// 0x0002 (0x0002 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularVelocityDrive final
+{
+public:
+	bool                                          bEnableSwingDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableTwistDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDrive;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveSLERP
+// 0x0001 (0x0001 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularVelocityDriveSLERP final
+{
+public:
+	bool                                          bEnableSLERP;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDriveSLERP;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveTwistAndSwing
+// 0x0002 (0x0002 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing final
+{
+public:
+	bool                                          bEnableTwistDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableSwingDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing;
+
+// Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget
+// 0x0018 (0x0018 - 0x0000)
+struct PhysicsConstraintComponent_SetAngularVelocityTarget final
+{
+public:
+	struct FVector                                InVelTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityTarget;
+
+// Function Engine.PhysicsConstraintComponent.SetConstrainedComponents
+// 0x0020 (0x0020 - 0x0000)
+struct PhysicsConstraintComponent_SetConstrainedComponents final
+{
+public:
+	class UPrimitiveComponent*                    Component1;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName1;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    Component2;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName2;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstrainedComponents;
+
+// Function Engine.PhysicsConstraintComponent.SetConstraintReferenceFrame
+// 0x0070 (0x0070 - 0x0000)
+struct PhysicsConstraintComponent_SetConstraintReferenceFrame final
+{
+public:
+	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RefFrame;                                          // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferenceFrame;
+
+// Function Engine.PhysicsConstraintComponent.SetConstraintReferenceOrientation
+// 0x0038 (0x0038 - 0x0000)
+struct PhysicsConstraintComponent_SetConstraintReferenceOrientation final
+{
+public:
+	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PriAxis;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SecAxis;                                           // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferenceOrientation;
+
+// Function Engine.PhysicsConstraintComponent.SetConstraintReferencePosition
+// 0x0020 (0x0020 - 0x0000)
+struct PhysicsConstraintComponent_SetConstraintReferencePosition final
+{
+public:
+	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RefPosition;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferencePosition;
+
+// Function Engine.PhysicsConstraintComponent.SetContactTransferScale
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicsConstraintComponent_SetContactTransferScale final
+{
+public:
+	float                                         ContactTransferScale;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetContactTransferScale;
+
+// Function Engine.PhysicsConstraintComponent.SetDisableCollision
+// 0x0001 (0x0001 - 0x0000)
+struct PhysicsConstraintComponent_SetDisableCollision final
+{
+public:
+	bool                                          bDisableCollision;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetDisableCollision;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearBreakable
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearBreakable final
+{
+public:
+	bool                                          bLinearBreakable;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LinearBreakThreshold;                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearBreakable;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearDriveParams
+// 0x000C (0x000C - 0x0000)
+struct PhysicsConstraintComponent_SetLinearDriveParams final
+{
+public:
+	float                                         PositionStrength;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VelocityStrength;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InForceLimit;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearDriveParams;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearPlasticity
+// 0x000C (0x000C - 0x0000)
+struct PhysicsConstraintComponent_SetLinearPlasticity final
+{
+public:
+	bool                                          bLinearPlasticity;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LinearPlasticityThreshold;                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EConstraintPlasticityType                     PlasticityType;                                    // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPlasticity;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearPositionDrive
+// 0x0003 (0x0003 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearPositionDrive final
+{
+public:
+	bool                                          bEnableDriveX;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDriveY;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDriveZ;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPositionDrive;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget
+// 0x0018 (0x0018 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearPositionTarget final
+{
+public:
+	struct FVector                                InPosTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPositionTarget;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearVelocityDrive
+// 0x0003 (0x0003 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearVelocityDrive final
+{
+public:
+	bool                                          bEnableDriveX;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDriveY;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDriveZ;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearVelocityDrive;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget
+// 0x0018 (0x0018 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearVelocityTarget final
+{
+public:
+	struct FVector                                InVelTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearVelocityTarget;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearXLimit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearXLimit final
+{
+public:
+	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearXLimit;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearYLimit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearYLimit final
+{
+public:
+	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearYLimit;
+
+// Function Engine.PhysicsConstraintComponent.SetLinearZLimit
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicsConstraintComponent_SetLinearZLimit final
+{
+public:
+	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearZLimit;
+
+// Function Engine.PhysicsConstraintComponent.SetOrientationDriveSLERP
+// 0x0001 (0x0001 - 0x0000)
+struct PhysicsConstraintComponent_SetOrientationDriveSLERP final
+{
+public:
+	bool                                          bEnableSLERP;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetOrientationDriveSLERP;
+
+// Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
+// 0x0002 (0x0002 - 0x0000)
+struct PhysicsConstraintComponent_SetOrientationDriveTwistAndSwing final
+{
+public:
+	bool                                          bEnableTwistDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableSwingDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_SetOrientationDriveTwistAndSwing;
+
+// Function Engine.PhysicsConstraintComponent.GetCurrentSwing1
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicsConstraintComponent_GetCurrentSwing1 final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentSwing1;
+
+// Function Engine.PhysicsConstraintComponent.GetCurrentSwing2
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicsConstraintComponent_GetCurrentSwing2 final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentSwing2;
+
+// Function Engine.PhysicsConstraintComponent.GetCurrentTwist
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicsConstraintComponent_GetCurrentTwist final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentTwist;
 
 // Function Engine.BoxComponent.SetBoxExtent
 // 0x0020 (0x0020 - 0x0000)
@@ -7254,314 +7932,34 @@ public:
 };
 DUMPER7_ASSERTS_GameModeBase_MustSpectate;
 
-// Function Engine.CachedAnimDataLibrary.StateMachine_GetGlobalWeight
-// 0x0028 (0x0028 - 0x0000)
-struct CachedAnimDataLibrary_StateMachine_GetGlobalWeight final
+// Function Engine.AnimationAttributeIdentifierExtensions.IsValid
+// 0x0048 (0x0048 - 0x0000)
+struct AnimationAttributeIdentifierExtensions_IsValid final
 {
 public:
-	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimationAttributeIdentifier          Identifier;                                        // 0x0000(0x0040)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_GetGlobalWeight;
+DUMPER7_ASSERTS_AnimationAttributeIdentifierExtensions_IsValid;
 
-// Function Engine.CachedAnimDataLibrary.StateMachine_GetLocalWeight
-// 0x0028 (0x0028 - 0x0000)
-struct CachedAnimDataLibrary_StateMachine_GetLocalWeight final
+// Function Engine.AudioPanelWidgetInterface.GetEditorName
+// 0x0018 (0x0018 - 0x0000)
+struct AudioPanelWidgetInterface_GetEditorName final
 {
 public:
-	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_GetLocalWeight;
+DUMPER7_ASSERTS_AudioPanelWidgetInterface_GetEditorName;
 
-// Function Engine.CachedAnimDataLibrary.StateMachine_IsStateRelevant
-// 0x0028 (0x0028 - 0x0000)
-struct CachedAnimDataLibrary_StateMachine_IsStateRelevant final
-{
-public:
-	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_IsStateRelevant;
-
-// Function Engine.MovementComponent.K2_MoveUpdatedComponent
-// 0x0120 (0x0120 - 0x0000)
-struct MovementComponent_K2_MoveUpdatedComponent final
-{
-public:
-	struct FVector                                Delta;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               NewRotation;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FHitResult                             OutHit;                                            // 0x0030(0x00E8)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bSweep;                                            // 0x0118(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTeleport;                                         // 0x0119(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x011A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovementComponent_K2_MoveUpdatedComponent;
-
-// Function Engine.MovementComponent.PhysicsVolumeChanged
+// Function Engine.AudioPanelWidgetInterface.GetIconBrushName
 // 0x0008 (0x0008 - 0x0000)
-struct MovementComponent_PhysicsVolumeChanged final
+struct AudioPanelWidgetInterface_GetIconBrushName final
 {
 public:
-	class APhysicsVolume*                         NewVolume;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovementComponent_PhysicsVolumeChanged;
-
-// Function Engine.MovementComponent.SetPlaneConstraintAxisSetting
-// 0x0001 (0x0001 - 0x0000)
-struct MovementComponent_SetPlaneConstraintAxisSetting final
-{
-public:
-	EPlaneConstraintAxisSetting                   NewAxisSetting;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintAxisSetting;
-
-// Function Engine.MovementComponent.SetPlaneConstraintEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct MovementComponent_SetPlaneConstraintEnabled final
-{
-public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintEnabled;
-
-// Function Engine.MovementComponent.SetPlaneConstraintFromVectors
-// 0x0030 (0x0030 - 0x0000)
-struct MovementComponent_SetPlaneConstraintFromVectors final
-{
-public:
-	struct FVector                                Forward;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Up;                                                // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintFromVectors;
-
-// Function Engine.MovementComponent.SetPlaneConstraintNormal
-// 0x0018 (0x0018 - 0x0000)
-struct MovementComponent_SetPlaneConstraintNormal final
-{
-public:
-	struct FVector                                PlaneNormal;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintNormal;
-
-// Function Engine.MovementComponent.SetPlaneConstraintOrigin
-// 0x0018 (0x0018 - 0x0000)
-struct MovementComponent_SetPlaneConstraintOrigin final
-{
-public:
-	struct FVector                                PlaneOrigin;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetPlaneConstraintOrigin;
-
-// Function Engine.MovementComponent.SetUpdatedComponent
-// 0x0008 (0x0008 - 0x0000)
-struct MovementComponent_SetUpdatedComponent final
-{
-public:
-	class USceneComponent*                        NewUpdatedComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_SetUpdatedComponent;
-
-// Function Engine.MovementComponent.ConstrainDirectionToPlane
-// 0x0030 (0x0030 - 0x0000)
-struct MovementComponent_ConstrainDirectionToPlane final
-{
-public:
-	struct FVector                                Direction;                                         // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_ConstrainDirectionToPlane;
-
-// Function Engine.MovementComponent.ConstrainLocationToPlane
-// 0x0030 (0x0030 - 0x0000)
-struct MovementComponent_ConstrainLocationToPlane final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_ConstrainLocationToPlane;
-
-// Function Engine.MovementComponent.ConstrainNormalToPlane
-// 0x0030 (0x0030 - 0x0000)
-struct MovementComponent_ConstrainNormalToPlane final
-{
-public:
-	struct FVector                                Normal;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_ConstrainNormalToPlane;
-
-// Function Engine.MovementComponent.GetGravityZ
-// 0x0004 (0x0004 - 0x0000)
-struct MovementComponent_GetGravityZ final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetGravityZ;
-
-// Function Engine.MovementComponent.GetMaxSpeed
-// 0x0004 (0x0004 - 0x0000)
-struct MovementComponent_GetMaxSpeed final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetMaxSpeed;
-
-// Function Engine.MovementComponent.GetPhysicsVolume
-// 0x0008 (0x0008 - 0x0000)
-struct MovementComponent_GetPhysicsVolume final
-{
-public:
-	class APhysicsVolume*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetPhysicsVolume;
-
-// Function Engine.MovementComponent.GetPlaneConstraintAxisSetting
-// 0x0001 (0x0001 - 0x0000)
-struct MovementComponent_GetPlaneConstraintAxisSetting final
-{
-public:
-	EPlaneConstraintAxisSetting                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintAxisSetting;
-
-// Function Engine.MovementComponent.GetPlaneConstraintNormal
-// 0x0018 (0x0018 - 0x0000)
-struct MovementComponent_GetPlaneConstraintNormal final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintNormal;
-
-// Function Engine.MovementComponent.GetPlaneConstraintOrigin
-// 0x0018 (0x0018 - 0x0000)
-struct MovementComponent_GetPlaneConstraintOrigin final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovementComponent_GetPlaneConstraintOrigin;
-
-// Function Engine.MovementComponent.IsExceedingMaxSpeed
-// 0x0008 (0x0008 - 0x0000)
-struct MovementComponent_IsExceedingMaxSpeed final
-{
-public:
-	float                                         MaxSpeed;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MovementComponent_IsExceedingMaxSpeed;
-
-// Function Engine.NavMovementComponent.IsCrouching
-// 0x0001 (0x0001 - 0x0000)
-struct NavMovementComponent_IsCrouching final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavMovementComponent_IsCrouching;
-
-// Function Engine.NavMovementComponent.IsFalling
-// 0x0001 (0x0001 - 0x0000)
-struct NavMovementComponent_IsFalling final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavMovementComponent_IsFalling;
-
-// Function Engine.NavMovementComponent.IsFlying
-// 0x0001 (0x0001 - 0x0000)
-struct NavMovementComponent_IsFlying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavMovementComponent_IsFlying;
-
-// Function Engine.NavMovementComponent.IsMovingOnGround
-// 0x0001 (0x0001 - 0x0000)
-struct NavMovementComponent_IsMovingOnGround final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavMovementComponent_IsMovingOnGround;
-
-// Function Engine.NavMovementComponent.IsSwimming
-// 0x0001 (0x0001 - 0x0000)
-struct NavMovementComponent_IsSwimming final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavMovementComponent_IsSwimming;
-
-// Function Engine.PawnMovementComponent.AddInputVector
-// 0x0020 (0x0020 - 0x0000)
-struct PawnMovementComponent_AddInputVector final
-{
-public:
-	struct FVector                                WorldVector;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForce;                                            // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PawnMovementComponent_AddInputVector;
-
-// Function Engine.PawnMovementComponent.ConsumeInputVector
-// 0x0018 (0x0018 - 0x0000)
-struct PawnMovementComponent_ConsumeInputVector final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnMovementComponent_ConsumeInputVector;
-
-// Function Engine.PawnMovementComponent.GetLastInputVector
-// 0x0018 (0x0018 - 0x0000)
-struct PawnMovementComponent_GetLastInputVector final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnMovementComponent_GetLastInputVector;
-
-// Function Engine.PawnMovementComponent.GetPawnOwner
-// 0x0008 (0x0008 - 0x0000)
-struct PawnMovementComponent_GetPawnOwner final
-{
-public:
-	class APawn*                                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnMovementComponent_GetPawnOwner;
-
-// Function Engine.PawnMovementComponent.GetPendingInputVector
-// 0x0018 (0x0018 - 0x0000)
-struct PawnMovementComponent_GetPendingInputVector final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnMovementComponent_GetPendingInputVector;
-
-// Function Engine.PawnMovementComponent.IsMoveInputIgnored
-// 0x0001 (0x0001 - 0x0000)
-struct PawnMovementComponent_IsMoveInputIgnored final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PawnMovementComponent_IsMoveInputIgnored;
+DUMPER7_ASSERTS_AudioPanelWidgetInterface_GetIconBrushName;
 
 // Function Engine.CharacterMovementComponent.AddForce
 // 0x0018 (0x0018 - 0x0000)
@@ -8030,32 +8428,75 @@ public:
 };
 DUMPER7_ASSERTS_FXSystemComponent_GetFXSystemAsset;
 
-// Function Engine.AsyncPhysicsInputComponent.ServerRPCBufferInput
-// 0x0008 (0x0008 - 0x0000)
-struct AsyncPhysicsInputComponent_ServerRPCBufferInput final
+// Function Engine.StaticMeshActor.SetMobility
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshActor_SetMobility final
 {
 public:
-	class UAsyncPhysicsData*                      AsyncPhysicsData;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EComponentMobility                            InMobility;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AsyncPhysicsInputComponent_ServerRPCBufferInput;
+DUMPER7_ASSERTS_StaticMeshActor_SetMobility;
 
-// Function Engine.AsyncPhysicsInputComponent.GetDataToConsume
-// 0x0008 (0x0008 - 0x0000)
-struct AsyncPhysicsInputComponent_GetDataToConsume final
+// Function Engine.AnimNotifyState.GetDefaultTriggerWeightThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct AnimNotifyState_GetDefaultTriggerWeightThreshold final
 {
 public:
-	const class UAsyncPhysicsData*                ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AsyncPhysicsInputComponent_GetDataToConsume;
+DUMPER7_ASSERTS_AnimNotifyState_GetDefaultTriggerWeightThreshold;
 
-// Function Engine.AsyncPhysicsInputComponent.GetDataToWrite
-// 0x0008 (0x0008 - 0x0000)
-struct AsyncPhysicsInputComponent_GetDataToWrite final
+// Function Engine.AnimNotifyState.GetNotifyName
+// 0x0010 (0x0010 - 0x0000)
+struct AnimNotifyState_GetNotifyName final
 {
 public:
-	class UAsyncPhysicsData*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AsyncPhysicsInputComponent_GetDataToWrite;
+DUMPER7_ASSERTS_AnimNotifyState_GetNotifyName;
+
+// Function Engine.AnimNotifyState.Received_NotifyBegin
+// 0x0048 (0x0048 - 0x0000)
+struct AnimNotifyState_Received_NotifyBegin final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalDuration;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyBegin;
+
+// Function Engine.AnimNotifyState.Received_NotifyEnd
+// 0x0040 (0x0040 - 0x0000)
+struct AnimNotifyState_Received_NotifyEnd final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyEnd;
+
+// Function Engine.AnimNotifyState.Received_NotifyTick
+// 0x0048 (0x0048 - 0x0000)
+struct AnimNotifyState_Received_NotifyTick final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimNotifyState_Received_NotifyTick;
 
 // Function Engine.Pawn.GetMovementBaseActor
 // 0x0010 (0x0010 - 0x0000)
@@ -8396,265 +8837,6 @@ public:
 };
 DUMPER7_ASSERTS_AnimNotify_Received_Notify;
 
-// Function Engine.WorldPartitionDestructibleInHLODSupportLibrary.DamageInHLOD
-// 0x0018 (0x0018 - 0x0000)
-struct WorldPartitionDestructibleInHLODSupportLibrary_DamageInHLOD final
-{
-public:
-	TScriptInterface<class IWorldPartitionDestructibleInHLODInterface> DestructibleInHLOD;           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamagePercent;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WorldPartitionDestructibleInHLODSupportLibrary_DamageInHLOD;
-
-// Function Engine.WorldPartitionDestructibleInHLODSupportLibrary.DestroyInHLOD
-// 0x0010 (0x0010 - 0x0000)
-struct WorldPartitionDestructibleInHLODSupportLibrary_DestroyInHLOD final
-{
-public:
-	TScriptInterface<class IWorldPartitionDestructibleInHLODInterface> DestructibleInHLOD;           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WorldPartitionDestructibleInHLODSupportLibrary_DestroyInHLOD;
-
-// Function Engine.TypedElementWorldInterface.CanDeleteElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_CanDeleteElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_CanDeleteElement;
-
-// Function Engine.TypedElementWorldInterface.CanDuplicateElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_CanDuplicateElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_CanDuplicateElement;
-
-// Function Engine.TypedElementWorldInterface.CanEditElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_CanEditElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_CanEditElement;
-
-// Function Engine.TypedElementWorldInterface.CanMoveElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_CanMoveElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	ETypedElementWorldType                        InWorldType;                                       // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_CanMoveElement;
-
-// Function Engine.TypedElementWorldInterface.CanPromoteElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_CanPromoteElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_CanPromoteElement;
-
-// Function Engine.TypedElementWorldInterface.DeleteElement
-// 0x0020 (0x0020 - 0x0000)
-struct TypedElementWorldInterface_DeleteElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UWorld*                                 InWorld;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTypedElementSelectionSet*              InSelectionSet;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTypedElementDeletionOptions           InDeletionOptions;                                 // 0x0018(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001B(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_DeleteElement;
-
-// Function Engine.TypedElementWorldInterface.DuplicateElement
-// 0x0030 (0x0030 - 0x0000)
-struct TypedElementWorldInterface_DuplicateElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UWorld*                                 InWorld;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InLocationOffset;                                  // 0x0010(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_DuplicateElement;
-
-// Function Engine.TypedElementWorldInterface.GetBounds
-// 0x0048 (0x0048 - 0x0000)
-struct TypedElementWorldInterface_GetBounds final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FBoxSphereBounds                       OutBounds;                                         // 0x0008(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetBounds;
-
-// Function Engine.TypedElementWorldInterface.GetOwnerLevel
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_GetOwnerLevel final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class ULevel*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetOwnerLevel;
-
-// Function Engine.TypedElementWorldInterface.GetOwnerWorld
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_GetOwnerWorld final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UWorld*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetOwnerWorld;
-
-// Function Engine.TypedElementWorldInterface.GetPivotOffset
-// 0x0028 (0x0028 - 0x0000)
-struct TypedElementWorldInterface_GetPivotOffset final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                OutPivotOffset;                                    // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetPivotOffset;
-
-// Function Engine.TypedElementWorldInterface.GetRelativeTransform
-// 0x0080 (0x0080 - 0x0000)
-struct TypedElementWorldInterface_GetRelativeTransform final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             OutTransform;                                      // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetRelativeTransform;
-
-// Function Engine.TypedElementWorldInterface.GetWorldTransform
-// 0x0080 (0x0080 - 0x0000)
-struct TypedElementWorldInterface_GetWorldTransform final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             OutTransform;                                      // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_GetWorldTransform;
-
-// Function Engine.TypedElementWorldInterface.IsTemplateElement
-// 0x0010 (0x0010 - 0x0000)
-struct TypedElementWorldInterface_IsTemplateElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_IsTemplateElement;
-
-// Function Engine.TypedElementWorldInterface.NotifyMovementEnded
-// 0x0008 (0x0008 - 0x0000)
-struct TypedElementWorldInterface_NotifyMovementEnded final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementEnded;
-
-// Function Engine.TypedElementWorldInterface.NotifyMovementOngoing
-// 0x0008 (0x0008 - 0x0000)
-struct TypedElementWorldInterface_NotifyMovementOngoing final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementOngoing;
-
-// Function Engine.TypedElementWorldInterface.NotifyMovementStarted
-// 0x0008 (0x0008 - 0x0000)
-struct TypedElementWorldInterface_NotifyMovementStarted final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementStarted;
-
-// Function Engine.TypedElementWorldInterface.PromoteElement
-// 0x0018 (0x0018 - 0x0000)
-struct TypedElementWorldInterface_PromoteElement final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UWorld*                                 OverrideWorld;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_PromoteElement;
-
-// Function Engine.TypedElementWorldInterface.SetPivotOffset
-// 0x0028 (0x0028 - 0x0000)
-struct TypedElementWorldInterface_SetPivotOffset final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                InPivotOffset;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_SetPivotOffset;
-
-// Function Engine.TypedElementWorldInterface.SetRelativeTransform
-// 0x0080 (0x0080 - 0x0000)
-struct TypedElementWorldInterface_SetRelativeTransform final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_SetRelativeTransform;
-
-// Function Engine.TypedElementWorldInterface.SetWorldTransform
-// 0x0080 (0x0080 - 0x0000)
-struct TypedElementWorldInterface_SetWorldTransform final
-{
-public:
-	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TypedElementWorldInterface_SetWorldTransform;
-
 // Function Engine.PlayerInput.InvertAxis
 // 0x0008 (0x0008 - 0x0000)
 struct PlayerInput_InvertAxis final
@@ -8701,423 +8883,536 @@ public:
 };
 DUMPER7_ASSERTS_PlayerInput_GetOuterAPlayerController;
 
-// Function Engine.StaticMeshComponent.GetInitialEvaluateWorldPositionOffset
+// Function Engine.LevelStreaming.CreateInstance
+// 0x0018 (0x0018 - 0x0000)
+struct LevelStreaming_CreateInstance final
+{
+public:
+	class FString                                 UniqueInstanceName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelStreaming*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_CreateInstance;
+
+// Function Engine.LevelStreaming.GetLevelScriptActor
+// 0x0008 (0x0008 - 0x0000)
+struct LevelStreaming_GetLevelScriptActor final
+{
+public:
+	class ALevelScriptActor*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_GetLevelScriptActor;
+
+// Function Engine.LevelStreaming.SetIsRequestingUnloadAndRemoval
 // 0x0001 (0x0001 - 0x0000)
-struct StaticMeshComponent_GetInitialEvaluateWorldPositionOffset final
+struct LevelStreaming_SetIsRequestingUnloadAndRemoval final
+{
+public:
+	bool                                          bInIsRequestingUnloadAndRemoval;                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_SetIsRequestingUnloadAndRemoval;
+
+// Function Engine.LevelStreaming.SetLevelLODIndex
+// 0x0004 (0x0004 - 0x0000)
+struct LevelStreaming_SetLevelLODIndex final
+{
+public:
+	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_SetLevelLODIndex;
+
+// Function Engine.LevelStreaming.SetPriority
+// 0x0004 (0x0004 - 0x0000)
+struct LevelStreaming_SetPriority final
+{
+public:
+	int32                                         NewPriority;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_SetPriority;
+
+// Function Engine.LevelStreaming.SetShouldBeLoaded
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_SetShouldBeLoaded final
+{
+public:
+	bool                                          bInShouldBeLoaded;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_SetShouldBeLoaded;
+
+// Function Engine.LevelStreaming.SetShouldBeVisible
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_SetShouldBeVisible final
+{
+public:
+	bool                                          bInShouldBeVisible;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_SetShouldBeVisible;
+
+// Function Engine.LevelStreaming.GetIsRequestingUnloadAndRemoval
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_GetIsRequestingUnloadAndRemoval final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_GetInitialEvaluateWorldPositionOffset;
+DUMPER7_ASSERTS_LevelStreaming_GetIsRequestingUnloadAndRemoval;
 
-// Function Engine.StaticMeshComponent.OnRep_StaticMesh
+// Function Engine.LevelStreaming.GetLoadedLevel
 // 0x0008 (0x0008 - 0x0000)
-struct StaticMeshComponent_OnRep_StaticMesh final
+struct LevelStreaming_GetLoadedLevel final
 {
 public:
-	class UStaticMesh*                            OldStaticMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevel*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_OnRep_StaticMesh;
+DUMPER7_ASSERTS_LevelStreaming_GetLoadedLevel;
 
-// Function Engine.StaticMeshComponent.SetDistanceFieldSelfShadowBias
+// Function Engine.LevelStreaming.GetWorldAssetPackageFName
+// 0x0008 (0x0008 - 0x0000)
+struct LevelStreaming_GetWorldAssetPackageFName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_GetWorldAssetPackageFName;
+
+// Function Engine.LevelStreaming.IsLevelLoaded
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_IsLevelLoaded final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_IsLevelLoaded;
+
+// Function Engine.LevelStreaming.IsLevelVisible
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_IsLevelVisible final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_IsLevelVisible;
+
+// Function Engine.LevelStreaming.IsStreamingStatePending
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_IsStreamingStatePending final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_IsStreamingStatePending;
+
+// Function Engine.LevelStreaming.ShouldBeLoaded
+// 0x0001 (0x0001 - 0x0000)
+struct LevelStreaming_ShouldBeLoaded final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelStreaming_ShouldBeLoaded;
+
+// Function Engine.LightComponentBase.SetAffectGlobalIllumination
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetAffectGlobalIllumination final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetAffectGlobalIllumination;
+
+// Function Engine.LightComponentBase.SetAffectReflection
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetAffectReflection final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetAffectReflection;
+
+// Function Engine.LightComponentBase.SetCastDeepShadow
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetCastDeepShadow final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetCastDeepShadow;
+
+// Function Engine.LightComponentBase.SetCastRaytracedShadow
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetCastRaytracedShadow final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetCastRaytracedShadow;
+
+// Function Engine.LightComponentBase.SetCastRaytracedShadows
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetCastRaytracedShadows final
+{
+public:
+	ECastRayTracedShadow                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetCastRaytracedShadows;
+
+// Function Engine.LightComponentBase.SetCastShadows
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetCastShadows final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetCastShadows;
+
+// Function Engine.LightComponentBase.SetCastVolumetricShadow
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponentBase_SetCastVolumetricShadow final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetCastVolumetricShadow;
+
+// Function Engine.LightComponentBase.SetSamplesPerPixel
 // 0x0004 (0x0004 - 0x0000)
-struct StaticMeshComponent_SetDistanceFieldSelfShadowBias final
+struct LightComponentBase_SetSamplesPerPixel final
+{
+public:
+	int32                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_SetSamplesPerPixel;
+
+// Function Engine.LightComponentBase.GetLightColor
+// 0x0010 (0x0010 - 0x0000)
+struct LightComponentBase_GetLightColor final
+{
+public:
+	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponentBase_GetLightColor;
+
+// Function Engine.LightComponent.SetAffectDynamicIndirectLighting
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetAffectDynamicIndirectLighting final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetAffectDynamicIndirectLighting;
+
+// Function Engine.LightComponent.SetAffectTranslucentLighting
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetAffectTranslucentLighting final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetAffectTranslucentLighting;
+
+// Function Engine.LightComponent.SetBloomMaxBrightness
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetBloomMaxBrightness final
 {
 public:
 	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_SetDistanceFieldSelfShadowBias;
+DUMPER7_ASSERTS_LightComponent_SetBloomMaxBrightness;
 
-// Function Engine.StaticMeshComponent.SetEvaluateWorldPositionOffset
-// 0x0001 (0x0001 - 0x0000)
-struct StaticMeshComponent_SetEvaluateWorldPositionOffset final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMeshComponent_SetEvaluateWorldPositionOffset;
-
-// Function Engine.StaticMeshComponent.SetEvaluateWorldPositionOffsetInRayTracing
-// 0x0001 (0x0001 - 0x0000)
-struct StaticMeshComponent_SetEvaluateWorldPositionOffsetInRayTracing final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMeshComponent_SetEvaluateWorldPositionOffsetInRayTracing;
-
-// Function Engine.StaticMeshComponent.SetForceDisableNanite
-// 0x0001 (0x0001 - 0x0000)
-struct StaticMeshComponent_SetForceDisableNanite final
-{
-public:
-	bool                                          bInForceDisableNanite;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMeshComponent_SetForceDisableNanite;
-
-// Function Engine.StaticMeshComponent.SetForcedLodModel
+// Function Engine.LightComponent.SetBloomScale
 // 0x0004 (0x0004 - 0x0000)
-struct StaticMeshComponent_SetForcedLodModel final
+struct LightComponent_SetBloomScale final
 {
 public:
-	int32                                         NewForcedLodModel;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_SetForcedLodModel;
+DUMPER7_ASSERTS_LightComponent_SetBloomScale;
 
-// Function Engine.StaticMeshComponent.SetReverseCulling
+// Function Engine.LightComponent.SetBloomThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetBloomThreshold final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetBloomThreshold;
+
+// Function Engine.LightComponent.SetBloomTint
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetBloomTint final
+{
+public:
+	struct FColor                                 NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetBloomTint;
+
+// Function Engine.LightComponent.SetEnableLightShaftBloom
 // 0x0001 (0x0001 - 0x0000)
-struct StaticMeshComponent_SetReverseCulling final
+struct LightComponent_SetEnableLightShaftBloom final
 {
 public:
-	bool                                          ReverseCulling;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_SetReverseCulling;
+DUMPER7_ASSERTS_LightComponent_SetEnableLightShaftBloom;
 
-// Function Engine.StaticMeshComponent.SetStaticMesh
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMeshComponent_SetStaticMesh final
+// Function Engine.LightComponent.SetForceCachedShadowsForMovablePrimitives
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetForceCachedShadowsForMovablePrimitives final
 {
 public:
-	class UStaticMesh*                            NewMesh;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_SetStaticMesh;
+DUMPER7_ASSERTS_LightComponent_SetForceCachedShadowsForMovablePrimitives;
 
-// Function Engine.StaticMeshComponent.GetLocalBounds
-// 0x0030 (0x0030 - 0x0000)
-struct StaticMeshComponent_GetLocalBounds final
+// Function Engine.LightComponent.SetIESBrightnessScale
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetIESBrightnessScale final
 {
 public:
-	struct FVector                                Min;                                               // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Max;                                               // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshComponent_GetLocalBounds;
+DUMPER7_ASSERTS_LightComponent_SetIESBrightnessScale;
 
-// Function Engine.SplineMeshComponent.SetBoundaryMax
+// Function Engine.LightComponent.SetIESTexture
 // 0x0008 (0x0008 - 0x0000)
-struct SplineMeshComponent_SetBoundaryMax final
+struct LightComponent_SetIESTexture final
 {
 public:
-	float                                         InBoundaryMax;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UTextureLightProfile*                   NewValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SplineMeshComponent_SetBoundaryMax;
+DUMPER7_ASSERTS_LightComponent_SetIESTexture;
 
-// Function Engine.SplineMeshComponent.SetBoundaryMin
-// 0x0008 (0x0008 - 0x0000)
-struct SplineMeshComponent_SetBoundaryMin final
-{
-public:
-	float                                         InBoundaryMin;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetBoundaryMin;
-
-// Function Engine.SplineMeshComponent.SetEndOffset
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_SetEndOffset final
-{
-public:
-	struct FVector2D                              EndOffset;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetEndOffset;
-
-// Function Engine.SplineMeshComponent.SetEndPosition
-// 0x0020 (0x0020 - 0x0000)
-struct SplineMeshComponent_SetEndPosition final
-{
-public:
-	struct FVector                                EndPos;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetEndPosition;
-
-// Function Engine.SplineMeshComponent.SetEndRoll
-// 0x0008 (0x0008 - 0x0000)
-struct SplineMeshComponent_SetEndRoll final
-{
-public:
-	float                                         EndRoll;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetEndRoll;
-
-// Function Engine.SplineMeshComponent.SetEndScale
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_SetEndScale final
-{
-public:
-	struct FVector2D                              EndScale;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetEndScale;
-
-// Function Engine.SplineMeshComponent.SetEndTangent
-// 0x0020 (0x0020 - 0x0000)
-struct SplineMeshComponent_SetEndTangent final
-{
-public:
-	struct FVector                                EndTangent;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetEndTangent;
-
-// Function Engine.SplineMeshComponent.SetForwardAxis
-// 0x0002 (0x0002 - 0x0000)
-struct SplineMeshComponent_SetForwardAxis final
-{
-public:
-	ESplineMeshAxis                               InForwardAxis;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetForwardAxis;
-
-// Function Engine.SplineMeshComponent.SetSplineUpDir
-// 0x0020 (0x0020 - 0x0000)
-struct SplineMeshComponent_SetSplineUpDir final
-{
-public:
-	struct FVector                                InSplineUpDir;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetSplineUpDir;
-
-// Function Engine.SplineMeshComponent.SetStartAndEnd
-// 0x0068 (0x0068 - 0x0000)
-struct SplineMeshComponent_SetStartAndEnd final
-{
-public:
-	struct FVector                                StartPos;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                StartTangent;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                EndPos;                                            // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                EndTangent;                                        // 0x0048(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartAndEnd;
-
-// Function Engine.SplineMeshComponent.SetStartOffset
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_SetStartOffset final
-{
-public:
-	struct FVector2D                              StartOffset;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartOffset;
-
-// Function Engine.SplineMeshComponent.SetStartPosition
-// 0x0020 (0x0020 - 0x0000)
-struct SplineMeshComponent_SetStartPosition final
-{
-public:
-	struct FVector                                StartPos;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartPosition;
-
-// Function Engine.SplineMeshComponent.SetStartRoll
-// 0x0008 (0x0008 - 0x0000)
-struct SplineMeshComponent_SetStartRoll final
-{
-public:
-	float                                         StartRoll;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartRoll;
-
-// Function Engine.SplineMeshComponent.SetStartScale
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_SetStartScale final
-{
-public:
-	struct FVector2D                              StartScale;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartScale;
-
-// Function Engine.SplineMeshComponent.SetStartTangent
-// 0x0020 (0x0020 - 0x0000)
-struct SplineMeshComponent_SetStartTangent final
-{
-public:
-	struct FVector                                StartTangent;                                      // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SplineMeshComponent_SetStartTangent;
-
-// Function Engine.SplineMeshComponent.GetBoundaryMax
+// Function Engine.LightComponent.SetIndirectLightingIntensity
 // 0x0004 (0x0004 - 0x0000)
-struct SplineMeshComponent_GetBoundaryMax final
+struct LightComponent_SetIndirectLightingIntensity final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SplineMeshComponent_GetBoundaryMax;
+DUMPER7_ASSERTS_LightComponent_SetIndirectLightingIntensity;
 
-// Function Engine.SplineMeshComponent.GetBoundaryMin
+// Function Engine.LightComponent.SetIntensity
 // 0x0004 (0x0004 - 0x0000)
-struct SplineMeshComponent_GetBoundaryMin final
+struct LightComponent_SetIntensity final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SplineMeshComponent_GetBoundaryMin;
+DUMPER7_ASSERTS_LightComponent_SetIntensity;
 
-// Function Engine.SplineMeshComponent.GetEndOffset
-// 0x0010 (0x0010 - 0x0000)
-struct SplineMeshComponent_GetEndOffset final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetEndOffset;
-
-// Function Engine.SplineMeshComponent.GetEndPosition
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_GetEndPosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetEndPosition;
-
-// Function Engine.SplineMeshComponent.GetEndRoll
-// 0x0004 (0x0004 - 0x0000)
-struct SplineMeshComponent_GetEndRoll final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetEndRoll;
-
-// Function Engine.SplineMeshComponent.GetEndScale
-// 0x0010 (0x0010 - 0x0000)
-struct SplineMeshComponent_GetEndScale final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetEndScale;
-
-// Function Engine.SplineMeshComponent.GetEndTangent
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_GetEndTangent final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetEndTangent;
-
-// Function Engine.SplineMeshComponent.GetForwardAxis
-// 0x0001 (0x0001 - 0x0000)
-struct SplineMeshComponent_GetForwardAxis final
-{
-public:
-	ESplineMeshAxis                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetForwardAxis;
-
-// Function Engine.SplineMeshComponent.GetSplineUpDir
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_GetSplineUpDir final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetSplineUpDir;
-
-// Function Engine.SplineMeshComponent.GetStartOffset
-// 0x0010 (0x0010 - 0x0000)
-struct SplineMeshComponent_GetStartOffset final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetStartOffset;
-
-// Function Engine.SplineMeshComponent.GetStartPosition
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_GetStartPosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetStartPosition;
-
-// Function Engine.SplineMeshComponent.GetStartRoll
-// 0x0004 (0x0004 - 0x0000)
-struct SplineMeshComponent_GetStartRoll final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetStartRoll;
-
-// Function Engine.SplineMeshComponent.GetStartScale
-// 0x0010 (0x0010 - 0x0000)
-struct SplineMeshComponent_GetStartScale final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetStartScale;
-
-// Function Engine.SplineMeshComponent.GetStartTangent
-// 0x0018 (0x0018 - 0x0000)
-struct SplineMeshComponent_GetStartTangent final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SplineMeshComponent_GetStartTangent;
-
-// Function Engine.ViewportStatsSubsystem.AddDisplayDelegate
+// Function Engine.LightComponent.SetLightColor
 // 0x0014 (0x0014 - 0x0000)
-struct ViewportStatsSubsystem_AddDisplayDelegate final
+struct LightComponent_SetLightColor final
 {
 public:
-	TDelegate<void(class FText* OutText, struct FLinearColor* OutColor)> Delegate;                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           NewLightColor;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSRGB;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_ViewportStatsSubsystem_AddDisplayDelegate;
+DUMPER7_ASSERTS_LightComponent_SetLightColor;
 
-// Function Engine.ViewportStatsSubsystem.AddTimedDisplay
-// 0x0040 (0x0040 - 0x0000)
-struct ViewportStatsSubsystem_AddTimedDisplay final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              DisplayOffset;                                     // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ViewportStatsSubsystem_AddTimedDisplay;
-
-// Function Engine.ViewportStatsSubsystem.RemoveDisplayDelegate
+// Function Engine.LightComponent.SetLightFColor
 // 0x0004 (0x0004 - 0x0000)
-struct ViewportStatsSubsystem_RemoveDisplayDelegate final
+struct LightComponent_SetLightFColor final
 {
 public:
-	int32                                         IndexToRemove;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 NewLightColor;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ViewportStatsSubsystem_RemoveDisplayDelegate;
+DUMPER7_ASSERTS_LightComponent_SetLightFColor;
+
+// Function Engine.LightComponent.SetLightFunctionDisabledBrightness
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetLightFunctionDisabledBrightness final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetLightFunctionDisabledBrightness;
+
+// Function Engine.LightComponent.SetLightFunctionFadeDistance
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetLightFunctionFadeDistance final
+{
+public:
+	float                                         NewLightFunctionFadeDistance;                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetLightFunctionFadeDistance;
+
+// Function Engine.LightComponent.SetLightFunctionMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct LightComponent_SetLightFunctionMaterial final
+{
+public:
+	class UMaterialInterface*                     NewLightFunctionMaterial;                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetLightFunctionMaterial;
+
+// Function Engine.LightComponent.SetLightFunctionScale
+// 0x0018 (0x0018 - 0x0000)
+struct LightComponent_SetLightFunctionScale final
+{
+public:
+	struct FVector                                NewLightFunctionScale;                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetLightFunctionScale;
+
+// Function Engine.LightComponent.SetLightingChannels
+// 0x0003 (0x0003 - 0x0000)
+struct LightComponent_SetLightingChannels final
+{
+public:
+	bool                                          bChannel0;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bChannel1;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bChannel2;                                         // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetLightingChannels;
+
+// Function Engine.LightComponent.SetShadowBias
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetShadowBias final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetShadowBias;
+
+// Function Engine.LightComponent.SetShadowSlopeBias
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetShadowSlopeBias final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetShadowSlopeBias;
+
+// Function Engine.LightComponent.SetSpecularScale
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetSpecularScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetSpecularScale;
+
+// Function Engine.LightComponent.SetTemperature
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetTemperature final
+{
+public:
+	float                                         NewTemperature;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetTemperature;
+
+// Function Engine.LightComponent.SetTransmission
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetTransmission final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetTransmission;
+
+// Function Engine.LightComponent.SetUseIESBrightness
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetUseIESBrightness final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetUseIESBrightness;
+
+// Function Engine.LightComponent.SetUseTemperature
+// 0x0001 (0x0001 - 0x0000)
+struct LightComponent_SetUseTemperature final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetUseTemperature;
+
+// Function Engine.LightComponent.SetVolumetricScatteringIntensity
+// 0x0004 (0x0004 - 0x0000)
+struct LightComponent_SetVolumetricScatteringIntensity final
+{
+public:
+	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LightComponent_SetVolumetricScatteringIntensity;
+
+// Function Engine.LocalLightComponent.GetUnitsConversionFactor
+// 0x000C (0x000C - 0x0000)
+struct LocalLightComponent_GetUnitsConversionFactor final
+{
+public:
+	ELightUnits                                   SrcUnits;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELightUnits                                   TargetUnits;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CosHalfConeAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LocalLightComponent_GetUnitsConversionFactor;
+
+// Function Engine.LocalLightComponent.SetAttenuationRadius
+// 0x0004 (0x0004 - 0x0000)
+struct LocalLightComponent_SetAttenuationRadius final
+{
+public:
+	float                                         NewRadius;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LocalLightComponent_SetAttenuationRadius;
+
+// Function Engine.LocalLightComponent.SetIntensityUnits
+// 0x0001 (0x0001 - 0x0000)
+struct LocalLightComponent_SetIntensityUnits final
+{
+public:
+	ELightUnits                                   NewIntensityUnits;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LocalLightComponent_SetIntensityUnits;
+
+// Function Engine.RectLightComponent.SetBarnDoorAngle
+// 0x0004 (0x0004 - 0x0000)
+struct RectLightComponent_SetBarnDoorAngle final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RectLightComponent_SetBarnDoorAngle;
+
+// Function Engine.RectLightComponent.SetBarnDoorLength
+// 0x0004 (0x0004 - 0x0000)
+struct RectLightComponent_SetBarnDoorLength final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RectLightComponent_SetBarnDoorLength;
+
+// Function Engine.RectLightComponent.SetSourceHeight
+// 0x0004 (0x0004 - 0x0000)
+struct RectLightComponent_SetSourceHeight final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RectLightComponent_SetSourceHeight;
+
+// Function Engine.RectLightComponent.SetSourceTexture
+// 0x0008 (0x0008 - 0x0000)
+struct RectLightComponent_SetSourceTexture final
+{
+public:
+	class UTexture*                               NewValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RectLightComponent_SetSourceTexture;
+
+// Function Engine.RectLightComponent.SetSourceWidth
+// 0x0004 (0x0004 - 0x0000)
+struct RectLightComponent_SetSourceWidth final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RectLightComponent_SetSourceWidth;
 
 // Function Engine.GameViewportClient.SetConsoleTarget
 // 0x0004 (0x0004 - 0x0000)
@@ -9128,42 +9423,14 @@ public:
 };
 DUMPER7_ASSERTS_GameViewportClient_SetConsoleTarget;
 
-// Function Engine.VOIPTalker.CreateTalkerForPlayer
-// 0x0010 (0x0010 - 0x0000)
-struct VOIPTalker_CreateTalkerForPlayer final
-{
-public:
-	class APlayerState*                           OwningState;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVOIPTalker*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VOIPTalker_CreateTalkerForPlayer;
-
-// Function Engine.VOIPTalker.BPOnTalkingBegin
-// 0x0008 (0x0008 - 0x0000)
-struct VOIPTalker_BPOnTalkingBegin final
-{
-public:
-	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VOIPTalker_BPOnTalkingBegin;
-
-// Function Engine.VOIPTalker.GetVoiceLevel
+// Function Engine.CameraActor.GetAutoActivatePlayerIndex
 // 0x0004 (0x0004 - 0x0000)
-struct VOIPTalker_GetVoiceLevel final
+struct CameraActor_GetAutoActivatePlayerIndex final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_VOIPTalker_GetVoiceLevel;
-
-// Function Engine.VOIPTalker.RegisterWithPlayerState
-// 0x0008 (0x0008 - 0x0000)
-struct VOIPTalker_RegisterWithPlayerState final
-{
-public:
-	class APlayerState*                           OwningState;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VOIPTalker_RegisterWithPlayerState;
+DUMPER7_ASSERTS_CameraActor_GetAutoActivatePlayerIndex;
 
 // Function Engine.InputComponent.OnInputOwnerEndPlayed
 // 0x0010 (0x0010 - 0x0000)
@@ -9276,201 +9543,17 @@ public:
 };
 DUMPER7_ASSERTS_InputComponent_WasControllerKeyJustReleased;
 
-// Function Engine.SkyAtmosphereComponent.GetAtmosphereTransmitanceOnGroundAtPlanetTop
-// 0x0018 (0x0018 - 0x0000)
-struct SkyAtmosphereComponent_GetAtmosphereTransmitanceOnGroundAtPlanetTop final
+// Function Engine.AsyncActionLoadPrimaryAssetList.AsyncLoadPrimaryAssetList
+// 0x0030 (0x0030 - 0x0000)
+struct AsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList final
 {
 public:
-	class UDirectionalLightComponent*             DirectionalLight;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPrimaryAssetId>                PrimaryAssetList;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           LoadBundles;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UAsyncActionLoadPrimaryAssetList*       ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SkyAtmosphereComponent_GetAtmosphereTransmitanceOnGroundAtPlanetTop;
-
-// Function Engine.SkyAtmosphereComponent.GetOverridenAtmosphereLightDirection
-// 0x0020 (0x0020 - 0x0000)
-struct SkyAtmosphereComponent_GetOverridenAtmosphereLightDirection final
-{
-public:
-	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_GetOverridenAtmosphereLightDirection;
-
-// Function Engine.SkyAtmosphereComponent.IsAtmosphereLightDirectionOverriden
-// 0x0008 (0x0008 - 0x0000)
-struct SkyAtmosphereComponent_IsAtmosphereLightDirectionOverriden final
-{
-public:
-	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_IsAtmosphereLightDirectionOverriden;
-
-// Function Engine.SkyAtmosphereComponent.OverrideAtmosphereLightDirection
-// 0x0020 (0x0020 - 0x0000)
-struct SkyAtmosphereComponent_OverrideAtmosphereLightDirection final
-{
-public:
-	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LightDirection;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_OverrideAtmosphereLightDirection;
-
-// Function Engine.SkyAtmosphereComponent.ResetAtmosphereLightDirectionOverride
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_ResetAtmosphereLightDirectionOverride final
-{
-public:
-	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_ResetAtmosphereLightDirectionOverride;
-
-// Function Engine.SkyAtmosphereComponent.SetAerialPespectiveViewDistanceScale
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetAerialPespectiveViewDistanceScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetAerialPespectiveViewDistanceScale;
-
-// Function Engine.SkyAtmosphereComponent.SetAtmosphereHeight
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetAtmosphereHeight final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetAtmosphereHeight;
-
-// Function Engine.SkyAtmosphereComponent.SetHeightFogContribution
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetHeightFogContribution final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetHeightFogContribution;
-
-// Function Engine.SkyAtmosphereComponent.SetMieAbsorption
-// 0x0010 (0x0010 - 0x0000)
-struct SkyAtmosphereComponent_SetMieAbsorption final
-{
-public:
-	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAbsorption;
-
-// Function Engine.SkyAtmosphereComponent.SetMieAbsorptionScale
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetMieAbsorptionScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAbsorptionScale;
-
-// Function Engine.SkyAtmosphereComponent.SetMieAnisotropy
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetMieAnisotropy final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAnisotropy;
-
-// Function Engine.SkyAtmosphereComponent.SetMieExponentialDistribution
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetMieExponentialDistribution final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieExponentialDistribution;
-
-// Function Engine.SkyAtmosphereComponent.SetMieScattering
-// 0x0010 (0x0010 - 0x0000)
-struct SkyAtmosphereComponent_SetMieScattering final
-{
-public:
-	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieScattering;
-
-// Function Engine.SkyAtmosphereComponent.SetMieScatteringScale
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetMieScatteringScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieScatteringScale;
-
-// Function Engine.SkyAtmosphereComponent.SetMultiScatteringFactor
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetMultiScatteringFactor final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMultiScatteringFactor;
-
-// Function Engine.SkyAtmosphereComponent.SetOtherAbsorption
-// 0x0010 (0x0010 - 0x0000)
-struct SkyAtmosphereComponent_SetOtherAbsorption final
-{
-public:
-	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetOtherAbsorption;
-
-// Function Engine.SkyAtmosphereComponent.SetOtherAbsorptionScale
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetOtherAbsorptionScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetOtherAbsorptionScale;
-
-// Function Engine.SkyAtmosphereComponent.SetRayleighExponentialDistribution
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetRayleighExponentialDistribution final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighExponentialDistribution;
-
-// Function Engine.SkyAtmosphereComponent.SetRayleighScattering
-// 0x0010 (0x0010 - 0x0000)
-struct SkyAtmosphereComponent_SetRayleighScattering final
-{
-public:
-	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighScattering;
-
-// Function Engine.SkyAtmosphereComponent.SetRayleighScatteringScale
-// 0x0004 (0x0004 - 0x0000)
-struct SkyAtmosphereComponent_SetRayleighScatteringScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighScatteringScale;
-
-// Function Engine.SkyAtmosphereComponent.SetSkyLuminanceFactor
-// 0x0010 (0x0010 - 0x0000)
-struct SkyAtmosphereComponent_SetSkyLuminanceFactor final
-{
-public:
-	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkyAtmosphereComponent_SetSkyLuminanceFactor;
+DUMPER7_ASSERTS_AsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList;
 
 // Function Engine.DataLayerInstance.GetDebugColor
 // 0x0004 (0x0004 - 0x0000)
@@ -9535,81 +9618,14 @@ public:
 };
 DUMPER7_ASSERTS_DataLayerInstance_IsVisible;
 
-// Function Engine.MaterialInterface.GetBaseMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct MaterialInterface_GetBaseMaterial final
-{
-public:
-	class UMaterial*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialInterface_GetBaseMaterial;
-
-// Function Engine.MaterialInterface.SetForceMipLevelsToBeResident
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialInterface_SetForceMipLevelsToBeResident final
-{
-public:
-	bool                                          OverrideForceMiplevelsToBeResident;                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceMiplevelsToBeResidentValue;                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ForceDuration;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CinematicTextureGroups;                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFastResponse;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MaterialInterface_SetForceMipLevelsToBeResident;
-
-// Function Engine.MaterialInterface.GetBlendMode
+// Function Engine.LocationVolume.IsLoaded
 // 0x0001 (0x0001 - 0x0000)
-struct MaterialInterface_GetBlendMode final
+struct LocationVolume_IsLoaded final
 {
 public:
-	EBlendMode                                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MaterialInterface_GetBlendMode;
-
-// Function Engine.MaterialInterface.GetParameterInfo
-// 0x0028 (0x0028 - 0x0000)
-struct MaterialInterface_GetParameterInfo final
-{
-public:
-	EMaterialParameterAssociation                 Association;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   ParameterName;                                     // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialFunctionInterface*             LayerFunction;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMaterialParameterInfo                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialInterface_GetParameterInfo;
-
-// Function Engine.MaterialInterface.GetPhysicalMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct MaterialInterface_GetPhysicalMaterial final
-{
-public:
-	class UPhysicalMaterial*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterial;
-
-// Function Engine.MaterialInterface.GetPhysicalMaterialFromMap
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialInterface_GetPhysicalMaterialFromMap final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterialFromMap;
-
-// Function Engine.MaterialInterface.GetPhysicalMaterialMask
-// 0x0008 (0x0008 - 0x0000)
-struct MaterialInterface_GetPhysicalMaterialMask final
-{
-public:
-	class UPhysicalMaterialMask*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterialMask;
+DUMPER7_ASSERTS_LocationVolume_IsLoaded;
 
 // Function Engine.CancellableAsyncAction.IsActive
 // 0x0001 (0x0001 - 0x0000)
@@ -9619,136 +9635,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CancellableAsyncAction_IsActive;
-
-// Function Engine.Skeleton.AddCompatibleSkeleton
-// 0x0008 (0x0008 - 0x0000)
-struct Skeleton_AddCompatibleSkeleton final
-{
-public:
-	const class USkeleton*                        SourceSkeleton;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Skeleton_AddCompatibleSkeleton;
-
-// Function Engine.Skeleton.GetBlendProfile
-// 0x0010 (0x0010 - 0x0000)
-struct Skeleton_GetBlendProfile final
-{
-public:
-	class FName                                   InProfileName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBlendProfile*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Skeleton_GetBlendProfile;
-
-// Function Engine.RawAnimSequenceTrackExtensions.GetPositionalKeys
-// 0x0040 (0x0040 - 0x0000)
-struct RawAnimSequenceTrackExtensions_GetPositionalKeys final
-{
-public:
-	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetPositionalKeys;
-
-// Function Engine.RawAnimSequenceTrackExtensions.GetRotationalKeys
-// 0x0040 (0x0040 - 0x0000)
-struct RawAnimSequenceTrackExtensions_GetRotationalKeys final
-{
-public:
-	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FQuat>                          ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetRotationalKeys;
-
-// Function Engine.RawAnimSequenceTrackExtensions.GetScaleKeys
-// 0x0040 (0x0040 - 0x0000)
-struct RawAnimSequenceTrackExtensions_GetScaleKeys final
-{
-public:
-	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetScaleKeys;
-
-// Function Engine.ArrowComponent.SetArrowColor
-// 0x0010 (0x0010 - 0x0000)
-struct ArrowComponent_SetArrowColor final
-{
-public:
-	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetArrowColor;
-
-// Function Engine.ArrowComponent.SetArrowFColor
-// 0x0004 (0x0004 - 0x0000)
-struct ArrowComponent_SetArrowFColor final
-{
-public:
-	struct FColor                                 NewColor;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetArrowFColor;
-
-// Function Engine.ArrowComponent.SetArrowLength
-// 0x0004 (0x0004 - 0x0000)
-struct ArrowComponent_SetArrowLength final
-{
-public:
-	float                                         NewLength;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetArrowLength;
-
-// Function Engine.ArrowComponent.SetArrowSize
-// 0x0004 (0x0004 - 0x0000)
-struct ArrowComponent_SetArrowSize final
-{
-public:
-	float                                         NewSize;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetArrowSize;
-
-// Function Engine.ArrowComponent.SetIsScreenSizeScaled
-// 0x0001 (0x0001 - 0x0000)
-struct ArrowComponent_SetIsScreenSizeScaled final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetIsScreenSizeScaled;
-
-// Function Engine.ArrowComponent.SetScreenSize
-// 0x0004 (0x0004 - 0x0000)
-struct ArrowComponent_SetScreenSize final
-{
-public:
-	float                                         NewScreenSize;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetScreenSize;
-
-// Function Engine.ArrowComponent.SetTreatAsASprite
-// 0x0001 (0x0001 - 0x0000)
-struct ArrowComponent_SetTreatAsASprite final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetTreatAsASprite;
-
-// Function Engine.ArrowComponent.SetUseInEditorScaling
-// 0x0001 (0x0001 - 0x0000)
-struct ArrowComponent_SetUseInEditorScaling final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ArrowComponent_SetUseInEditorScaling;
-
-// Function Engine.World.K2_GetWorldSettings
-// 0x0008 (0x0008 - 0x0000)
-struct World_K2_GetWorldSettings final
-{
-public:
-	class AWorldSettings*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_World_K2_GetWorldSettings;
 
 // Function Engine.GameMode.K2_OnSetMatchState
 // 0x0008 (0x0008 - 0x0000)
@@ -9803,164 +9689,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GameMode_IsMatchInProgress;
-
-// Function Engine.KismetInternationalizationLibrary.ClearCurrentAssetGroupCulture
-// 0x000C (0x000C - 0x0000)
-struct KismetInternationalizationLibrary_ClearCurrentAssetGroupCulture final
-{
-public:
-	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_ClearCurrentAssetGroupCulture;
-
-// Function Engine.KismetInternationalizationLibrary.GetCultureDisplayName
-// 0x0028 (0x0028 - 0x0000)
-struct KismetInternationalizationLibrary_GetCultureDisplayName final
-{
-public:
-	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Localized;                                         // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCultureDisplayName;
-
-// Function Engine.KismetInternationalizationLibrary.GetCurrentAssetGroupCulture
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_GetCurrentAssetGroupCulture final
-{
-public:
-	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentAssetGroupCulture;
-
-// Function Engine.KismetInternationalizationLibrary.GetCurrentCulture
-// 0x0010 (0x0010 - 0x0000)
-struct KismetInternationalizationLibrary_GetCurrentCulture final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentCulture;
-
-// Function Engine.KismetInternationalizationLibrary.GetCurrentLanguage
-// 0x0010 (0x0010 - 0x0000)
-struct KismetInternationalizationLibrary_GetCurrentLanguage final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentLanguage;
-
-// Function Engine.KismetInternationalizationLibrary.GetCurrentLocale
-// 0x0010 (0x0010 - 0x0000)
-struct KismetInternationalizationLibrary_GetCurrentLocale final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentLocale;
-
-// Function Engine.KismetInternationalizationLibrary.GetLocalizedCultures
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_GetLocalizedCultures final
-{
-public:
-	bool                                          IncludeGame;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IncludeEngine;                                     // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IncludeEditor;                                     // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IncludeAdditional;                                 // 0x0003(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetLocalizedCultures;
-
-// Function Engine.KismetInternationalizationLibrary.GetNativeCulture
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_GetNativeCulture final
-{
-public:
-	ELocalizedTextSourceCategory                  TextCategory;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetNativeCulture;
-
-// Function Engine.KismetInternationalizationLibrary.GetSuitableCulture
-// 0x0040 (0x0040 - 0x0000)
-struct KismetInternationalizationLibrary_GetSuitableCulture final
-{
-public:
-	TArray<class FString>                         AvailableCultures;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 CultureToMatch;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FallbackCulture;                                   // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetSuitableCulture;
-
-// Function Engine.KismetInternationalizationLibrary.SetCurrentAssetGroupCulture
-// 0x0020 (0x0020 - 0x0000)
-struct KismetInternationalizationLibrary_SetCurrentAssetGroupCulture final
-{
-public:
-	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Culture;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentAssetGroupCulture;
-
-// Function Engine.KismetInternationalizationLibrary.SetCurrentCulture
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_SetCurrentCulture final
-{
-public:
-	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentCulture;
-
-// Function Engine.KismetInternationalizationLibrary.SetCurrentLanguage
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_SetCurrentLanguage final
-{
-public:
-	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLanguage;
-
-// Function Engine.KismetInternationalizationLibrary.SetCurrentLanguageAndLocale
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_SetCurrentLanguageAndLocale final
-{
-public:
-	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLanguageAndLocale;
-
-// Function Engine.KismetInternationalizationLibrary.SetCurrentLocale
-// 0x0018 (0x0018 - 0x0000)
-struct KismetInternationalizationLibrary_SetCurrentLocale final
-{
-public:
-	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLocale;
 
 // Function Engine.AnimInstance.BlueprintThreadSafeUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -11051,364 +10779,43 @@ public:
 };
 DUMPER7_ASSERTS_AnimInstance_TryGetPawnOwner;
 
-// Function Engine.LightComponentBase.SetAffectGlobalIllumination
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetAffectGlobalIllumination final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetAffectGlobalIllumination;
-
-// Function Engine.LightComponentBase.SetAffectReflection
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetAffectReflection final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetAffectReflection;
-
-// Function Engine.LightComponentBase.SetCastDeepShadow
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetCastDeepShadow final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetCastDeepShadow;
-
-// Function Engine.LightComponentBase.SetCastRaytracedShadow
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetCastRaytracedShadow final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetCastRaytracedShadow;
-
-// Function Engine.LightComponentBase.SetCastRaytracedShadows
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetCastRaytracedShadows final
-{
-public:
-	ECastRayTracedShadow                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetCastRaytracedShadows;
-
-// Function Engine.LightComponentBase.SetCastShadows
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetCastShadows final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetCastShadows;
-
-// Function Engine.LightComponentBase.SetCastVolumetricShadow
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponentBase_SetCastVolumetricShadow final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetCastVolumetricShadow;
-
-// Function Engine.LightComponentBase.SetSamplesPerPixel
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponentBase_SetSamplesPerPixel final
-{
-public:
-	int32                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_SetSamplesPerPixel;
-
-// Function Engine.LightComponentBase.GetLightColor
-// 0x0010 (0x0010 - 0x0000)
-struct LightComponentBase_GetLightColor final
-{
-public:
-	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponentBase_GetLightColor;
-
-// Function Engine.LightComponent.SetAffectDynamicIndirectLighting
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetAffectDynamicIndirectLighting final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetAffectDynamicIndirectLighting;
-
-// Function Engine.LightComponent.SetAffectTranslucentLighting
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetAffectTranslucentLighting final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetAffectTranslucentLighting;
-
-// Function Engine.LightComponent.SetBloomMaxBrightness
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetBloomMaxBrightness final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetBloomMaxBrightness;
-
-// Function Engine.LightComponent.SetBloomScale
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetBloomScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetBloomScale;
-
-// Function Engine.LightComponent.SetBloomThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetBloomThreshold final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetBloomThreshold;
-
-// Function Engine.LightComponent.SetBloomTint
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetBloomTint final
-{
-public:
-	struct FColor                                 NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetBloomTint;
-
-// Function Engine.LightComponent.SetEnableLightShaftBloom
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetEnableLightShaftBloom final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetEnableLightShaftBloom;
-
-// Function Engine.LightComponent.SetForceCachedShadowsForMovablePrimitives
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetForceCachedShadowsForMovablePrimitives final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetForceCachedShadowsForMovablePrimitives;
-
-// Function Engine.LightComponent.SetIESBrightnessScale
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetIESBrightnessScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetIESBrightnessScale;
-
-// Function Engine.LightComponent.SetIESTexture
+// Function Engine.SphereComponent.SetSphereRadius
 // 0x0008 (0x0008 - 0x0000)
-struct LightComponent_SetIESTexture final
+struct SphereComponent_SetSphereRadius final
 {
 public:
-	class UTextureLightProfile*                   NewValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InSphereRadius;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateOverlaps;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_LightComponent_SetIESTexture;
+DUMPER7_ASSERTS_SphereComponent_SetSphereRadius;
 
-// Function Engine.LightComponent.SetIndirectLightingIntensity
+// Function Engine.SphereComponent.GetScaledSphereRadius
 // 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetIndirectLightingIntensity final
+struct SphereComponent_GetScaledSphereRadius final
 {
 public:
-	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LightComponent_SetIndirectLightingIntensity;
+DUMPER7_ASSERTS_SphereComponent_GetScaledSphereRadius;
 
-// Function Engine.LightComponent.SetIntensity
+// Function Engine.SphereComponent.GetShapeScale
 // 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetIntensity final
+struct SphereComponent_GetShapeScale final
 {
 public:
-	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LightComponent_SetIntensity;
+DUMPER7_ASSERTS_SphereComponent_GetShapeScale;
 
-// Function Engine.LightComponent.SetLightColor
-// 0x0014 (0x0014 - 0x0000)
-struct LightComponent_SetLightColor final
-{
-public:
-	struct FLinearColor                           NewLightColor;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSRGB;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LightComponent_SetLightColor;
-
-// Function Engine.LightComponent.SetLightFColor
+// Function Engine.SphereComponent.GetUnscaledSphereRadius
 // 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetLightFColor final
+struct SphereComponent_GetUnscaledSphereRadius final
 {
 public:
-	struct FColor                                 NewLightColor;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LightComponent_SetLightFColor;
-
-// Function Engine.LightComponent.SetLightFunctionDisabledBrightness
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetLightFunctionDisabledBrightness final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetLightFunctionDisabledBrightness;
-
-// Function Engine.LightComponent.SetLightFunctionFadeDistance
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetLightFunctionFadeDistance final
-{
-public:
-	float                                         NewLightFunctionFadeDistance;                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetLightFunctionFadeDistance;
-
-// Function Engine.LightComponent.SetLightFunctionMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct LightComponent_SetLightFunctionMaterial final
-{
-public:
-	class UMaterialInterface*                     NewLightFunctionMaterial;                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetLightFunctionMaterial;
-
-// Function Engine.LightComponent.SetLightFunctionScale
-// 0x0018 (0x0018 - 0x0000)
-struct LightComponent_SetLightFunctionScale final
-{
-public:
-	struct FVector                                NewLightFunctionScale;                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetLightFunctionScale;
-
-// Function Engine.LightComponent.SetLightingChannels
-// 0x0003 (0x0003 - 0x0000)
-struct LightComponent_SetLightingChannels final
-{
-public:
-	bool                                          bChannel0;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bChannel1;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bChannel2;                                         // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetLightingChannels;
-
-// Function Engine.LightComponent.SetShadowBias
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetShadowBias final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetShadowBias;
-
-// Function Engine.LightComponent.SetShadowSlopeBias
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetShadowSlopeBias final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetShadowSlopeBias;
-
-// Function Engine.LightComponent.SetSpecularScale
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetSpecularScale final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetSpecularScale;
-
-// Function Engine.LightComponent.SetTemperature
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetTemperature final
-{
-public:
-	float                                         NewTemperature;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetTemperature;
-
-// Function Engine.LightComponent.SetTransmission
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetTransmission final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetTransmission;
-
-// Function Engine.LightComponent.SetUseIESBrightness
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetUseIESBrightness final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetUseIESBrightness;
-
-// Function Engine.LightComponent.SetUseTemperature
-// 0x0001 (0x0001 - 0x0000)
-struct LightComponent_SetUseTemperature final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetUseTemperature;
-
-// Function Engine.LightComponent.SetVolumetricScatteringIntensity
-// 0x0004 (0x0004 - 0x0000)
-struct LightComponent_SetVolumetricScatteringIntensity final
-{
-public:
-	float                                         NewIntensity;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LightComponent_SetVolumetricScatteringIntensity;
-
-// Function Engine.LocalLightComponent.GetUnitsConversionFactor
-// 0x000C (0x000C - 0x0000)
-struct LocalLightComponent_GetUnitsConversionFactor final
-{
-public:
-	ELightUnits                                   SrcUnits;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELightUnits                                   TargetUnits;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CosHalfConeAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LocalLightComponent_GetUnitsConversionFactor;
-
-// Function Engine.LocalLightComponent.SetAttenuationRadius
-// 0x0004 (0x0004 - 0x0000)
-struct LocalLightComponent_SetAttenuationRadius final
-{
-public:
-	float                                         NewRadius;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LocalLightComponent_SetAttenuationRadius;
-
-// Function Engine.LocalLightComponent.SetIntensityUnits
-// 0x0001 (0x0001 - 0x0000)
-struct LocalLightComponent_SetIntensityUnits final
-{
-public:
-	ELightUnits                                   NewIntensityUnits;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LocalLightComponent_SetIntensityUnits;
+DUMPER7_ASSERTS_SphereComponent_GetUnscaledSphereRadius;
 
 // Function Engine.CameraShakeBase.SetRootShakePattern
 // 0x0008 (0x0008 - 0x0000)
@@ -12344,6 +11751,71 @@ public:
 };
 DUMPER7_ASSERTS_AudioComponent_IsVirtualized;
 
+// Function Engine.TimecodeProvider.FetchTimecode
+// 0x0014 (0x0014 - 0x0000)
+struct TimecodeProvider_FetchTimecode final
+{
+public:
+	struct FQualifiedFrameTime                    OutFrameTime;                                      // 0x0000(0x0010)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TimecodeProvider_FetchTimecode;
+
+// Function Engine.TimecodeProvider.GetDelayedQualifiedFrameTime
+// 0x0010 (0x0010 - 0x0000)
+struct TimecodeProvider_GetDelayedQualifiedFrameTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetDelayedQualifiedFrameTime;
+
+// Function Engine.TimecodeProvider.GetDelayedTimecode
+// 0x0014 (0x0014 - 0x0000)
+struct TimecodeProvider_GetDelayedTimecode final
+{
+public:
+	struct FTimecode                              ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetDelayedTimecode;
+
+// Function Engine.TimecodeProvider.GetFrameRate
+// 0x0008 (0x0008 - 0x0000)
+struct TimecodeProvider_GetFrameRate final
+{
+public:
+	struct FFrameRate                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetFrameRate;
+
+// Function Engine.TimecodeProvider.GetQualifiedFrameTime
+// 0x0010 (0x0010 - 0x0000)
+struct TimecodeProvider_GetQualifiedFrameTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetQualifiedFrameTime;
+
+// Function Engine.TimecodeProvider.GetSynchronizationState
+// 0x0004 (0x0004 - 0x0000)
+struct TimecodeProvider_GetSynchronizationState final
+{
+public:
+	ETimecodeProviderSynchronizationState         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetSynchronizationState;
+
+// Function Engine.TimecodeProvider.GetTimecode
+// 0x0014 (0x0014 - 0x0000)
+struct TimecodeProvider_GetTimecode final
+{
+public:
+	struct FTimecode                              ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimecodeProvider_GetTimecode;
+
 // Function Engine.Exporter.RunAssetExportTask
 // 0x0010 (0x0010 - 0x0000)
 struct Exporter_RunAssetExportTask final
@@ -12377,25 +11849,415 @@ public:
 };
 DUMPER7_ASSERTS_Exporter_ScriptRunAssetExportTask;
 
-// Function Engine.LODActor.OnSubActorEndPlay
-// 0x0010 (0x0010 - 0x0000)
-struct LODActor_OnSubActorEndPlay final
+// Function Engine.WorldPartitionBlueprintLibrary.GetActorDescs
+// 0x0018 (0x0018 - 0x0000)
+struct WorldPartitionBlueprintLibrary_GetActorDescs final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEndPlayReason                                Reason;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FActorDesc>                     OutActorDescs;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_LODActor_OnSubActorEndPlay;
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetActorDescs;
 
-// Function Engine.SceneCaptureCube.OnInterpToggle
-// 0x0001 (0x0001 - 0x0000)
-struct SceneCaptureCube_OnInterpToggle final
+// Function Engine.WorldPartitionBlueprintLibrary.GetEditorWorldBounds
+// 0x0038 (0x0038 - 0x0000)
+struct WorldPartitionBlueprintLibrary_GetEditorWorldBounds final
 {
 public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SceneCaptureCube_OnInterpToggle;
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetEditorWorldBounds;
+
+// Function Engine.WorldPartitionBlueprintLibrary.GetIntersectingActorDescs
+// 0x0050 (0x0050 - 0x0000)
+struct WorldPartitionBlueprintLibrary_GetIntersectingActorDescs final
+{
+public:
+	struct FBox                                   InBox;                                             // 0x0000(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FActorDesc>                     OutActorDescs;                                     // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetIntersectingActorDescs;
+
+// Function Engine.WorldPartitionBlueprintLibrary.GetRuntimeWorldBounds
+// 0x0038 (0x0038 - 0x0000)
+struct WorldPartitionBlueprintLibrary_GetRuntimeWorldBounds final
+{
+public:
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetRuntimeWorldBounds;
+
+// Function Engine.WorldPartitionBlueprintLibrary.LoadActors
+// 0x0010 (0x0010 - 0x0000)
+struct WorldPartitionBlueprintLibrary_LoadActors final
+{
+public:
+	TArray<struct FGuid>                          InActorsToLoad;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_LoadActors;
+
+// Function Engine.WorldPartitionBlueprintLibrary.PinActors
+// 0x0010 (0x0010 - 0x0000)
+struct WorldPartitionBlueprintLibrary_PinActors final
+{
+public:
+	TArray<struct FGuid>                          InActorsToPin;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_PinActors;
+
+// Function Engine.WorldPartitionBlueprintLibrary.UnloadActors
+// 0x0010 (0x0010 - 0x0000)
+struct WorldPartitionBlueprintLibrary_UnloadActors final
+{
+public:
+	TArray<struct FGuid>                          InActorsToUnload;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_UnloadActors;
+
+// Function Engine.WorldPartitionBlueprintLibrary.UnpinActors
+// 0x0010 (0x0010 - 0x0000)
+struct WorldPartitionBlueprintLibrary_UnpinActors final
+{
+public:
+	TArray<struct FGuid>                          InActorsToUnpin;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_UnpinActors;
+
+// Function Engine.Emitter.OnParticleSystemFinished
+// 0x0008 (0x0008 - 0x0000)
+struct Emitter_OnParticleSystemFinished final
+{
+public:
+	class UParticleSystemComponent*               FinishedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_OnParticleSystemFinished;
+
+// Function Engine.Emitter.SetActorParameter
+// 0x0010 (0x0010 - 0x0000)
+struct Emitter_SetActorParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Param;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetActorParameter;
+
+// Function Engine.Emitter.SetColorParameter
+// 0x0018 (0x0018 - 0x0000)
+struct Emitter_SetColorParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Param;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetColorParameter;
+
+// Function Engine.Emitter.SetFloatParameter
+// 0x000C (0x000C - 0x0000)
+struct Emitter_SetFloatParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Param;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetFloatParameter;
+
+// Function Engine.Emitter.SetMaterialParameter
+// 0x0010 (0x0010 - 0x0000)
+struct Emitter_SetMaterialParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Param;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetMaterialParameter;
+
+// Function Engine.Emitter.SetTemplate
+// 0x0008 (0x0008 - 0x0000)
+struct Emitter_SetTemplate final
+{
+public:
+	class UParticleSystem*                        NewTemplate;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetTemplate;
+
+// Function Engine.Emitter.SetVectorParameter
+// 0x0020 (0x0020 - 0x0000)
+struct Emitter_SetVectorParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Param;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_SetVectorParameter;
+
+// Function Engine.Emitter.IsActive
+// 0x0001 (0x0001 - 0x0000)
+struct Emitter_IsActive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Emitter_IsActive;
+
+// Function Engine.StreamableRenderAsset.SetForceMipLevelsToBeResident
+// 0x0008 (0x0008 - 0x0000)
+struct StreamableRenderAsset_SetForceMipLevelsToBeResident final
+{
+public:
+	float                                         Seconds;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CinematicLODGroupMask;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StreamableRenderAsset_SetForceMipLevelsToBeResident;
+
+// Function Engine.StaticMesh.CreateStaticMeshDescription
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_CreateStaticMeshDescription final
+{
+public:
+	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMeshDescription*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_CreateStaticMeshDescription;
+
+// Function Engine.StaticMesh.AddMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_AddMaterial final
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_AddMaterial;
+
+// Function Engine.StaticMesh.AddSocket
+// 0x0008 (0x0008 - 0x0000)
+struct StaticMesh_AddSocket final
+{
+public:
+	class UStaticMeshSocket*                      Socket;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_AddSocket;
+
+// Function Engine.StaticMesh.BuildFromStaticMeshDescriptions
+// 0x0018 (0x0018 - 0x0000)
+struct StaticMesh_BuildFromStaticMeshDescriptions final
+{
+public:
+	TArray<class UStaticMeshDescription*>         StaticMeshDescriptions;                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bBuildSimpleCollision;                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFastBuild;                                        // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_StaticMesh_BuildFromStaticMeshDescriptions;
+
+// Function Engine.StaticMesh.GetStaticMeshDescription
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_GetStaticMeshDescription final
+{
+public:
+	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshDescription*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetStaticMeshDescription;
+
+// Function Engine.StaticMesh.RemoveSocket
+// 0x0008 (0x0008 - 0x0000)
+struct StaticMesh_RemoveSocket final
+{
+public:
+	class UStaticMeshSocket*                      Socket;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_RemoveSocket;
+
+// Function Engine.StaticMesh.SetMinimumLODForPlatform
+// 0x000C (0x000C - 0x0000)
+struct StaticMesh_SetMinimumLODForPlatform final
+{
+public:
+	class FName                                   PlatformName;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InMinLOD;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_SetMinimumLODForPlatform;
+
+// Function Engine.StaticMesh.SetMinimumLODForPlatforms
+// 0x0050 (0x0050 - 0x0000)
+struct StaticMesh_SetMinimumLODForPlatforms final
+{
+public:
+	TMap<class FName, int32>                      PlatformMinimumLODs;                               // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_SetMinimumLODForPlatforms;
+
+// Function Engine.StaticMesh.SetMinLODForQualityLevels
+// 0x0058 (0x0058 - 0x0000)
+struct StaticMesh_SetMinLODForQualityLevels final
+{
+public:
+	TMap<EPerQualityLevels, int32>                QualityLevelMinimumLODs;                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Default;                                           // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_StaticMesh_SetMinLODForQualityLevels;
+
+// Function Engine.StaticMesh.SetStaticMaterials
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_SetStaticMaterials final
+{
+public:
+	TArray<struct FStaticMaterial>                InStaticMaterials;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_SetStaticMaterials;
+
+// Function Engine.StaticMesh.FindSocket
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_FindSocket final
+{
+public:
+	class FName                                   InSocketName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMeshSocket*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_FindSocket;
+
+// Function Engine.StaticMesh.GetBoundingBox
+// 0x0038 (0x0038 - 0x0000)
+struct StaticMesh_GetBoundingBox final
+{
+public:
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetBoundingBox;
+
+// Function Engine.StaticMesh.GetBounds
+// 0x0038 (0x0038 - 0x0000)
+struct StaticMesh_GetBounds final
+{
+public:
+	struct FBoxSphereBounds                       ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetBounds;
+
+// Function Engine.StaticMesh.GetMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_GetMaterial final
+{
+public:
+	int32                                         MaterialIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMaterial;
+
+// Function Engine.StaticMesh.GetMaterialIndex
+// 0x000C (0x000C - 0x0000)
+struct StaticMesh_GetMaterialIndex final
+{
+public:
+	class FName                                   MaterialSlotName;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMaterialIndex;
+
+// Function Engine.StaticMesh.GetMinimumLODForPlatform
+// 0x000C (0x000C - 0x0000)
+struct StaticMesh_GetMinimumLODForPlatform final
+{
+public:
+	class FName                                   PlatformName;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForPlatform;
+
+// Function Engine.StaticMesh.GetMinimumLODForPlatforms
+// 0x0050 (0x0050 - 0x0000)
+struct StaticMesh_GetMinimumLODForPlatforms final
+{
+public:
+	TMap<class FName, int32>                      PlatformMinimumLODs;                               // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForPlatforms;
+
+// Function Engine.StaticMesh.GetMinimumLODForQualityLevel
+// 0x000C (0x000C - 0x0000)
+struct StaticMesh_GetMinimumLODForQualityLevel final
+{
+public:
+	class FName                                   QualityLevel;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForQualityLevel;
+
+// Function Engine.StaticMesh.GetMinimumLODForQualityLevels
+// 0x0050 (0x0050 - 0x0000)
+struct StaticMesh_GetMinimumLODForQualityLevels final
+{
+public:
+	TMap<class FName, int32>                      QualityLevelMinimumLODs;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForQualityLevels;
+
+// Function Engine.StaticMesh.GetMinLODForQualityLevels
+// 0x0058 (0x0058 - 0x0000)
+struct StaticMesh_GetMinLODForQualityLevels final
+{
+public:
+	TMap<EPerQualityLevels, int32>                QualityLevelMinimumLODs;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	int32                                         Default;                                           // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_StaticMesh_GetMinLODForQualityLevels;
+
+// Function Engine.StaticMesh.GetNumLODs
+// 0x0004 (0x0004 - 0x0000)
+struct StaticMesh_GetNumLODs final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetNumLODs;
+
+// Function Engine.StaticMesh.GetNumSections
+// 0x0008 (0x0008 - 0x0000)
+struct StaticMesh_GetNumSections final
+{
+public:
+	int32                                         InLOD;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetNumSections;
+
+// Function Engine.StaticMesh.GetNumTriangles
+// 0x0008 (0x0008 - 0x0000)
+struct StaticMesh_GetNumTriangles final
+{
+public:
+	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetNumTriangles;
+
+// Function Engine.StaticMesh.GetSocketsByTag
+// 0x0020 (0x0020 - 0x0000)
+struct StaticMesh_GetSocketsByTag final
+{
+public:
+	class FString                                 InSocketTag;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UStaticMeshSocket*>              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetSocketsByTag;
+
+// Function Engine.StaticMesh.GetStaticMaterials
+// 0x0010 (0x0010 - 0x0000)
+struct StaticMesh_GetStaticMaterials final
+{
+public:
+	TArray<struct FStaticMaterial>                ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMesh_GetStaticMaterials;
 
 // Function Engine.SoundWave.SetSoundAssetCompressionType
 // 0x0002 (0x0002 - 0x0000)
@@ -12416,104 +12278,163 @@ public:
 };
 DUMPER7_ASSERTS_SoundWave_GetSoundAssetCompressionType;
 
-// Function Engine.Light.SetAffectTranslucentLighting
-// 0x0001 (0x0001 - 0x0000)
-struct Light_SetAffectTranslucentLighting final
+// Function Engine.KismetInternationalizationLibrary.ClearCurrentAssetGroupCulture
+// 0x000C (0x000C - 0x0000)
+struct KismetInternationalizationLibrary_ClearCurrentAssetGroupCulture final
 {
 public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_Light_SetAffectTranslucentLighting;
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_ClearCurrentAssetGroupCulture;
 
-// Function Engine.Light.SetBrightness
-// 0x0004 (0x0004 - 0x0000)
-struct Light_SetBrightness final
+// Function Engine.KismetInternationalizationLibrary.GetCultureDisplayName
+// 0x0028 (0x0028 - 0x0000)
+struct KismetInternationalizationLibrary_GetCultureDisplayName final
 {
 public:
-	float                                         NewBrightness;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Localized;                                         // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Light_SetBrightness;
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCultureDisplayName;
 
-// Function Engine.Light.SetCastShadows
-// 0x0001 (0x0001 - 0x0000)
-struct Light_SetCastShadows final
-{
-public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_SetCastShadows;
-
-// Function Engine.Light.SetEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct Light_SetEnabled final
-{
-public:
-	bool                                          bSetEnabled;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_SetEnabled;
-
-// Function Engine.Light.SetLightColor
-// 0x0010 (0x0010 - 0x0000)
-struct Light_SetLightColor final
-{
-public:
-	struct FLinearColor                           NewLightColor;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_SetLightColor;
-
-// Function Engine.Light.SetLightFunctionFadeDistance
-// 0x0004 (0x0004 - 0x0000)
-struct Light_SetLightFunctionFadeDistance final
-{
-public:
-	float                                         NewLightFunctionFadeDistance;                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_SetLightFunctionFadeDistance;
-
-// Function Engine.Light.SetLightFunctionMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct Light_SetLightFunctionMaterial final
-{
-public:
-	class UMaterialInterface*                     NewLightFunctionMaterial;                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_SetLightFunctionMaterial;
-
-// Function Engine.Light.SetLightFunctionScale
+// Function Engine.KismetInternationalizationLibrary.GetCurrentAssetGroupCulture
 // 0x0018 (0x0018 - 0x0000)
-struct Light_SetLightFunctionScale final
+struct KismetInternationalizationLibrary_GetCurrentAssetGroupCulture final
 {
 public:
-	struct FVector                                NewLightFunctionScale;                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Light_SetLightFunctionScale;
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentAssetGroupCulture;
 
-// Function Engine.Light.GetBrightness
-// 0x0004 (0x0004 - 0x0000)
-struct Light_GetBrightness final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Light_GetBrightness;
-
-// Function Engine.Light.GetLightColor
+// Function Engine.KismetInternationalizationLibrary.GetCurrentCulture
 // 0x0010 (0x0010 - 0x0000)
-struct Light_GetLightColor final
+struct KismetInternationalizationLibrary_GetCurrentCulture final
 {
 public:
-	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Light_GetLightColor;
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentCulture;
 
-// Function Engine.Light.IsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct Light_IsEnabled final
+// Function Engine.KismetInternationalizationLibrary.GetCurrentLanguage
+// 0x0010 (0x0010 - 0x0000)
+struct KismetInternationalizationLibrary_GetCurrentLanguage final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Light_IsEnabled;
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentLanguage;
+
+// Function Engine.KismetInternationalizationLibrary.GetCurrentLocale
+// 0x0010 (0x0010 - 0x0000)
+struct KismetInternationalizationLibrary_GetCurrentLocale final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetCurrentLocale;
+
+// Function Engine.KismetInternationalizationLibrary.GetLocalizedCultures
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_GetLocalizedCultures final
+{
+public:
+	bool                                          IncludeGame;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IncludeEngine;                                     // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IncludeEditor;                                     // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IncludeAdditional;                                 // 0x0003(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetLocalizedCultures;
+
+// Function Engine.KismetInternationalizationLibrary.GetNativeCulture
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_GetNativeCulture final
+{
+public:
+	ELocalizedTextSourceCategory                  TextCategory;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetNativeCulture;
+
+// Function Engine.KismetInternationalizationLibrary.GetSuitableCulture
+// 0x0040 (0x0040 - 0x0000)
+struct KismetInternationalizationLibrary_GetSuitableCulture final
+{
+public:
+	TArray<class FString>                         AvailableCultures;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 CultureToMatch;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FallbackCulture;                                   // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_GetSuitableCulture;
+
+// Function Engine.KismetInternationalizationLibrary.SetCurrentAssetGroupCulture
+// 0x0020 (0x0020 - 0x0000)
+struct KismetInternationalizationLibrary_SetCurrentAssetGroupCulture final
+{
+public:
+	class FName                                   AssetGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Culture;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentAssetGroupCulture;
+
+// Function Engine.KismetInternationalizationLibrary.SetCurrentCulture
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_SetCurrentCulture final
+{
+public:
+	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentCulture;
+
+// Function Engine.KismetInternationalizationLibrary.SetCurrentLanguage
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_SetCurrentLanguage final
+{
+public:
+	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLanguage;
+
+// Function Engine.KismetInternationalizationLibrary.SetCurrentLanguageAndLocale
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_SetCurrentLanguageAndLocale final
+{
+public:
+	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLanguageAndLocale;
+
+// Function Engine.KismetInternationalizationLibrary.SetCurrentLocale
+// 0x0018 (0x0018 - 0x0000)
+struct KismetInternationalizationLibrary_SetCurrentLocale final
+{
+public:
+	class FString                                 Culture;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SaveToConfig;                                      // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetInternationalizationLibrary_SetCurrentLocale;
 
 // Function Engine.Controller.ClientSetLocation
 // 0x0030 (0x0030 - 0x0000)
@@ -14140,6 +14061,132 @@ public:
 };
 DUMPER7_ASSERTS_PlayerController_WasInputKeyJustReleased;
 
+// Function Engine.PlayerState.OnPawnPrivateDestroyed
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerState_OnPawnPrivateDestroyed final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_OnPawnPrivateDestroyed;
+
+// Function Engine.PlayerState.ReceiveCopyProperties
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerState_ReceiveCopyProperties final
+{
+public:
+	class APlayerState*                           NewPlayerState;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_ReceiveCopyProperties;
+
+// Function Engine.PlayerState.ReceiveOverrideWith
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerState_ReceiveOverrideWith final
+{
+public:
+	class APlayerState*                           OldPlayerState;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_ReceiveOverrideWith;
+
+// Function Engine.PlayerState.BP_GetUniqueId
+// 0x0030 (0x0030 - 0x0000)
+struct PlayerState_BP_GetUniqueId final
+{
+public:
+	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_BP_GetUniqueId;
+
+// Function Engine.PlayerState.GetCompressedPing
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerState_GetCompressedPing final
+{
+public:
+	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetCompressedPing;
+
+// Function Engine.PlayerState.GetPawn
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerState_GetPawn final
+{
+public:
+	class APawn*                                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetPawn;
+
+// Function Engine.PlayerState.GetPingInMilliseconds
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerState_GetPingInMilliseconds final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetPingInMilliseconds;
+
+// Function Engine.PlayerState.GetPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct PlayerState_GetPlayerController final
+{
+public:
+	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetPlayerController;
+
+// Function Engine.PlayerState.GetPlayerId
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerState_GetPlayerId final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetPlayerId;
+
+// Function Engine.PlayerState.GetPlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct PlayerState_GetPlayerName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetPlayerName;
+
+// Function Engine.PlayerState.GetScore
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerState_GetScore final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_GetScore;
+
+// Function Engine.PlayerState.IsABot
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerState_IsABot final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_IsABot;
+
+// Function Engine.PlayerState.IsOnlyASpectator
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerState_IsOnlyASpectator final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_IsOnlyASpectator;
+
+// Function Engine.PlayerState.IsSpectator
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerState_IsSpectator final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PlayerState_IsSpectator;
+
 // Function Engine.GameStateBase.GetPlayerRespawnDelay
 // 0x0010 (0x0010 - 0x0000)
 struct GameStateBase_GetPlayerRespawnDelay final
@@ -14198,59 +14245,147 @@ public:
 };
 DUMPER7_ASSERTS_GameStateBase_HasMatchStarted;
 
-// Function Engine.AudioVolume.SetEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct AudioVolume_SetEnabled final
+// Function Engine.ChildActorComponent.OnChildActorDestroyed
+// 0x0008 (0x0008 - 0x0000)
+struct ChildActorComponent_OnChildActorDestroyed final
 {
 public:
-	bool                                          bNewEnabled;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioVolume_SetEnabled;
+DUMPER7_ASSERTS_ChildActorComponent_OnChildActorDestroyed;
 
-// Function Engine.AudioVolume.SetInteriorSettings
+// Function Engine.ChildActorComponent.SetChildActorClass
+// 0x0008 (0x0008 - 0x0000)
+struct ChildActorComponent_SetChildActorClass final
+{
+public:
+	TSubclassOf<class AActor>                     InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChildActorComponent_SetChildActorClass;
+
+// Function Engine.Texture.Blueprint_GetMemorySize
+// 0x0008 (0x0008 - 0x0000)
+struct Texture_Blueprint_GetMemorySize final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Texture_Blueprint_GetMemorySize;
+
+// Function Engine.Texture.Blueprint_GetTextureSourceDiskAndMemorySize
+// 0x0010 (0x0010 - 0x0000)
+struct Texture_Blueprint_GetTextureSourceDiskAndMemorySize final
+{
+public:
+	int64                                         OutDiskSize;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         OutMemorySize;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Texture_Blueprint_GetTextureSourceDiskAndMemorySize;
+
+// Function Engine.Texture.ComputeTextureSourceChannelMinMax
 // 0x0024 (0x0024 - 0x0000)
-struct AudioVolume_SetInteriorSettings final
+struct Texture_ComputeTextureSourceChannelMinMax final
 {
 public:
-	struct FInteriorSettings                      NewInteriorSettings;                               // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FLinearColor                           OutColorMin;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           OutColorMax;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioVolume_SetInteriorSettings;
+DUMPER7_ASSERTS_Texture_ComputeTextureSourceChannelMinMax;
 
-// Function Engine.AudioVolume.SetPriority
+// Function Engine.StaticMeshComponent.GetInitialEvaluateWorldPositionOffset
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshComponent_GetInitialEvaluateWorldPositionOffset final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_GetInitialEvaluateWorldPositionOffset;
+
+// Function Engine.StaticMeshComponent.OnRep_StaticMesh
+// 0x0008 (0x0008 - 0x0000)
+struct StaticMeshComponent_OnRep_StaticMesh final
+{
+public:
+	class UStaticMesh*                            OldStaticMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_OnRep_StaticMesh;
+
+// Function Engine.StaticMeshComponent.SetDistanceFieldSelfShadowBias
 // 0x0004 (0x0004 - 0x0000)
-struct AudioVolume_SetPriority final
+struct StaticMeshComponent_SetDistanceFieldSelfShadowBias final
 {
 public:
-	float                                         NewPriority;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioVolume_SetPriority;
+DUMPER7_ASSERTS_StaticMeshComponent_SetDistanceFieldSelfShadowBias;
 
-// Function Engine.AudioVolume.SetReverbSettings
-// 0x0020 (0x0020 - 0x0000)
-struct AudioVolume_SetReverbSettings final
+// Function Engine.StaticMeshComponent.SetEvaluateWorldPositionOffset
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshComponent_SetEvaluateWorldPositionOffset final
 {
 public:
-	struct FReverbSettings                        NewReverbSettings;                                 // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          NewValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioVolume_SetReverbSettings;
+DUMPER7_ASSERTS_StaticMeshComponent_SetEvaluateWorldPositionOffset;
 
-// Function Engine.AudioVolume.SetSubmixOverrideSettings
+// Function Engine.StaticMeshComponent.SetEvaluateWorldPositionOffsetInRayTracing
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshComponent_SetEvaluateWorldPositionOffsetInRayTracing final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_SetEvaluateWorldPositionOffsetInRayTracing;
+
+// Function Engine.StaticMeshComponent.SetForceDisableNanite
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshComponent_SetForceDisableNanite final
+{
+public:
+	bool                                          bInForceDisableNanite;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_SetForceDisableNanite;
+
+// Function Engine.StaticMeshComponent.SetForcedLodModel
+// 0x0004 (0x0004 - 0x0000)
+struct StaticMeshComponent_SetForcedLodModel final
+{
+public:
+	int32                                         NewForcedLodModel;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_SetForcedLodModel;
+
+// Function Engine.StaticMeshComponent.SetReverseCulling
+// 0x0001 (0x0001 - 0x0000)
+struct StaticMeshComponent_SetReverseCulling final
+{
+public:
+	bool                                          ReverseCulling;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StaticMeshComponent_SetReverseCulling;
+
+// Function Engine.StaticMeshComponent.SetStaticMesh
 // 0x0010 (0x0010 - 0x0000)
-struct AudioVolume_SetSubmixOverrideSettings final
+struct StaticMeshComponent_SetStaticMesh final
 {
 public:
-	TArray<struct FAudioVolumeSubmixOverrideSettings> NewSubmixOverrideSettings;                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            NewMesh;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioVolume_SetSubmixOverrideSettings;
+DUMPER7_ASSERTS_StaticMeshComponent_SetStaticMesh;
 
-// Function Engine.AudioVolume.SetSubmixSendSettings
-// 0x0010 (0x0010 - 0x0000)
-struct AudioVolume_SetSubmixSendSettings final
+// Function Engine.StaticMeshComponent.GetLocalBounds
+// 0x0030 (0x0030 - 0x0000)
+struct StaticMeshComponent_GetLocalBounds final
 {
 public:
-	TArray<struct FAudioVolumeSubmixSendSettings> NewSubmixSendSettings;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                Min;                                               // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Max;                                               // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioVolume_SetSubmixSendSettings;
+DUMPER7_ASSERTS_StaticMeshComponent_GetLocalBounds;
 
 // Function Engine.InstancedStaticMeshComponent.AddInstance
 // 0x0070 (0x0070 - 0x0000)
@@ -14443,59 +14578,81 @@ public:
 };
 DUMPER7_ASSERTS_InstancedStaticMeshComponent_IsValidInstance;
 
-// Function Engine.StaticMeshActor.SetMobility
-// 0x0001 (0x0001 - 0x0000)
-struct StaticMeshActor_SetMobility final
-{
-public:
-	EComponentMobility                            InMobility;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMeshActor_SetMobility;
-
-// Function Engine.RectLightComponent.SetBarnDoorAngle
-// 0x0004 (0x0004 - 0x0000)
-struct RectLightComponent_SetBarnDoorAngle final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RectLightComponent_SetBarnDoorAngle;
-
-// Function Engine.RectLightComponent.SetBarnDoorLength
-// 0x0004 (0x0004 - 0x0000)
-struct RectLightComponent_SetBarnDoorLength final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RectLightComponent_SetBarnDoorLength;
-
-// Function Engine.RectLightComponent.SetSourceHeight
-// 0x0004 (0x0004 - 0x0000)
-struct RectLightComponent_SetSourceHeight final
-{
-public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RectLightComponent_SetSourceHeight;
-
-// Function Engine.RectLightComponent.SetSourceTexture
+// Function Engine.MaterialInterface.GetBaseMaterial
 // 0x0008 (0x0008 - 0x0000)
-struct RectLightComponent_SetSourceTexture final
+struct MaterialInterface_GetBaseMaterial final
 {
 public:
-	class UTexture*                               NewValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterial*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RectLightComponent_SetSourceTexture;
+DUMPER7_ASSERTS_MaterialInterface_GetBaseMaterial;
 
-// Function Engine.RectLightComponent.SetSourceWidth
-// 0x0004 (0x0004 - 0x0000)
-struct RectLightComponent_SetSourceWidth final
+// Function Engine.MaterialInterface.SetForceMipLevelsToBeResident
+// 0x0010 (0x0010 - 0x0000)
+struct MaterialInterface_SetForceMipLevelsToBeResident final
 {
 public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OverrideForceMiplevelsToBeResident;                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceMiplevelsToBeResidentValue;                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ForceDuration;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CinematicTextureGroups;                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFastResponse;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_RectLightComponent_SetSourceWidth;
+DUMPER7_ASSERTS_MaterialInterface_SetForceMipLevelsToBeResident;
+
+// Function Engine.MaterialInterface.GetBlendMode
+// 0x0001 (0x0001 - 0x0000)
+struct MaterialInterface_GetBlendMode final
+{
+public:
+	EBlendMode                                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialInterface_GetBlendMode;
+
+// Function Engine.MaterialInterface.GetParameterInfo
+// 0x0028 (0x0028 - 0x0000)
+struct MaterialInterface_GetParameterInfo final
+{
+public:
+	EMaterialParameterAssociation                 Association;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ParameterName;                                     // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialFunctionInterface*             LayerFunction;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMaterialParameterInfo                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialInterface_GetParameterInfo;
+
+// Function Engine.MaterialInterface.GetPhysicalMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct MaterialInterface_GetPhysicalMaterial final
+{
+public:
+	class UPhysicalMaterial*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterial;
+
+// Function Engine.MaterialInterface.GetPhysicalMaterialFromMap
+// 0x0010 (0x0010 - 0x0000)
+struct MaterialInterface_GetPhysicalMaterialFromMap final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterialFromMap;
+
+// Function Engine.MaterialInterface.GetPhysicalMaterialMask
+// 0x0008 (0x0008 - 0x0000)
+struct MaterialInterface_GetPhysicalMaterialMask final
+{
+public:
+	class UPhysicalMaterialMask*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialInterface_GetPhysicalMaterialMask;
 
 // Function Engine.MaterialInstanceConstant.K2_GetScalarParameterValue
 // 0x000C (0x000C - 0x0000)
@@ -14527,88 +14684,223 @@ public:
 };
 DUMPER7_ASSERTS_MaterialInstanceConstant_K2_GetVectorParameterValue;
 
-// Function Engine.AnimationAsset.GetPlayLength
-// 0x0004 (0x0004 - 0x0000)
-struct AnimationAsset_GetPlayLength final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimationAsset_GetPlayLength;
-
-// Function Engine.TimecodeProvider.FetchTimecode
-// 0x0014 (0x0014 - 0x0000)
-struct TimecodeProvider_FetchTimecode final
-{
-public:
-	struct FQualifiedFrameTime                    OutFrameTime;                                      // 0x0000(0x0010)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_TimecodeProvider_FetchTimecode;
-
-// Function Engine.TimecodeProvider.GetDelayedQualifiedFrameTime
-// 0x0010 (0x0010 - 0x0000)
-struct TimecodeProvider_GetDelayedQualifiedFrameTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TimecodeProvider_GetDelayedQualifiedFrameTime;
-
-// Function Engine.TimecodeProvider.GetDelayedTimecode
-// 0x0014 (0x0014 - 0x0000)
-struct TimecodeProvider_GetDelayedTimecode final
-{
-public:
-	struct FTimecode                              ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TimecodeProvider_GetDelayedTimecode;
-
-// Function Engine.TimecodeProvider.GetFrameRate
+// Function Engine.InputDeviceProperty.ApplyDeviceProperty
 // 0x0008 (0x0008 - 0x0000)
-struct TimecodeProvider_GetFrameRate final
+struct InputDeviceProperty_ApplyDeviceProperty final
 {
 public:
-	struct FFrameRate                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlatformUserId                        UserId;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_TimecodeProvider_GetFrameRate;
+DUMPER7_ASSERTS_InputDeviceProperty_ApplyDeviceProperty;
 
-// Function Engine.TimecodeProvider.GetQualifiedFrameTime
+// Function Engine.InputDeviceProperty.EvaluateDeviceProperty
 // 0x0010 (0x0010 - 0x0000)
-struct TimecodeProvider_GetQualifiedFrameTime final
+struct InputDeviceProperty_EvaluateDeviceProperty final
 {
 public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlatformUserId                        PlatformUser;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_TimecodeProvider_GetQualifiedFrameTime;
+DUMPER7_ASSERTS_InputDeviceProperty_EvaluateDeviceProperty;
 
-// Function Engine.TimecodeProvider.GetSynchronizationState
-// 0x0004 (0x0004 - 0x0000)
-struct TimecodeProvider_GetSynchronizationState final
+// Function Engine.InputDeviceProperty.ResetDeviceProperty
+// 0x0008 (0x0008 - 0x0000)
+struct InputDeviceProperty_ResetDeviceProperty final
 {
 public:
-	ETimecodeProviderSynchronizationState         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlatformUserId                        PlatformUser;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_TimecodeProvider_GetSynchronizationState;
+DUMPER7_ASSERTS_InputDeviceProperty_ResetDeviceProperty;
 
-// Function Engine.TimecodeProvider.GetTimecode
-// 0x0014 (0x0014 - 0x0000)
-struct TimecodeProvider_GetTimecode final
+// Function Engine.Canvas.K2_Deproject
+// 0x0040 (0x0040 - 0x0000)
+struct Canvas_K2_Deproject final
 {
 public:
-	struct FTimecode                              ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldOrigin;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldDirection;                                    // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_TimecodeProvider_GetTimecode;
+DUMPER7_ASSERTS_Canvas_K2_Deproject;
 
-// Function Engine.CameraActor.GetAutoActivatePlayerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct CameraActor_GetAutoActivatePlayerIndex final
+// Function Engine.Canvas.K2_DrawBorder
+// 0x00C8 (0x00C8 - 0x0000)
+struct Canvas_K2_DrawBorder final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               BorderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               BackgroundTexture;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               LeftBorderTexture;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               RightBorderTexture;                                // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               TopBorderTexture;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               BottomBorderTexture;                               // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0030(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenSize;                                        // 0x0040(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinatePosition;                                // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinateSize;                                    // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x0070(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              BorderScale;                                       // 0x0080(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              BackgroundScale;                                   // 0x0090(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rotation;                                          // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              PivotPoint;                                        // 0x00A8(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CornerSize;                                        // 0x00B8(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CameraActor_GetAutoActivatePlayerIndex;
+DUMPER7_ASSERTS_Canvas_K2_DrawBorder;
+
+// Function Engine.Canvas.K2_DrawBox
+// 0x0038 (0x0038 - 0x0000)
+struct Canvas_K2_DrawBox final
+{
+public:
+	struct FVector2D                              ScreenPosition;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenSize;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thickness;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x0024(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawBox;
+
+// Function Engine.Canvas.K2_DrawLine
+// 0x0038 (0x0038 - 0x0000)
+struct Canvas_K2_DrawLine final
+{
+public:
+	struct FVector2D                              ScreenPositionA;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPositionB;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thickness;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x0024(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawLine;
+
+// Function Engine.Canvas.K2_DrawMaterial
+// 0x0060 (0x0060 - 0x0000)
+struct Canvas_K2_DrawMaterial final
+{
+public:
+	class UMaterialInterface*                     RenderMaterial;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenSize;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinatePosition;                                // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinateSize;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rotation;                                          // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              PivotPoint;                                        // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawMaterial;
+
+// Function Engine.Canvas.K2_DrawMaterialTriangle
+// 0x0018 (0x0018 - 0x0000)
+struct Canvas_K2_DrawMaterialTriangle final
+{
+public:
+	class UMaterialInterface*                     RenderMaterial;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCanvasUVTri>                   Triangles;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawMaterialTriangle;
+
+// Function Engine.Canvas.K2_DrawPolygon
+// 0x0040 (0x0040 - 0x0000)
+struct Canvas_K2_DrawPolygon final
+{
+public:
+	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Radius;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumberOfSides;                                     // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x002C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawPolygon;
+
+// Function Engine.Canvas.K2_DrawText
+// 0x0088 (0x0088 - 0x0000)
+struct Canvas_K2_DrawText final
+{
+public:
+	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Scale;                                             // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Kerning;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ShadowColor;                                       // 0x004C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ShadowOffset;                                      // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCentreX;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCentreY;                                          // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutlined;                                         // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_73[0x1];                                       // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           OutlineColor;                                      // 0x0074(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawText;
+
+// Function Engine.Canvas.K2_DrawTexture
+// 0x0070 (0x0070 - 0x0000)
+struct Canvas_K2_DrawTexture final
+{
+public:
+	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScreenSize;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinatePosition;                                // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              CoordinateSize;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RenderColor;                                       // 0x0048(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBlendMode                                    BlendMode;                                         // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Rotation;                                          // 0x005C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              PivotPoint;                                        // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawTexture;
+
+// Function Engine.Canvas.K2_DrawTriangle
+// 0x0018 (0x0018 - 0x0000)
+struct Canvas_K2_DrawTriangle final
+{
+public:
+	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCanvasUVTri>                   Triangles;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_DrawTriangle;
+
+// Function Engine.Canvas.K2_Project
+// 0x0030 (0x0030 - 0x0000)
+struct Canvas_K2_Project final
+{
+public:
+	struct FVector                                WorldLocation;                                     // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_Project;
+
+// Function Engine.Canvas.K2_StrLen
+// 0x0028 (0x0028 - 0x0000)
+struct Canvas_K2_StrLen final
+{
+public:
+	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_StrLen;
+
+// Function Engine.Canvas.K2_TextSize
+// 0x0038 (0x0038 - 0x0000)
+struct Canvas_K2_TextSize final
+{
+public:
+	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Scale;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Canvas_K2_TextSize;
 
 // Function Engine.CameraComponent.AddOrUpdateBlendable
 // 0x0018 (0x0018 - 0x0000)
@@ -14722,198 +15014,137 @@ public:
 };
 DUMPER7_ASSERTS_CameraComponent_SetUseFieldOfViewForLOD;
 
-// Function Engine.MaterialExpressionDataDrivenShaderPlatformInfoSwitch.GetNameOptions
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialExpressionDataDrivenShaderPlatformInfoSwitch_GetNameOptions final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialExpressionDataDrivenShaderPlatformInfoSwitch_GetNameOptions;
-
-// Function Engine.AnimationSettings.GetBoneCustomAttributeNamesToImport
-// 0x0010 (0x0010 - 0x0000)
-struct AnimationSettings_GetBoneCustomAttributeNamesToImport final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimationSettings_GetBoneCustomAttributeNamesToImport;
-
-// Function Engine.AudioParameterConversionStatics.BooleanArrayToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_BooleanArrayToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<bool>                                  Bools;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_BooleanArrayToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.BooleanToAudioParameter
-// 0x00B0 (0x00B0 - 0x0000)
-struct AudioParameterConversionStatics_BooleanToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Bool;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_BooleanToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.FloatArrayToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_FloatArrayToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 Floats;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_FloatArrayToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.FloatToAudioParameter
-// 0x00B0 (0x00B0 - 0x0000)
-struct AudioParameterConversionStatics_FloatToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         float_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_FloatToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.IntegerArrayToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_IntegerArrayToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Integers;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_IntegerArrayToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.IntegerToAudioParameter
-// 0x00B0 (0x00B0 - 0x0000)
-struct AudioParameterConversionStatics_IntegerToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Integer;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_IntegerToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.ObjectArrayToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_ObjectArrayToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        Objects;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_ObjectArrayToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.ObjectToAudioParameter
-// 0x00B0 (0x00B0 - 0x0000)
-struct AudioParameterConversionStatics_ObjectToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Object;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_ObjectToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.StringArrayToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_StringArrayToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         Strings;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_StringArrayToAudioParameter;
-
-// Function Engine.AudioParameterConversionStatics.StringToAudioParameter
-// 0x00B8 (0x00B8 - 0x0000)
-struct AudioParameterConversionStatics_StringToAudioParameter final
-{
-public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 String;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioParameterConversionStatics_StringToAudioParameter;
-
-// Function Engine.CameraShakeSourceComponent.StartCameraShake
+// Function Engine.PhysicsFieldStatics.EvalPhysicsIntegerField
 // 0x0028 (0x0028 - 0x0000)
-struct CameraShakeSourceComponent_StartCameraShake final
+struct PhysicsFieldStatics_EvalPhysicsIntegerField final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           InCameraShake;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraShakePlaySpace                         PlaySpace;                                         // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               UserPlaySpaceRot;                                  // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFieldIntegerType                             IntegerType;                                       // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CameraShakeSourceComponent_StartCameraShake;
+DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsIntegerField;
 
-// Function Engine.CameraShakeSourceComponent.StopAllCameraShakes
-// 0x0001 (0x0001 - 0x0000)
-struct CameraShakeSourceComponent_StopAllCameraShakes final
+// Function Engine.PhysicsFieldStatics.EvalPhysicsScalarField
+// 0x0028 (0x0028 - 0x0000)
+struct PhysicsFieldStatics_EvalPhysicsScalarField final
 {
 public:
-	bool                                          bImmediately;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFieldScalarType                              ScalarType;                                        // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CameraShakeSourceComponent_StopAllCameraShakes;
+DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsScalarField;
 
-// Function Engine.CameraShakeSourceComponent.StopAllCameraShakesOfType
-// 0x0010 (0x0010 - 0x0000)
-struct CameraShakeSourceComponent_StopAllCameraShakesOfType final
+// Function Engine.PhysicsFieldStatics.EvalPhysicsVectorField
+// 0x0040 (0x0040 - 0x0000)
+struct PhysicsFieldStatics_EvalPhysicsVectorField final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           InCameraShake;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFieldVectorType                              VectorType;                                        // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CameraShakeSourceComponent_StopAllCameraShakesOfType;
+DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsVectorField;
 
-// Function Engine.CameraShakeSourceComponent.GetAttenuationFactor
-// 0x0020 (0x0020 - 0x0000)
-struct CameraShakeSourceComponent_GetAttenuationFactor final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_CameraShakeSourceComponent_GetAttenuationFactor;
-
-// Function Engine.AudioPanelWidgetInterface.GetEditorName
-// 0x0018 (0x0018 - 0x0000)
-struct AudioPanelWidgetInterface_GetEditorName final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AudioPanelWidgetInterface_GetEditorName;
-
-// Function Engine.AudioPanelWidgetInterface.GetIconBrushName
+// Function Engine.AmbientSound.AdjustVolume
 // 0x0008 (0x0008 - 0x0000)
-struct AudioPanelWidgetInterface_GetIconBrushName final
+struct AmbientSound_AdjustVolume final
 {
 public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AdjustVolumeDuration;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AdjustVolumeLevel;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioPanelWidgetInterface_GetIconBrushName;
+DUMPER7_ASSERTS_AmbientSound_AdjustVolume;
+
+// Function Engine.AmbientSound.FadeIn
+// 0x0008 (0x0008 - 0x0000)
+struct AmbientSound_FadeIn final
+{
+public:
+	float                                         FadeInDuration;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeVolumeLevel;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AmbientSound_FadeIn;
+
+// Function Engine.AmbientSound.FadeOut
+// 0x0008 (0x0008 - 0x0000)
+struct AmbientSound_FadeOut final
+{
+public:
+	float                                         FadeOutDuration;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeVolumeLevel;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AmbientSound_FadeOut;
+
+// Function Engine.AmbientSound.Play
+// 0x0004 (0x0004 - 0x0000)
+struct AmbientSound_Play final
+{
+public:
+	float                                         StartTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AmbientSound_Play;
+
+// Function Engine.AudioVolume.SetEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct AudioVolume_SetEnabled final
+{
+public:
+	bool                                          bNewEnabled;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetEnabled;
+
+// Function Engine.AudioVolume.SetInteriorSettings
+// 0x0024 (0x0024 - 0x0000)
+struct AudioVolume_SetInteriorSettings final
+{
+public:
+	struct FInteriorSettings                      NewInteriorSettings;                               // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetInteriorSettings;
+
+// Function Engine.AudioVolume.SetPriority
+// 0x0004 (0x0004 - 0x0000)
+struct AudioVolume_SetPriority final
+{
+public:
+	float                                         NewPriority;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetPriority;
+
+// Function Engine.AudioVolume.SetReverbSettings
+// 0x0020 (0x0020 - 0x0000)
+struct AudioVolume_SetReverbSettings final
+{
+public:
+	struct FReverbSettings                        NewReverbSettings;                                 // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetReverbSettings;
+
+// Function Engine.AudioVolume.SetSubmixOverrideSettings
+// 0x0010 (0x0010 - 0x0000)
+struct AudioVolume_SetSubmixOverrideSettings final
+{
+public:
+	TArray<struct FAudioVolumeSubmixOverrideSettings> NewSubmixOverrideSettings;                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetSubmixOverrideSettings;
+
+// Function Engine.AudioVolume.SetSubmixSendSettings
+// 0x0010 (0x0010 - 0x0000)
+struct AudioVolume_SetSubmixSendSettings final
+{
+public:
+	TArray<struct FAudioVolumeSubmixSendSettings> NewSubmixSendSettings;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioVolume_SetSubmixSendSettings;
 
 // Function Engine.CameraLensEffectInterface.GetParticleComponents
 // 0x0010 (0x0010 - 0x0000)
@@ -14932,6 +15163,511 @@ public:
 	class UFXSystemComponent*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CameraLensEffectInterface_GetPrimaryParticleComponent;
+
+// Function Engine.RawAnimSequenceTrackExtensions.GetPositionalKeys
+// 0x0040 (0x0040 - 0x0000)
+struct RawAnimSequenceTrackExtensions_GetPositionalKeys final
+{
+public:
+	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetPositionalKeys;
+
+// Function Engine.RawAnimSequenceTrackExtensions.GetRotationalKeys
+// 0x0040 (0x0040 - 0x0000)
+struct RawAnimSequenceTrackExtensions_GetRotationalKeys final
+{
+public:
+	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FQuat>                          ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetRotationalKeys;
+
+// Function Engine.RawAnimSequenceTrackExtensions.GetScaleKeys
+// 0x0040 (0x0040 - 0x0000)
+struct RawAnimSequenceTrackExtensions_GetScaleKeys final
+{
+public:
+	struct FRawAnimSequenceTrack                  Track;                                             // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RawAnimSequenceTrackExtensions_GetScaleKeys;
+
+// Function Engine.CheatManager.BugIt
+// 0x0010 (0x0010 - 0x0000)
+struct CheatManager_BugIt final
+{
+public:
+	class FString                                 ScreenShotDescription;                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_BugIt;
+
+// Function Engine.CheatManager.BugItGo
+// 0x0018 (0x0018 - 0x0000)
+struct CheatManager_BugItGo final
+{
+public:
+	float                                         X;                                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Y;                                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Z;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Pitch;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Yaw;                                               // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Roll;                                              // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_BugItGo;
+
+// Function Engine.CheatManager.BugItStringCreator
+// 0x0050 (0x0050 - 0x0000)
+struct CheatManager_BugItStringCreator final
+{
+public:
+	struct FVector                                ViewLocation;                                      // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               ViewRotation;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 GoString;                                          // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LocString;                                         // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_BugItStringCreator;
+
+// Function Engine.CheatManager.ChangeSize
+// 0x0004 (0x0004 - 0x0000)
+struct CheatManager_ChangeSize final
+{
+public:
+	float                                         F;                                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_ChangeSize;
+
+// Function Engine.CheatManager.CheatScript
+// 0x0010 (0x0010 - 0x0000)
+struct CheatManager_CheatScript final
+{
+public:
+	class FString                                 ScriptName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_CheatScript;
+
+// Function Engine.CheatManager.DamageTarget
+// 0x0004 (0x0004 - 0x0000)
+struct CheatManager_DamageTarget final
+{
+public:
+	float                                         DamageAmount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DamageTarget;
+
+// Function Engine.CheatManager.DebugCapsuleSweepChannel
+// 0x0001 (0x0001 - 0x0000)
+struct CheatManager_DebugCapsuleSweepChannel final
+{
+public:
+	ECollisionChannel                             Channel;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepChannel;
+
+// Function Engine.CheatManager.DebugCapsuleSweepComplex
+// 0x0001 (0x0001 - 0x0000)
+struct CheatManager_DebugCapsuleSweepComplex final
+{
+public:
+	bool                                          bTraceComplex;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepComplex;
+
+// Function Engine.CheatManager.DebugCapsuleSweepSize
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_DebugCapsuleSweepSize final
+{
+public:
+	float                                         HalfHeight;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepSize;
+
+// Function Engine.CheatManager.DestroyAll
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_DestroyAll final
+{
+public:
+	TSubclassOf<class AActor>                     aClass;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DestroyAll;
+
+// Function Engine.CheatManager.DestroyPawns
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_DestroyPawns final
+{
+public:
+	TSubclassOf<class APawn>                      aClass;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_DestroyPawns;
+
+// Function Engine.CheatManager.FreezeFrame
+// 0x0004 (0x0004 - 0x0000)
+struct CheatManager_FreezeFrame final
+{
+public:
+	float                                         Delay;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_FreezeFrame;
+
+// Function Engine.CheatManager.OnlyLoadLevel
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_OnlyLoadLevel final
+{
+public:
+	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_OnlyLoadLevel;
+
+// Function Engine.CheatManager.OnPlayerEndPlayed
+// 0x0010 (0x0010 - 0x0000)
+struct CheatManager_OnPlayerEndPlayed final
+{
+public:
+	class AActor*                                 Player;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CheatManager_OnPlayerEndPlayed;
+
+// Function Engine.CheatManager.Slomo
+// 0x0004 (0x0004 - 0x0000)
+struct CheatManager_Slomo final
+{
+public:
+	float                                         NewTimeDilation;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_Slomo;
+
+// Function Engine.CheatManager.StreamLevelIn
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_StreamLevelIn final
+{
+public:
+	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_StreamLevelIn;
+
+// Function Engine.CheatManager.StreamLevelOut
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_StreamLevelOut final
+{
+public:
+	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_StreamLevelOut;
+
+// Function Engine.CheatManager.Summon
+// 0x0010 (0x0010 - 0x0000)
+struct CheatManager_Summon final
+{
+public:
+	class FString                                 ClassName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_Summon;
+
+// Function Engine.CheatManager.ViewActor
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_ViewActor final
+{
+public:
+	class FName                                   ActorName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_ViewActor;
+
+// Function Engine.CheatManager.ViewClass
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_ViewClass final
+{
+public:
+	TSubclassOf<class AActor>                     DesiredClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_ViewClass;
+
+// Function Engine.CheatManager.ViewPlayer
+// 0x0010 (0x0010 - 0x0000)
+struct CheatManager_ViewPlayer final
+{
+public:
+	class FString                                 S;                                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_ViewPlayer;
+
+// Function Engine.CheatManager.GetPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct CheatManager_GetPlayerController final
+{
+public:
+	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CheatManager_GetPlayerController;
+
+// Function Engine.BlueprintMapLibrary.Map_Add
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_Add final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0054(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Add;
+
+// Function Engine.BlueprintMapLibrary.Map_Clear
+// 0x0050 (0x0050 - 0x0000)
+struct BlueprintMapLibrary_Map_Clear final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Clear;
+
+// Function Engine.BlueprintMapLibrary.Map_Contains
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_Contains final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Contains;
+
+// Function Engine.BlueprintMapLibrary.Map_Find
+// 0x0060 (0x0060 - 0x0000)
+struct BlueprintMapLibrary_Map_Find final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Find;
+
+// Function Engine.BlueprintMapLibrary.Map_IsEmpty
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_IsEmpty final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_IsEmpty;
+
+// Function Engine.BlueprintMapLibrary.Map_IsNotEmpty
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_IsNotEmpty final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_IsNotEmpty;
+
+// Function Engine.BlueprintMapLibrary.Map_Keys
+// 0x0060 (0x0060 - 0x0000)
+struct BlueprintMapLibrary_Map_Keys final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Keys;                                              // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Keys;
+
+// Function Engine.BlueprintMapLibrary.Map_Length
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_Length final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Length;
+
+// Function Engine.BlueprintMapLibrary.Map_Remove
+// 0x0058 (0x0058 - 0x0000)
+struct BlueprintMapLibrary_Map_Remove final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Remove;
+
+// Function Engine.BlueprintMapLibrary.Map_Values
+// 0x0060 (0x0060 - 0x0000)
+struct BlueprintMapLibrary_Map_Values final
+{
+public:
+	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Values;                                            // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Values;
+
+// Function Engine.BlueprintMapLibrary.SetMapPropertyByName
+// 0x0060 (0x0060 - 0x0000)
+struct BlueprintMapLibrary_SetMapPropertyByName final
+{
+public:
+	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            Value;                                             // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintMapLibrary_SetMapPropertyByName;
+
+// Function Engine.ArrowComponent.SetArrowColor
+// 0x0010 (0x0010 - 0x0000)
+struct ArrowComponent_SetArrowColor final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetArrowColor;
+
+// Function Engine.ArrowComponent.SetArrowFColor
+// 0x0004 (0x0004 - 0x0000)
+struct ArrowComponent_SetArrowFColor final
+{
+public:
+	struct FColor                                 NewColor;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetArrowFColor;
+
+// Function Engine.ArrowComponent.SetArrowLength
+// 0x0004 (0x0004 - 0x0000)
+struct ArrowComponent_SetArrowLength final
+{
+public:
+	float                                         NewLength;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetArrowLength;
+
+// Function Engine.ArrowComponent.SetArrowSize
+// 0x0004 (0x0004 - 0x0000)
+struct ArrowComponent_SetArrowSize final
+{
+public:
+	float                                         NewSize;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetArrowSize;
+
+// Function Engine.ArrowComponent.SetIsScreenSizeScaled
+// 0x0001 (0x0001 - 0x0000)
+struct ArrowComponent_SetIsScreenSizeScaled final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetIsScreenSizeScaled;
+
+// Function Engine.ArrowComponent.SetScreenSize
+// 0x0004 (0x0004 - 0x0000)
+struct ArrowComponent_SetScreenSize final
+{
+public:
+	float                                         NewScreenSize;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetScreenSize;
+
+// Function Engine.ArrowComponent.SetTreatAsASprite
+// 0x0001 (0x0001 - 0x0000)
+struct ArrowComponent_SetTreatAsASprite final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetTreatAsASprite;
+
+// Function Engine.ArrowComponent.SetUseInEditorScaling
+// 0x0001 (0x0001 - 0x0000)
+struct ArrowComponent_SetUseInEditorScaling final
+{
+public:
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ArrowComponent_SetUseInEditorScaling;
+
+// Function Engine.CurveSourceInterface.GetBindingName
+// 0x0008 (0x0008 - 0x0000)
+struct CurveSourceInterface_GetBindingName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveSourceInterface_GetBindingName;
+
+// Function Engine.CurveSourceInterface.GetCurves
+// 0x0010 (0x0010 - 0x0000)
+struct CurveSourceInterface_GetCurves final
+{
+public:
+	TArray<struct FNamedCurveValue>               OutValues;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveSourceInterface_GetCurves;
+
+// Function Engine.CurveSourceInterface.GetCurveValue
+// 0x000C (0x000C - 0x0000)
+struct CurveSourceInterface_GetCurveValue final
+{
+public:
+	class FName                                   CurveName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveSourceInterface_GetCurveValue;
+
+// Function Engine.RuntimeVirtualTexture.GetPageTableSize
+// 0x0004 (0x0004 - 0x0000)
+struct RuntimeVirtualTexture_GetPageTableSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimeVirtualTexture_GetPageTableSize;
+
+// Function Engine.RuntimeVirtualTexture.GetSize
+// 0x0004 (0x0004 - 0x0000)
+struct RuntimeVirtualTexture_GetSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimeVirtualTexture_GetSize;
+
+// Function Engine.RuntimeVirtualTexture.GetTileBorderSize
+// 0x0004 (0x0004 - 0x0000)
+struct RuntimeVirtualTexture_GetTileBorderSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileBorderSize;
+
+// Function Engine.RuntimeVirtualTexture.GetTileCount
+// 0x0004 (0x0004 - 0x0000)
+struct RuntimeVirtualTexture_GetTileCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileCount;
+
+// Function Engine.RuntimeVirtualTexture.GetTileSize
+// 0x0004 (0x0004 - 0x0000)
+struct RuntimeVirtualTexture_GetTileSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileSize;
 
 // Function Engine.BillboardComponent.SetOpacityMaskRefVal
 // 0x0004 (0x0004 - 0x0000)
@@ -14976,994 +15712,32 @@ public:
 };
 DUMPER7_ASSERTS_BillboardComponent_SetUV;
 
-// Function Engine.DebugCameraController.ReceiveOnActivate
-// 0x0008 (0x0008 - 0x0000)
-struct DebugCameraController_ReceiveOnActivate final
-{
-public:
-	class APlayerController*                      OriginalPC;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DebugCameraController_ReceiveOnActivate;
-
-// Function Engine.DebugCameraController.ReceiveOnActorSelected
-// 0x0120 (0x0120 - 0x0000)
-struct DebugCameraController_ReceiveOnActorSelected final
-{
-public:
-	class AActor*                                 NewSelectedActor;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SelectHitLocation;                                 // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SelectHitNormal;                                   // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x0038(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DebugCameraController_ReceiveOnActorSelected;
-
-// Function Engine.DebugCameraController.ReceiveOnDeactivate
-// 0x0008 (0x0008 - 0x0000)
-struct DebugCameraController_ReceiveOnDeactivate final
-{
-public:
-	class APlayerController*                      RestoredPC;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DebugCameraController_ReceiveOnDeactivate;
-
-// Function Engine.DebugCameraController.SetPawnMovementSpeedScale
+// Function Engine.Texture2D.Blueprint_GetSizeX
 // 0x0004 (0x0004 - 0x0000)
-struct DebugCameraController_SetPawnMovementSpeedScale final
+struct Texture2D_Blueprint_GetSizeX final
 {
 public:
-	float                                         NewSpeedScale;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DebugCameraController_SetPawnMovementSpeedScale;
+DUMPER7_ASSERTS_Texture2D_Blueprint_GetSizeX;
 
-// Function Engine.DebugCameraController.GetSelectedActor
-// 0x0008 (0x0008 - 0x0000)
-struct DebugCameraController_GetSelectedActor final
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DebugCameraController_GetSelectedActor;
-
-// Function Engine.ParticleSystem.ContainsEmitterType
-// 0x0010 (0x0010 - 0x0000)
-struct ParticleSystem_ContainsEmitterType final
-{
-public:
-	class UClass*                                 TypeData;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ParticleSystem_ContainsEmitterType;
-
-// Function Engine.SphereComponent.SetSphereRadius
-// 0x0008 (0x0008 - 0x0000)
-struct SphereComponent_SetSphereRadius final
-{
-public:
-	float                                         InSphereRadius;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateOverlaps;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SphereComponent_SetSphereRadius;
-
-// Function Engine.SphereComponent.GetScaledSphereRadius
+// Function Engine.Texture2D.Blueprint_GetSizeY
 // 0x0004 (0x0004 - 0x0000)
-struct SphereComponent_GetScaledSphereRadius final
+struct Texture2D_Blueprint_GetSizeY final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SphereComponent_GetScaledSphereRadius;
+DUMPER7_ASSERTS_Texture2D_Blueprint_GetSizeY;
 
-// Function Engine.SphereComponent.GetShapeScale
-// 0x0004 (0x0004 - 0x0000)
-struct SphereComponent_GetShapeScale final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SphereComponent_GetShapeScale;
-
-// Function Engine.SphereComponent.GetUnscaledSphereRadius
-// 0x0004 (0x0004 - 0x0000)
-struct SphereComponent_GetUnscaledSphereRadius final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SphereComponent_GetUnscaledSphereRadius;
-
-// Function Engine.AmbientSound.AdjustVolume
-// 0x0008 (0x0008 - 0x0000)
-struct AmbientSound_AdjustVolume final
-{
-public:
-	float                                         AdjustVolumeDuration;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AdjustVolumeLevel;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AmbientSound_AdjustVolume;
-
-// Function Engine.AmbientSound.FadeIn
-// 0x0008 (0x0008 - 0x0000)
-struct AmbientSound_FadeIn final
-{
-public:
-	float                                         FadeInDuration;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeVolumeLevel;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AmbientSound_FadeIn;
-
-// Function Engine.AmbientSound.FadeOut
-// 0x0008 (0x0008 - 0x0000)
-struct AmbientSound_FadeOut final
-{
-public:
-	float                                         FadeOutDuration;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeVolumeLevel;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AmbientSound_FadeOut;
-
-// Function Engine.AmbientSound.Play
-// 0x0004 (0x0004 - 0x0000)
-struct AmbientSound_Play final
-{
-public:
-	float                                         StartTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AmbientSound_Play;
-
-// Function Engine.KismetTextLibrary.AsCurrency_Float
-// 0x0040 (0x0040 - 0x0000)
-struct KismetTextLibrary_AsCurrency_Float final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CurrencyCode;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsCurrency_Float;
-
-// Function Engine.KismetTextLibrary.AsCurrency_Integer
-// 0x0040 (0x0040 - 0x0000)
-struct KismetTextLibrary_AsCurrency_Integer final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CurrencyCode;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsCurrency_Integer;
-
-// Function Engine.KismetTextLibrary.AsCurrencyBase
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_AsCurrencyBase final
-{
-public:
-	int32                                         BaseValue;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CurrencyCode;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsCurrencyBase;
-
-// Function Engine.KismetTextLibrary.AsDate_DateTime
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_AsDate_DateTime final
-{
-public:
-	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsDate_DateTime;
-
-// Function Engine.KismetTextLibrary.AsDateTime_DateTime
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_AsDateTime_DateTime final
-{
-public:
-	struct FDateTime                              In;                                                // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsDateTime_DateTime;
-
-// Function Engine.KismetTextLibrary.AsPercent_Float
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_AsPercent_Float final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsPercent_Float;
-
-// Function Engine.KismetTextLibrary.AsTime_DateTime
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_AsTime_DateTime final
-{
-public:
-	struct FDateTime                              In;                                                // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsTime_DateTime;
-
-// Function Engine.KismetTextLibrary.AsTimespan_Timespan
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_AsTimespan_Timespan final
-{
-public:
-	struct FTimespan                              InTimespan;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsTimespan_Timespan;
-
-// Function Engine.KismetTextLibrary.AsTimeZoneDate_DateTime
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_AsTimeZoneDate_DateTime final
-{
-public:
-	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneDate_DateTime;
-
-// Function Engine.KismetTextLibrary.AsTimeZoneDateTime_DateTime
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_AsTimeZoneDateTime_DateTime final
-{
-public:
-	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneDateTime_DateTime;
-
-// Function Engine.KismetTextLibrary.AsTimeZoneTime_DateTime
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_AsTimeZoneTime_DateTime final
-{
-public:
-	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneTime_DateTime;
-
-// Function Engine.KismetTextLibrary.Conv_BoolToText
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_Conv_BoolToText final
-{
-public:
-	bool                                          InBool;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_BoolToText;
-
-// Function Engine.KismetTextLibrary.Conv_ByteToText
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_Conv_ByteToText final
-{
-public:
-	uint8                                         Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_ByteToText;
-
-// Function Engine.KismetTextLibrary.Conv_ColorToText
-// 0x0028 (0x0028 - 0x0000)
-struct KismetTextLibrary_Conv_ColorToText final
-{
-public:
-	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_ColorToText;
-
-// Function Engine.KismetTextLibrary.Conv_DoubleToText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_Conv_DoubleToText final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERoundingMode                                 RoundingMode;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinimumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumFractionalDigits;                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_DoubleToText;
-
-// Function Engine.KismetTextLibrary.Conv_Int64ToText
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_Conv_Int64ToText final
-{
-public:
-	int64                                         Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_Int64ToText;
-
-// Function Engine.KismetTextLibrary.Conv_IntToText
-// 0x0028 (0x0028 - 0x0000)
-struct KismetTextLibrary_Conv_IntToText final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysSign;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseGrouping;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_IntToText;
-
-// Function Engine.KismetTextLibrary.Conv_NameToText
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_Conv_NameToText final
-{
-public:
-	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_NameToText;
-
-// Function Engine.KismetTextLibrary.Conv_ObjectToText
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_Conv_ObjectToText final
-{
-public:
-	class UObject*                                InObj;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_ObjectToText;
-
-// Function Engine.KismetTextLibrary.Conv_RotatorToText
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_Conv_RotatorToText final
-{
-public:
-	struct FRotator                               InRot;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_RotatorToText;
-
-// Function Engine.KismetTextLibrary.Conv_StringToText
-// 0x0028 (0x0028 - 0x0000)
-struct KismetTextLibrary_Conv_StringToText final
-{
-public:
-	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_StringToText;
-
-// Function Engine.KismetTextLibrary.Conv_TextToString
-// 0x0028 (0x0028 - 0x0000)
-struct KismetTextLibrary_Conv_TextToString final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_TextToString;
-
-// Function Engine.KismetTextLibrary.Conv_TransformToText
-// 0x0080 (0x0080 - 0x0000)
-struct KismetTextLibrary_Conv_TransformToText final
-{
-public:
-	struct FTransform                             InTrans;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0060(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_TransformToText;
-
-// Function Engine.KismetTextLibrary.Conv_Vector2dToText
-// 0x0028 (0x0028 - 0x0000)
-struct KismetTextLibrary_Conv_Vector2dToText final
-{
-public:
-	struct FVector2D                              InVec;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_Vector2dToText;
-
-// Function Engine.KismetTextLibrary.Conv_VectorToText
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_Conv_VectorToText final
-{
-public:
-	struct FVector                                InVec;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Conv_VectorToText;
-
-// Function Engine.KismetTextLibrary.EqualEqual_IgnoreCase_TextText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_EqualEqual_IgnoreCase_TextText final
-{
-public:
-	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_EqualEqual_IgnoreCase_TextText;
-
-// Function Engine.KismetTextLibrary.EqualEqual_TextText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_EqualEqual_TextText final
-{
-public:
-	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_EqualEqual_TextText;
-
-// Function Engine.KismetTextLibrary.FindTextInLocalizationTable
-// 0x0040 (0x0040 - 0x0000)
-struct KismetTextLibrary_FindTextInLocalizationTable final
-{
-public:
-	class FString                                 Namespace;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Key;                                               // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   OutText;                                           // 0x0020(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_FindTextInLocalizationTable;
-
-// Function Engine.KismetTextLibrary.Format
-// 0x0040 (0x0040 - 0x0000)
-struct KismetTextLibrary_Format final
-{
-public:
-	class FText                                   InPattern;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FFormatArgumentData>            InArgs;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_Format;
-
-// Function Engine.KismetTextLibrary.GetEmptyText
-// 0x0018 (0x0018 - 0x0000)
-struct KismetTextLibrary_GetEmptyText final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_GetEmptyText;
-
-// Function Engine.KismetTextLibrary.IsPolyglotDataValid
-// 0x00D8 (0x00D8 - 0x0000)
-struct KismetTextLibrary_IsPolyglotDataValid final
-{
-public:
-	struct FPolyglotTextData                      PolyglotData;                                      // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValid;                                           // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ErrorMessage;                                      // 0x00C0(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_IsPolyglotDataValid;
-
-// Function Engine.KismetTextLibrary.NotEqual_IgnoreCase_TextText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_NotEqual_IgnoreCase_TextText final
-{
-public:
-	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_NotEqual_IgnoreCase_TextText;
-
-// Function Engine.KismetTextLibrary.NotEqual_TextText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_NotEqual_TextText final
-{
-public:
-	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_NotEqual_TextText;
-
-// Function Engine.KismetTextLibrary.PolyglotDataToText
-// 0x00D0 (0x00D0 - 0x0000)
-struct KismetTextLibrary_PolyglotDataToText final
-{
-public:
-	struct FPolyglotTextData                      PolyglotData;                                      // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x00B8(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_PolyglotDataToText;
-
-// Function Engine.KismetTextLibrary.StringTableIdAndKeyFromText
-// 0x0038 (0x0038 - 0x0000)
-struct KismetTextLibrary_StringTableIdAndKeyFromText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	class FName                                   OutTableId;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutKey;                                            // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_StringTableIdAndKeyFromText;
-
-// Function Engine.KismetTextLibrary.TextFromStringTable
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextFromStringTable final
-{
-public:
-	class FName                                   TableId;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Key;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextFromStringTable;
-
-// Function Engine.KismetTextLibrary.TextIsCultureInvariant
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_TextIsCultureInvariant final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextIsCultureInvariant;
-
-// Function Engine.KismetTextLibrary.TextIsEmpty
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_TextIsEmpty final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextIsEmpty;
-
-// Function Engine.KismetTextLibrary.TextIsFromStringTable
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_TextIsFromStringTable final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextIsFromStringTable;
-
-// Function Engine.KismetTextLibrary.TextIsTransient
-// 0x0020 (0x0020 - 0x0000)
-struct KismetTextLibrary_TextIsTransient final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextIsTransient;
-
-// Function Engine.KismetTextLibrary.TextToLower
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextToLower final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextToLower;
-
-// Function Engine.KismetTextLibrary.TextToUpper
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextToUpper final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextToUpper;
-
-// Function Engine.KismetTextLibrary.TextTrimPreceding
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextTrimPreceding final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextTrimPreceding;
-
-// Function Engine.KismetTextLibrary.TextTrimPrecedingAndTrailing
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextTrimPrecedingAndTrailing final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextTrimPrecedingAndTrailing;
-
-// Function Engine.KismetTextLibrary.TextTrimTrailing
-// 0x0030 (0x0030 - 0x0000)
-struct KismetTextLibrary_TextTrimTrailing final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetTextLibrary_TextTrimTrailing;
-
-// Function Engine.ChildActorComponent.OnChildActorDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct ChildActorComponent_OnChildActorDestroyed final
-{
-public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ChildActorComponent_OnChildActorDestroyed;
-
-// Function Engine.ChildActorComponent.SetChildActorClass
-// 0x0008 (0x0008 - 0x0000)
-struct ChildActorComponent_SetChildActorClass final
-{
-public:
-	TSubclassOf<class AActor>                     InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ChildActorComponent_SetChildActorClass;
-
-// Function Engine.InterpToMovementComponent.AddControlPointPosition
-// 0x0020 (0x0020 - 0x0000)
-struct InterpToMovementComponent_AddControlPointPosition final
-{
-public:
-	struct FVector                                Pos;                                               // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPositionIsRelative;                               // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterpToMovementComponent_AddControlPointPosition;
-
-// Function Engine.InterpToMovementComponent.RestartMovement
-// 0x0004 (0x0004 - 0x0000)
-struct InterpToMovementComponent_RestartMovement final
-{
-public:
-	float                                         InitialDirection;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterpToMovementComponent_RestartMovement;
-
-// Function Engine.InterpToMovementComponent.StopSimulating
-// 0x00E8 (0x00E8 - 0x0000)
-struct InterpToMovementComponent_StopSimulating final
-{
-public:
-	struct FHitResult                             HitResult;                                         // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterpToMovementComponent_StopSimulating;
-
-// Function Engine.Emitter.OnParticleSystemFinished
-// 0x0008 (0x0008 - 0x0000)
-struct Emitter_OnParticleSystemFinished final
-{
-public:
-	class UParticleSystemComponent*               FinishedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_OnParticleSystemFinished;
-
-// Function Engine.Emitter.SetActorParameter
+// Function Engine.AnimationSettings.GetBoneCustomAttributeNamesToImport
 // 0x0010 (0x0010 - 0x0000)
-struct Emitter_SetActorParameter final
+struct AnimationSettings_GetBoneCustomAttributeNamesToImport final
 {
 public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Param;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Emitter_SetActorParameter;
-
-// Function Engine.Emitter.SetColorParameter
-// 0x0018 (0x0018 - 0x0000)
-struct Emitter_SetColorParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Param;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_SetColorParameter;
-
-// Function Engine.Emitter.SetFloatParameter
-// 0x000C (0x000C - 0x0000)
-struct Emitter_SetFloatParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Param;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_SetFloatParameter;
-
-// Function Engine.Emitter.SetMaterialParameter
-// 0x0010 (0x0010 - 0x0000)
-struct Emitter_SetMaterialParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     Param;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_SetMaterialParameter;
-
-// Function Engine.Emitter.SetTemplate
-// 0x0008 (0x0008 - 0x0000)
-struct Emitter_SetTemplate final
-{
-public:
-	class UParticleSystem*                        NewTemplate;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_SetTemplate;
-
-// Function Engine.Emitter.SetVectorParameter
-// 0x0020 (0x0020 - 0x0000)
-struct Emitter_SetVectorParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Param;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_SetVectorParameter;
-
-// Function Engine.Emitter.IsActive
-// 0x0001 (0x0001 - 0x0000)
-struct Emitter_IsActive final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Emitter_IsActive;
-
-// Function Engine.DataLayerSubsystem.SetDataLayerInstanceRuntimeState
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_SetDataLayerInstanceRuntimeState final
-{
-public:
-	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerInstanceRuntimeState;
-
-// Function Engine.DataLayerSubsystem.SetDataLayerRuntimeState
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_SetDataLayerRuntimeState final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerRuntimeState;
-
-// Function Engine.DataLayerSubsystem.SetDataLayerRuntimeStateByLabel
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_SetDataLayerRuntimeStateByLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerRuntimeStateByLabel;
-
-// Function Engine.DataLayerSubsystem.SetDataLayerState
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_SetDataLayerState final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerState                               InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerState;
-
-// Function Engine.DataLayerSubsystem.SetDataLayerStateByLabel
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_SetDataLayerStateByLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerState                               InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerStateByLabel;
-
-// Function Engine.DataLayerSubsystem.GetActiveDataLayerNames
-// 0x0050 (0x0050 - 0x0000)
-struct DataLayerSubsystem_GetActiveDataLayerNames final
-{
-public:
-	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetActiveDataLayerNames;
-
-// Function Engine.DataLayerSubsystem.GetDataLayer
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayer final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayer;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerEffectiveRuntimeState
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerEffectiveRuntimeState final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerEffectiveRuntimeState;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerEffectiveRuntimeStateByLabel
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerEffectiveRuntimeStateByLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerEffectiveRuntimeStateByLabel;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerFromLabel
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayerFromLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerFromLabel;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerFromName
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayerFromName final
-{
-public:
-	class FName                                   InDataLayerName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerFromName;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerInstanceEffectiveRuntimeState
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayerInstanceEffectiveRuntimeState final
-{
-public:
-	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceEffectiveRuntimeState;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerInstanceFromAsset
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayerInstanceFromAsset final
-{
-public:
-	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceFromAsset;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerInstanceRuntimeState
-// 0x0010 (0x0010 - 0x0000)
-struct DataLayerSubsystem_GetDataLayerInstanceRuntimeState final
-{
-public:
-	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceRuntimeState;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerRuntimeState
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerRuntimeState final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerRuntimeState;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerRuntimeStateByLabel
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerRuntimeStateByLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerRuntimeStateByLabel;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerState
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerState final
-{
-public:
-	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerState                               ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerState;
-
-// Function Engine.DataLayerSubsystem.GetDataLayerStateByLabel
-// 0x000C (0x000C - 0x0000)
-struct DataLayerSubsystem_GetDataLayerStateByLabel final
-{
-public:
-	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataLayerState                               ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerStateByLabel;
-
-// Function Engine.DataLayerSubsystem.GetLoadedDataLayerNames
-// 0x0050 (0x0050 - 0x0000)
-struct DataLayerSubsystem_GetLoadedDataLayerNames final
-{
-public:
-	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerSubsystem_GetLoadedDataLayerNames;
+DUMPER7_ASSERTS_AnimationSettings_GetBoneCustomAttributeNamesToImport;
 
 // Function Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringColor
 // 0x0010 (0x0010 - 0x0000)
@@ -16181,139 +15955,17 @@ public:
 };
 DUMPER7_ASSERTS_ExponentialHeightFogComponent_SetVolumetricFogScatteringDistribution;
 
-// Function Engine.SpotLight.SetInnerConeAngle
-// 0x0004 (0x0004 - 0x0000)
-struct SpotLight_SetInnerConeAngle final
-{
-public:
-	float                                         NewInnerConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpotLight_SetInnerConeAngle;
-
-// Function Engine.SpotLight.SetOuterConeAngle
-// 0x0004 (0x0004 - 0x0000)
-struct SpotLight_SetOuterConeAngle final
-{
-public:
-	float                                         NewOuterConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpotLight_SetOuterConeAngle;
-
-// Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForMatchingPrimaryAssets
+// Function Engine.AsyncActionLoadPrimaryAsset.AsyncLoadPrimaryAsset
 // 0x0030 (0x0030 - 0x0000)
-struct AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets final
+struct AsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           NewBundles;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FName>                           OldBundles;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UAsyncActionChangePrimaryAssetBundles*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPrimaryAssetId                        PrimaryAsset;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           LoadBundles;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UAsyncActionLoadPrimaryAsset*           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets;
-
-// Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForPrimaryAssetList
-// 0x0040 (0x0040 - 0x0000)
-struct AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPrimaryAssetId>                PrimaryAssetList;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FName>                           AddBundles;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FName>                           RemoveBundles;                                     // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UAsyncActionChangePrimaryAssetBundles*  ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList;
-
-// Function Engine.InputSettings.GetInputSettings
-// 0x0008 (0x0008 - 0x0000)
-struct InputSettings_GetInputSettings final
-{
-public:
-	class UInputSettings*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputSettings_GetInputSettings;
-
-// Function Engine.InputSettings.AddActionMapping
-// 0x0030 (0x0030 - 0x0000)
-struct InputSettings_AddActionMapping final
-{
-public:
-	struct FInputActionKeyMapping                 KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputSettings_AddActionMapping;
-
-// Function Engine.InputSettings.AddAxisMapping
-// 0x0030 (0x0030 - 0x0000)
-struct InputSettings_AddAxisMapping final
-{
-public:
-	struct FInputAxisKeyMapping                   KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputSettings_AddAxisMapping;
-
-// Function Engine.InputSettings.RemoveActionMapping
-// 0x0030 (0x0030 - 0x0000)
-struct InputSettings_RemoveActionMapping final
-{
-public:
-	struct FInputActionKeyMapping                 KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputSettings_RemoveActionMapping;
-
-// Function Engine.InputSettings.RemoveAxisMapping
-// 0x0030 (0x0030 - 0x0000)
-struct InputSettings_RemoveAxisMapping final
-{
-public:
-	struct FInputAxisKeyMapping                   KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InputSettings_RemoveAxisMapping;
-
-// Function Engine.InputSettings.GetActionMappingByName
-// 0x0018 (0x0018 - 0x0000)
-struct InputSettings_GetActionMappingByName final
-{
-public:
-	class FName                                   InActionName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FInputActionKeyMapping>         OutMappings;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputSettings_GetActionMappingByName;
-
-// Function Engine.InputSettings.GetActionNames
-// 0x0010 (0x0010 - 0x0000)
-struct InputSettings_GetActionNames final
-{
-public:
-	TArray<class FName>                           ActionNames;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputSettings_GetActionNames;
-
-// Function Engine.InputSettings.GetAxisMappingByName
-// 0x0018 (0x0018 - 0x0000)
-struct InputSettings_GetAxisMappingByName final
-{
-public:
-	class FName                                   InAxisName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FInputAxisKeyMapping>           OutMappings;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputSettings_GetAxisMappingByName;
-
-// Function Engine.InputSettings.GetAxisNames
-// 0x0010 (0x0010 - 0x0000)
-struct InputSettings_GetAxisNames final
-{
-public:
-	TArray<class FName>                           AxisNames;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputSettings_GetAxisNames;
+DUMPER7_ASSERTS_AsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset;
 
 // Function Engine.AnimationDataController.AddAttribute
 // 0x0048 (0x0048 - 0x0000)
@@ -16957,132 +16609,539 @@ public:
 };
 DUMPER7_ASSERTS_AnimationDataModel_IsValidBoneTrackName;
 
-// Function Engine.LevelStreaming.CreateInstance
+// Function Engine.KismetTextLibrary.AsCurrency_Float
+// 0x0040 (0x0040 - 0x0000)
+struct KismetTextLibrary_AsCurrency_Float final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CurrencyCode;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsCurrency_Float;
+
+// Function Engine.KismetTextLibrary.AsCurrency_Integer
+// 0x0040 (0x0040 - 0x0000)
+struct KismetTextLibrary_AsCurrency_Integer final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CurrencyCode;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsCurrency_Integer;
+
+// Function Engine.KismetTextLibrary.AsCurrencyBase
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_AsCurrencyBase final
+{
+public:
+	int32                                         BaseValue;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CurrencyCode;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsCurrencyBase;
+
+// Function Engine.KismetTextLibrary.AsDate_DateTime
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_AsDate_DateTime final
+{
+public:
+	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsDate_DateTime;
+
+// Function Engine.KismetTextLibrary.AsDateTime_DateTime
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_AsDateTime_DateTime final
+{
+public:
+	struct FDateTime                              In;                                                // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsDateTime_DateTime;
+
+// Function Engine.KismetTextLibrary.AsPercent_Float
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_AsPercent_Float final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERoundingMode                                 RoundingMode;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinimumFractionalDigits;                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsPercent_Float;
+
+// Function Engine.KismetTextLibrary.AsTime_DateTime
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_AsTime_DateTime final
+{
+public:
+	struct FDateTime                              In;                                                // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsTime_DateTime;
+
+// Function Engine.KismetTextLibrary.AsTimespan_Timespan
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_AsTimespan_Timespan final
+{
+public:
+	struct FTimespan                              InTimespan;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsTimespan_Timespan;
+
+// Function Engine.KismetTextLibrary.AsTimeZoneDate_DateTime
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_AsTimeZoneDate_DateTime final
+{
+public:
+	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneDate_DateTime;
+
+// Function Engine.KismetTextLibrary.AsTimeZoneDateTime_DateTime
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_AsTimeZoneDateTime_DateTime final
+{
+public:
+	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneDateTime_DateTime;
+
+// Function Engine.KismetTextLibrary.AsTimeZoneTime_DateTime
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_AsTimeZoneTime_DateTime final
+{
+public:
+	struct FDateTime                              InDateTime;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InTimeZone;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_AsTimeZoneTime_DateTime;
+
+// Function Engine.KismetTextLibrary.Conv_BoolToText
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_Conv_BoolToText final
+{
+public:
+	bool                                          InBool;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_BoolToText;
+
+// Function Engine.KismetTextLibrary.Conv_ByteToText
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_Conv_ByteToText final
+{
+public:
+	uint8                                         Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_ByteToText;
+
+// Function Engine.KismetTextLibrary.Conv_ColorToText
+// 0x0028 (0x0028 - 0x0000)
+struct KismetTextLibrary_Conv_ColorToText final
+{
+public:
+	struct FLinearColor                           InColor;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_ColorToText;
+
+// Function Engine.KismetTextLibrary.Conv_DoubleToText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_Conv_DoubleToText final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERoundingMode                                 RoundingMode;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinimumFractionalDigits;                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumFractionalDigits;                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_DoubleToText;
+
+// Function Engine.KismetTextLibrary.Conv_Int64ToText
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_Conv_Int64ToText final
+{
+public:
+	int64                                         Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_Int64ToText;
+
+// Function Engine.KismetTextLibrary.Conv_IntToText
+// 0x0028 (0x0028 - 0x0000)
+struct KismetTextLibrary_Conv_IntToText final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysSign;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseGrouping;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinimumIntegralDigits;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumIntegralDigits;                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_IntToText;
+
+// Function Engine.KismetTextLibrary.Conv_NameToText
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_Conv_NameToText final
+{
+public:
+	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_NameToText;
+
+// Function Engine.KismetTextLibrary.Conv_ObjectToText
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_Conv_ObjectToText final
+{
+public:
+	class UObject*                                InObj;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_ObjectToText;
+
+// Function Engine.KismetTextLibrary.Conv_RotatorToText
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_Conv_RotatorToText final
+{
+public:
+	struct FRotator                               InRot;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_RotatorToText;
+
+// Function Engine.KismetTextLibrary.Conv_StringToText
+// 0x0028 (0x0028 - 0x0000)
+struct KismetTextLibrary_Conv_StringToText final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_StringToText;
+
+// Function Engine.KismetTextLibrary.Conv_TextToString
+// 0x0028 (0x0028 - 0x0000)
+struct KismetTextLibrary_Conv_TextToString final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_TextToString;
+
+// Function Engine.KismetTextLibrary.Conv_TransformToText
+// 0x0080 (0x0080 - 0x0000)
+struct KismetTextLibrary_Conv_TransformToText final
+{
+public:
+	struct FTransform                             InTrans;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0060(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_TransformToText;
+
+// Function Engine.KismetTextLibrary.Conv_Vector2dToText
+// 0x0028 (0x0028 - 0x0000)
+struct KismetTextLibrary_Conv_Vector2dToText final
+{
+public:
+	struct FVector2D                              InVec;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_Vector2dToText;
+
+// Function Engine.KismetTextLibrary.Conv_VectorToText
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_Conv_VectorToText final
+{
+public:
+	struct FVector                                InVec;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Conv_VectorToText;
+
+// Function Engine.KismetTextLibrary.EqualEqual_IgnoreCase_TextText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_EqualEqual_IgnoreCase_TextText final
+{
+public:
+	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_EqualEqual_IgnoreCase_TextText;
+
+// Function Engine.KismetTextLibrary.EqualEqual_TextText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_EqualEqual_TextText final
+{
+public:
+	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_EqualEqual_TextText;
+
+// Function Engine.KismetTextLibrary.FindTextInLocalizationTable
+// 0x0040 (0x0040 - 0x0000)
+struct KismetTextLibrary_FindTextInLocalizationTable final
+{
+public:
+	class FString                                 Namespace;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Key;                                               // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   OutText;                                           // 0x0020(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_FindTextInLocalizationTable;
+
+// Function Engine.KismetTextLibrary.Format
+// 0x0040 (0x0040 - 0x0000)
+struct KismetTextLibrary_Format final
+{
+public:
+	class FText                                   InPattern;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FFormatArgumentData>            InArgs;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_Format;
+
+// Function Engine.KismetTextLibrary.GetEmptyText
 // 0x0018 (0x0018 - 0x0000)
-struct LevelStreaming_CreateInstance final
+struct KismetTextLibrary_GetEmptyText final
 {
 public:
-	class FString                                 UniqueInstanceName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelStreaming*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LevelStreaming_CreateInstance;
+DUMPER7_ASSERTS_KismetTextLibrary_GetEmptyText;
 
-// Function Engine.LevelStreaming.GetLevelScriptActor
+// Function Engine.KismetTextLibrary.IsPolyglotDataValid
+// 0x00D8 (0x00D8 - 0x0000)
+struct KismetTextLibrary_IsPolyglotDataValid final
+{
+public:
+	struct FPolyglotTextData                      PolyglotData;                                      // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValid;                                           // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ErrorMessage;                                      // 0x00C0(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_IsPolyglotDataValid;
+
+// Function Engine.KismetTextLibrary.NotEqual_IgnoreCase_TextText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_NotEqual_IgnoreCase_TextText final
+{
+public:
+	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_NotEqual_IgnoreCase_TextText;
+
+// Function Engine.KismetTextLibrary.NotEqual_TextText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_NotEqual_TextText final
+{
+public:
+	class FText                                   A;                                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   B;                                                 // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_NotEqual_TextText;
+
+// Function Engine.KismetTextLibrary.PolyglotDataToText
+// 0x00D0 (0x00D0 - 0x0000)
+struct KismetTextLibrary_PolyglotDataToText final
+{
+public:
+	struct FPolyglotTextData                      PolyglotData;                                      // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x00B8(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_PolyglotDataToText;
+
+// Function Engine.KismetTextLibrary.StringTableIdAndKeyFromText
+// 0x0038 (0x0038 - 0x0000)
+struct KismetTextLibrary_StringTableIdAndKeyFromText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	class FName                                   OutTableId;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutKey;                                            // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_StringTableIdAndKeyFromText;
+
+// Function Engine.KismetTextLibrary.TextFromStringTable
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextFromStringTable final
+{
+public:
+	class FName                                   TableId;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Key;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextFromStringTable;
+
+// Function Engine.KismetTextLibrary.TextIsCultureInvariant
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_TextIsCultureInvariant final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextIsCultureInvariant;
+
+// Function Engine.KismetTextLibrary.TextIsEmpty
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_TextIsEmpty final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextIsEmpty;
+
+// Function Engine.KismetTextLibrary.TextIsFromStringTable
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_TextIsFromStringTable final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextIsFromStringTable;
+
+// Function Engine.KismetTextLibrary.TextIsTransient
+// 0x0020 (0x0020 - 0x0000)
+struct KismetTextLibrary_TextIsTransient final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextIsTransient;
+
+// Function Engine.KismetTextLibrary.TextToLower
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextToLower final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextToLower;
+
+// Function Engine.KismetTextLibrary.TextToUpper
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextToUpper final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextToUpper;
+
+// Function Engine.KismetTextLibrary.TextTrimPreceding
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextTrimPreceding final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextTrimPreceding;
+
+// Function Engine.KismetTextLibrary.TextTrimPrecedingAndTrailing
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextTrimPrecedingAndTrailing final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextTrimPrecedingAndTrailing;
+
+// Function Engine.KismetTextLibrary.TextTrimTrailing
+// 0x0030 (0x0030 - 0x0000)
+struct KismetTextLibrary_TextTrimTrailing final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetTextLibrary_TextTrimTrailing;
+
+// Function Engine.World.K2_GetWorldSettings
 // 0x0008 (0x0008 - 0x0000)
-struct LevelStreaming_GetLevelScriptActor final
+struct World_K2_GetWorldSettings final
 {
 public:
-	class ALevelScriptActor*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AWorldSettings*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LevelStreaming_GetLevelScriptActor;
-
-// Function Engine.LevelStreaming.SetIsRequestingUnloadAndRemoval
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_SetIsRequestingUnloadAndRemoval final
-{
-public:
-	bool                                          bInIsRequestingUnloadAndRemoval;                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_SetIsRequestingUnloadAndRemoval;
-
-// Function Engine.LevelStreaming.SetLevelLODIndex
-// 0x0004 (0x0004 - 0x0000)
-struct LevelStreaming_SetLevelLODIndex final
-{
-public:
-	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_SetLevelLODIndex;
-
-// Function Engine.LevelStreaming.SetPriority
-// 0x0004 (0x0004 - 0x0000)
-struct LevelStreaming_SetPriority final
-{
-public:
-	int32                                         NewPriority;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_SetPriority;
-
-// Function Engine.LevelStreaming.SetShouldBeLoaded
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_SetShouldBeLoaded final
-{
-public:
-	bool                                          bInShouldBeLoaded;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_SetShouldBeLoaded;
-
-// Function Engine.LevelStreaming.SetShouldBeVisible
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_SetShouldBeVisible final
-{
-public:
-	bool                                          bInShouldBeVisible;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_SetShouldBeVisible;
-
-// Function Engine.LevelStreaming.GetIsRequestingUnloadAndRemoval
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_GetIsRequestingUnloadAndRemoval final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_GetIsRequestingUnloadAndRemoval;
-
-// Function Engine.LevelStreaming.GetLoadedLevel
-// 0x0008 (0x0008 - 0x0000)
-struct LevelStreaming_GetLoadedLevel final
-{
-public:
-	class ULevel*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_GetLoadedLevel;
-
-// Function Engine.LevelStreaming.GetWorldAssetPackageFName
-// 0x0008 (0x0008 - 0x0000)
-struct LevelStreaming_GetWorldAssetPackageFName final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_GetWorldAssetPackageFName;
-
-// Function Engine.LevelStreaming.IsLevelLoaded
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_IsLevelLoaded final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_IsLevelLoaded;
-
-// Function Engine.LevelStreaming.IsLevelVisible
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_IsLevelVisible final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_IsLevelVisible;
-
-// Function Engine.LevelStreaming.IsStreamingStatePending
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_IsStreamingStatePending final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_IsStreamingStatePending;
-
-// Function Engine.LevelStreaming.ShouldBeLoaded
-// 0x0001 (0x0001 - 0x0000)
-struct LevelStreaming_ShouldBeLoaded final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelStreaming_ShouldBeLoaded;
+DUMPER7_ASSERTS_World_K2_GetWorldSettings;
 
 // Function Engine.LevelStreamingDynamic.LoadLevelInstance
 // 0x0078 (0x0078 - 0x0000)
@@ -17121,6 +17180,70 @@ public:
 	class ULevelStreamingDynamic*                 ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LevelStreamingDynamic_LoadLevelInstanceBySoftObjectPtr;
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
+// 0x0014 (0x0014 - 0x0000)
+struct PhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow final
+{
+public:
+	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ProfileName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeSelf;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClearNotFound;                                    // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow;
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
+// 0x002C (0x002C - 0x0000)
+struct PhysicalAnimationComponent_ApplyPhysicalAnimationSettings final
+{
+public:
+	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPhysicalAnimationData                 PhysicalAnimationData;                             // 0x0008(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationSettings;
+
+// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
+// 0x0030 (0x0030 - 0x0000)
+struct PhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow final
+{
+public:
+	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPhysicalAnimationData                 PhysicalAnimationData;                             // 0x0008(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIncludeSelf;                                      // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow;
+
+// Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
+// 0x0008 (0x0008 - 0x0000)
+struct PhysicalAnimationComponent_SetSkeletalMeshComponent final
+{
+public:
+	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_SetSkeletalMeshComponent;
+
+// Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
+// 0x0004 (0x0004 - 0x0000)
+struct PhysicalAnimationComponent_SetStrengthMultiplyer final
+{
+public:
+	float                                         InStrengthMultiplyer;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_SetStrengthMultiplyer;
+
+// Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
+// 0x0070 (0x0070 - 0x0000)
+struct PhysicalAnimationComponent_GetBodyTargetTransform final
+{
+public:
+	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PhysicalAnimationComponent_GetBodyTargetTransform;
 
 // Function Engine.PhysicsHandleComponent.GrabComponent
 // 0x0030 (0x0030 - 0x0000)
@@ -17250,720 +17373,177 @@ public:
 };
 DUMPER7_ASSERTS_PhysicsHandleComponent_GetTargetLocationAndRotation;
 
-// Function Engine.PlayerState.OnPawnPrivateDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerState_OnPawnPrivateDestroyed final
-{
-public:
-	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_OnPawnPrivateDestroyed;
-
-// Function Engine.PlayerState.ReceiveCopyProperties
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerState_ReceiveCopyProperties final
-{
-public:
-	class APlayerState*                           NewPlayerState;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_ReceiveCopyProperties;
-
-// Function Engine.PlayerState.ReceiveOverrideWith
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerState_ReceiveOverrideWith final
-{
-public:
-	class APlayerState*                           OldPlayerState;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_ReceiveOverrideWith;
-
-// Function Engine.PlayerState.BP_GetUniqueId
-// 0x0030 (0x0030 - 0x0000)
-struct PlayerState_BP_GetUniqueId final
-{
-public:
-	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_BP_GetUniqueId;
-
-// Function Engine.PlayerState.GetCompressedPing
-// 0x0001 (0x0001 - 0x0000)
-struct PlayerState_GetCompressedPing final
-{
-public:
-	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_GetCompressedPing;
-
-// Function Engine.PlayerState.GetPawn
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerState_GetPawn final
-{
-public:
-	class APawn*                                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_GetPawn;
-
-// Function Engine.PlayerState.GetPingInMilliseconds
-// 0x0004 (0x0004 - 0x0000)
-struct PlayerState_GetPingInMilliseconds final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_GetPingInMilliseconds;
-
-// Function Engine.PlayerState.GetPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct PlayerState_GetPlayerController final
-{
-public:
-	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_GetPlayerController;
-
-// Function Engine.PlayerState.GetPlayerId
-// 0x0004 (0x0004 - 0x0000)
-struct PlayerState_GetPlayerId final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PlayerState_GetPlayerId;
-
-// Function Engine.PlayerState.GetPlayerName
+// Function Engine.MaterialExpressionDataDrivenShaderPlatformInfoSwitch.GetNameOptions
 // 0x0010 (0x0010 - 0x0000)
-struct PlayerState_GetPlayerName final
+struct MaterialExpressionDataDrivenShaderPlatformInfoSwitch_GetNameOptions final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerState_GetPlayerName;
+DUMPER7_ASSERTS_MaterialExpressionDataDrivenShaderPlatformInfoSwitch_GetNameOptions;
 
-// Function Engine.PlayerState.GetScore
-// 0x0004 (0x0004 - 0x0000)
-struct PlayerState_GetScore final
+// Function Engine.SoundSubmix.AddEnvelopeFollowerDelegate
+// 0x0018 (0x0018 - 0x0000)
+struct SoundSubmix_AddEnvelopeFollowerDelegate final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<float>& Envelope)> OnSubmixEnvelopeBP;                               // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerState_GetScore;
+DUMPER7_ASSERTS_SoundSubmix_AddEnvelopeFollowerDelegate;
 
-// Function Engine.PlayerState.IsABot
-// 0x0001 (0x0001 - 0x0000)
-struct PlayerState_IsABot final
+// Function Engine.SoundSubmix.AddSpectralAnalysisDelegate
+// 0x0040 (0x0040 - 0x0000)
+struct SoundSubmix_AddSpectralAnalysisDelegate final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> InBandSettings;                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<float>& Magnitude)> OnSubmixSpectralAnalysisBP;                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UpdateRate;                                        // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecibelNoiseFloor;                                 // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoNormalize;                                      // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoAutoRange;                                      // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AutoRangeAttackTime;                               // 0x0034(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AutoRangeReleaseTime;                              // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PlayerState_IsABot;
+DUMPER7_ASSERTS_SoundSubmix_AddSpectralAnalysisDelegate;
 
-// Function Engine.PlayerState.IsOnlyASpectator
-// 0x0001 (0x0001 - 0x0000)
-struct PlayerState_IsOnlyASpectator final
+// Function Engine.SoundSubmix.RemoveSpectralAnalysisDelegate
+// 0x0018 (0x0018 - 0x0000)
+struct SoundSubmix_RemoveSpectralAnalysisDelegate final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<float>& Magnitude)> OnSubmixSpectralAnalysisBP;                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PlayerState_IsOnlyASpectator;
+DUMPER7_ASSERTS_SoundSubmix_RemoveSpectralAnalysisDelegate;
 
-// Function Engine.PlayerState.IsSpectator
-// 0x0001 (0x0001 - 0x0000)
-struct PlayerState_IsSpectator final
+// Function Engine.SoundSubmix.SetSubmixDryLevel
+// 0x0010 (0x0010 - 0x0000)
+struct SoundSubmix_SetSubmixDryLevel final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDryLevel;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PlayerState_IsSpectator;
+DUMPER7_ASSERTS_SoundSubmix_SetSubmixDryLevel;
 
-// Function Engine.ImportanceSamplingLibrary.BreakImportanceTexture
-// 0x0060 (0x0060 - 0x0000)
-struct ImportanceSamplingLibrary_BreakImportanceTexture final
+// Function Engine.SoundSubmix.SetSubmixOutputVolume
+// 0x0010 (0x0010 - 0x0000)
+struct SoundSubmix_SetSubmixOutputVolume final
 {
 public:
-	struct FImportanceTexture                     ImportanceTexture;                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EImportanceWeight                             WeightingFunc;                                     // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InOutputVolume;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_BreakImportanceTexture;
+DUMPER7_ASSERTS_SoundSubmix_SetSubmixOutputVolume;
 
-// Function Engine.ImportanceSamplingLibrary.ImportanceSample
-// 0x0090 (0x0090 - 0x0000)
-struct ImportanceSamplingLibrary_ImportanceSample final
+// Function Engine.SoundSubmix.SetSubmixWetLevel
+// 0x0010 (0x0010 - 0x0000)
+struct SoundSubmix_SetSubmixWetLevel final
 {
 public:
-	struct FImportanceTexture                     Texture;                                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector2D                              Rand;                                              // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Samples;                                           // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Intensity;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SamplePosition;                                    // 0x0068(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SampleColor;                                       // 0x0078(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SampleIntensity;                                   // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SampleSize;                                        // 0x008C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InWetLevel;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_ImportanceSample;
+DUMPER7_ASSERTS_SoundSubmix_SetSubmixWetLevel;
 
-// Function Engine.ImportanceSamplingLibrary.MakeImportanceTexture
-// 0x0060 (0x0060 - 0x0000)
-struct ImportanceSamplingLibrary_MakeImportanceTexture final
+// Function Engine.SoundSubmix.StartEnvelopeFollowing
+// 0x0008 (0x0008 - 0x0000)
+struct SoundSubmix_StartEnvelopeFollowing final
 {
 public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EImportanceWeight                             WeightingFunc;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SoundSubmix_StartEnvelopeFollowing;
+
+// Function Engine.SoundSubmix.StartRecordingOutput
+// 0x0010 (0x0010 - 0x0000)
+struct SoundSubmix_StartRecordingOutput final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExpectedDuration;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SoundSubmix_StartRecordingOutput;
+
+// Function Engine.SoundSubmix.StartSpectralAnalysis
+// 0x0018 (0x0018 - 0x0000)
+struct SoundSubmix_StartSpectralAnalysis final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFFTSize                                      FFTSize;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFFTPeakInterpolationMethod                   InterpolationMethod;                               // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFFTWindowType                                WindowType;                                        // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HopSize;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioSpectrumType                            SpectrumType;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SoundSubmix_StartSpectralAnalysis;
+
+// Function Engine.SoundSubmix.StopEnvelopeFollowing
+// 0x0008 (0x0008 - 0x0000)
+struct SoundSubmix_StopEnvelopeFollowing final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SoundSubmix_StopEnvelopeFollowing;
+
+// Function Engine.SoundSubmix.StopRecordingOutput
+// 0x0038 (0x0038 - 0x0000)
+struct SoundSubmix_StopRecordingOutput final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioRecordingExportType                     ExportType;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FImportanceTexture                     ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Path;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundWave*                             ExistingSoundWaveToOverwrite;                      // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_MakeImportanceTexture;
+DUMPER7_ASSERTS_SoundSubmix_StopRecordingOutput;
 
-// Function Engine.ImportanceSamplingLibrary.NextSobolCell2D
-// 0x0028 (0x0028 - 0x0000)
-struct ImportanceSamplingLibrary_NextSobolCell2D final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PreviousValue;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolCell2D;
-
-// Function Engine.ImportanceSamplingLibrary.NextSobolCell3D
-// 0x0038 (0x0038 - 0x0000)
-struct ImportanceSamplingLibrary_NextSobolCell3D final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PreviousValue;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolCell3D;
-
-// Function Engine.ImportanceSamplingLibrary.NextSobolFloat
-// 0x0010 (0x0010 - 0x0000)
-struct ImportanceSamplingLibrary_NextSobolFloat final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Dimension;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PreviousValue;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolFloat;
-
-// Function Engine.ImportanceSamplingLibrary.RandomSobolCell2D
-// 0x0038 (0x0038 - 0x0000)
-struct ImportanceSamplingLibrary_RandomSobolCell2D final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Cell;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Seed;                                              // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolCell2D;
-
-// Function Engine.ImportanceSamplingLibrary.RandomSobolCell3D
-// 0x0050 (0x0050 - 0x0000)
-struct ImportanceSamplingLibrary_RandomSobolCell3D final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Cell;                                              // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Seed;                                              // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolCell3D;
-
-// Function Engine.ImportanceSamplingLibrary.RandomSobolFloat
-// 0x0010 (0x0010 - 0x0000)
-struct ImportanceSamplingLibrary_RandomSobolFloat final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Dimension;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Seed;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolFloat;
-
-// Function Engine.MaterialParameterCollection.GetScalarParameterDefaultValue
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialParameterCollection_GetScalarParameterDefaultValue final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bParameterFound;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialParameterCollection_GetScalarParameterDefaultValue;
-
-// Function Engine.MaterialParameterCollection.GetScalarParameterNames
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialParameterCollection_GetScalarParameterNames final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialParameterCollection_GetScalarParameterNames;
-
-// Function Engine.MaterialParameterCollection.GetVectorParameterDefaultValue
-// 0x001C (0x001C - 0x0000)
-struct MaterialParameterCollection_GetVectorParameterDefaultValue final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bParameterFound;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialParameterCollection_GetVectorParameterDefaultValue;
-
-// Function Engine.MaterialParameterCollection.GetVectorParameterNames
-// 0x0010 (0x0010 - 0x0000)
-struct MaterialParameterCollection_GetVectorParameterNames final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MaterialParameterCollection_GetVectorParameterNames;
-
-// Function Engine.DataLayerAsset.GetDebugColor
-// 0x0004 (0x0004 - 0x0000)
-struct DataLayerAsset_GetDebugColor final
-{
-public:
-	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerAsset_GetDebugColor;
-
-// Function Engine.DataLayerAsset.GetType
-// 0x0001 (0x0001 - 0x0000)
-struct DataLayerAsset_GetType final
-{
-public:
-	EDataLayerType                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerAsset_GetType;
-
-// Function Engine.DataLayerAsset.IsRuntime
-// 0x0001 (0x0001 - 0x0000)
-struct DataLayerAsset_IsRuntime final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_DataLayerAsset_IsRuntime;
-
-// Function Engine.NetPushModelHelpers.MarkPropertyDirty
-// 0x0010 (0x0010 - 0x0000)
-struct NetPushModelHelpers_MarkPropertyDirty final
-{
-public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NetPushModelHelpers_MarkPropertyDirty;
-
-// Function Engine.NetPushModelHelpers.MarkPropertyDirtyFromRepIndex
-// 0x0018 (0x0018 - 0x0000)
-struct NetPushModelHelpers_MarkPropertyDirtyFromRepIndex final
-{
-public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RepIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyName;                                      // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_NetPushModelHelpers_MarkPropertyDirtyFromRepIndex;
-
-// Function Engine.KismetRenderingLibrary.BeginDrawCanvasToRenderTarget
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_BeginDrawCanvasToRenderTarget final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCanvas*                                Canvas;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Size;                                              // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDrawToRenderTargetContext             Context;                                           // 0x0028(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_BeginDrawCanvasToRenderTarget;
-
-// Function Engine.KismetRenderingLibrary.BreakSkinWeightInfo
-// 0x005C (0x005C - 0x0000)
-struct KismetRenderingLibrary_BreakSkinWeightInfo final
-{
-public:
-	struct FSkelMeshSkinWeightInfo                InWeight;                                          // 0x0000(0x003C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         Bone0;                                             // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight0;                                           // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone1;                                             // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight1;                                           // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone2;                                             // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight2;                                           // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone3;                                             // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight3;                                           // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_BreakSkinWeightInfo;
-
-// Function Engine.KismetRenderingLibrary.CalculateProjectionMatrix
-// 0x0840 (0x0840 - 0x0000)
-struct KismetRenderingLibrary_CalculateProjectionMatrix final
-{
-public:
-	struct FMinimalViewInfo                       MinimalViewInfo;                                   // 0x0000(0x07C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMatrix                                ReturnValue;                                       // 0x07C0(0x0080)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_CalculateProjectionMatrix;
-
-// Function Engine.KismetRenderingLibrary.ClearRenderTarget2D
-// 0x0020 (0x0020 - 0x0000)
-struct KismetRenderingLibrary_ClearRenderTarget2D final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ClearColor;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ClearRenderTarget2D;
-
-// Function Engine.KismetRenderingLibrary.ConvertRenderTargetToTexture2DEditorOnly
-// 0x0018 (0x0018 - 0x0000)
-struct KismetRenderingLibrary_ConvertRenderTargetToTexture2DEditorOnly final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ConvertRenderTargetToTexture2DEditorOnly;
-
-// Function Engine.KismetRenderingLibrary.CreateRenderTarget2D
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_CreateRenderTarget2D final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureRenderTargetFormat                    Format;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ClearColor;                                        // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateMipMaps;                              // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportUAVs;                                      // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTarget2D;
-
-// Function Engine.KismetRenderingLibrary.CreateRenderTarget2DArray
-// 0x0038 (0x0038 - 0x0000)
-struct KismetRenderingLibrary_CreateRenderTarget2DArray final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Slices;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureRenderTargetFormat                    Format;                                            // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ClearColor;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateMipMaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportUAVs;                                      // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2DArray*            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTarget2DArray;
-
-// Function Engine.KismetRenderingLibrary.CreateRenderTargetVolume
-// 0x0038 (0x0038 - 0x0000)
-struct KismetRenderingLibrary_CreateRenderTargetVolume final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Depth;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureRenderTargetFormat                    Format;                                            // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ClearColor;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateMipMaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportUAVs;                                      // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTargetVolume*             ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTargetVolume;
-
-// Function Engine.KismetRenderingLibrary.DrawMaterialToRenderTarget
-// 0x0018 (0x0018 - 0x0000)
-struct KismetRenderingLibrary_DrawMaterialToRenderTarget final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     Material;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_DrawMaterialToRenderTarget;
-
-// Function Engine.KismetRenderingLibrary.EnablePathTracing
-// 0x0001 (0x0001 - 0x0000)
-struct KismetRenderingLibrary_EnablePathTracing final
-{
-public:
-	bool                                          bEnablePathTracer;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_EnablePathTracing;
-
-// Function Engine.KismetRenderingLibrary.EndDrawCanvasToRenderTarget
-// 0x0010 (0x0010 - 0x0000)
-struct KismetRenderingLibrary_EndDrawCanvasToRenderTarget final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDrawToRenderTargetContext             Context;                                           // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_EndDrawCanvasToRenderTarget;
-
-// Function Engine.KismetRenderingLibrary.ExportRenderTarget
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_ExportRenderTarget final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ExportRenderTarget;
-
-// Function Engine.KismetRenderingLibrary.ExportTexture2D
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_ExportTexture2D final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ExportTexture2D;
-
-// Function Engine.KismetRenderingLibrary.ImportBufferAsTexture2D
-// 0x0020 (0x0020 - 0x0000)
-struct KismetRenderingLibrary_ImportBufferAsTexture2D final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Buffer;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UTexture2D*                             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ImportBufferAsTexture2D;
-
-// Function Engine.KismetRenderingLibrary.ImportFileAsTexture2D
-// 0x0020 (0x0020 - 0x0000)
-struct KismetRenderingLibrary_ImportFileAsTexture2D final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ImportFileAsTexture2D;
-
-// Function Engine.KismetRenderingLibrary.MakeSkinWeightInfo
-// 0x005C (0x005C - 0x0000)
-struct KismetRenderingLibrary_MakeSkinWeightInfo final
-{
-public:
-	int32                                         Bone0;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight0;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone1;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight1;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone2;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight2;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Bone3;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Weight3;                                           // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSkelMeshSkinWeightInfo                ReturnValue;                                       // 0x0020(0x003C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_MakeSkinWeightInfo;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTarget
-// 0x0028 (0x0028 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTarget final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FColor>                         OutSamples;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTarget;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetPixel
-// 0x0020 (0x0020 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetPixel final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         X;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Y;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetPixel;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetRaw
-// 0x0028 (0x0028 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetRaw final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FLinearColor>                   OutLinearSamples;                                  // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRaw;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawPixel
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetRawPixel final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         X;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Y;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawPixel;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawPixelArea
-// 0x0038 (0x0038 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetRawPixelArea final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinX;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinY;                                              // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxX;                                              // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxY;                                              // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawPixelArea;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawUV
-// 0x0030 (0x0030 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetRawUV final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         U;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         V;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawUV;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawUVArea
-// 0x0050 (0x0050 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetRawUVArea final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox2D                                 Area;                                              // 0x0010(0x0028)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bNormalize;                                        // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawUVArea;
-
-// Function Engine.KismetRenderingLibrary.ReadRenderTargetUV
-// 0x0020 (0x0020 - 0x0000)
-struct KismetRenderingLibrary_ReadRenderTargetUV final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         U;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         V;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetUV;
-
-// Function Engine.KismetRenderingLibrary.ReleaseRenderTarget2D
+// Function Engine.SoundSubmix.StopSpectralAnalysis
 // 0x0008 (0x0008 - 0x0000)
-struct KismetRenderingLibrary_ReleaseRenderTarget2D final
+struct SoundSubmix_StopSpectralAnalysis final
 {
 public:
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetRenderingLibrary_ReleaseRenderTarget2D;
+DUMPER7_ASSERTS_SoundSubmix_StopSpectralAnalysis;
 
-// Function Engine.KismetRenderingLibrary.RenderTargetCreateStaticTexture2DEditorOnly
-// 0x0028 (0x0028 - 0x0000)
-struct KismetRenderingLibrary_RenderTargetCreateStaticTexture2DEditorOnly final
+// Function Engine.StereoLayerFunctionLibrary.EnableAutoLoadingSplashScreen
+// 0x0001 (0x0001 - 0x0000)
+struct StereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen final
 {
 public:
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureCompressionSettings                   CompressionSettings;                               // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureMipGenSettings                        MipSettings;                                       // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InAutoShowEnabled;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KismetRenderingLibrary_RenderTargetCreateStaticTexture2DEditorOnly;
+DUMPER7_ASSERTS_StereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen;
 
-// Function Engine.KismetRenderingLibrary.ResizeRenderTarget2D
-// 0x0010 (0x0010 - 0x0000)
-struct KismetRenderingLibrary_ResizeRenderTarget2D final
+// Function Engine.StereoLayerFunctionLibrary.SetSplashScreen
+// 0x0038 (0x0038 - 0x0000)
+struct StereoLayerFunctionLibrary_SetSplashScreen final
 {
 public:
-	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Scale;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Offset;                                            // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowLoadingMovie;                                 // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowOnSet;                                        // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_KismetRenderingLibrary_ResizeRenderTarget2D;
-
-// Function Engine.KismetRenderingLibrary.SetCastInsetShadowForAllAttachments
-// 0x0010 (0x0010 - 0x0000)
-struct KismetRenderingLibrary_SetCastInsetShadowForAllAttachments final
-{
-public:
-	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCastInsetShadow;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLightAttachmentsAsGroup;                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KismetRenderingLibrary_SetCastInsetShadowForAllAttachments;
+DUMPER7_ASSERTS_StereoLayerFunctionLibrary_SetSplashScreen;
 
 // Function Engine.BlueprintPathsLibrary.AutomationDir
 // 0x0010 (0x0010 - 0x0000)
@@ -18758,55 +18338,699 @@ public:
 };
 DUMPER7_ASSERTS_BlueprintPathsLibrary_VideoCaptureDir;
 
-// Function Engine.PhysicsFieldStatics.EvalPhysicsIntegerField
+// Function Engine.ImportanceSamplingLibrary.BreakImportanceTexture
+// 0x0060 (0x0060 - 0x0000)
+struct ImportanceSamplingLibrary_BreakImportanceTexture final
+{
+public:
+	struct FImportanceTexture                     ImportanceTexture;                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EImportanceWeight                             WeightingFunc;                                     // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_BreakImportanceTexture;
+
+// Function Engine.ImportanceSamplingLibrary.ImportanceSample
+// 0x0090 (0x0090 - 0x0000)
+struct ImportanceSamplingLibrary_ImportanceSample final
+{
+public:
+	struct FImportanceTexture                     Texture;                                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector2D                              Rand;                                              // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Samples;                                           // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Intensity;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SamplePosition;                                    // 0x0068(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SampleColor;                                       // 0x0078(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SampleIntensity;                                   // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SampleSize;                                        // 0x008C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_ImportanceSample;
+
+// Function Engine.ImportanceSamplingLibrary.MakeImportanceTexture
+// 0x0060 (0x0060 - 0x0000)
+struct ImportanceSamplingLibrary_MakeImportanceTexture final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EImportanceWeight                             WeightingFunc;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FImportanceTexture                     ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_MakeImportanceTexture;
+
+// Function Engine.ImportanceSamplingLibrary.NextSobolCell2D
 // 0x0028 (0x0028 - 0x0000)
-struct PhysicsFieldStatics_EvalPhysicsIntegerField final
+struct ImportanceSamplingLibrary_NextSobolCell2D final
 {
 public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFieldIntegerType                             IntegerType;                                       // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              PreviousValue;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsIntegerField;
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolCell2D;
 
-// Function Engine.PhysicsFieldStatics.EvalPhysicsScalarField
-// 0x0028 (0x0028 - 0x0000)
-struct PhysicsFieldStatics_EvalPhysicsScalarField final
+// Function Engine.ImportanceSamplingLibrary.NextSobolCell3D
+// 0x0038 (0x0038 - 0x0000)
+struct ImportanceSamplingLibrary_NextSobolCell3D final
 {
 public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFieldScalarType                              ScalarType;                                        // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PreviousValue;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsScalarField;
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolCell3D;
 
-// Function Engine.PhysicsFieldStatics.EvalPhysicsVectorField
-// 0x0040 (0x0040 - 0x0000)
-struct PhysicsFieldStatics_EvalPhysicsVectorField final
+// Function Engine.ImportanceSamplingLibrary.NextSobolFloat
+// 0x0010 (0x0010 - 0x0000)
+struct ImportanceSamplingLibrary_NextSobolFloat final
 {
 public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldPosition;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFieldVectorType                              VectorType;                                        // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Dimension;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PreviousValue;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PhysicsFieldStatics_EvalPhysicsVectorField;
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_NextSobolFloat;
 
-// Function Engine.PostProcessVolume.AddOrUpdateBlendable
+// Function Engine.ImportanceSamplingLibrary.RandomSobolCell2D
+// 0x0038 (0x0038 - 0x0000)
+struct ImportanceSamplingLibrary_RandomSobolCell2D final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Cell;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Seed;                                              // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolCell2D;
+
+// Function Engine.ImportanceSamplingLibrary.RandomSobolCell3D
+// 0x0050 (0x0050 - 0x0000)
+struct ImportanceSamplingLibrary_RandomSobolCell3D final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumCells;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Cell;                                              // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Seed;                                              // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolCell3D;
+
+// Function Engine.ImportanceSamplingLibrary.RandomSobolFloat
+// 0x0010 (0x0010 - 0x0000)
+struct ImportanceSamplingLibrary_RandomSobolFloat final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Dimension;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Seed;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ImportanceSamplingLibrary_RandomSobolFloat;
+
+// Function Engine.MaterialParameterCollection.GetScalarParameterDefaultValue
+// 0x0010 (0x0010 - 0x0000)
+struct MaterialParameterCollection_GetScalarParameterDefaultValue final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bParameterFound;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialParameterCollection_GetScalarParameterDefaultValue;
+
+// Function Engine.MaterialParameterCollection.GetScalarParameterNames
+// 0x0010 (0x0010 - 0x0000)
+struct MaterialParameterCollection_GetScalarParameterNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialParameterCollection_GetScalarParameterNames;
+
+// Function Engine.MaterialParameterCollection.GetVectorParameterDefaultValue
+// 0x001C (0x001C - 0x0000)
+struct MaterialParameterCollection_GetVectorParameterDefaultValue final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bParameterFound;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialParameterCollection_GetVectorParameterDefaultValue;
+
+// Function Engine.MaterialParameterCollection.GetVectorParameterNames
+// 0x0010 (0x0010 - 0x0000)
+struct MaterialParameterCollection_GetVectorParameterNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MaterialParameterCollection_GetVectorParameterNames;
+
+// Function Engine.KismetRenderingLibrary.BeginDrawCanvasToRenderTarget
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_BeginDrawCanvasToRenderTarget final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCanvas*                                Canvas;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Size;                                              // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDrawToRenderTargetContext             Context;                                           // 0x0028(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_BeginDrawCanvasToRenderTarget;
+
+// Function Engine.KismetRenderingLibrary.BreakSkinWeightInfo
+// 0x005C (0x005C - 0x0000)
+struct KismetRenderingLibrary_BreakSkinWeightInfo final
+{
+public:
+	struct FSkelMeshSkinWeightInfo                InWeight;                                          // 0x0000(0x003C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         Bone0;                                             // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight0;                                           // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone1;                                             // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight1;                                           // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone2;                                             // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight2;                                           // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone3;                                             // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight3;                                           // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_BreakSkinWeightInfo;
+
+// Function Engine.KismetRenderingLibrary.CalculateProjectionMatrix
+// 0x0840 (0x0840 - 0x0000)
+struct KismetRenderingLibrary_CalculateProjectionMatrix final
+{
+public:
+	struct FMinimalViewInfo                       MinimalViewInfo;                                   // 0x0000(0x07C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMatrix                                ReturnValue;                                       // 0x07C0(0x0080)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_CalculateProjectionMatrix;
+
+// Function Engine.KismetRenderingLibrary.ClearRenderTarget2D
+// 0x0020 (0x0020 - 0x0000)
+struct KismetRenderingLibrary_ClearRenderTarget2D final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ClearColor;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ClearRenderTarget2D;
+
+// Function Engine.KismetRenderingLibrary.ConvertRenderTargetToTexture2DEditorOnly
 // 0x0018 (0x0018 - 0x0000)
-struct PostProcessVolume_AddOrUpdateBlendable final
+struct KismetRenderingLibrary_ConvertRenderTargetToTexture2DEditorOnly final
 {
 public:
-	TScriptInterface<class IBlendableInterface>   InBlendableObject;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InWeight;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ConvertRenderTargetToTexture2DEditorOnly;
+
+// Function Engine.KismetRenderingLibrary.CreateRenderTarget2D
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_CreateRenderTarget2D final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureRenderTargetFormat                    Format;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ClearColor;                                        // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateMipMaps;                              // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportUAVs;                                      // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTarget2D;
+
+// Function Engine.KismetRenderingLibrary.CreateRenderTarget2DArray
+// 0x0038 (0x0038 - 0x0000)
+struct KismetRenderingLibrary_CreateRenderTarget2DArray final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Slices;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureRenderTargetFormat                    Format;                                            // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ClearColor;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateMipMaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportUAVs;                                      // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2DArray*            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTarget2DArray;
+
+// Function Engine.KismetRenderingLibrary.CreateRenderTargetVolume
+// 0x0038 (0x0038 - 0x0000)
+struct KismetRenderingLibrary_CreateRenderTargetVolume final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Depth;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureRenderTargetFormat                    Format;                                            // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ClearColor;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateMipMaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportUAVs;                                      // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTargetVolume*             ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_CreateRenderTargetVolume;
+
+// Function Engine.KismetRenderingLibrary.DrawMaterialToRenderTarget
+// 0x0018 (0x0018 - 0x0000)
+struct KismetRenderingLibrary_DrawMaterialToRenderTarget final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Material;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_DrawMaterialToRenderTarget;
+
+// Function Engine.KismetRenderingLibrary.EnablePathTracing
+// 0x0001 (0x0001 - 0x0000)
+struct KismetRenderingLibrary_EnablePathTracing final
+{
+public:
+	bool                                          bEnablePathTracer;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_EnablePathTracing;
+
+// Function Engine.KismetRenderingLibrary.EndDrawCanvasToRenderTarget
+// 0x0010 (0x0010 - 0x0000)
+struct KismetRenderingLibrary_EndDrawCanvasToRenderTarget final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDrawToRenderTargetContext             Context;                                           // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_EndDrawCanvasToRenderTarget;
+
+// Function Engine.KismetRenderingLibrary.ExportRenderTarget
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_ExportRenderTarget final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ExportRenderTarget;
+
+// Function Engine.KismetRenderingLibrary.ExportTexture2D
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_ExportTexture2D final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ExportTexture2D;
+
+// Function Engine.KismetRenderingLibrary.ImportBufferAsTexture2D
+// 0x0020 (0x0020 - 0x0000)
+struct KismetRenderingLibrary_ImportBufferAsTexture2D final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Buffer;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UTexture2D*                             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ImportBufferAsTexture2D;
+
+// Function Engine.KismetRenderingLibrary.ImportFileAsTexture2D
+// 0x0020 (0x0020 - 0x0000)
+struct KismetRenderingLibrary_ImportFileAsTexture2D final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ImportFileAsTexture2D;
+
+// Function Engine.KismetRenderingLibrary.MakeSkinWeightInfo
+// 0x005C (0x005C - 0x0000)
+struct KismetRenderingLibrary_MakeSkinWeightInfo final
+{
+public:
+	int32                                         Bone0;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight0;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone1;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight1;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone2;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight2;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Bone3;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Weight3;                                           // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSkelMeshSkinWeightInfo                ReturnValue;                                       // 0x0020(0x003C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_MakeSkinWeightInfo;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTarget
+// 0x0028 (0x0028 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTarget final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FColor>                         OutSamples;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTarget;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetPixel
+// 0x0020 (0x0020 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetPixel final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         X;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Y;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetPixel;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetRaw
+// 0x0028 (0x0028 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetRaw final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FLinearColor>                   OutLinearSamples;                                  // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRaw;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawPixel
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetRawPixel final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         X;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Y;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawPixel;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawPixelArea
+// 0x0038 (0x0038 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetRawPixelArea final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinX;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinY;                                              // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxX;                                              // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxY;                                              // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawPixelArea;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawUV
+// 0x0030 (0x0030 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetRawUV final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         U;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         V;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawUV;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetRawUVArea
+// 0x0050 (0x0050 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetRawUVArea final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox2D                                 Area;                                              // 0x0010(0x0028)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bNormalize;                                        // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetRawUVArea;
+
+// Function Engine.KismetRenderingLibrary.ReadRenderTargetUV
+// 0x0020 (0x0020 - 0x0000)
+struct KismetRenderingLibrary_ReadRenderTargetUV final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         U;                                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         V;                                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReadRenderTargetUV;
+
+// Function Engine.KismetRenderingLibrary.ReleaseRenderTarget2D
+// 0x0008 (0x0008 - 0x0000)
+struct KismetRenderingLibrary_ReleaseRenderTarget2D final
+{
+public:
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ReleaseRenderTarget2D;
+
+// Function Engine.KismetRenderingLibrary.RenderTargetCreateStaticTexture2DEditorOnly
+// 0x0028 (0x0028 - 0x0000)
+struct KismetRenderingLibrary_RenderTargetCreateStaticTexture2DEditorOnly final
+{
+public:
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureCompressionSettings                   CompressionSettings;                               // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureMipGenSettings                        MipSettings;                                       // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_RenderTargetCreateStaticTexture2DEditorOnly;
+
+// Function Engine.KismetRenderingLibrary.ResizeRenderTarget2D
+// 0x0010 (0x0010 - 0x0000)
+struct KismetRenderingLibrary_ResizeRenderTarget2D final
+{
+public:
+	class UTextureRenderTarget2D*                 TextureRenderTarget;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Width;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Height;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_ResizeRenderTarget2D;
+
+// Function Engine.KismetRenderingLibrary.SetCastInsetShadowForAllAttachments
+// 0x0010 (0x0010 - 0x0000)
+struct KismetRenderingLibrary_SetCastInsetShadowForAllAttachments final
+{
+public:
+	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCastInsetShadow;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLightAttachmentsAsGroup;                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KismetRenderingLibrary_SetCastInsetShadowForAllAttachments;
+
+// Function Engine.ParticleSystem.ContainsEmitterType
+// 0x0010 (0x0010 - 0x0000)
+struct ParticleSystem_ContainsEmitterType final
+{
+public:
+	class UClass*                                 TypeData;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ParticleSystem_ContainsEmitterType;
+
+// Function Engine.SubsystemBlueprintLibrary.GetAudioEngineSubsystem
+// 0x0018 (0x0018 - 0x0000)
+struct SubsystemBlueprintLibrary_GetAudioEngineSubsystem final
+{
+public:
+	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAudioEngineSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioEngineSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetAudioEngineSubsystem;
+
+// Function Engine.SubsystemBlueprintLibrary.GetEngineSubsystem
+// 0x0010 (0x0010 - 0x0000)
+struct SubsystemBlueprintLibrary_GetEngineSubsystem final
+{
+public:
+	TSubclassOf<class UEngineSubsystem>           Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEngineSubsystem*                       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetEngineSubsystem;
+
+// Function Engine.SubsystemBlueprintLibrary.GetGameInstanceSubsystem
+// 0x0018 (0x0018 - 0x0000)
+struct SubsystemBlueprintLibrary_GetGameInstanceSubsystem final
+{
+public:
+	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UGameInstanceSubsystem>     Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameInstanceSubsystem*                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetGameInstanceSubsystem;
+
+// Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubsystem
+// 0x0018 (0x0018 - 0x0000)
+struct SubsystemBlueprintLibrary_GetLocalPlayerSubsystem final
+{
+public:
+	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULocalPlayerSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULocalPlayerSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetLocalPlayerSubsystem;
+
+// Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubSystemFromPlayerController
+// 0x0018 (0x0018 - 0x0000)
+struct SubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULocalPlayerSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULocalPlayerSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController;
+
+// Function Engine.SubsystemBlueprintLibrary.GetWorldSubsystem
+// 0x0018 (0x0018 - 0x0000)
+struct SubsystemBlueprintLibrary_GetWorldSubsystem final
+{
+public:
+	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UWorldSubsystem>            Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWorldSubsystem*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetWorldSubsystem;
+
+// Function Engine.NetPushModelHelpers.MarkPropertyDirty
+// 0x0010 (0x0010 - 0x0000)
+struct NetPushModelHelpers_MarkPropertyDirty final
+{
+public:
+	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NetPushModelHelpers_MarkPropertyDirty;
+
+// Function Engine.NetPushModelHelpers.MarkPropertyDirtyFromRepIndex
+// 0x0018 (0x0018 - 0x0000)
+struct NetPushModelHelpers_MarkPropertyDirtyFromRepIndex final
+{
+public:
+	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RepIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PostProcessVolume_AddOrUpdateBlendable;
+DUMPER7_ASSERTS_NetPushModelHelpers_MarkPropertyDirtyFromRepIndex;
+
+// Function Engine.AsyncPhysicsInputComponent.ServerRPCBufferInput
+// 0x0008 (0x0008 - 0x0000)
+struct AsyncPhysicsInputComponent_ServerRPCBufferInput final
+{
+public:
+	class UAsyncPhysicsData*                      AsyncPhysicsData;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AsyncPhysicsInputComponent_ServerRPCBufferInput;
+
+// Function Engine.AsyncPhysicsInputComponent.GetDataToConsume
+// 0x0008 (0x0008 - 0x0000)
+struct AsyncPhysicsInputComponent_GetDataToConsume final
+{
+public:
+	const class UAsyncPhysicsData*                ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AsyncPhysicsInputComponent_GetDataToConsume;
+
+// Function Engine.AsyncPhysicsInputComponent.GetDataToWrite
+// 0x0008 (0x0008 - 0x0000)
+struct AsyncPhysicsInputComponent_GetDataToWrite final
+{
+public:
+	class UAsyncPhysicsData*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AsyncPhysicsInputComponent_GetDataToWrite;
+
+// Function Engine.InterpToMovementComponent.AddControlPointPosition
+// 0x0020 (0x0020 - 0x0000)
+struct InterpToMovementComponent_AddControlPointPosition final
+{
+public:
+	struct FVector                                Pos;                                               // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPositionIsRelative;                               // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterpToMovementComponent_AddControlPointPosition;
+
+// Function Engine.InterpToMovementComponent.RestartMovement
+// 0x0004 (0x0004 - 0x0000)
+struct InterpToMovementComponent_RestartMovement final
+{
+public:
+	float                                         InitialDirection;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterpToMovementComponent_RestartMovement;
+
+// Function Engine.InterpToMovementComponent.StopSimulating
+// 0x00E8 (0x00E8 - 0x0000)
+struct InterpToMovementComponent_StopSimulating final
+{
+public:
+	struct FHitResult                             HitResult;                                         // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterpToMovementComponent_StopSimulating;
 
 // Function Engine.MaterialBillboardComponent.AddElement
 // 0x0028 (0x0028 - 0x0000)
@@ -18887,126 +19111,135 @@ public:
 };
 DUMPER7_ASSERTS_PointLightComponent_SetUseInverseSquaredFalloff;
 
-// Function Engine.BlueprintMapLibrary.Map_Add
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_Add final
+// Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForMatchingPrimaryAssets
+// 0x0030 (0x0030 - 0x0000)
+struct AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0054(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           NewBundles;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           OldBundles;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UAsyncActionChangePrimaryAssetBundles*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Add;
+DUMPER7_ASSERTS_AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets;
 
-// Function Engine.BlueprintMapLibrary.Map_Clear
-// 0x0050 (0x0050 - 0x0000)
-struct BlueprintMapLibrary_Map_Clear final
+// Function Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForPrimaryAssetList
+// 0x0040 (0x0040 - 0x0000)
+struct AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPrimaryAssetId>                PrimaryAssetList;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           AddBundles;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           RemoveBundles;                                     // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UAsyncActionChangePrimaryAssetBundles*  ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Clear;
+DUMPER7_ASSERTS_AsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList;
 
-// Function Engine.BlueprintMapLibrary.Map_Contains
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_Contains final
+// Function Engine.CurveBase.GetTimeRange
+// 0x0008 (0x0008 - 0x0000)
+struct CurveBase_GetTimeRange final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         MinTime;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Contains;
+DUMPER7_ASSERTS_CurveBase_GetTimeRange;
 
-// Function Engine.BlueprintMapLibrary.Map_Find
-// 0x0060 (0x0060 - 0x0000)
-struct BlueprintMapLibrary_Map_Find final
+// Function Engine.CurveBase.GetValueRange
+// 0x0008 (0x0008 - 0x0000)
+struct CurveBase_GetValueRange final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         MinValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxValue;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Find;
+DUMPER7_ASSERTS_CurveBase_GetValueRange;
 
-// Function Engine.BlueprintMapLibrary.Map_IsEmpty
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_IsEmpty final
+// Function Engine.CurveFloat.GetFloatValue
+// 0x0008 (0x0008 - 0x0000)
+struct CurveFloat_GetFloatValue final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_IsEmpty;
+DUMPER7_ASSERTS_CurveFloat_GetFloatValue;
 
-// Function Engine.BlueprintMapLibrary.Map_IsNotEmpty
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_IsNotEmpty final
+// Function Engine.DebugCameraController.ReceiveOnActivate
+// 0x0008 (0x0008 - 0x0000)
+struct DebugCameraController_ReceiveOnActivate final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      OriginalPC;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_IsNotEmpty;
+DUMPER7_ASSERTS_DebugCameraController_ReceiveOnActivate;
 
-// Function Engine.BlueprintMapLibrary.Map_Keys
-// 0x0060 (0x0060 - 0x0000)
-struct BlueprintMapLibrary_Map_Keys final
+// Function Engine.DebugCameraController.ReceiveOnActorSelected
+// 0x0120 (0x0120 - 0x0000)
+struct DebugCameraController_ReceiveOnActorSelected final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Keys;                                              // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class AActor*                                 NewSelectedActor;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SelectHitLocation;                                 // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SelectHitNormal;                                   // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x0038(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Keys;
+DUMPER7_ASSERTS_DebugCameraController_ReceiveOnActorSelected;
 
-// Function Engine.BlueprintMapLibrary.Map_Length
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_Length final
+// Function Engine.DebugCameraController.ReceiveOnDeactivate
+// 0x0008 (0x0008 - 0x0000)
+struct DebugCameraController_ReceiveOnDeactivate final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      RestoredPC;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Length;
+DUMPER7_ASSERTS_DebugCameraController_ReceiveOnDeactivate;
 
-// Function Engine.BlueprintMapLibrary.Map_Remove
-// 0x0058 (0x0058 - 0x0000)
-struct BlueprintMapLibrary_Map_Remove final
+// Function Engine.DebugCameraController.SetPawnMovementSpeedScale
+// 0x0004 (0x0004 - 0x0000)
+struct DebugCameraController_SetPawnMovementSpeedScale final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Key;                                               // 0x0050(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         NewSpeedScale;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Remove;
+DUMPER7_ASSERTS_DebugCameraController_SetPawnMovementSpeedScale;
 
-// Function Engine.BlueprintMapLibrary.Map_Values
-// 0x0060 (0x0060 - 0x0000)
-struct BlueprintMapLibrary_Map_Values final
+// Function Engine.DebugCameraController.GetSelectedActor
+// 0x0008 (0x0008 - 0x0000)
+struct DebugCameraController_GetSelectedActor final
 {
 public:
-	TMap<int32, int32>                            TargetMap;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Values;                                            // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_Map_Values;
+DUMPER7_ASSERTS_DebugCameraController_GetSelectedActor;
 
-// Function Engine.BlueprintMapLibrary.SetMapPropertyByName
-// 0x0060 (0x0060 - 0x0000)
-struct BlueprintMapLibrary_SetMapPropertyByName final
+// Function Engine.SpringArmComponent.GetTargetRotation
+// 0x0018 (0x0018 - 0x0000)
+struct SpringArmComponent_GetTargetRotation final
 {
 public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            Value;                                             // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_BlueprintMapLibrary_SetMapPropertyByName;
+DUMPER7_ASSERTS_SpringArmComponent_GetTargetRotation;
+
+// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
+// 0x0018 (0x0018 - 0x0000)
+struct SpringArmComponent_GetUnfixedCameraPosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpringArmComponent_GetUnfixedCameraPosition;
+
+// Function Engine.SpringArmComponent.IsCollisionFixApplied
+// 0x0001 (0x0001 - 0x0000)
+struct SpringArmComponent_IsCollisionFixApplied final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SpringArmComponent_IsCollisionFixApplied;
 
 // Function Engine.InputDeviceLibrary.EqualEqual_InputDeviceId
 // 0x000C (0x000C - 0x0000)
@@ -19287,6 +19520,299 @@ public:
 };
 DUMPER7_ASSERTS_AnimNotifyState_Trail_OverridePSTemplate;
 
+// Function Engine.SplineMeshComponent.SetBoundaryMax
+// 0x0008 (0x0008 - 0x0000)
+struct SplineMeshComponent_SetBoundaryMax final
+{
+public:
+	float                                         InBoundaryMax;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetBoundaryMax;
+
+// Function Engine.SplineMeshComponent.SetBoundaryMin
+// 0x0008 (0x0008 - 0x0000)
+struct SplineMeshComponent_SetBoundaryMin final
+{
+public:
+	float                                         InBoundaryMin;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetBoundaryMin;
+
+// Function Engine.SplineMeshComponent.SetEndOffset
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_SetEndOffset final
+{
+public:
+	struct FVector2D                              EndOffset;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetEndOffset;
+
+// Function Engine.SplineMeshComponent.SetEndPosition
+// 0x0020 (0x0020 - 0x0000)
+struct SplineMeshComponent_SetEndPosition final
+{
+public:
+	struct FVector                                EndPos;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetEndPosition;
+
+// Function Engine.SplineMeshComponent.SetEndRoll
+// 0x0008 (0x0008 - 0x0000)
+struct SplineMeshComponent_SetEndRoll final
+{
+public:
+	float                                         EndRoll;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetEndRoll;
+
+// Function Engine.SplineMeshComponent.SetEndScale
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_SetEndScale final
+{
+public:
+	struct FVector2D                              EndScale;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetEndScale;
+
+// Function Engine.SplineMeshComponent.SetEndTangent
+// 0x0020 (0x0020 - 0x0000)
+struct SplineMeshComponent_SetEndTangent final
+{
+public:
+	struct FVector                                EndTangent;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetEndTangent;
+
+// Function Engine.SplineMeshComponent.SetForwardAxis
+// 0x0002 (0x0002 - 0x0000)
+struct SplineMeshComponent_SetForwardAxis final
+{
+public:
+	ESplineMeshAxis                               InForwardAxis;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetForwardAxis;
+
+// Function Engine.SplineMeshComponent.SetSplineUpDir
+// 0x0020 (0x0020 - 0x0000)
+struct SplineMeshComponent_SetSplineUpDir final
+{
+public:
+	struct FVector                                InSplineUpDir;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetSplineUpDir;
+
+// Function Engine.SplineMeshComponent.SetStartAndEnd
+// 0x0068 (0x0068 - 0x0000)
+struct SplineMeshComponent_SetStartAndEnd final
+{
+public:
+	struct FVector                                StartPos;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                StartTangent;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndPos;                                            // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndTangent;                                        // 0x0048(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartAndEnd;
+
+// Function Engine.SplineMeshComponent.SetStartOffset
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_SetStartOffset final
+{
+public:
+	struct FVector2D                              StartOffset;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartOffset;
+
+// Function Engine.SplineMeshComponent.SetStartPosition
+// 0x0020 (0x0020 - 0x0000)
+struct SplineMeshComponent_SetStartPosition final
+{
+public:
+	struct FVector                                StartPos;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartPosition;
+
+// Function Engine.SplineMeshComponent.SetStartRoll
+// 0x0008 (0x0008 - 0x0000)
+struct SplineMeshComponent_SetStartRoll final
+{
+public:
+	float                                         StartRoll;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartRoll;
+
+// Function Engine.SplineMeshComponent.SetStartScale
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_SetStartScale final
+{
+public:
+	struct FVector2D                              StartScale;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartScale;
+
+// Function Engine.SplineMeshComponent.SetStartTangent
+// 0x0020 (0x0020 - 0x0000)
+struct SplineMeshComponent_SetStartTangent final
+{
+public:
+	struct FVector                                StartTangent;                                      // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateMesh;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SplineMeshComponent_SetStartTangent;
+
+// Function Engine.SplineMeshComponent.GetBoundaryMax
+// 0x0004 (0x0004 - 0x0000)
+struct SplineMeshComponent_GetBoundaryMax final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetBoundaryMax;
+
+// Function Engine.SplineMeshComponent.GetBoundaryMin
+// 0x0004 (0x0004 - 0x0000)
+struct SplineMeshComponent_GetBoundaryMin final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetBoundaryMin;
+
+// Function Engine.SplineMeshComponent.GetEndOffset
+// 0x0010 (0x0010 - 0x0000)
+struct SplineMeshComponent_GetEndOffset final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetEndOffset;
+
+// Function Engine.SplineMeshComponent.GetEndPosition
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_GetEndPosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetEndPosition;
+
+// Function Engine.SplineMeshComponent.GetEndRoll
+// 0x0004 (0x0004 - 0x0000)
+struct SplineMeshComponent_GetEndRoll final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetEndRoll;
+
+// Function Engine.SplineMeshComponent.GetEndScale
+// 0x0010 (0x0010 - 0x0000)
+struct SplineMeshComponent_GetEndScale final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetEndScale;
+
+// Function Engine.SplineMeshComponent.GetEndTangent
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_GetEndTangent final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetEndTangent;
+
+// Function Engine.SplineMeshComponent.GetForwardAxis
+// 0x0001 (0x0001 - 0x0000)
+struct SplineMeshComponent_GetForwardAxis final
+{
+public:
+	ESplineMeshAxis                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetForwardAxis;
+
+// Function Engine.SplineMeshComponent.GetSplineUpDir
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_GetSplineUpDir final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetSplineUpDir;
+
+// Function Engine.SplineMeshComponent.GetStartOffset
+// 0x0010 (0x0010 - 0x0000)
+struct SplineMeshComponent_GetStartOffset final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetStartOffset;
+
+// Function Engine.SplineMeshComponent.GetStartPosition
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_GetStartPosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetStartPosition;
+
+// Function Engine.SplineMeshComponent.GetStartRoll
+// 0x0004 (0x0004 - 0x0000)
+struct SplineMeshComponent_GetStartRoll final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetStartRoll;
+
+// Function Engine.SplineMeshComponent.GetStartScale
+// 0x0010 (0x0010 - 0x0000)
+struct SplineMeshComponent_GetStartScale final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetStartScale;
+
+// Function Engine.SplineMeshComponent.GetStartTangent
+// 0x0018 (0x0018 - 0x0000)
+struct SplineMeshComponent_GetStartTangent final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SplineMeshComponent_GetStartTangent;
+
 // Function Engine.WorldPartitionStreamingSourceComponent.IsStreamingCompleted
 // 0x0001 (0x0001 - 0x0000)
 struct WorldPartitionStreamingSourceComponent_IsStreamingCompleted final
@@ -19304,95 +19830,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_WorldPartitionStreamingSourceComponent_IsStreamingSourceEnabled;
-
-// Function Engine.CurveBase.GetTimeRange
-// 0x0008 (0x0008 - 0x0000)
-struct CurveBase_GetTimeRange final
-{
-public:
-	float                                         MinTime;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveBase_GetTimeRange;
-
-// Function Engine.CurveBase.GetValueRange
-// 0x0008 (0x0008 - 0x0000)
-struct CurveBase_GetValueRange final
-{
-public:
-	float                                         MinValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxValue;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveBase_GetValueRange;
-
-// Function Engine.CurveFloat.GetFloatValue
-// 0x0008 (0x0008 - 0x0000)
-struct CurveFloat_GetFloatValue final
-{
-public:
-	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveFloat_GetFloatValue;
-
-// Function Engine.InputDeviceProperty.ApplyDeviceProperty
-// 0x0008 (0x0008 - 0x0000)
-struct InputDeviceProperty_ApplyDeviceProperty final
-{
-public:
-	struct FPlatformUserId                        UserId;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputDeviceProperty_ApplyDeviceProperty;
-
-// Function Engine.InputDeviceProperty.EvaluateDeviceProperty
-// 0x0010 (0x0010 - 0x0000)
-struct InputDeviceProperty_EvaluateDeviceProperty final
-{
-public:
-	struct FPlatformUserId                        PlatformUser;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaTime;                                         // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputDeviceProperty_EvaluateDeviceProperty;
-
-// Function Engine.InputDeviceProperty.ResetDeviceProperty
-// 0x0008 (0x0008 - 0x0000)
-struct InputDeviceProperty_ResetDeviceProperty final
-{
-public:
-	struct FPlatformUserId                        PlatformUser;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputDeviceId                         DeviceID;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InputDeviceProperty_ResetDeviceProperty;
-
-// Function Engine.SpringArmComponent.GetTargetRotation
-// 0x0018 (0x0018 - 0x0000)
-struct SpringArmComponent_GetTargetRotation final
-{
-public:
-	struct FRotator                               ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpringArmComponent_GetTargetRotation;
-
-// Function Engine.SpringArmComponent.GetUnfixedCameraPosition
-// 0x0018 (0x0018 - 0x0000)
-struct SpringArmComponent_GetUnfixedCameraPosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpringArmComponent_GetUnfixedCameraPosition;
-
-// Function Engine.SpringArmComponent.IsCollisionFixApplied
-// 0x0001 (0x0001 - 0x0000)
-struct SpringArmComponent_IsCollisionFixApplied final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SpringArmComponent_IsCollisionFixApplied;
 
 // Function Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D
 // 0x0020 (0x0020 - 0x0000)
@@ -20501,6 +20938,36 @@ public:
 };
 DUMPER7_ASSERTS_SceneCapture2D_OnInterpToggle;
 
+// Function Engine.CurveLinearColor.GetClampedLinearColorValue
+// 0x0014 (0x0014 - 0x0000)
+struct CurveLinearColor_GetClampedLinearColorValue final
+{
+public:
+	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveLinearColor_GetClampedLinearColorValue;
+
+// Function Engine.CurveLinearColor.GetLinearColorValue
+// 0x0014 (0x0014 - 0x0000)
+struct CurveLinearColor_GetLinearColorValue final
+{
+public:
+	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveLinearColor_GetLinearColorValue;
+
+// Function Engine.CurveLinearColor.GetUnadjustedLinearColorValue
+// 0x0014 (0x0014 - 0x0000)
+struct CurveLinearColor_GetUnadjustedLinearColorValue final
+{
+public:
+	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_CurveLinearColor_GetUnadjustedLinearColorValue;
+
 // Function Engine.SceneCaptureComponent2D.AddOrUpdateBlendable
 // 0x0018 (0x0018 - 0x0000)
 struct SceneCaptureComponent2D_AddOrUpdateBlendable final
@@ -20521,26 +20988,14 @@ public:
 };
 DUMPER7_ASSERTS_SceneCaptureComponent2D_RemoveBlendable;
 
-// Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation
-// 0x0038 (0x0038 - 0x0000)
-struct SkeletalMeshSocket_InitializeSocketFromLocation final
+// Function Engine.SceneCaptureCube.OnInterpToggle
+// 0x0001 (0x0001 - 0x0000)
+struct SceneCaptureCube_OnInterpToggle final
 {
 public:
-	const class USkeletalMeshComponent*           SkelComp;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldNormal;                                       // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SkeletalMeshSocket_InitializeSocketFromLocation;
-
-// Function Engine.SkeletalMeshSocket.GetSocketLocation
-// 0x0020 (0x0020 - 0x0000)
-struct SkeletalMeshSocket_GetSocketLocation final
-{
-public:
-	const class USkeletalMeshComponent*           SkelComp;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SkeletalMeshSocket_GetSocketLocation;
+DUMPER7_ASSERTS_SceneCaptureCube_OnInterpToggle;
 
 // Function Engine.SkyLightComponent.SetCubemap
 // 0x0008 (0x0008 - 0x0000)
@@ -21372,99 +21827,6 @@ public:
 };
 DUMPER7_ASSERTS_AsyncActionLoadPrimaryAssetClass_AsyncLoadPrimaryAssetClass;
 
-// Function Engine.AnimMontage.CreateSlotAnimationAsDynamicMontage_WithBlendSettings
-// 0x0068 (0x0068 - 0x0000)
-struct AnimMontage_CreateSlotAnimationAsDynamicMontage_WithBlendSettings final
-{
-public:
-	class UAnimSequenceBase*                      Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SlotNodeName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMontageBlendSettings                  BlendInSettings;                                   // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMontageBlendSettings                  BlendOutSettings;                                  // 0x0030(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         InPlayRate;                                        // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LoopCount;                                         // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InBlendOutTriggerTime;                             // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_CreateSlotAnimationAsDynamicMontage_WithBlendSettings;
-
-// Function Engine.AnimMontage.GetBlendInArgs
-// 0x0010 (0x0010 - 0x0000)
-struct AnimMontage_GetBlendInArgs final
-{
-public:
-	struct FAlphaBlendArgs                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetBlendInArgs;
-
-// Function Engine.AnimMontage.GetBlendOutArgs
-// 0x0010 (0x0010 - 0x0000)
-struct AnimMontage_GetBlendOutArgs final
-{
-public:
-	struct FAlphaBlendArgs                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetBlendOutArgs;
-
-// Function Engine.AnimMontage.GetDefaultBlendInTime
-// 0x0004 (0x0004 - 0x0000)
-struct AnimMontage_GetDefaultBlendInTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetDefaultBlendInTime;
-
-// Function Engine.AnimMontage.GetDefaultBlendOutTime
-// 0x0004 (0x0004 - 0x0000)
-struct AnimMontage_GetDefaultBlendOutTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetDefaultBlendOutTime;
-
-// Function Engine.AnimMontage.GetNumSections
-// 0x0004 (0x0004 - 0x0000)
-struct AnimMontage_GetNumSections final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetNumSections;
-
-// Function Engine.AnimMontage.GetSectionIndex
-// 0x000C (0x000C - 0x0000)
-struct AnimMontage_GetSectionIndex final
-{
-public:
-	class FName                                   InSectionName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetSectionIndex;
-
-// Function Engine.AnimMontage.GetSectionName
-// 0x000C (0x000C - 0x0000)
-struct AnimMontage_GetSectionName final
-{
-public:
-	int32                                         SectionIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimMontage_GetSectionName;
-
-// Function Engine.AnimMontage.IsValidSectionName
-// 0x000C (0x000C - 0x0000)
-struct AnimMontage_IsValidSectionName final
-{
-public:
-	class FName                                   InSectionName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AnimMontage_IsValidSectionName;
-
 // Function Engine.AnimNotifyLibrary.NotifyStateReachedEnd
 // 0x0030 (0x0030 - 0x0000)
 struct AnimNotifyLibrary_NotifyStateReachedEnd final
@@ -21656,68 +22018,71 @@ public:
 };
 DUMPER7_ASSERTS_AnimSingleNodeInstance_GetAnimationAsset;
 
-// Function Engine.AnimationAttributeIdentifierExtensions.IsValid
-// 0x0048 (0x0048 - 0x0000)
-struct AnimationAttributeIdentifierExtensions_IsValid final
+// Function Engine.CachedAnimDataLibrary.StateMachine_GetGlobalWeight
+// 0x0028 (0x0028 - 0x0000)
+struct CachedAnimDataLibrary_StateMachine_GetGlobalWeight final
 {
 public:
-	struct FAnimationAttributeIdentifier          Identifier;                                        // 0x0000(0x0040)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimationAttributeIdentifierExtensions_IsValid;
+DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_GetGlobalWeight;
 
-// Function Engine.CurveSourceInterface.GetBindingName
-// 0x0008 (0x0008 - 0x0000)
-struct CurveSourceInterface_GetBindingName final
+// Function Engine.CachedAnimDataLibrary.StateMachine_GetLocalWeight
+// 0x0028 (0x0028 - 0x0000)
+struct CachedAnimDataLibrary_StateMachine_GetLocalWeight final
 {
 public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CurveSourceInterface_GetBindingName;
+DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_GetLocalWeight;
 
-// Function Engine.CurveSourceInterface.GetCurves
-// 0x0010 (0x0010 - 0x0000)
-struct CurveSourceInterface_GetCurves final
+// Function Engine.CachedAnimDataLibrary.StateMachine_IsStateRelevant
+// 0x0028 (0x0028 - 0x0000)
+struct CachedAnimDataLibrary_StateMachine_IsStateRelevant final
 {
 public:
-	TArray<struct FNamedCurveValue>               OutValues;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCachedAnimStateData                   CachedAnimStateData;                               // 0x0008(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CurveSourceInterface_GetCurves;
+DUMPER7_ASSERTS_CachedAnimDataLibrary_StateMachine_IsStateRelevant;
 
-// Function Engine.CurveSourceInterface.GetCurveValue
-// 0x000C (0x000C - 0x0000)
-struct CurveSourceInterface_GetCurveValue final
+// Function Engine.AnimationCurveIdentifierExtensions.GetName
+// 0x0018 (0x0018 - 0x0000)
+struct AnimationCurveIdentifierExtensions_GetName final
 {
 public:
-	class FName                                   CurveName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CurveSourceInterface_GetCurveValue;
+DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_GetName;
 
-// Function Engine.AsyncActionLoadPrimaryAsset.AsyncLoadPrimaryAsset
-// 0x0030 (0x0030 - 0x0000)
-struct AsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset final
+// Function Engine.AnimationCurveIdentifierExtensions.GetType
+// 0x0014 (0x0014 - 0x0000)
+struct AnimationCurveIdentifierExtensions_GetType final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPrimaryAssetId                        PrimaryAsset;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           LoadBundles;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UAsyncActionLoadPrimaryAsset*           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERawCurveTrackTypes                           ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset;
+DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_GetType;
 
-// Function Engine.AsyncActionLoadPrimaryAssetList.AsyncLoadPrimaryAssetList
-// 0x0030 (0x0030 - 0x0000)
-struct AsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList final
+// Function Engine.AnimationCurveIdentifierExtensions.IsValid
+// 0x0014 (0x0014 - 0x0000)
+struct AnimationCurveIdentifierExtensions_IsValid final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPrimaryAssetId>                PrimaryAssetList;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FName>                           LoadBundles;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class UAsyncActionLoadPrimaryAssetList*       ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimationCurveIdentifier              Identifier;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AsyncActionLoadPrimaryAssetList_AsyncLoadPrimaryAssetList;
+DUMPER7_ASSERTS_AnimationCurveIdentifierExtensions_IsValid;
 
 // Function Engine.AsyncActionLoadPrimaryAssetClassList.AsyncLoadPrimaryAssetClassList
 // 0x0030 (0x0030 - 0x0000)
@@ -21730,6 +22095,202 @@ public:
 	class UAsyncActionLoadPrimaryAssetClassList*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AsyncActionLoadPrimaryAssetClassList_AsyncLoadPrimaryAssetClassList;
+
+// Function Engine.SkyAtmosphereComponent.GetAtmosphereTransmitanceOnGroundAtPlanetTop
+// 0x0018 (0x0018 - 0x0000)
+struct SkyAtmosphereComponent_GetAtmosphereTransmitanceOnGroundAtPlanetTop final
+{
+public:
+	class UDirectionalLightComponent*             DirectionalLight;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_GetAtmosphereTransmitanceOnGroundAtPlanetTop;
+
+// Function Engine.SkyAtmosphereComponent.GetOverridenAtmosphereLightDirection
+// 0x0020 (0x0020 - 0x0000)
+struct SkyAtmosphereComponent_GetOverridenAtmosphereLightDirection final
+{
+public:
+	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_GetOverridenAtmosphereLightDirection;
+
+// Function Engine.SkyAtmosphereComponent.IsAtmosphereLightDirectionOverriden
+// 0x0008 (0x0008 - 0x0000)
+struct SkyAtmosphereComponent_IsAtmosphereLightDirectionOverriden final
+{
+public:
+	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_IsAtmosphereLightDirectionOverriden;
+
+// Function Engine.SkyAtmosphereComponent.OverrideAtmosphereLightDirection
+// 0x0020 (0x0020 - 0x0000)
+struct SkyAtmosphereComponent_OverrideAtmosphereLightDirection final
+{
+public:
+	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LightDirection;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_OverrideAtmosphereLightDirection;
+
+// Function Engine.SkyAtmosphereComponent.ResetAtmosphereLightDirectionOverride
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_ResetAtmosphereLightDirectionOverride final
+{
+public:
+	int32                                         AtmosphereLightIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_ResetAtmosphereLightDirectionOverride;
+
+// Function Engine.SkyAtmosphereComponent.SetAerialPespectiveViewDistanceScale
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetAerialPespectiveViewDistanceScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetAerialPespectiveViewDistanceScale;
+
+// Function Engine.SkyAtmosphereComponent.SetAtmosphereHeight
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetAtmosphereHeight final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetAtmosphereHeight;
+
+// Function Engine.SkyAtmosphereComponent.SetHeightFogContribution
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetHeightFogContribution final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetHeightFogContribution;
+
+// Function Engine.SkyAtmosphereComponent.SetMieAbsorption
+// 0x0010 (0x0010 - 0x0000)
+struct SkyAtmosphereComponent_SetMieAbsorption final
+{
+public:
+	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAbsorption;
+
+// Function Engine.SkyAtmosphereComponent.SetMieAbsorptionScale
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetMieAbsorptionScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAbsorptionScale;
+
+// Function Engine.SkyAtmosphereComponent.SetMieAnisotropy
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetMieAnisotropy final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieAnisotropy;
+
+// Function Engine.SkyAtmosphereComponent.SetMieExponentialDistribution
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetMieExponentialDistribution final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieExponentialDistribution;
+
+// Function Engine.SkyAtmosphereComponent.SetMieScattering
+// 0x0010 (0x0010 - 0x0000)
+struct SkyAtmosphereComponent_SetMieScattering final
+{
+public:
+	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieScattering;
+
+// Function Engine.SkyAtmosphereComponent.SetMieScatteringScale
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetMieScatteringScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMieScatteringScale;
+
+// Function Engine.SkyAtmosphereComponent.SetMultiScatteringFactor
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetMultiScatteringFactor final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetMultiScatteringFactor;
+
+// Function Engine.SkyAtmosphereComponent.SetOtherAbsorption
+// 0x0010 (0x0010 - 0x0000)
+struct SkyAtmosphereComponent_SetOtherAbsorption final
+{
+public:
+	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetOtherAbsorption;
+
+// Function Engine.SkyAtmosphereComponent.SetOtherAbsorptionScale
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetOtherAbsorptionScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetOtherAbsorptionScale;
+
+// Function Engine.SkyAtmosphereComponent.SetRayleighExponentialDistribution
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetRayleighExponentialDistribution final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighExponentialDistribution;
+
+// Function Engine.SkyAtmosphereComponent.SetRayleighScattering
+// 0x0010 (0x0010 - 0x0000)
+struct SkyAtmosphereComponent_SetRayleighScattering final
+{
+public:
+	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighScattering;
+
+// Function Engine.SkyAtmosphereComponent.SetRayleighScatteringScale
+// 0x0004 (0x0004 - 0x0000)
+struct SkyAtmosphereComponent_SetRayleighScatteringScale final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetRayleighScatteringScale;
+
+// Function Engine.SkyAtmosphereComponent.SetSkyLuminanceFactor
+// 0x0010 (0x0010 - 0x0000)
+struct SkyAtmosphereComponent_SetSkyLuminanceFactor final
+{
+public:
+	struct FLinearColor                           NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SkyAtmosphereComponent_SetSkyLuminanceFactor;
 
 // Function Engine.AtmosphericFogComponent.DisableGroundScattering
 // 0x0001 (0x0001 - 0x0000)
@@ -21859,6 +22420,119 @@ public:
 };
 DUMPER7_ASSERTS_ActorSoundParameterInterface_GetActorSoundParams;
 
+// Function Engine.AudioParameterConversionStatics.BooleanArrayToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_BooleanArrayToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  Bools;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_BooleanArrayToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.BooleanToAudioParameter
+// 0x00B0 (0x00B0 - 0x0000)
+struct AudioParameterConversionStatics_BooleanToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Bool;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_BooleanToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.FloatArrayToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_FloatArrayToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 Floats;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_FloatArrayToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.FloatToAudioParameter
+// 0x00B0 (0x00B0 - 0x0000)
+struct AudioParameterConversionStatics_FloatToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         float_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_FloatToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.IntegerArrayToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_IntegerArrayToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Integers;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_IntegerArrayToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.IntegerToAudioParameter
+// 0x00B0 (0x00B0 - 0x0000)
+struct AudioParameterConversionStatics_IntegerToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Integer;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_IntegerToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.ObjectArrayToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_ObjectArrayToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        Objects;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_ObjectArrayToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.ObjectToAudioParameter
+// 0x00B0 (0x00B0 - 0x0000)
+struct AudioParameterConversionStatics_ObjectToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Object;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_ObjectToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.StringArrayToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_StringArrayToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Strings;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_StringArrayToAudioParameter;
+
+// Function Engine.AudioParameterConversionStatics.StringToAudioParameter
+// 0x00B8 (0x00B8 - 0x0000)
+struct AudioParameterConversionStatics_StringToAudioParameter final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 String;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAudioParameter                        ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioParameterConversionStatics_StringToAudioParameter;
+
 // Function Engine.CameraLensEffectInterfaceClassSupportLibrary.GetInterfaceClass
 // 0x0010 (0x0010 - 0x0000)
 struct CameraLensEffectInterfaceClassSupportLibrary_GetInterfaceClass final
@@ -21903,214 +22577,49 @@ public:
 };
 DUMPER7_ASSERTS_CameraLensEffectInterfaceClassSupportLibrary_SetInterfaceClass;
 
-// Function Engine.CheatManager.BugIt
-// 0x0010 (0x0010 - 0x0000)
-struct CheatManager_BugIt final
+// Function Engine.CameraShakeSourceComponent.StartCameraShake
+// 0x0028 (0x0028 - 0x0000)
+struct CameraShakeSourceComponent_StartCameraShake final
 {
 public:
-	class FString                                 ScreenShotDescription;                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           InCameraShake;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraShakePlaySpace                         PlaySpace;                                         // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               UserPlaySpaceRot;                                  // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CheatManager_BugIt;
+DUMPER7_ASSERTS_CameraShakeSourceComponent_StartCameraShake;
 
-// Function Engine.CheatManager.BugItGo
-// 0x0018 (0x0018 - 0x0000)
-struct CheatManager_BugItGo final
-{
-public:
-	float                                         X;                                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Y;                                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Z;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Pitch;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Yaw;                                               // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Roll;                                              // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_BugItGo;
-
-// Function Engine.CheatManager.BugItStringCreator
-// 0x0050 (0x0050 - 0x0000)
-struct CheatManager_BugItStringCreator final
-{
-public:
-	struct FVector                                ViewLocation;                                      // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ViewRotation;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 GoString;                                          // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LocString;                                         // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_BugItStringCreator;
-
-// Function Engine.CheatManager.ChangeSize
-// 0x0004 (0x0004 - 0x0000)
-struct CheatManager_ChangeSize final
-{
-public:
-	float                                         F;                                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_ChangeSize;
-
-// Function Engine.CheatManager.CheatScript
-// 0x0010 (0x0010 - 0x0000)
-struct CheatManager_CheatScript final
-{
-public:
-	class FString                                 ScriptName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_CheatScript;
-
-// Function Engine.CheatManager.DamageTarget
-// 0x0004 (0x0004 - 0x0000)
-struct CheatManager_DamageTarget final
-{
-public:
-	float                                         DamageAmount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_DamageTarget;
-
-// Function Engine.CheatManager.DebugCapsuleSweepChannel
+// Function Engine.CameraShakeSourceComponent.StopAllCameraShakes
 // 0x0001 (0x0001 - 0x0000)
-struct CheatManager_DebugCapsuleSweepChannel final
+struct CameraShakeSourceComponent_StopAllCameraShakes final
 {
 public:
-	ECollisionChannel                             Channel;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImmediately;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepChannel;
+DUMPER7_ASSERTS_CameraShakeSourceComponent_StopAllCameraShakes;
 
-// Function Engine.CheatManager.DebugCapsuleSweepComplex
-// 0x0001 (0x0001 - 0x0000)
-struct CheatManager_DebugCapsuleSweepComplex final
-{
-public:
-	bool                                          bTraceComplex;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepComplex;
-
-// Function Engine.CheatManager.DebugCapsuleSweepSize
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_DebugCapsuleSweepSize final
-{
-public:
-	float                                         HalfHeight;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_DebugCapsuleSweepSize;
-
-// Function Engine.CheatManager.DestroyAll
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_DestroyAll final
-{
-public:
-	TSubclassOf<class AActor>                     aClass;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_DestroyAll;
-
-// Function Engine.CheatManager.DestroyPawns
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_DestroyPawns final
-{
-public:
-	TSubclassOf<class APawn>                      aClass;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_DestroyPawns;
-
-// Function Engine.CheatManager.FreezeFrame
-// 0x0004 (0x0004 - 0x0000)
-struct CheatManager_FreezeFrame final
-{
-public:
-	float                                         Delay;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_FreezeFrame;
-
-// Function Engine.CheatManager.OnlyLoadLevel
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_OnlyLoadLevel final
-{
-public:
-	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_OnlyLoadLevel;
-
-// Function Engine.CheatManager.OnPlayerEndPlayed
+// Function Engine.CameraShakeSourceComponent.StopAllCameraShakesOfType
 // 0x0010 (0x0010 - 0x0000)
-struct CheatManager_OnPlayerEndPlayed final
+struct CameraShakeSourceComponent_StopAllCameraShakesOfType final
 {
 public:
-	class AActor*                                 Player;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           InCameraShake;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CheatManager_OnPlayerEndPlayed;
+DUMPER7_ASSERTS_CameraShakeSourceComponent_StopAllCameraShakesOfType;
 
-// Function Engine.CheatManager.Slomo
-// 0x0004 (0x0004 - 0x0000)
-struct CheatManager_Slomo final
+// Function Engine.CameraShakeSourceComponent.GetAttenuationFactor
+// 0x0020 (0x0020 - 0x0000)
+struct CameraShakeSourceComponent_GetAttenuationFactor final
 {
 public:
-	float                                         NewTimeDilation;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CheatManager_Slomo;
-
-// Function Engine.CheatManager.StreamLevelIn
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_StreamLevelIn final
-{
-public:
-	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_StreamLevelIn;
-
-// Function Engine.CheatManager.StreamLevelOut
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_StreamLevelOut final
-{
-public:
-	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_StreamLevelOut;
-
-// Function Engine.CheatManager.Summon
-// 0x0010 (0x0010 - 0x0000)
-struct CheatManager_Summon final
-{
-public:
-	class FString                                 ClassName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_Summon;
-
-// Function Engine.CheatManager.ViewActor
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_ViewActor final
-{
-public:
-	class FName                                   ActorName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_ViewActor;
-
-// Function Engine.CheatManager.ViewClass
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_ViewClass final
-{
-public:
-	TSubclassOf<class AActor>                     DesiredClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_ViewClass;
-
-// Function Engine.CheatManager.ViewPlayer
-// 0x0010 (0x0010 - 0x0000)
-struct CheatManager_ViewPlayer final
-{
-public:
-	class FString                                 S;                                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_ViewPlayer;
-
-// Function Engine.CheatManager.GetPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct CheatManager_GetPlayerController final
-{
-public:
-	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CheatManager_GetPlayerController;
+DUMPER7_ASSERTS_CameraShakeSourceComponent_GetAttenuationFactor;
 
 // Function Engine.CheatManagerExtension.GetPlayerController
 // 0x0008 (0x0008 - 0x0000)
@@ -22886,36 +23395,6 @@ public:
 };
 DUMPER7_ASSERTS_VolumetricCloudComponent_SetViewSampleCountScale;
 
-// Function Engine.CurveLinearColor.GetClampedLinearColorValue
-// 0x0014 (0x0014 - 0x0000)
-struct CurveLinearColor_GetClampedLinearColorValue final
-{
-public:
-	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveLinearColor_GetClampedLinearColorValue;
-
-// Function Engine.CurveLinearColor.GetLinearColorValue
-// 0x0014 (0x0014 - 0x0000)
-struct CurveLinearColor_GetLinearColorValue final
-{
-public:
-	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveLinearColor_GetLinearColorValue;
-
-// Function Engine.CurveLinearColor.GetUnadjustedLinearColorValue
-// 0x0014 (0x0014 - 0x0000)
-struct CurveLinearColor_GetUnadjustedLinearColorValue final
-{
-public:
-	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CurveLinearColor_GetUnadjustedLinearColorValue;
-
 // Function Engine.CurveLinearColorAtlas.GetCurvePosition
 // 0x0010 (0x0010 - 0x0000)
 struct CurveLinearColorAtlas_GetCurvePosition final
@@ -23175,6 +23654,245 @@ public:
 };
 DUMPER7_ASSERTS_TypedElementCommonActions_PasteNormalizedElementsFromString;
 
+// Function Engine.TypedElementWorldInterface.CanDeleteElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_CanDeleteElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_CanDeleteElement;
+
+// Function Engine.TypedElementWorldInterface.CanDuplicateElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_CanDuplicateElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_CanDuplicateElement;
+
+// Function Engine.TypedElementWorldInterface.CanEditElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_CanEditElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_CanEditElement;
+
+// Function Engine.TypedElementWorldInterface.CanMoveElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_CanMoveElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	ETypedElementWorldType                        InWorldType;                                       // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_CanMoveElement;
+
+// Function Engine.TypedElementWorldInterface.CanPromoteElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_CanPromoteElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_CanPromoteElement;
+
+// Function Engine.TypedElementWorldInterface.DeleteElement
+// 0x0020 (0x0020 - 0x0000)
+struct TypedElementWorldInterface_DeleteElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UWorld*                                 InWorld;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTypedElementSelectionSet*              InSelectionSet;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTypedElementDeletionOptions           InDeletionOptions;                                 // 0x0018(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001B(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_DeleteElement;
+
+// Function Engine.TypedElementWorldInterface.DuplicateElement
+// 0x0030 (0x0030 - 0x0000)
+struct TypedElementWorldInterface_DuplicateElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UWorld*                                 InWorld;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InLocationOffset;                                  // 0x0010(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_DuplicateElement;
+
+// Function Engine.TypedElementWorldInterface.GetBounds
+// 0x0048 (0x0048 - 0x0000)
+struct TypedElementWorldInterface_GetBounds final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       OutBounds;                                         // 0x0008(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetBounds;
+
+// Function Engine.TypedElementWorldInterface.GetOwnerLevel
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_GetOwnerLevel final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class ULevel*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetOwnerLevel;
+
+// Function Engine.TypedElementWorldInterface.GetOwnerWorld
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_GetOwnerWorld final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UWorld*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetOwnerWorld;
+
+// Function Engine.TypedElementWorldInterface.GetPivotOffset
+// 0x0028 (0x0028 - 0x0000)
+struct TypedElementWorldInterface_GetPivotOffset final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                OutPivotOffset;                                    // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetPivotOffset;
+
+// Function Engine.TypedElementWorldInterface.GetRelativeTransform
+// 0x0080 (0x0080 - 0x0000)
+struct TypedElementWorldInterface_GetRelativeTransform final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetRelativeTransform;
+
+// Function Engine.TypedElementWorldInterface.GetWorldTransform
+// 0x0080 (0x0080 - 0x0000)
+struct TypedElementWorldInterface_GetWorldTransform final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_GetWorldTransform;
+
+// Function Engine.TypedElementWorldInterface.IsTemplateElement
+// 0x0010 (0x0010 - 0x0000)
+struct TypedElementWorldInterface_IsTemplateElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_IsTemplateElement;
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementEnded
+// 0x0008 (0x0008 - 0x0000)
+struct TypedElementWorldInterface_NotifyMovementEnded final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementEnded;
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementOngoing
+// 0x0008 (0x0008 - 0x0000)
+struct TypedElementWorldInterface_NotifyMovementOngoing final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementOngoing;
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementStarted
+// 0x0008 (0x0008 - 0x0000)
+struct TypedElementWorldInterface_NotifyMovementStarted final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_NotifyMovementStarted;
+
+// Function Engine.TypedElementWorldInterface.PromoteElement
+// 0x0018 (0x0018 - 0x0000)
+struct TypedElementWorldInterface_PromoteElement final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UWorld*                                 OverrideWorld;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_PromoteElement;
+
+// Function Engine.TypedElementWorldInterface.SetPivotOffset
+// 0x0028 (0x0028 - 0x0000)
+struct TypedElementWorldInterface_SetPivotOffset final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                InPivotOffset;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_SetPivotOffset;
+
+// Function Engine.TypedElementWorldInterface.SetRelativeTransform
+// 0x0080 (0x0080 - 0x0000)
+struct TypedElementWorldInterface_SetRelativeTransform final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_SetRelativeTransform;
+
+// Function Engine.TypedElementWorldInterface.SetWorldTransform
+// 0x0080 (0x0080 - 0x0000)
+struct TypedElementWorldInterface_SetWorldTransform final
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_TypedElementWorldInterface_SetWorldTransform;
+
 // Function Engine.AutoDestroySubsystem.OnActorEndPlay
 // 0x0010 (0x0010 - 0x0000)
 struct AutoDestroySubsystem_OnActorEndPlay final
@@ -23185,6 +23903,38 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AutoDestroySubsystem_OnActorEndPlay;
+
+// Function Engine.ViewportStatsSubsystem.AddDisplayDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct ViewportStatsSubsystem_AddDisplayDelegate final
+{
+public:
+	TDelegate<void(class FText* OutText, struct FLinearColor* OutColor)> Delegate;                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ViewportStatsSubsystem_AddDisplayDelegate;
+
+// Function Engine.ViewportStatsSubsystem.AddTimedDisplay
+// 0x0040 (0x0040 - 0x0000)
+struct ViewportStatsSubsystem_AddTimedDisplay final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              DisplayOffset;                                     // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ViewportStatsSubsystem_AddTimedDisplay;
+
+// Function Engine.ViewportStatsSubsystem.RemoveDisplayDelegate
+// 0x0004 (0x0004 - 0x0000)
+struct ViewportStatsSubsystem_RemoveDisplayDelegate final
+{
+public:
+	int32                                         IndexToRemove;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ViewportStatsSubsystem_RemoveDisplayDelegate;
 
 // Function Engine.AsyncActionHandleSaveGame.AsyncLoadGameFromSlot
 // 0x0028 (0x0028 - 0x0000)
@@ -39495,14 +40245,16 @@ public:
 };
 DUMPER7_ASSERTS_LightWeightInstanceBlueprintFunctionLibrary_CreateNewLightWeightInstance;
 
-// Function Engine.LocationVolume.IsLoaded
-// 0x0001 (0x0001 - 0x0000)
-struct LocationVolume_IsLoaded final
+// Function Engine.LODActor.OnSubActorEndPlay
+// 0x0010 (0x0010 - 0x0000)
+struct LODActor_OnSubActorEndPlay final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEndPlayReason                                Reason;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_LocationVolume_IsLoaded;
+DUMPER7_ASSERTS_LODActor_OnSubActorEndPlay;
 
 // Function Engine.MaterialInstanceDynamic.CopyInterpParameters
 // 0x0008 (0x0008 - 0x0000)
@@ -40458,460 +41210,6 @@ public:
 };
 DUMPER7_ASSERTS_ConstraintInstanceBlueprintLibrary_SetProjectionParams;
 
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
-// 0x0014 (0x0014 - 0x0000)
-struct PhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow final
-{
-public:
-	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ProfileName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeSelf;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClearNotFound;                                    // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow;
-
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettings
-// 0x002C (0x002C - 0x0000)
-struct PhysicalAnimationComponent_ApplyPhysicalAnimationSettings final
-{
-public:
-	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPhysicalAnimationData                 PhysicalAnimationData;                             // 0x0008(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationSettings;
-
-// Function Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationSettingsBelow
-// 0x0030 (0x0030 - 0x0000)
-struct PhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow final
-{
-public:
-	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPhysicalAnimationData                 PhysicalAnimationData;                             // 0x0008(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIncludeSelf;                                      // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow;
-
-// Function Engine.PhysicalAnimationComponent.SetSkeletalMeshComponent
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicalAnimationComponent_SetSkeletalMeshComponent final
-{
-public:
-	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_SetSkeletalMeshComponent;
-
-// Function Engine.PhysicalAnimationComponent.SetStrengthMultiplyer
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicalAnimationComponent_SetStrengthMultiplyer final
-{
-public:
-	float                                         InStrengthMultiplyer;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_SetStrengthMultiplyer;
-
-// Function Engine.PhysicalAnimationComponent.GetBodyTargetTransform
-// 0x0070 (0x0070 - 0x0000)
-struct PhysicalAnimationComponent_GetBodyTargetTransform final
-{
-public:
-	class FName                                   BodyName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicalAnimationComponent_GetBodyTargetTransform;
-
-// Function Engine.PhysicsConstraintComponent.GetConstrainedComponents
-// 0x0020 (0x0020 - 0x0000)
-struct PhysicsConstraintComponent_GetConstrainedComponents final
-{
-public:
-	class UPrimitiveComponent*                    OutComponent1;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OutBoneName1;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    OutComponent2;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OutBoneName2;                                      // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstrainedComponents;
-
-// Function Engine.PhysicsConstraintComponent.GetConstraint
-// 0x000C (0x000C - 0x0000)
-struct PhysicsConstraintComponent_GetConstraint final
-{
-public:
-	struct FConstraintInstanceAccessor            ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstraint;
-
-// Function Engine.PhysicsConstraintComponent.GetConstraintForce
-// 0x0030 (0x0030 - 0x0000)
-struct PhysicsConstraintComponent_GetConstraintForce final
-{
-public:
-	struct FVector                                OutLinearForce;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutAngularForce;                                   // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetConstraintForce;
-
-// Function Engine.PhysicsConstraintComponent.IsBroken
-// 0x0001 (0x0001 - 0x0000)
-struct PhysicsConstraintComponent_IsBroken final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_IsBroken;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularBreakable
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularBreakable final
-{
-public:
-	bool                                          bAngularBreakable;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AngularBreakThreshold;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularBreakable;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularDriveMode
-// 0x0001 (0x0001 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularDriveMode final
-{
-public:
-	EAngularDriveMode                             DriveMode;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularDriveMode;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularDriveParams
-// 0x000C (0x000C - 0x0000)
-struct PhysicsConstraintComponent_SetAngularDriveParams final
-{
-public:
-	float                                         PositionStrength;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VelocityStrength;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InForceLimit;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularDriveParams;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularOrientationDrive
-// 0x0002 (0x0002 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularOrientationDrive final
-{
-public:
-	bool                                          bEnableSwingDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableTwistDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularOrientationDrive;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget
-// 0x0018 (0x0018 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularOrientationTarget final
-{
-public:
-	struct FRotator                               InPosTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularOrientationTarget;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularPlasticity
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularPlasticity final
-{
-public:
-	bool                                          bAngularPlasticity;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AngularPlasticityThreshold;                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularPlasticity;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularSwing1Limit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularSwing1Limit final
-{
-public:
-	EAngularConstraintMotion                      MotionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Swing1LimitAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularSwing1Limit;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularSwing2Limit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularSwing2Limit final
-{
-public:
-	EAngularConstraintMotion                      MotionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Swing2LimitAngle;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularSwing2Limit;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularTwistLimit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularTwistLimit final
-{
-public:
-	EAngularConstraintMotion                      ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TwistLimitAngle;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularTwistLimit;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDrive
-// 0x0002 (0x0002 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularVelocityDrive final
-{
-public:
-	bool                                          bEnableSwingDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableTwistDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDrive;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveSLERP
-// 0x0001 (0x0001 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularVelocityDriveSLERP final
-{
-public:
-	bool                                          bEnableSLERP;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDriveSLERP;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularVelocityDriveTwistAndSwing
-// 0x0002 (0x0002 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing final
-{
-public:
-	bool                                          bEnableTwistDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableSwingDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityDriveTwistAndSwing;
-
-// Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget
-// 0x0018 (0x0018 - 0x0000)
-struct PhysicsConstraintComponent_SetAngularVelocityTarget final
-{
-public:
-	struct FVector                                InVelTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetAngularVelocityTarget;
-
-// Function Engine.PhysicsConstraintComponent.SetConstrainedComponents
-// 0x0020 (0x0020 - 0x0000)
-struct PhysicsConstraintComponent_SetConstrainedComponents final
-{
-public:
-	class UPrimitiveComponent*                    Component1;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName1;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    Component2;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName2;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstrainedComponents;
-
-// Function Engine.PhysicsConstraintComponent.SetConstraintReferenceFrame
-// 0x0070 (0x0070 - 0x0000)
-struct PhysicsConstraintComponent_SetConstraintReferenceFrame final
-{
-public:
-	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             RefFrame;                                          // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferenceFrame;
-
-// Function Engine.PhysicsConstraintComponent.SetConstraintReferenceOrientation
-// 0x0038 (0x0038 - 0x0000)
-struct PhysicsConstraintComponent_SetConstraintReferenceOrientation final
-{
-public:
-	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PriAxis;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SecAxis;                                           // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferenceOrientation;
-
-// Function Engine.PhysicsConstraintComponent.SetConstraintReferencePosition
-// 0x0020 (0x0020 - 0x0000)
-struct PhysicsConstraintComponent_SetConstraintReferencePosition final
-{
-public:
-	EConstraintFrame                              Frame;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RefPosition;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetConstraintReferencePosition;
-
-// Function Engine.PhysicsConstraintComponent.SetContactTransferScale
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicsConstraintComponent_SetContactTransferScale final
-{
-public:
-	float                                         ContactTransferScale;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetContactTransferScale;
-
-// Function Engine.PhysicsConstraintComponent.SetDisableCollision
-// 0x0001 (0x0001 - 0x0000)
-struct PhysicsConstraintComponent_SetDisableCollision final
-{
-public:
-	bool                                          bDisableCollision;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetDisableCollision;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearBreakable
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearBreakable final
-{
-public:
-	bool                                          bLinearBreakable;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LinearBreakThreshold;                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearBreakable;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearDriveParams
-// 0x000C (0x000C - 0x0000)
-struct PhysicsConstraintComponent_SetLinearDriveParams final
-{
-public:
-	float                                         PositionStrength;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VelocityStrength;                                  // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InForceLimit;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearDriveParams;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearPlasticity
-// 0x000C (0x000C - 0x0000)
-struct PhysicsConstraintComponent_SetLinearPlasticity final
-{
-public:
-	bool                                          bLinearPlasticity;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LinearPlasticityThreshold;                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EConstraintPlasticityType                     PlasticityType;                                    // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPlasticity;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearPositionDrive
-// 0x0003 (0x0003 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearPositionDrive final
-{
-public:
-	bool                                          bEnableDriveX;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableDriveY;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableDriveZ;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPositionDrive;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget
-// 0x0018 (0x0018 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearPositionTarget final
-{
-public:
-	struct FVector                                InPosTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearPositionTarget;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearVelocityDrive
-// 0x0003 (0x0003 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearVelocityDrive final
-{
-public:
-	bool                                          bEnableDriveX;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableDriveY;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableDriveZ;                                     // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearVelocityDrive;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget
-// 0x0018 (0x0018 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearVelocityTarget final
-{
-public:
-	struct FVector                                InVelTarget;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearVelocityTarget;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearXLimit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearXLimit final
-{
-public:
-	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearXLimit;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearYLimit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearYLimit final
-{
-public:
-	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearYLimit;
-
-// Function Engine.PhysicsConstraintComponent.SetLinearZLimit
-// 0x0008 (0x0008 - 0x0000)
-struct PhysicsConstraintComponent_SetLinearZLimit final
-{
-public:
-	ELinearConstraintMotion                       ConstraintType;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LimitSize;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetLinearZLimit;
-
-// Function Engine.PhysicsConstraintComponent.SetOrientationDriveSLERP
-// 0x0001 (0x0001 - 0x0000)
-struct PhysicsConstraintComponent_SetOrientationDriveSLERP final
-{
-public:
-	bool                                          bEnableSLERP;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetOrientationDriveSLERP;
-
-// Function Engine.PhysicsConstraintComponent.SetOrientationDriveTwistAndSwing
-// 0x0002 (0x0002 - 0x0000)
-struct PhysicsConstraintComponent_SetOrientationDriveTwistAndSwing final
-{
-public:
-	bool                                          bEnableTwistDrive;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableSwingDrive;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_SetOrientationDriveTwistAndSwing;
-
-// Function Engine.PhysicsConstraintComponent.GetCurrentSwing1
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicsConstraintComponent_GetCurrentSwing1 final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentSwing1;
-
-// Function Engine.PhysicsConstraintComponent.GetCurrentSwing2
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicsConstraintComponent_GetCurrentSwing2 final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentSwing2;
-
-// Function Engine.PhysicsConstraintComponent.GetCurrentTwist
-// 0x0004 (0x0004 - 0x0000)
-struct PhysicsConstraintComponent_GetCurrentTwist final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PhysicsConstraintComponent_GetCurrentTwist;
-
 // Function Engine.RadialForceComponent.AddObjectTypeToAffect
 // 0x0001 (0x0001 - 0x0000)
 struct RadialForceComponent_AddObjectTypeToAffect final
@@ -40929,6 +41227,17 @@ public:
 	EObjectTypeQuery                              ObjectType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RadialForceComponent_RemoveObjectTypeToAffect;
+
+// Function Engine.PostProcessVolume.AddOrUpdateBlendable
+// 0x0018 (0x0018 - 0x0000)
+struct PostProcessVolume_AddOrUpdateBlendable final
+{
+public:
+	TScriptInterface<class IBlendableInterface>   InBlendableObject;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InWeight;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PostProcessVolume_AddOrUpdateBlendable;
 
 // Function Engine.HealthSnapshotBlueprintLibrary.LogPerformanceSnapshot
 // 0x0018 (0x0018 - 0x0000)
@@ -41239,796 +41548,213 @@ public:
 };
 DUMPER7_ASSERTS_SkeletalMesh_NumSockets;
 
-// Function Engine.SoundSubmix.AddEnvelopeFollowerDelegate
-// 0x0018 (0x0018 - 0x0000)
-struct SoundSubmix_AddEnvelopeFollowerDelegate final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const TArray<float>& Envelope)> OnSubmixEnvelopeBP;                               // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SoundSubmix_AddEnvelopeFollowerDelegate;
-
-// Function Engine.SoundSubmix.AddSpectralAnalysisDelegate
-// 0x0040 (0x0040 - 0x0000)
-struct SoundSubmix_AddSpectralAnalysisDelegate final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> InBandSettings;                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TDelegate<void(const TArray<float>& Magnitude)> OnSubmixSpectralAnalysisBP;                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UpdateRate;                                        // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecibelNoiseFloor;                                 // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoNormalize;                                      // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoAutoRange;                                      // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AutoRangeAttackTime;                               // 0x0034(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AutoRangeReleaseTime;                              // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_AddSpectralAnalysisDelegate;
-
-// Function Engine.SoundSubmix.RemoveSpectralAnalysisDelegate
-// 0x0018 (0x0018 - 0x0000)
-struct SoundSubmix_RemoveSpectralAnalysisDelegate final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const TArray<float>& Magnitude)> OnSubmixSpectralAnalysisBP;                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SoundSubmix_RemoveSpectralAnalysisDelegate;
-
-// Function Engine.SoundSubmix.SetSubmixDryLevel
-// 0x0010 (0x0010 - 0x0000)
-struct SoundSubmix_SetSubmixDryLevel final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InDryLevel;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_SetSubmixDryLevel;
-
-// Function Engine.SoundSubmix.SetSubmixOutputVolume
-// 0x0010 (0x0010 - 0x0000)
-struct SoundSubmix_SetSubmixOutputVolume final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InOutputVolume;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_SetSubmixOutputVolume;
-
-// Function Engine.SoundSubmix.SetSubmixWetLevel
-// 0x0010 (0x0010 - 0x0000)
-struct SoundSubmix_SetSubmixWetLevel final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InWetLevel;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_SetSubmixWetLevel;
-
-// Function Engine.SoundSubmix.StartEnvelopeFollowing
+// Function Engine.InputSettings.GetInputSettings
 // 0x0008 (0x0008 - 0x0000)
-struct SoundSubmix_StartEnvelopeFollowing final
+struct InputSettings_GetInputSettings final
 {
 public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInputSettings*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SoundSubmix_StartEnvelopeFollowing;
+DUMPER7_ASSERTS_InputSettings_GetInputSettings;
 
-// Function Engine.SoundSubmix.StartRecordingOutput
-// 0x0010 (0x0010 - 0x0000)
-struct SoundSubmix_StartRecordingOutput final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExpectedDuration;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_StartRecordingOutput;
-
-// Function Engine.SoundSubmix.StartSpectralAnalysis
-// 0x0018 (0x0018 - 0x0000)
-struct SoundSubmix_StartSpectralAnalysis final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFFTSize                                      FFTSize;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFFTPeakInterpolationMethod                   InterpolationMethod;                               // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFFTWindowType                                WindowType;                                        // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         HopSize;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioSpectrumType                            SpectrumType;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SoundSubmix_StartSpectralAnalysis;
-
-// Function Engine.SoundSubmix.StopEnvelopeFollowing
-// 0x0008 (0x0008 - 0x0000)
-struct SoundSubmix_StopEnvelopeFollowing final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SoundSubmix_StopEnvelopeFollowing;
-
-// Function Engine.SoundSubmix.StopRecordingOutput
-// 0x0038 (0x0038 - 0x0000)
-struct SoundSubmix_StopRecordingOutput final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioRecordingExportType                     ExportType;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Name_0;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Path;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundWave*                             ExistingSoundWaveToOverwrite;                      // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SoundSubmix_StopRecordingOutput;
-
-// Function Engine.SoundSubmix.StopSpectralAnalysis
-// 0x0008 (0x0008 - 0x0000)
-struct SoundSubmix_StopSpectralAnalysis final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SoundSubmix_StopSpectralAnalysis;
-
-// Function Engine.StaticMesh.CreateStaticMeshDescription
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_CreateStaticMeshDescription final
-{
-public:
-	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMeshDescription*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_CreateStaticMeshDescription;
-
-// Function Engine.StaticMesh.AddMaterial
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_AddMaterial final
-{
-public:
-	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_AddMaterial;
-
-// Function Engine.StaticMesh.AddSocket
-// 0x0008 (0x0008 - 0x0000)
-struct StaticMesh_AddSocket final
-{
-public:
-	class UStaticMeshSocket*                      Socket;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_AddSocket;
-
-// Function Engine.StaticMesh.BuildFromStaticMeshDescriptions
-// 0x0018 (0x0018 - 0x0000)
-struct StaticMesh_BuildFromStaticMeshDescriptions final
-{
-public:
-	TArray<class UStaticMeshDescription*>         StaticMeshDescriptions;                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bBuildSimpleCollision;                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFastBuild;                                        // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_StaticMesh_BuildFromStaticMeshDescriptions;
-
-// Function Engine.StaticMesh.GetStaticMeshDescription
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_GetStaticMeshDescription final
-{
-public:
-	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshDescription*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetStaticMeshDescription;
-
-// Function Engine.StaticMesh.RemoveSocket
-// 0x0008 (0x0008 - 0x0000)
-struct StaticMesh_RemoveSocket final
-{
-public:
-	class UStaticMeshSocket*                      Socket;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_RemoveSocket;
-
-// Function Engine.StaticMesh.SetMinimumLODForPlatform
-// 0x000C (0x000C - 0x0000)
-struct StaticMesh_SetMinimumLODForPlatform final
-{
-public:
-	class FName                                   PlatformName;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InMinLOD;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_SetMinimumLODForPlatform;
-
-// Function Engine.StaticMesh.SetMinimumLODForPlatforms
-// 0x0050 (0x0050 - 0x0000)
-struct StaticMesh_SetMinimumLODForPlatforms final
-{
-public:
-	TMap<class FName, int32>                      PlatformMinimumLODs;                               // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_SetMinimumLODForPlatforms;
-
-// Function Engine.StaticMesh.SetMinLODForQualityLevels
-// 0x0058 (0x0058 - 0x0000)
-struct StaticMesh_SetMinLODForQualityLevels final
-{
-public:
-	TMap<EPerQualityLevels, int32>                QualityLevelMinimumLODs;                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Default;                                           // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_StaticMesh_SetMinLODForQualityLevels;
-
-// Function Engine.StaticMesh.SetStaticMaterials
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_SetStaticMaterials final
-{
-public:
-	TArray<struct FStaticMaterial>                InStaticMaterials;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_SetStaticMaterials;
-
-// Function Engine.StaticMesh.FindSocket
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_FindSocket final
-{
-public:
-	class FName                                   InSocketName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMeshSocket*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_FindSocket;
-
-// Function Engine.StaticMesh.GetBoundingBox
-// 0x0038 (0x0038 - 0x0000)
-struct StaticMesh_GetBoundingBox final
-{
-public:
-	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetBoundingBox;
-
-// Function Engine.StaticMesh.GetBounds
-// 0x0038 (0x0038 - 0x0000)
-struct StaticMesh_GetBounds final
-{
-public:
-	struct FBoxSphereBounds                       ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetBounds;
-
-// Function Engine.StaticMesh.GetMaterial
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_GetMaterial final
-{
-public:
-	int32                                         MaterialIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMaterial;
-
-// Function Engine.StaticMesh.GetMaterialIndex
-// 0x000C (0x000C - 0x0000)
-struct StaticMesh_GetMaterialIndex final
-{
-public:
-	class FName                                   MaterialSlotName;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMaterialIndex;
-
-// Function Engine.StaticMesh.GetMinimumLODForPlatform
-// 0x000C (0x000C - 0x0000)
-struct StaticMesh_GetMinimumLODForPlatform final
-{
-public:
-	class FName                                   PlatformName;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForPlatform;
-
-// Function Engine.StaticMesh.GetMinimumLODForPlatforms
-// 0x0050 (0x0050 - 0x0000)
-struct StaticMesh_GetMinimumLODForPlatforms final
-{
-public:
-	TMap<class FName, int32>                      PlatformMinimumLODs;                               // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForPlatforms;
-
-// Function Engine.StaticMesh.GetMinimumLODForQualityLevel
-// 0x000C (0x000C - 0x0000)
-struct StaticMesh_GetMinimumLODForQualityLevel final
-{
-public:
-	class FName                                   QualityLevel;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForQualityLevel;
-
-// Function Engine.StaticMesh.GetMinimumLODForQualityLevels
-// 0x0050 (0x0050 - 0x0000)
-struct StaticMesh_GetMinimumLODForQualityLevels final
-{
-public:
-	TMap<class FName, int32>                      QualityLevelMinimumLODs;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetMinimumLODForQualityLevels;
-
-// Function Engine.StaticMesh.GetMinLODForQualityLevels
-// 0x0058 (0x0058 - 0x0000)
-struct StaticMesh_GetMinLODForQualityLevels final
-{
-public:
-	TMap<EPerQualityLevels, int32>                QualityLevelMinimumLODs;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-	int32                                         Default;                                           // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_StaticMesh_GetMinLODForQualityLevels;
-
-// Function Engine.StaticMesh.GetNumLODs
-// 0x0004 (0x0004 - 0x0000)
-struct StaticMesh_GetNumLODs final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetNumLODs;
-
-// Function Engine.StaticMesh.GetNumSections
-// 0x0008 (0x0008 - 0x0000)
-struct StaticMesh_GetNumSections final
-{
-public:
-	int32                                         InLOD;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetNumSections;
-
-// Function Engine.StaticMesh.GetNumTriangles
-// 0x0008 (0x0008 - 0x0000)
-struct StaticMesh_GetNumTriangles final
-{
-public:
-	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetNumTriangles;
-
-// Function Engine.StaticMesh.GetSocketsByTag
-// 0x0020 (0x0020 - 0x0000)
-struct StaticMesh_GetSocketsByTag final
-{
-public:
-	class FString                                 InSocketTag;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UStaticMeshSocket*>              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetSocketsByTag;
-
-// Function Engine.StaticMesh.GetStaticMaterials
-// 0x0010 (0x0010 - 0x0000)
-struct StaticMesh_GetStaticMaterials final
-{
-public:
-	TArray<struct FStaticMaterial>                ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StaticMesh_GetStaticMaterials;
-
-// Function Engine.StereoLayerFunctionLibrary.EnableAutoLoadingSplashScreen
-// 0x0001 (0x0001 - 0x0000)
-struct StereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen final
-{
-public:
-	bool                                          InAutoShowEnabled;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_StereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen;
-
-// Function Engine.StereoLayerFunctionLibrary.SetSplashScreen
-// 0x0038 (0x0038 - 0x0000)
-struct StereoLayerFunctionLibrary_SetSplashScreen final
-{
-public:
-	class UTexture*                               Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Scale;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Offset;                                            // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowLoadingMovie;                                 // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowOnSet;                                        // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_StereoLayerFunctionLibrary_SetSplashScreen;
-
-// Function Engine.SubsystemBlueprintLibrary.GetAudioEngineSubsystem
-// 0x0018 (0x0018 - 0x0000)
-struct SubsystemBlueprintLibrary_GetAudioEngineSubsystem final
-{
-public:
-	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAudioEngineSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAudioEngineSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetAudioEngineSubsystem;
-
-// Function Engine.SubsystemBlueprintLibrary.GetEngineSubsystem
-// 0x0010 (0x0010 - 0x0000)
-struct SubsystemBlueprintLibrary_GetEngineSubsystem final
-{
-public:
-	TSubclassOf<class UEngineSubsystem>           Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEngineSubsystem*                       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetEngineSubsystem;
-
-// Function Engine.SubsystemBlueprintLibrary.GetGameInstanceSubsystem
-// 0x0018 (0x0018 - 0x0000)
-struct SubsystemBlueprintLibrary_GetGameInstanceSubsystem final
-{
-public:
-	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UGameInstanceSubsystem>     Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGameInstanceSubsystem*                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetGameInstanceSubsystem;
-
-// Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubsystem
-// 0x0018 (0x0018 - 0x0000)
-struct SubsystemBlueprintLibrary_GetLocalPlayerSubsystem final
-{
-public:
-	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ULocalPlayerSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULocalPlayerSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetLocalPlayerSubsystem;
-
-// Function Engine.SubsystemBlueprintLibrary.GetLocalPlayerSubSystemFromPlayerController
-// 0x0018 (0x0018 - 0x0000)
-struct SubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ULocalPlayerSubsystem>      Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULocalPlayerSubsystem*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetLocalPlayerSubSystemFromPlayerController;
-
-// Function Engine.SubsystemBlueprintLibrary.GetWorldSubsystem
-// 0x0018 (0x0018 - 0x0000)
-struct SubsystemBlueprintLibrary_GetWorldSubsystem final
-{
-public:
-	class UObject*                                ContextObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UWorldSubsystem>            Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWorldSubsystem*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubsystemBlueprintLibrary_GetWorldSubsystem;
-
-// Function Engine.Canvas.K2_Deproject
-// 0x0040 (0x0040 - 0x0000)
-struct Canvas_K2_Deproject final
-{
-public:
-	struct FVector2D                              ScreenPosition;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldOrigin;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WorldDirection;                                    // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_Deproject;
-
-// Function Engine.Canvas.K2_DrawBorder
-// 0x00C8 (0x00C8 - 0x0000)
-struct Canvas_K2_DrawBorder final
-{
-public:
-	class UTexture*                               BorderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               BackgroundTexture;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               LeftBorderTexture;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               RightBorderTexture;                                // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               TopBorderTexture;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               BottomBorderTexture;                               // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0030(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenSize;                                        // 0x0040(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinatePosition;                                // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinateSize;                                    // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x0070(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              BorderScale;                                       // 0x0080(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              BackgroundScale;                                   // 0x0090(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rotation;                                          // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              PivotPoint;                                        // 0x00A8(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CornerSize;                                        // 0x00B8(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawBorder;
-
-// Function Engine.Canvas.K2_DrawBox
-// 0x0038 (0x0038 - 0x0000)
-struct Canvas_K2_DrawBox final
-{
-public:
-	struct FVector2D                              ScreenPosition;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenSize;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Thickness;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x0024(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawBox;
-
-// Function Engine.Canvas.K2_DrawLine
-// 0x0038 (0x0038 - 0x0000)
-struct Canvas_K2_DrawLine final
-{
-public:
-	struct FVector2D                              ScreenPositionA;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPositionB;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Thickness;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x0024(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawLine;
-
-// Function Engine.Canvas.K2_DrawMaterial
-// 0x0060 (0x0060 - 0x0000)
-struct Canvas_K2_DrawMaterial final
-{
-public:
-	class UMaterialInterface*                     RenderMaterial;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenSize;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinatePosition;                                // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinateSize;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rotation;                                          // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              PivotPoint;                                        // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawMaterial;
-
-// Function Engine.Canvas.K2_DrawMaterialTriangle
-// 0x0018 (0x0018 - 0x0000)
-struct Canvas_K2_DrawMaterialTriangle final
-{
-public:
-	class UMaterialInterface*                     RenderMaterial;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FCanvasUVTri>                   Triangles;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawMaterialTriangle;
-
-// Function Engine.Canvas.K2_DrawPolygon
-// 0x0040 (0x0040 - 0x0000)
-struct Canvas_K2_DrawPolygon final
-{
-public:
-	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Radius;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumberOfSides;                                     // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x002C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawPolygon;
-
-// Function Engine.Canvas.K2_DrawText
-// 0x0088 (0x0088 - 0x0000)
-struct Canvas_K2_DrawText final
-{
-public:
-	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Scale;                                             // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Kerning;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ShadowColor;                                       // 0x004C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ShadowOffset;                                      // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCentreX;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCentreY;                                          // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOutlined;                                         // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_73[0x1];                                       // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           OutlineColor;                                      // 0x0074(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawText;
-
-// Function Engine.Canvas.K2_DrawTexture
-// 0x0070 (0x0070 - 0x0000)
-struct Canvas_K2_DrawTexture final
-{
-public:
-	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenSize;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinatePosition;                                // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              CoordinateSize;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RenderColor;                                       // 0x0048(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBlendMode                                    BlendMode;                                         // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Rotation;                                          // 0x005C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              PivotPoint;                                        // 0x0060(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawTexture;
-
-// Function Engine.Canvas.K2_DrawTriangle
-// 0x0018 (0x0018 - 0x0000)
-struct Canvas_K2_DrawTriangle final
-{
-public:
-	class UTexture*                               RenderTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FCanvasUVTri>                   Triangles;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Canvas_K2_DrawTriangle;
-
-// Function Engine.Canvas.K2_Project
+// Function Engine.InputSettings.AddActionMapping
 // 0x0030 (0x0030 - 0x0000)
-struct Canvas_K2_Project final
+struct InputSettings_AddActionMapping final
 {
 public:
-	struct FVector                                WorldLocation;                                     // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputActionKeyMapping                 KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_Canvas_K2_Project;
+DUMPER7_ASSERTS_InputSettings_AddActionMapping;
 
-// Function Engine.Canvas.K2_StrLen
-// 0x0028 (0x0028 - 0x0000)
-struct Canvas_K2_StrLen final
+// Function Engine.InputSettings.AddAxisMapping
+// 0x0030 (0x0030 - 0x0000)
+struct InputSettings_AddAxisMapping final
 {
 public:
-	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputAxisKeyMapping                   KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_Canvas_K2_StrLen;
+DUMPER7_ASSERTS_InputSettings_AddAxisMapping;
 
-// Function Engine.Canvas.K2_TextSize
-// 0x0038 (0x0038 - 0x0000)
-struct Canvas_K2_TextSize final
+// Function Engine.InputSettings.RemoveActionMapping
+// 0x0030 (0x0030 - 0x0000)
+struct InputSettings_RemoveActionMapping final
 {
 public:
-	class UFont*                                  RenderFont;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RenderText;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Scale;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputActionKeyMapping                 KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_Canvas_K2_TextSize;
+DUMPER7_ASSERTS_InputSettings_RemoveActionMapping;
 
-// Function Engine.VOIPStatics.SetMicThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct VOIPStatics_SetMicThreshold final
+// Function Engine.InputSettings.RemoveAxisMapping
+// 0x0030 (0x0030 - 0x0000)
+struct InputSettings_RemoveAxisMapping final
 {
 public:
-	float                                         InThreshold;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputAxisKeyMapping                   KeyMapping;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bForceRebuildKeymaps;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_VOIPStatics_SetMicThreshold;
+DUMPER7_ASSERTS_InputSettings_RemoveAxisMapping;
 
-// Function Engine.RuntimeVirtualTexture.GetPageTableSize
-// 0x0004 (0x0004 - 0x0000)
-struct RuntimeVirtualTexture_GetPageTableSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RuntimeVirtualTexture_GetPageTableSize;
-
-// Function Engine.RuntimeVirtualTexture.GetSize
-// 0x0004 (0x0004 - 0x0000)
-struct RuntimeVirtualTexture_GetSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RuntimeVirtualTexture_GetSize;
-
-// Function Engine.RuntimeVirtualTexture.GetTileBorderSize
-// 0x0004 (0x0004 - 0x0000)
-struct RuntimeVirtualTexture_GetTileBorderSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileBorderSize;
-
-// Function Engine.RuntimeVirtualTexture.GetTileCount
-// 0x0004 (0x0004 - 0x0000)
-struct RuntimeVirtualTexture_GetTileCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileCount;
-
-// Function Engine.RuntimeVirtualTexture.GetTileSize
-// 0x0004 (0x0004 - 0x0000)
-struct RuntimeVirtualTexture_GetTileSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RuntimeVirtualTexture_GetTileSize;
-
-// Function Engine.WorldPartitionBlueprintLibrary.GetActorDescs
+// Function Engine.InputSettings.GetActionMappingByName
 // 0x0018 (0x0018 - 0x0000)
-struct WorldPartitionBlueprintLibrary_GetActorDescs final
+struct InputSettings_GetActionMappingByName final
 {
 public:
-	TArray<struct FActorDesc>                     OutActorDescs;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   InActionName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FInputActionKeyMapping>         OutMappings;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetActorDescs;
+DUMPER7_ASSERTS_InputSettings_GetActionMappingByName;
 
-// Function Engine.WorldPartitionBlueprintLibrary.GetEditorWorldBounds
-// 0x0038 (0x0038 - 0x0000)
-struct WorldPartitionBlueprintLibrary_GetEditorWorldBounds final
+// Function Engine.InputSettings.GetActionNames
+// 0x0010 (0x0010 - 0x0000)
+struct InputSettings_GetActionNames final
 {
 public:
-	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ActionNames;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetEditorWorldBounds;
+DUMPER7_ASSERTS_InputSettings_GetActionNames;
 
-// Function Engine.WorldPartitionBlueprintLibrary.GetIntersectingActorDescs
+// Function Engine.InputSettings.GetAxisMappingByName
+// 0x0018 (0x0018 - 0x0000)
+struct InputSettings_GetAxisMappingByName final
+{
+public:
+	class FName                                   InAxisName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FInputAxisKeyMapping>           OutMappings;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputSettings_GetAxisMappingByName;
+
+// Function Engine.InputSettings.GetAxisNames
+// 0x0010 (0x0010 - 0x0000)
+struct InputSettings_GetAxisNames final
+{
+public:
+	TArray<class FName>                           AxisNames;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InputSettings_GetAxisNames;
+
+// Function Engine.VisualLoggerKismetLibrary.EnableRecording
+// 0x0001 (0x0001 - 0x0000)
+struct VisualLoggerKismetLibrary_EnableRecording final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_EnableRecording;
+
+// Function Engine.VisualLoggerKismetLibrary.LogBox
+// 0x0070 (0x0070 - 0x0000)
+struct VisualLoggerKismetLibrary_LogBox final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   BoxShape;                                          // 0x0008(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 Text;                                              // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ObjectColor;                                       // 0x0050(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LogCategory;                                       // 0x0060(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddToMessageLog;                                  // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogBox;
+
+// Function Engine.VisualLoggerKismetLibrary.LogLocation
 // 0x0050 (0x0050 - 0x0000)
-struct WorldPartitionBlueprintLibrary_GetIntersectingActorDescs final
+struct VisualLoggerKismetLibrary_LogLocation final
 {
 public:
-	struct FBox                                   InBox;                                             // 0x0000(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FActorDesc>                     OutActorDescs;                                     // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Text;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ObjectColor;                                       // 0x0030(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LogCategory;                                       // 0x0044(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddToMessageLog;                                  // 0x004C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetIntersectingActorDescs;
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogLocation;
 
-// Function Engine.WorldPartitionBlueprintLibrary.GetRuntimeWorldBounds
-// 0x0038 (0x0038 - 0x0000)
-struct WorldPartitionBlueprintLibrary_GetRuntimeWorldBounds final
+// Function Engine.VisualLoggerKismetLibrary.LogSegment
+// 0x0068 (0x0068 - 0x0000)
+struct VisualLoggerKismetLibrary_LogSegment final
 {
 public:
-	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SegmentStart;                                      // 0x0008(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SegmentEnd;                                        // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Text;                                              // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ObjectColor;                                       // 0x0048(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thickness;                                         // 0x0058(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   CategoryName;                                      // 0x005C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddToMessageLog;                                  // 0x0064(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_GetRuntimeWorldBounds;
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogSegment;
 
-// Function Engine.WorldPartitionBlueprintLibrary.LoadActors
+// Function Engine.VisualLoggerKismetLibrary.LogText
+// 0x0028 (0x0028 - 0x0000)
+struct VisualLoggerKismetLibrary_LogText final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Text;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LogCategory;                                       // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddToMessageLog;                                  // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_LogText;
+
+// Function Engine.VisualLoggerKismetLibrary.RedirectVislog
 // 0x0010 (0x0010 - 0x0000)
-struct WorldPartitionBlueprintLibrary_LoadActors final
+struct VisualLoggerKismetLibrary_RedirectVislog final
 {
 public:
-	TArray<struct FGuid>                          InActorsToLoad;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                SourceOwner;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                DestinationOwner;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_LoadActors;
+DUMPER7_ASSERTS_VisualLoggerKismetLibrary_RedirectVislog;
 
-// Function Engine.WorldPartitionBlueprintLibrary.PinActors
+// Function Engine.VOIPTalker.CreateTalkerForPlayer
 // 0x0010 (0x0010 - 0x0000)
-struct WorldPartitionBlueprintLibrary_PinActors final
+struct VOIPTalker_CreateTalkerForPlayer final
 {
 public:
-	TArray<struct FGuid>                          InActorsToPin;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class APlayerState*                           OwningState;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVOIPTalker*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_PinActors;
+DUMPER7_ASSERTS_VOIPTalker_CreateTalkerForPlayer;
 
-// Function Engine.WorldPartitionBlueprintLibrary.UnloadActors
-// 0x0010 (0x0010 - 0x0000)
-struct WorldPartitionBlueprintLibrary_UnloadActors final
+// Function Engine.VOIPTalker.BPOnTalkingBegin
+// 0x0008 (0x0008 - 0x0000)
+struct VOIPTalker_BPOnTalkingBegin final
 {
 public:
-	TArray<struct FGuid>                          InActorsToUnload;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_UnloadActors;
+DUMPER7_ASSERTS_VOIPTalker_BPOnTalkingBegin;
 
-// Function Engine.WorldPartitionBlueprintLibrary.UnpinActors
-// 0x0010 (0x0010 - 0x0000)
-struct WorldPartitionBlueprintLibrary_UnpinActors final
+// Function Engine.VOIPTalker.GetVoiceLevel
+// 0x0004 (0x0004 - 0x0000)
+struct VOIPTalker_GetVoiceLevel final
 {
 public:
-	TArray<struct FGuid>                          InActorsToUnpin;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WorldPartitionBlueprintLibrary_UnpinActors;
+DUMPER7_ASSERTS_VOIPTalker_GetVoiceLevel;
+
+// Function Engine.VOIPTalker.RegisterWithPlayerState
+// 0x0008 (0x0008 - 0x0000)
+struct VOIPTalker_RegisterWithPlayerState final
+{
+public:
+	class APlayerState*                           OwningState;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VOIPTalker_RegisterWithPlayerState;
 
 // Function Engine.WorldDataLayers.OnDataLayerRuntimeStateChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -42142,6 +41868,237 @@ public:
 };
 DUMPER7_ASSERTS_DataLayer_IsVisible;
 
+// Function Engine.DataLayerAsset.GetDebugColor
+// 0x0004 (0x0004 - 0x0000)
+struct DataLayerAsset_GetDebugColor final
+{
+public:
+	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerAsset_GetDebugColor;
+
+// Function Engine.DataLayerAsset.GetType
+// 0x0001 (0x0001 - 0x0000)
+struct DataLayerAsset_GetType final
+{
+public:
+	EDataLayerType                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerAsset_GetType;
+
+// Function Engine.DataLayerAsset.IsRuntime
+// 0x0001 (0x0001 - 0x0000)
+struct DataLayerAsset_IsRuntime final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerAsset_IsRuntime;
+
+// Function Engine.DataLayerSubsystem.SetDataLayerInstanceRuntimeState
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_SetDataLayerInstanceRuntimeState final
+{
+public:
+	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerInstanceRuntimeState;
+
+// Function Engine.DataLayerSubsystem.SetDataLayerRuntimeState
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_SetDataLayerRuntimeState final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerRuntimeState;
+
+// Function Engine.DataLayerSubsystem.SetDataLayerRuntimeStateByLabel
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_SetDataLayerRuntimeStateByLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsRecursive;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerRuntimeStateByLabel;
+
+// Function Engine.DataLayerSubsystem.SetDataLayerState
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_SetDataLayerState final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerState                               InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerState;
+
+// Function Engine.DataLayerSubsystem.SetDataLayerStateByLabel
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_SetDataLayerStateByLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerState                               InState;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_SetDataLayerStateByLabel;
+
+// Function Engine.DataLayerSubsystem.GetActiveDataLayerNames
+// 0x0050 (0x0050 - 0x0000)
+struct DataLayerSubsystem_GetActiveDataLayerNames final
+{
+public:
+	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetActiveDataLayerNames;
+
+// Function Engine.DataLayerSubsystem.GetDataLayer
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayer final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayer;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerEffectiveRuntimeState
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerEffectiveRuntimeState final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerEffectiveRuntimeState;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerEffectiveRuntimeStateByLabel
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerEffectiveRuntimeStateByLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerEffectiveRuntimeStateByLabel;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerFromLabel
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayerFromLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerFromLabel;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerFromName
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayerFromName final
+{
+public:
+	class FName                                   InDataLayerName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerFromName;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerInstanceEffectiveRuntimeState
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayerInstanceEffectiveRuntimeState final
+{
+public:
+	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceEffectiveRuntimeState;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerInstanceFromAsset
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayerInstanceFromAsset final
+{
+public:
+	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataLayerInstance*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceFromAsset;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerInstanceRuntimeState
+// 0x0010 (0x0010 - 0x0000)
+struct DataLayerSubsystem_GetDataLayerInstanceRuntimeState final
+{
+public:
+	const class UDataLayerAsset*                  InDataLayerAsset;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerInstanceRuntimeState;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerRuntimeState
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerRuntimeState final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerRuntimeState;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerRuntimeStateByLabel
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerRuntimeStateByLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerRuntimeStateByLabel;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerState
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerState final
+{
+public:
+	struct FActorDataLayer                        InDataLayer;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerState                               ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerState;
+
+// Function Engine.DataLayerSubsystem.GetDataLayerStateByLabel
+// 0x000C (0x000C - 0x0000)
+struct DataLayerSubsystem_GetDataLayerStateByLabel final
+{
+public:
+	class FName                                   InDataLayerLabel;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerState                               ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetDataLayerStateByLabel;
+
+// Function Engine.DataLayerSubsystem.GetLoadedDataLayerNames
+// 0x0050 (0x0050 - 0x0000)
+struct DataLayerSubsystem_GetLoadedDataLayerNames final
+{
+public:
+	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataLayerSubsystem_GetLoadedDataLayerNames;
+
 // Function Engine.WorldPartitionDestructibleInHLODInterface.SetHLODDestructionTag
 // 0x0010 (0x0010 - 0x0000)
 struct WorldPartitionDestructibleInHLODInterface_SetHLODDestructionTag final
@@ -42159,6 +42116,49 @@ public:
 	struct FWorldPartitionHLODDestructionTag      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_WorldPartitionDestructibleInHLODInterface_GetHLODDestructionTag;
+
+// Function Engine.WorldPartitionDestructibleInHLODSupportLibrary.DamageInHLOD
+// 0x0018 (0x0018 - 0x0000)
+struct WorldPartitionDestructibleInHLODSupportLibrary_DamageInHLOD final
+{
+public:
+	TScriptInterface<class IWorldPartitionDestructibleInHLODInterface> DestructibleInHLOD;           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamagePercent;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WorldPartitionDestructibleInHLODSupportLibrary_DamageInHLOD;
+
+// Function Engine.WorldPartitionDestructibleInHLODSupportLibrary.DestroyInHLOD
+// 0x0010 (0x0010 - 0x0000)
+struct WorldPartitionDestructibleInHLODSupportLibrary_DestroyInHLOD final
+{
+public:
+	TScriptInterface<class IWorldPartitionDestructibleInHLODInterface> DestructibleInHLOD;           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionDestructibleInHLODSupportLibrary_DestroyInHLOD;
+
+// Function Engine.WorldPartitionSubsystem.IsAllStreamingCompleted
+// 0x0001 (0x0001 - 0x0000)
+struct WorldPartitionSubsystem_IsAllStreamingCompleted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WorldPartitionSubsystem_IsAllStreamingCompleted;
+
+// Function Engine.WorldPartitionSubsystem.IsStreamingCompleted
+// 0x0020 (0x0020 - 0x0000)
+struct WorldPartitionSubsystem_IsStreamingCompleted final
+{
+public:
+	EWorldPartitionRuntimeCellState               QueryState;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FWorldPartitionStreamingQuerySource> QuerySources;                                 // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bExactState;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WorldPartitionSubsystem_IsStreamingCompleted;
 
 }
 

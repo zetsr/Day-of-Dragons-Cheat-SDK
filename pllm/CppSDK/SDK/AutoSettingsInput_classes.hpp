@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "GameplayTags_structs.hpp"
-#include "AutoSettingsInput_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "AutoSettingsInput_structs.hpp"
 #include "Engine_classes.hpp"
 
 

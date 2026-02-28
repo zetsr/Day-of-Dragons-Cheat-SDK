@@ -10,151 +10,152 @@
 
 #include "Basic.hpp"
 
-#include "Enum_CreatureLevels_structs.hpp"
-#include "Struct_SavePlayerData_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "Struct_Destination_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_ItemRarity_structs.hpp"
+#include "Struct_AdminPlayerArrayInfo_structs.hpp"
+#include "Enum_Species_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
+#include "Struct_SavePlayerData_structs.hpp"
 #include "Enum_PlayerCharacter_structs.hpp"
 #include "Struct_EmitterTimeLoc_structs.hpp"
-#include "Struct_AdminPlayerArrayInfo_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "Struct_Destination_structs.hpp"
 #include "FMODStudio_structs.hpp"
+#include "Dragons_structs.hpp"
 #include "Dragons_classes.hpp"
 #include "Enum_MapRegion_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
-#include "Enum_KickReason_structs.hpp"
-#include "Enum_Species_structs.hpp"
+#include "Enum_CreatureLevels_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "Enum_Unlockables_structs.hpp"
 #include "CommonInput_structs.hpp"
-#include "Enum_ItemRarity_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass DragonsPC.DragonsPC_C
-// 0x0570 (0x0DE0 - 0x0870)
+// 0x0570 (0x0EF0 - 0x0980)
 class ADragonsPC_C final : public ADragonsPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPAC_C*                                 PAC;                                               // 0x0878(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWi_EscapeMenu_C*                       EscapeMenu_Ref;                                    // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsGameMenuActive;                                  // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_889[0x7];                                      // 0x0889(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              LoadInputSettings;                                 // 0x0890(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsDev;                                             // 0x08A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsAdmin;                                           // 0x08A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSpectating;                                      // 0x08A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsKickstarter;                                     // 0x08A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   SteamID;                                           // 0x08A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8AC[0x4];                                      // 0x08AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ServerMOTD;                                        // 0x08B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 ServerDiscordLink;                                 // 0x08C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class AChar_Parent_Player_C*                  PawnPending;                                       // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 PlayerName;                                        // 0x08D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FStruct_Destination                    PortDestination;                                   // 0x08E8(0x0030)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWi_PlayerHUD_C*                        PlayerHUD;                                         // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSpawnMenuActive;                                 // 0x0920(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_921[0x7];                                      // 0x0921(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           AutoRespawnTimer;                                  // 0x0928(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const class FString& Message, Enum_ChatChannel Channel)> DispatchSystemChat; // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool HideHUD)>  ToggleHUD;                                         // 0x0940(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          HideHUD;                                           // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideChat;                                          // 0x0951(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_952[0x6];                                      // 0x0952(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool HideChat)> ToggleChat;                                        // 0x0958(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool CyclePrev)> CycleChatChannel;                                 // 0x0968(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              PressEnterToChat;                                  // 0x0978(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const class FString& User, bool IsAdmin, bool IsDev, const class FString& Message, Enum_ChatChannel Channel, bool IsJrakhonic)> DispatchLocalChatSelf; // 0x0988(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsInfoMenuActive;                                  // 0x0998(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSocialMenuActive;                                // 0x0999(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsAdminMenuActive;                                 // 0x099A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99B[0x5];                                      // 0x099B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWi_SpectatorHUD_C*                     SpectatorHUD;                                      // 0x09A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWi_HintText_C*                         HintTextRef;                                       // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWi_InteractHintText_C*                 InteractHintTextRef;                               // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHintActive;                                      // 0x09B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInteractHintActive;                              // 0x09B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9BA[0x6];                                      // 0x09BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWi_AnncText_C*                         AnncTextRef;                                       // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsAnncActive;                                      // 0x09C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9C9[0x7];                                      // 0x09C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDragonsGI_C*                           DragonsGameInstance;                               // 0x09D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ADragonsGM_C*                           DragonsGameMode;                                   // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ADragonsGS_C*                           DragonsGameState;                                  // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         ChatLog;                                           // 0x09E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsClearingCorpses;                                 // 0x09F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9F9[0x7];                                      // 0x09F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWi_DialogueDisplay_C*                  DialogueDisplay_Ref;                               // 0x0A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDialogueDisplayed;                               // 0x0A08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A09[0x7];                                      // 0x0A09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 DialogueActor;                                     // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              PressEnterToAdminChat;                             // 0x0A18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(uint8 CurrentPlayers)> RefreshAdminNumbers;                        // 0x0A28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWi_Crosshair_C*                        CrosshairRef;                                      // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsShowingCrosshair;                                // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A41[0x7];                                      // 0x0A41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            DeathFade;                                         // 0x0A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ADragonsSP_C*                           PawnSpectator;                                     // 0x0A50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsNestInterfaceActive;                             // 0x0A58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasEggReady;                                       // 0x0A59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5A[0x2];                                      // 0x0A5A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         EggNestArrayIndex;                                 // 0x0A5C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBeingReborn;                                     // 0x0A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStuckOnCooldown;                                 // 0x0A61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsResettingSpawners;                               // 0x0A62(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasLowFPS;                                         // 0x0A63(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasUsingSuper;                                     // 0x0A64(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A65[0x3];                                      // 0x0A65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastCheckIn;                                       // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFirstCheckIn;                                    // 0x0A70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlayerInitialized;                                 // 0x0A71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A72[0x2];                                      // 0x0A72(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DesyncCounter;                                     // 0x0A74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NewGender;                                         // 0x0A78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverrideGender;                                    // 0x0A79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A7A[0x6];                                      // 0x0A7A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              PlayerArrayStructReceived;                         // 0x0A80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<struct FStruct_AdminPlayerArrayInfo>   PlayerArrayInfoStruct;                             // 0x0A90(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          DidFindVeryStuckGroup;                             // 0x0AA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanUseVeryStuck;                                   // 0x0AA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA2[0x6];                                      // 0x0AA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& Name, bool IsAdmin, bool IsDev, const class FString& Message)> DispatchAdminChat; // 0x0AA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FStruct_SavePlayerData                 StoredLastPlayerCharacter;                         // 0x0AB8(0x0218)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          HasStoredCharacter;                                // 0x0CD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	Enum_PlayerCharacter                          StoredCharacterSpecies;                            // 0x0CD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD2[0x6];                                      // 0x0CD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           ClearStoredCharTimer;                              // 0x0CD8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBeingRestored;                                   // 0x0CE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CE1[0x7];                                      // 0x0CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         LastFrameCount;                                    // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOnlineCheck;                                     // 0x0CF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NTO;                                               // 0x0CF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CF2[0x2];                                      // 0x0CF2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumFireEmitters;                                   // 0x0CF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASpawn_GroundFire_C*                    GroundFireSound;                                   // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FStruct_EmitterTimeLoc>         GroundFireTracker;                                 // 0x0D00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FFMODEventInstance                     GroundFireSFX;                                     // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	int32                                         CurrentFPS;                                        // 0x0D18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CantBeTeleported;                                  // 0x0D1C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AdminMuteWarnings;                                 // 0x0D1D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1E[0x2];                                      // 0x0D1E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 RP_Name;                                           // 0x0D20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	TSet<class AChar_Parent_Player_C*>            UnpossessedCharacters;                             // 0x0D30(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              WidgetRemoveCharPanel;                             // 0x0D80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              WidgetRemoveSocialPanel;                           // 0x0D90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              WidgetRemoveNestInterface;                         // 0x0DA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              WidgetRemoveAdminPanel;                            // 0x0DB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWi_ContainerUI_C*                      ContainerUI;                                       // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 EpicID;                                            // 0x0DC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         InviteToEggIndex;                                  // 0x0DD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBeingRebornFromPouch;                            // 0x0DDC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPAC_C*                                 PAC;                                               // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWi_EscapeMenu_C*                       EscapeMenu_Ref;                                    // 0x0990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsGameMenuActive;                                  // 0x0998(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_999[0x7];                                      // 0x0999(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              LoadInputSettings;                                 // 0x09A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsDev;                                             // 0x09B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAdmin;                                           // 0x09B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSpectating;                                      // 0x09B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsKickstarter;                                     // 0x09B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   SteamID;                                           // 0x09B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9BC[0x4];                                      // 0x09BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ServerMOTD;                                        // 0x09C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 ServerDiscordLink;                                 // 0x09D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class AChar_Parent_Player_C*                  PawnPending;                                       // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x09E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FStruct_Destination                    PortDestination;                                   // 0x09F8(0x0030)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWi_PlayerHUD_C*                        PlayerHUD;                                         // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSpawnMenuActive;                                 // 0x0A30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A31[0x7];                                      // 0x0A31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           AutoRespawnTimer;                                  // 0x0A38(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const class FString& Message, Enum_ChatChannel Channel)> DispatchSystemChat; // 0x0A40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool HideHUD)>  ToggleHUD;                                         // 0x0A50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          HideHUD;                                           // 0x0A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideChat;                                          // 0x0A61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A62[0x6];                                      // 0x0A62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool HideChat)> ToggleChat;                                        // 0x0A68(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool CyclePrev)> CycleChatChannel;                                 // 0x0A78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              PressEnterToChat;                                  // 0x0A88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& User, bool IsAdmin, bool IsDev, const class FString& Message, Enum_ChatChannel Channel, bool IsJrakhonic)> DispatchLocalChatSelf; // 0x0A98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsInfoMenuActive;                                  // 0x0AA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSocialMenuActive;                                // 0x0AA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAdminMenuActive;                                 // 0x0AAA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AAB[0x5];                                      // 0x0AAB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWi_SpectatorHUD_C*                     SpectatorHUD;                                      // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWi_HintText_C*                         HintTextRef;                                       // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWi_InteractHintText_C*                 InteractHintTextRef;                               // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHintActive;                                      // 0x0AC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInteractHintActive;                              // 0x0AC9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ACA[0x6];                                      // 0x0ACA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWi_AnncText_C*                         AnncTextRef;                                       // 0x0AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAnncActive;                                      // 0x0AD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD9[0x7];                                      // 0x0AD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDragonsGI_C*                           DragonsGameInstance;                               // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ADragonsGM_C*                           DragonsGameMode;                                   // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ADragonsGS_C*                           DragonsGameState;                                  // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         ChatLog;                                           // 0x0AF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsClearingCorpses;                                 // 0x0B08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B09[0x7];                                      // 0x0B09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWi_DialogueDisplay_C*                  DialogueDisplay_Ref;                               // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDialogueDisplayed;                               // 0x0B18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B19[0x7];                                      // 0x0B19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 DialogueActor;                                     // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              PressEnterToAdminChat;                             // 0x0B28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(uint8 CurrentPlayers)> RefreshAdminNumbers;                        // 0x0B38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWi_Crosshair_C*                        CrosshairRef;                                      // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsShowingCrosshair;                                // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B51[0x7];                                      // 0x0B51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            DeathFade;                                         // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ADragonsSP_C*                           PawnSpectator;                                     // 0x0B60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNestInterfaceActive;                             // 0x0B68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasEggReady;                                       // 0x0B69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B6A[0x2];                                      // 0x0B6A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         EggNestArrayIndex;                                 // 0x0B6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBeingReborn;                                     // 0x0B70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStuckOnCooldown;                                 // 0x0B71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsResettingSpawners;                               // 0x0B72(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasLowFPS;                                         // 0x0B73(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasUsingSuper;                                     // 0x0B74(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B75[0x3];                                      // 0x0B75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastCheckIn;                                       // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFirstCheckIn;                                    // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayerInitialized;                                 // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B82[0x2];                                      // 0x0B82(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DesyncCounter;                                     // 0x0B84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NewGender;                                         // 0x0B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OverrideGender;                                    // 0x0B89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B8A[0x6];                                      // 0x0B8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              PlayerArrayStructReceived;                         // 0x0B90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<struct FStruct_AdminPlayerArrayInfo>   PlayerArrayInfoStruct;                             // 0x0BA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          DidFindVeryStuckGroup;                             // 0x0BB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanUseVeryStuck;                                   // 0x0BB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BB2[0x6];                                      // 0x0BB2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& Name, bool IsAdmin, bool IsDev, const class FString& Message)> DispatchAdminChat; // 0x0BB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FStruct_SavePlayerData                 StoredLastPlayerCharacter;                         // 0x0BC8(0x0218)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          HasStoredCharacter;                                // 0x0DE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_PlayerCharacter                          StoredCharacterSpecies;                            // 0x0DE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DE2[0x6];                                      // 0x0DE2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           ClearStoredCharTimer;                              // 0x0DE8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBeingRestored;                                   // 0x0DF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DF1[0x7];                                      // 0x0DF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         LastFrameCount;                                    // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOnlineCheck;                                     // 0x0E00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NTO;                                               // 0x0E01(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E02[0x2];                                      // 0x0E02(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumFireEmitters;                                   // 0x0E04(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASpawn_GroundFire_C*                    GroundFireSound;                                   // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FStruct_EmitterTimeLoc>         GroundFireTracker;                                 // 0x0E10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FFMODEventInstance                     GroundFireSFX;                                     // 0x0E20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int32                                         CurrentFPS;                                        // 0x0E28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CantBeTeleported;                                  // 0x0E2C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AdminMuteWarnings;                                 // 0x0E2D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E2E[0x2];                                      // 0x0E2E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 RP_Name;                                           // 0x0E30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	TSet<class AChar_Parent_Player_C*>            UnpossessedCharacters;                             // 0x0E40(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              WidgetRemoveCharPanel;                             // 0x0E90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              WidgetRemoveSocialPanel;                           // 0x0EA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              WidgetRemoveNestInterface;                         // 0x0EB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              WidgetRemoveAdminPanel;                            // 0x0EC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWi_ContainerUI_C*                      ContainerUI;                                       // 0x0ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 EpicID;                                            // 0x0ED8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         InviteToEggIndex;                                  // 0x0EE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBeingRebornFromPouch;                            // 0x0EEC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AbortShutdownSequence();
@@ -299,6 +300,7 @@ public:
 	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
 	void OnlyMaryPoppins(const TArray<Enum_PlayerCharacter>& SavedCharactersKeys, const TArray<bool>& SavedCharactersValues, const TArray<Enum_Unlockables>& UnlockablesKeys, const TArray<bool>& UnlockablesValues, bool IsRespawnAvailable, Enum_PlayerCharacter RespawnCharacter);
 	void OnPlayerTeleported();
+	void OnSecurityViolationReported(ESecurityViolationType ViolationType, const class FString& ViolationDetails);
 	void OnSendMessageToServer_Event(const TArray<uint8>& Message);
 	void ParseChatCommand(const class FString& Command);
 	void PlayerPossessed();
@@ -353,7 +355,7 @@ public:
 	void SaveSuperStateAdminPanel();
 	void SendAdminChat(const class FString& MessageData);
 	void SendChat(const class FString& Message, Enum_ChatChannel Channel);
-	void SendServerSystemWarning(bool LogOnly, const class FString& Message);
+	void SendServerSystemWarning(bool LogOnly, const class FString& Message, const class FString& Key);
 	void SendSystemBulkChats(const TArray<class FString>& Message);
 	void SendSystemChat(const class FString& Message);
 	void SendToParadise();

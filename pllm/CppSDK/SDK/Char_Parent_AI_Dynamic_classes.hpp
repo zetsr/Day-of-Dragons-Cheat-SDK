@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Enum_AiGrowth_structs.hpp"
 #include "Char_Parent_AI_classes.hpp"
 #include "Engine_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_AI_Dynamic.Char_Parent_AI_Dynamic_C
-// 0x0060 (0x08D0 - 0x0870)
+// 0x0060 (0x09D0 - 0x0970)
 class AChar_Parent_AI_Dynamic_C : public AChar_Parent_AI_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_AI_Dynamic_C;           // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFMODAudioComponent*                    SND_SwimLoop;                                      // 0x0878(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNavigationInvokerComponent*            NavigationInvoker;                                 // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AAct_AI_Dynamic_Parent_Spawner_C*       SpawnerRef;                                        // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FTimerHandle                           TrackTimer;                                        // 0x0890(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        TrackTimerTimeSeconds;                             // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MinutesUntilDespawn;                               // 0x08A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              LastBleedTime;                                     // 0x08A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastBleedLoc;                                      // 0x08B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AAIController*                          AI;                                                // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Char_Parent_AI_Dynamic_C;           // 0x0970(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFMODAudioComponent*                    SND_SwimLoop;                                      // 0x0978(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNavigationInvokerComponent*            NavigationInvoker;                                 // 0x0980(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AAct_AI_Dynamic_Parent_Spawner_C*       SpawnerRef;                                        // 0x0988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FTimerHandle                           TrackTimer;                                        // 0x0990(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        TrackTimerTimeSeconds;                             // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinutesUntilDespawn;                               // 0x09A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              LastBleedTime;                                     // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastBleedLoc;                                      // 0x09B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AAIController*                          AI;                                                // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyBleedStack(Enum_StatMutations StacksToApply);

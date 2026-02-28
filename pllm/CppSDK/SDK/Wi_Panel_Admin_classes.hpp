@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
-#include "UMG_classes.hpp"
-#include "Struct_AdminPlayerListData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Struct_ByteDateTime_structs.hpp"
+#include "Struct_AdminPlayerListData_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UMG_classes.hpp"
 #include "Enum_Gender_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
 
@@ -157,6 +157,7 @@ public:
 	class UWidget* Get_MutePlyr_ToolTipWidget_0();
 	ESlateVisibility Get_MuteTimer_Visibility();
 	class FText Get_PlayerSelectedID_Text_0();
+	class UWidget* Get_PMBtn_ToolTipWidget();
 	class UWidget* Get_PortBtn_ToolTipWidget_0();
 	class UWidget* Get_RefreshBtn_ToolTipWidget_0();
 	class UWidget* Get_ReplenishBtn_ToolTipWidget_0();

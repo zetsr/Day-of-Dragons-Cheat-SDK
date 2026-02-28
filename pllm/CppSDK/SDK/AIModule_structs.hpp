@@ -558,37 +558,6 @@ enum class EAITaskPriority : uint8
 	EAITaskPriority_MAX                      = 255,
 };
 
-// ScriptStruct AIModule.AIStimulus
-// 0x0058 (0x0058 - 0x0000)
-struct FAIStimulus final
-{
-public:
-	float                                         Age;                                               // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ExpirationAge;                                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Strength;                                          // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                StimulusLocation;                                  // 0x0010(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReceiverLocation;                                  // 0x0028(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Tag;                                               // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0xC];                                       // 0x0048(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         BitPad_54_0 : 1;                                   // 0x0054(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bSuccessfullySensed : 1;                           // 0x0054(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAIStimulus;
-
-// ScriptStruct AIModule.ActorPerceptionUpdateInfo
-// 0x0068 (0x0068 - 0x0000)
-struct FActorPerceptionUpdateInfo final
-{
-public:
-	int32                                         TargetId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  Target;                                            // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAIStimulus                            Stimulus;                                          // 0x0010(0x0058)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FActorPerceptionUpdateInfo;
-
 // ScriptStruct AIModule.EnvTraceData
 // 0x0040 (0x0040 - 0x0000)
 struct FEnvTraceData final
@@ -619,6 +588,55 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FEnvTraceData;
+
+// ScriptStruct AIModule.SimpleIndexedHandleBase
+// 0x0004 (0x0004 - 0x0000)
+struct alignas(0x04) FSimpleIndexedHandleBase
+{
+public:
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSimpleIndexedHandleBase;
+
+// ScriptStruct AIModule.IndexedHandleBase
+// 0x0004 (0x0008 - 0x0004)
+struct FIndexedHandleBase final : public FSimpleIndexedHandleBase
+{
+public:
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FIndexedHandleBase;
+
+// ScriptStruct AIModule.AIStimulus
+// 0x0058 (0x0058 - 0x0000)
+struct FAIStimulus final
+{
+public:
+	float                                         Age;                                               // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ExpirationAge;                                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Strength;                                          // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StimulusLocation;                                  // 0x0010(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReceiverLocation;                                  // 0x0028(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0xC];                                       // 0x0048(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_54_0 : 1;                                   // 0x0054(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bSuccessfullySensed : 1;                           // 0x0054(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIStimulus;
+
+// ScriptStruct AIModule.ActorPerceptionUpdateInfo
+// 0x0068 (0x0068 - 0x0000)
+struct FActorPerceptionUpdateInfo final
+{
+public:
+	int32                                         TargetId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  Target;                                            // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAIStimulus                            Stimulus;                                          // 0x0010(0x0058)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FActorPerceptionUpdateInfo;
 
 // ScriptStruct AIModule.EnvDirection
 // 0x0020 (0x0020 - 0x0000)
@@ -758,24 +776,6 @@ public:
 	uint8                                         TeamID;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FGenericTeamId;
-
-// ScriptStruct AIModule.SimpleIndexedHandleBase
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FSimpleIndexedHandleBase
-{
-public:
-	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSimpleIndexedHandleBase;
-
-// ScriptStruct AIModule.IndexedHandleBase
-// 0x0004 (0x0008 - 0x0004)
-struct FIndexedHandleBase final : public FSimpleIndexedHandleBase
-{
-public:
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FIndexedHandleBase;
 
 // ScriptStruct AIModule.CompactIndexedHandleBase
 // 0x0004 (0x0004 - 0x0000)

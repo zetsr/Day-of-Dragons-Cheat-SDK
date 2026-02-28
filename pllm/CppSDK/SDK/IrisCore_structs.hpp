@@ -34,6 +34,15 @@ enum class ENetObjectCountLimiterMode : uint32
 	ENetObjectCountLimiterMode_MAX           = 2,
 };
 
+// ScriptStruct IrisCore.NetSerializerConfig
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FNetSerializerConfig
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FNetSerializerConfig;
+
 // ScriptStruct IrisCore.DataStreamDefinition
 // 0x0020 (0x0020 - 0x0000)
 struct FDataStreamDefinition final
@@ -47,22 +56,6 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataStreamDefinition;
-
-// ScriptStruct IrisCore.NetSerializerConfig
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FNetSerializerConfig
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FNetSerializerConfig;
-
-// ScriptStruct IrisCore.WeakObjectNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FWeakObjectNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FWeakObjectNetSerializerConfig;
 
 // ScriptStruct IrisCore.NopNetSerializerConfig
 // 0x0000 (0x0010 - 0x0010)
@@ -394,6 +387,13 @@ struct FObjectNetSerializerConfig final : public FNetSerializerConfig
 {
 };
 DUMPER7_ASSERTS_FObjectNetSerializerConfig;
+
+// ScriptStruct IrisCore.WeakObjectNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FWeakObjectNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+DUMPER7_ASSERTS_FWeakObjectNetSerializerConfig;
 
 // ScriptStruct IrisCore.ScriptInterfaceNetSerializerConfig
 // 0x0008 (0x0018 - 0x0010)

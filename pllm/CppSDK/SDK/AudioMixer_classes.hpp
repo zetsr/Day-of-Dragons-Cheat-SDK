@@ -19,85 +19,6 @@
 namespace SDK
 {
 
-// Class AudioMixer.AudioDeviceNotificationSubsystem
-// 0x00F8 (0x0128 - 0x0030)
-class UAudioDeviceNotificationSubsystem final : public UEngineSubsystem
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EAudioDeviceChangedRole AudioDeviceRole, const class FString& DeviceID)> DefaultCaptureDeviceChanged; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EAudioDeviceChangedRole AudioDeviceRole, const class FString& DeviceID)> DefaultRenderDeviceChanged; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceAdded;                       // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x18];                                      // 0x0098(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceRemoved;                     // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C0[0x18];                                      // 0x00C0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& DeviceID, EAudioDeviceChangedState NewState)> DeviceStateChanged; // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8[0x18];                                      // 0x00E8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceSwitched;                    // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_110[0x18];                                     // 0x0110(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioDeviceNotificationSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioDeviceNotificationSubsystem")
-	}
-	static class UAudioDeviceNotificationSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioDeviceNotificationSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UAudioDeviceNotificationSubsystem;
-
-// Class AudioMixer.QuartzSubsystem
-// 0x0020 (0x0060 - 0x0040)
-class UQuartzSubsystem final : public UTickableWorldSubsystem
-{
-public:
-	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UQuartzClockHandle* CreateNewClock(const class UObject* WorldContextObject, class FName ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists, bool bUseAudioEngineClockManager);
-	void DeleteClockByHandle(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle);
-	void DeleteClockByName(const class UObject* WorldContextObject, class FName ClockName);
-	bool DoesClockExist(const class UObject* WorldContextObject, class FName ClockName);
-	float GetAudioRenderThreadToGameThreadAverageLatency();
-	float GetAudioRenderThreadToGameThreadMaxLatency();
-	float GetAudioRenderThreadToGameThreadMinLatency();
-	struct FQuartzTransportTimeStamp GetCurrentClockTimestamp(const class UObject* WorldContextObject, const class FName& InClockName);
-	float GetDurationOfQuantizationTypeInSeconds(const class UObject* WorldContextObject, class FName ClockName, const EQuartzCommandQuantization& QuantizationType, float Multiplier);
-	float GetEstimatedClockRunTime(const class UObject* WorldContextObject, const class FName& InClockName);
-	float GetGameThreadToAudioRenderThreadAverageLatency(const class UObject* WorldContextObject);
-	float GetGameThreadToAudioRenderThreadMaxLatency(const class UObject* WorldContextObject);
-	float GetGameThreadToAudioRenderThreadMinLatency(const class UObject* WorldContextObject);
-	class UQuartzClockHandle* GetHandleForClock(const class UObject* WorldContextObject, class FName ClockName);
-	float GetRoundTripAverageLatency(const class UObject* WorldContextObject);
-	float GetRoundTripMaxLatency(const class UObject* WorldContextObject);
-	float GetRoundTripMinLatency(const class UObject* WorldContextObject);
-	bool IsClockRunning(const class UObject* WorldContextObject, class FName ClockName);
-	bool IsQuartzEnabled();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("QuartzSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"QuartzSubsystem")
-	}
-	static class UQuartzSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UQuartzSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UQuartzSubsystem;
-
 // Class AudioMixer.SynthComponent
 // 0x04F0 (0x0790 - 0x02A0)
 class USynthComponent : public USceneComponent
@@ -165,6 +86,33 @@ public:
 };
 DUMPER7_ASSERTS_USynthComponent;
 
+// Class AudioMixer.SubmixEffectSubmixEQPreset
+// 0x0048 (0x00B0 - 0x0068)
+class USubmixEffectSubmixEQPreset final : public USoundEffectSubmixPreset
+{
+public:
+	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSubmixEffectSubmixEQSettings          Settings;                                          // 0x00A0(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	void SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SubmixEffectSubmixEQPreset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SubmixEffectSubmixEQPreset")
+	}
+	static class USubmixEffectSubmixEQPreset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USubmixEffectSubmixEQPreset>();
+	}
+};
+DUMPER7_ASSERTS_USubmixEffectSubmixEQPreset;
+
 // Class AudioMixer.AudioBusSubsystem
 // 0x0060 (0x0090 - 0x0030)
 class UAudioBusSubsystem final : public UAudioEngineSubsystem
@@ -187,6 +135,41 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAudioBusSubsystem;
+
+// Class AudioMixer.AudioDeviceNotificationSubsystem
+// 0x00F8 (0x0128 - 0x0030)
+class UAudioDeviceNotificationSubsystem final : public UEngineSubsystem
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EAudioDeviceChangedRole AudioDeviceRole, const class FString& DeviceID)> DefaultCaptureDeviceChanged; // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EAudioDeviceChangedRole AudioDeviceRole, const class FString& DeviceID)> DefaultRenderDeviceChanged; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceAdded;                       // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x18];                                      // 0x0098(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceRemoved;                     // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C0[0x18];                                      // 0x00C0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& DeviceID, EAudioDeviceChangedState NewState)> DeviceStateChanged; // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E8[0x18];                                      // 0x00E8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const class FString& DeviceID)> DeviceSwitched;                    // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0x18];                                     // 0x0110(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioDeviceNotificationSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioDeviceNotificationSubsystem")
+	}
+	static class UAudioDeviceNotificationSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioDeviceNotificationSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UAudioDeviceNotificationSubsystem;
 
 // Class AudioMixer.AudioMixerBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -302,33 +285,6 @@ public:
 };
 DUMPER7_ASSERTS_USubmixEffectDynamicsProcessorPreset;
 
-// Class AudioMixer.SubmixEffectSubmixEQPreset
-// 0x0048 (0x00B0 - 0x0068)
-class USubmixEffectSubmixEQPreset final : public USoundEffectSubmixPreset
-{
-public:
-	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSubmixEffectSubmixEQSettings          Settings;                                          // 0x00A0(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	void SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SubmixEffectSubmixEQPreset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SubmixEffectSubmixEQPreset")
-	}
-	static class USubmixEffectSubmixEQPreset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USubmixEffectSubmixEQPreset>();
-	}
-};
-DUMPER7_ASSERTS_USubmixEffectSubmixEQPreset;
-
 // Class AudioMixer.SubmixEffectReverbPreset
 // 0x00A8 (0x0110 - 0x0068)
 class USubmixEffectReverbPreset final : public USoundEffectSubmixPreset
@@ -430,6 +386,50 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UQuartzClockHandle;
+
+// Class AudioMixer.QuartzSubsystem
+// 0x0020 (0x0060 - 0x0040)
+class UQuartzSubsystem final : public UTickableWorldSubsystem
+{
+public:
+	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UQuartzClockHandle* CreateNewClock(const class UObject* WorldContextObject, class FName ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists, bool bUseAudioEngineClockManager);
+	void DeleteClockByHandle(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle);
+	void DeleteClockByName(const class UObject* WorldContextObject, class FName ClockName);
+	bool DoesClockExist(const class UObject* WorldContextObject, class FName ClockName);
+	float GetAudioRenderThreadToGameThreadAverageLatency();
+	float GetAudioRenderThreadToGameThreadMaxLatency();
+	float GetAudioRenderThreadToGameThreadMinLatency();
+	struct FQuartzTransportTimeStamp GetCurrentClockTimestamp(const class UObject* WorldContextObject, const class FName& InClockName);
+	float GetDurationOfQuantizationTypeInSeconds(const class UObject* WorldContextObject, class FName ClockName, const EQuartzCommandQuantization& QuantizationType, float Multiplier);
+	float GetEstimatedClockRunTime(const class UObject* WorldContextObject, const class FName& InClockName);
+	float GetGameThreadToAudioRenderThreadAverageLatency(const class UObject* WorldContextObject);
+	float GetGameThreadToAudioRenderThreadMaxLatency(const class UObject* WorldContextObject);
+	float GetGameThreadToAudioRenderThreadMinLatency(const class UObject* WorldContextObject);
+	class UQuartzClockHandle* GetHandleForClock(const class UObject* WorldContextObject, class FName ClockName);
+	float GetRoundTripAverageLatency(const class UObject* WorldContextObject);
+	float GetRoundTripMaxLatency(const class UObject* WorldContextObject);
+	float GetRoundTripMinLatency(const class UObject* WorldContextObject);
+	bool IsClockRunning(const class UObject* WorldContextObject, class FName ClockName);
+	bool IsQuartzEnabled();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("QuartzSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"QuartzSubsystem")
+	}
+	static class UQuartzSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UQuartzSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UQuartzSubsystem;
 
 }
 

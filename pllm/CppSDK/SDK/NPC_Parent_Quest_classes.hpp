@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "Enum_PlayerTitles_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_PlayerTitles_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass NPC_Parent_Quest.NPC_Parent_Quest_C
-// 0x0188 (0x04A0 - 0x0318)
+// 0x0190 (0x04A8 - 0x0318)
 class ANPC_Parent_Quest_C : public APawn
 {
 public:
@@ -69,6 +69,7 @@ public:
 	class FString                                 Tribe;                                             // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(class FName NotifyName)> OnMontageNotifyBegin;                     // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class FName NotifyName)> OnMontageNotifyEnd;                       // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          AllowTesting;                                      // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__NPC_Parent_Quest_EndDialogueOverlap_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_MenuSettingNav_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Enum_MenuSettingNav_structs.hpp"
 
 
 namespace SDK::Params

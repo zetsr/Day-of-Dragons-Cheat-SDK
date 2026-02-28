@@ -638,16 +638,6 @@ public:
 };
 DUMPER7_ASSERTS_FInterpCurveTwoVectors;
 
-// ScriptStruct CoreUObject.UintPoint
-// 0x0008 (0x0008 - 0x0000)
-struct FUintPoint final
-{
-public:
-	int32                                         X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUintPoint;
-
 // ScriptStruct CoreUObject.InterpCurvePointVector
 // 0x0058 (0x0058 - 0x0000)
 struct FInterpCurvePointVector final
@@ -866,6 +856,18 @@ public:
 	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAssetData;
+
+// ScriptStruct CoreUObject.Vector4d
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x10) FVector4d final
+{
+public:
+	double                                        X;                                                 // 0x0000(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Y;                                                 // 0x0008(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Z;                                                 // 0x0010(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        W;                                                 // 0x0018(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVector4d;
 
 // ScriptStruct CoreUObject.Guid
 // 0x0010 (0x0010 - 0x0000)
@@ -1099,6 +1101,18 @@ public:
 };
 DUMPER7_ASSERTS_FFilePath;
 
+// ScriptStruct CoreUObject.Uint32Vector4
+// 0x0010 (0x0010 - 0x0000)
+struct FUint32Vector4 final
+{
+public:
+	uint32                                        X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUint32Vector4;
+
 // ScriptStruct CoreUObject.FloatInterval
 // 0x0008 (0x0008 - 0x0000)
 struct FFloatInterval final
@@ -1130,16 +1144,6 @@ public:
 };
 DUMPER7_ASSERTS_FFloatRange;
 
-// ScriptStruct CoreUObject.Uint64Vector2
-// 0x0010 (0x0010 - 0x0000)
-struct FUint64Vector2 final
-{
-public:
-	uint64                                        X;                                                 // 0x0000(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint64                                        Y;                                                 // 0x0008(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUint64Vector2;
-
 // ScriptStruct CoreUObject.FrameNumber
 // 0x0004 (0x0004 - 0x0000)
 struct FFrameNumber final
@@ -1148,6 +1152,18 @@ public:
 	int32                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFrameNumber;
+
+// ScriptStruct CoreUObject.Uint64Vector4
+// 0x0020 (0x0020 - 0x0000)
+struct FUint64Vector4 final
+{
+public:
+	uint64                                        X;                                                 // 0x0000(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        Y;                                                 // 0x0008(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        Z;                                                 // 0x0010(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        W;                                                 // 0x0018(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUint64Vector4;
 
 // ScriptStruct CoreUObject.FrameNumberRangeBound
 // 0x0008 (0x0008 - 0x0000)
@@ -1180,16 +1196,6 @@ public:
 };
 DUMPER7_ASSERTS_FFrameRate;
 
-// ScriptStruct CoreUObject.UintVector2
-// 0x0008 (0x0008 - 0x0000)
-struct FUintVector2 final
-{
-public:
-	uint32                                        X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUintVector2;
-
 // ScriptStruct CoreUObject.FrameTime
 // 0x0008 (0x0008 - 0x0000)
 struct FFrameTime final
@@ -1199,6 +1205,18 @@ public:
 	float                                         SubFrame;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FFrameTime;
+
+// ScriptStruct CoreUObject.UintVector4
+// 0x0010 (0x0010 - 0x0000)
+struct FUintVector4 final
+{
+public:
+	uint32                                        X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUintVector4;
 
 // ScriptStruct CoreUObject.InputDeviceId
 // 0x0004 (0x0004 - 0x0000)
@@ -1228,18 +1246,6 @@ public:
 	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInt32Point;
-
-// ScriptStruct CoreUObject.Vector4f
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x10) FVector4f final
-{
-public:
-	float                                         X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FVector4f;
 
 // ScriptStruct CoreUObject.Int32RangeBound
 // 0x0008 (0x0008 - 0x0000)
@@ -2008,18 +2014,6 @@ public:
 };
 DUMPER7_ASSERTS_FUint32Vector2;
 
-// ScriptStruct CoreUObject.Uint32Vector4
-// 0x0010 (0x0010 - 0x0000)
-struct FUint32Vector4 final
-{
-public:
-	uint32                                        X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUint32Vector4;
-
 // ScriptStruct CoreUObject.Uint64Point
 // 0x0010 (0x0010 - 0x0000)
 struct FUint64Point final
@@ -2041,17 +2035,25 @@ public:
 };
 DUMPER7_ASSERTS_FUint64Vector;
 
-// ScriptStruct CoreUObject.Uint64Vector4
-// 0x0020 (0x0020 - 0x0000)
-struct FUint64Vector4 final
+// ScriptStruct CoreUObject.Uint64Vector2
+// 0x0010 (0x0010 - 0x0000)
+struct FUint64Vector2 final
 {
 public:
 	uint64                                        X;                                                 // 0x0000(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint64                                        Y;                                                 // 0x0008(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint64                                        Z;                                                 // 0x0010(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint64                                        W;                                                 // 0x0018(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUint64Vector4;
+DUMPER7_ASSERTS_FUint64Vector2;
+
+// ScriptStruct CoreUObject.UintPoint
+// 0x0008 (0x0008 - 0x0000)
+struct FUintPoint final
+{
+public:
+	int32                                         X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUintPoint;
 
 // ScriptStruct CoreUObject.UintVector
 // 0x000C (0x000C - 0x0000)
@@ -2064,17 +2066,15 @@ public:
 };
 DUMPER7_ASSERTS_FUintVector;
 
-// ScriptStruct CoreUObject.UintVector4
-// 0x0010 (0x0010 - 0x0000)
-struct FUintVector4 final
+// ScriptStruct CoreUObject.UintVector2
+// 0x0008 (0x0008 - 0x0000)
+struct FUintVector2 final
 {
 public:
 	uint32                                        X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUintVector4;
+DUMPER7_ASSERTS_FUintVector2;
 
 // ScriptStruct CoreUObject.Vector4
 // 0x0020 (0x0020 - 0x0000)
@@ -2088,17 +2088,17 @@ public:
 };
 DUMPER7_ASSERTS_FVector4;
 
-// ScriptStruct CoreUObject.Vector4d
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x10) FVector4d final
+// ScriptStruct CoreUObject.Vector4f
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x10) FVector4f final
 {
 public:
-	double                                        X;                                                 // 0x0000(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Y;                                                 // 0x0008(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Z;                                                 // 0x0010(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        W;                                                 // 0x0018(0x0008)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         X;                                                 // 0x0000(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Y;                                                 // 0x0004(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Z;                                                 // 0x0008(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         W;                                                 // 0x000C(0x0004)(Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVector4d;
+DUMPER7_ASSERTS_FVector4f;
 
 }
 

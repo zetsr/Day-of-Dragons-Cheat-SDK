@@ -13,8 +13,8 @@
 #include "Enum_AiGrowth_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK::Params

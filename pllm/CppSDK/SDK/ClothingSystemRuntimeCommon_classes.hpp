@@ -19,6 +19,26 @@
 namespace SDK
 {
 
+// Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
+// 0x0000 (0x0028 - 0x0028)
+class UClothingAssetCustomData final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothingAssetCustomData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothingAssetCustomData")
+	}
+	static class UClothingAssetCustomData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingAssetCustomData>();
+	}
+};
+DUMPER7_ASSERTS_UClothingAssetCustomData;
+
 // Class ClothingSystemRuntimeCommon.ClothConfigCommon
 // 0x0000 (0x0028 - 0x0028)
 class UClothConfigCommon : public UClothConfigBase
@@ -39,25 +59,31 @@ public:
 };
 DUMPER7_ASSERTS_UClothConfigCommon;
 
-// Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
-// 0x0000 (0x0028 - 0x0028)
-class UClothingAssetCustomData final : public UObject
+// Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
+// 0x0140 (0x0168 - 0x0028)
+class UClothLODDataCommon_Legacy final : public UObject
 {
+public:
+	class UClothPhysicalMeshDataBase_Legacy*      PhysicalMeshData;                                  // 0x0028(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FClothPhysicalMeshData                 ClothPhysicalMeshData;                             // 0x0030(0x00D8)(NativeAccessSpecifierPublic)
+	struct FClothCollisionData                    CollisionData;                                     // 0x0108(0x0040)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_148[0x20];                                     // 0x0148(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ClothingAssetCustomData")
+		STATIC_CLASS_IMPL("ClothLODDataCommon_Legacy")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ClothingAssetCustomData")
+		STATIC_NAME_IMPL(L"ClothLODDataCommon_Legacy")
 	}
-	static class UClothingAssetCustomData* GetDefaultObj()
+	static class UClothLODDataCommon_Legacy* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UClothingAssetCustomData>();
+		return GetDefaultObjImpl<UClothLODDataCommon_Legacy>();
 	}
 };
-DUMPER7_ASSERTS_UClothingAssetCustomData;
+DUMPER7_ASSERTS_UClothLODDataCommon_Legacy;
 
 // Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon
 // 0x0000 (0x0028 - 0x0028)
@@ -109,32 +135,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UClothingAssetCommon;
-
-// Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
-// 0x0140 (0x0168 - 0x0028)
-class UClothLODDataCommon_Legacy final : public UObject
-{
-public:
-	class UClothPhysicalMeshDataBase_Legacy*      PhysicalMeshData;                                  // 0x0028(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FClothPhysicalMeshData                 ClothPhysicalMeshData;                             // 0x0030(0x00D8)(NativeAccessSpecifierPublic)
-	struct FClothCollisionData                    CollisionData;                                     // 0x0108(0x0040)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_148[0x20];                                     // 0x0148(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ClothLODDataCommon_Legacy")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ClothLODDataCommon_Legacy")
-	}
-	static class UClothLODDataCommon_Legacy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothLODDataCommon_Legacy>();
-	}
-};
-DUMPER7_ASSERTS_UClothLODDataCommon_Legacy;
 
 }
 

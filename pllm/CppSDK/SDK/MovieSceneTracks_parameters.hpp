@@ -19,24 +19,6 @@
 namespace SDK::Params
 {
 
-// Function MovieSceneTracks.MovieSceneCVarSection.SetFromString
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCVarSection_SetFromString final
-{
-public:
-	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneCVarSection_SetFromString;
-
-// Function MovieSceneTracks.MovieSceneCVarSection.GetString
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCVarSection_GetString final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneCVarSection_GetString;
-
 // Function MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
 // 0x0010 (0x0010 - 0x0000)
 struct MovieSceneParameterSection_AddBoolParameterKey final
@@ -280,6 +262,24 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MovieSceneCinematicShotSection_GetShotDisplayName;
+
+// Function MovieSceneTracks.MovieSceneCVarSection.SetFromString
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCVarSection_SetFromString final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneCVarSection_SetFromString;
+
+// Function MovieSceneTracks.MovieSceneCVarSection.GetString
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCVarSection_GetString final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneCVarSection_GetString;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetDataLayerAssets
 // 0x0010 (0x0010 - 0x0000)

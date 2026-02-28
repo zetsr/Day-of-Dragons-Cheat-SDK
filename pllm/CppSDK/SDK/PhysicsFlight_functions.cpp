@@ -410,6 +410,20 @@ void UPhysicsFlight_C::CheckIfBoostPressed()
 }
 
 
+// Function PhysicsFlight.PhysicsFlight_C.CheckIfBrakePressed
+// (BlueprintCallable, BlueprintEvent)
+
+void UPhysicsFlight_C::CheckIfBrakePressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PhysicsFlight_C", "CheckIfBrakePressed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PhysicsFlight.PhysicsFlight_C.Debug_PrintFlightData
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -646,46 +660,6 @@ void UPhysicsFlight_C::Get_IsSimulatingFlightPhysics(bool* IsSimulatingFlightPhy
 }
 
 
-// Function PhysicsFlight.PhysicsFlight_C.InpActEvt_AirBoost_K2Node_InputActionEvent_3
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UPhysicsFlight_C::InpActEvt_AirBoost_K2Node_InputActionEvent_3(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PhysicsFlight_C", "InpActEvt_AirBoost_K2Node_InputActionEvent_3");
-
-	Params::PhysicsFlight_C_InpActEvt_AirBoost_K2Node_InputActionEvent_3 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PhysicsFlight.PhysicsFlight_C.InpActEvt_AirBoost_K2Node_InputActionEvent_4
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UPhysicsFlight_C::InpActEvt_AirBoost_K2Node_InputActionEvent_4(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PhysicsFlight_C", "InpActEvt_AirBoost_K2Node_InputActionEvent_4");
-
-	Params::PhysicsFlight_C_InpActEvt_AirBoost_K2Node_InputActionEvent_4 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PhysicsFlight.PhysicsFlight_C.InpActEvt_AirBrake_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
@@ -726,19 +700,19 @@ void UPhysicsFlight_C::InpActEvt_AirBrake_K2Node_InputActionEvent_2(const struct
 }
 
 
-// Function PhysicsFlight.PhysicsFlight_C.InpActEvt_Fly_K2Node_InputActionEvent_5
+// Function PhysicsFlight.PhysicsFlight_C.InpActEvt_Fly_K2Node_InputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::InpActEvt_Fly_K2Node_InputActionEvent_5(const struct FKey& Key)
+void UPhysicsFlight_C::InpActEvt_Fly_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PhysicsFlight_C", "InpActEvt_Fly_K2Node_InputActionEvent_5");
+		Func = Class->GetFunction("PhysicsFlight_C", "InpActEvt_Fly_K2Node_InputActionEvent_3");
 
-	Params::PhysicsFlight_C_InpActEvt_Fly_K2Node_InputActionEvent_5 Parms{};
+	Params::PhysicsFlight_C_InpActEvt_Fly_K2Node_InputActionEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -1056,9 +1030,9 @@ void UPhysicsFlight_C::ResetServerFlightGates()
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ShouldFly                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    WantsHover                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    WantsHover_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover)
+void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1068,7 +1042,7 @@ void UPhysicsFlight_C::Server_SimulateFlight(bool ShouldFly, bool WantsHover)
 	Params::PhysicsFlight_C_Server_SimulateFlight Parms{};
 
 	Parms.ShouldFly = ShouldFly;
-	Parms.WantsHover = WantsHover;
+	Parms.WantsHover_0 = WantsHover_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1225,6 +1199,26 @@ void UPhysicsFlight_C::SyncFlightVelocity(const struct FVector& CapturedVelocity
 	Params::PhysicsFlight_C_SyncFlightVelocity Parms{};
 
 	Parms.CapturedVelocity = std::move(CapturedVelocity);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PhysicsFlight.PhysicsFlight_C.TellServerApplyAirBrake
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ApplyAirBrake_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPhysicsFlight_C::TellServerApplyAirBrake(bool ApplyAirBrake_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PhysicsFlight_C", "TellServerApplyAirBrake");
+
+	Params::PhysicsFlight_C_TellServerApplyAirBrake Parms{};
+
+	Parms.ApplyAirBrake_0 = ApplyAirBrake_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

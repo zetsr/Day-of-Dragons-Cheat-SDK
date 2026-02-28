@@ -56,6 +56,15 @@ public:
 };
 DUMPER7_ASSERTS_LevelSequence_FindMetaDataByClass;
 
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+// 0x0020 (0x0020 - 0x0000)
+struct LevelSequenceBurnInOptions_SetBurnIn final
+{
+public:
+	struct FSoftClassPath                         InBurnInClass;                                     // 0x0000(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceBurnInOptions_SetBurnIn;
+
 // Function LevelSequence.LevelSequenceActor.AddBinding
 // 0x0028 (0x0028 - 0x0000)
 struct LevelSequenceActor_AddBinding final
@@ -197,15 +206,6 @@ public:
 	class ULevelSequence*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LevelSequenceActor_LoadSequence;
-
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-// 0x0020 (0x0020 - 0x0000)
-struct LevelSequenceBurnInOptions_SetBurnIn final
-{
-public:
-	struct FSoftClassPath                         InBurnInClass;                                     // 0x0000(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LevelSequenceBurnInOptions_SetBurnIn;
 
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // 0x0008 (0x0008 - 0x0000)

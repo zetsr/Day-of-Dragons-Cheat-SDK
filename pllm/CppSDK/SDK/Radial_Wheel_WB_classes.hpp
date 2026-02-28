@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Radial_Wheel_Slot_Struct_structs.hpp"
+#include "Radial_Wheel_Position_Enum_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
-#include "Radial_Wheel_Position_Enum_structs.hpp"
 
 
 namespace SDK

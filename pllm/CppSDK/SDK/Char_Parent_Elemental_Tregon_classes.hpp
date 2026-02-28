@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Char_Parent_Elemental_Tregon.Char_Parent_Elemental_Tregon_C
-// 0x0000 (0x0D00 - 0x0D00)
+// 0x0000 (0x0E00 - 0x0E00)
 class AChar_Parent_Elemental_Tregon_C final : public AChar_Parent_Elemental_C
 {
 public:

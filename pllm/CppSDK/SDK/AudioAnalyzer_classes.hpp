@@ -102,6 +102,30 @@ public:
 };
 DUMPER7_ASSERTS_UAudioAnalyzerNRT;
 
+// Class AudioAnalyzer.AudioAnalyzerSubsystem
+// 0x0020 (0x0050 - 0x0030)
+class UAudioAnalyzerSubsystem final : public UEngineSubsystem
+{
+public:
+	TArray<class UAudioAnalyzer*>                 AudioAnalyzers;                                    // 0x0030(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioAnalyzerSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioAnalyzerSubsystem")
+	}
+	static class UAudioAnalyzerSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioAnalyzerSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UAudioAnalyzerSubsystem;
+
 // Class AudioAnalyzer.AudioAnalyzer
 // 0x0068 (0x0090 - 0x0028)
 class UAudioAnalyzer : public UObject
@@ -131,30 +155,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAudioAnalyzer;
-
-// Class AudioAnalyzer.AudioAnalyzerSubsystem
-// 0x0020 (0x0050 - 0x0030)
-class UAudioAnalyzerSubsystem final : public UEngineSubsystem
-{
-public:
-	TArray<class UAudioAnalyzer*>                 AudioAnalyzers;                                    // 0x0030(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioAnalyzerSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioAnalyzerSubsystem")
-	}
-	static class UAudioAnalyzerSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioAnalyzerSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UAudioAnalyzerSubsystem;
 
 }
 

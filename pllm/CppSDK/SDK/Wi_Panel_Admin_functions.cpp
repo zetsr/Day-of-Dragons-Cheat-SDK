@@ -995,6 +995,26 @@ class FText UWi_Panel_Admin_C::Get_PlayerSelectedID_Text_0()
 }
 
 
+// Function Wi_Panel_Admin.Wi_Panel_Admin_C.Get_PMBtn_ToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWi_Panel_Admin_C::Get_PMBtn_ToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Wi_Panel_Admin_C", "Get_PMBtn_ToolTipWidget");
+
+	Params::Wi_Panel_Admin_C_Get_PMBtn_ToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Wi_Panel_Admin.Wi_Panel_Admin_C.Get_PortBtn_ToolTipWidget_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CommonInput_structs.hpp"

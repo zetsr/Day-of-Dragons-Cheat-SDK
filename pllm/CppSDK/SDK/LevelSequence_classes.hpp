@@ -59,90 +59,6 @@ public:
 };
 DUMPER7_ASSERTS_ULevelSequence;
 
-// Class LevelSequence.LevelSequenceActor
-// 0x0078 (0x0308 - 0x0290)
-class ALevelSequenceActor : public AActor
-{
-public:
-	uint8                                         Pad_290[0x10];                                     // 0x0290(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02A0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	class ULevelSequencePlayer*                   SequencePlayer;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequence*                         LevelSequenceAsset;                                // 0x02C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLevelSequenceCameraSettings           CameraSettings;                                    // 0x02D0(0x0002)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2[0x6];                                      // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelSequenceBurnInOptions*            BurnInOptions;                                     // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bAutoPlay : 1;                                     // 0x02E8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideInstanceData : 1;                         // 0x02E8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReplicatePlayback : 1;                            // 0x02E8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                DefaultInstanceData;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequenceBurnIn*                   BurnInInstance;                                    // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bShowBurnin;                                       // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
-	void AddBindingByTag(class FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);
-	void HideBurnin();
-	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
-	void RemoveBindingByTag(class FName Tag, class AActor* Actor);
-	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
-	void ResetBindings();
-	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, const TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
-	void SetBindingByTag(class FName BindingTag, const TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
-	void SetReplicatePlayback(bool ReplicatePlayback);
-	void SetSequence(class ULevelSequence* InSequence);
-	void ShowBurnin();
-
-	struct FMovieSceneObjectBindingID FindNamedBinding(class FName Tag) const;
-	const TArray<struct FMovieSceneObjectBindingID> FindNamedBindings(class FName Tag) const;
-	class ULevelSequence* GetSequence() const;
-	class ULevelSequencePlayer* GetSequencePlayer() const;
-	class ULevelSequence* LoadSequence() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LevelSequenceActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LevelSequenceActor")
-	}
-	static class ALevelSequenceActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ALevelSequenceActor>();
-	}
-};
-DUMPER7_ASSERTS_ALevelSequenceActor;
-
-// Class LevelSequence.DefaultLevelSequenceInstanceData
-// 0x0078 (0x00A0 - 0x0028)
-class UDefaultLevelSequenceInstanceData final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TransformOriginActor;                              // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DefaultLevelSequenceInstanceData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DefaultLevelSequenceInstanceData")
-	}
-	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
-	}
-};
-DUMPER7_ASSERTS_UDefaultLevelSequenceInstanceData;
-
 // Class LevelSequence.LevelSequenceMetaData
 // 0x0000 (0x0000 - 0x0000)
 class ILevelSequenceMetaData final
@@ -171,6 +87,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ILevelSequenceMetaData;
+
+// Class LevelSequence.DefaultLevelSequenceInstanceData
+// 0x0078 (0x00A0 - 0x0028)
+class UDefaultLevelSequenceInstanceData final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TransformOriginActor;                              // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DefaultLevelSequenceInstanceData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DefaultLevelSequenceInstanceData")
+	}
+	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
+	}
+};
+DUMPER7_ASSERTS_UDefaultLevelSequenceInstanceData;
 
 // Class LevelSequence.AnimSequenceLevelSequenceLink
 // 0x0030 (0x0058 - 0x0028)
@@ -244,6 +186,64 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULevelSequenceBurnInOptions;
+
+// Class LevelSequence.LevelSequenceActor
+// 0x0078 (0x0308 - 0x0290)
+class ALevelSequenceActor : public AActor
+{
+public:
+	uint8                                         Pad_290[0x10];                                     // 0x0290(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02A0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	class ULevelSequencePlayer*                   SequencePlayer;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequence*                         LevelSequenceAsset;                                // 0x02C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLevelSequenceCameraSettings           CameraSettings;                                    // 0x02D0(0x0002)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D2[0x6];                                      // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequenceBurnInOptions*            BurnInOptions;                                     // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bAutoPlay : 1;                                     // 0x02E8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideInstanceData : 1;                         // 0x02E8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bReplicatePlayback : 1;                            // 0x02E8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                DefaultInstanceData;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequenceBurnIn*                   BurnInInstance;                                    // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bShowBurnin;                                       // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
+	void AddBindingByTag(class FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);
+	void HideBurnin();
+	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
+	void RemoveBindingByTag(class FName Tag, class AActor* Actor);
+	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
+	void ResetBindings();
+	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, const TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
+	void SetBindingByTag(class FName BindingTag, const TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
+	void SetReplicatePlayback(bool ReplicatePlayback);
+	void SetSequence(class ULevelSequence* InSequence);
+	void ShowBurnin();
+
+	struct FMovieSceneObjectBindingID FindNamedBinding(class FName Tag) const;
+	const TArray<struct FMovieSceneObjectBindingID> FindNamedBindings(class FName Tag) const;
+	class ULevelSequence* GetSequence() const;
+	class ULevelSequencePlayer* GetSequencePlayer() const;
+	class ULevelSequence* LoadSequence() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LevelSequenceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelSequenceActor")
+	}
+	static class ALevelSequenceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALevelSequenceActor>();
+	}
+};
+DUMPER7_ASSERTS_ALevelSequenceActor;
 
 // Class LevelSequence.ReplicatedLevelSequenceActor
 // 0x0000 (0x0308 - 0x0308)

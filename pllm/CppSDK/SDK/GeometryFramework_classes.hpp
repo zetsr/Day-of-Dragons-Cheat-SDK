@@ -12,43 +12,34 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "GeometryFramework_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class GeometryFramework.MeshCommandChangeTarget
-// 0x0000 (0x0000 - 0x0000)
-class IMeshCommandChangeTarget final
+// Class GeometryFramework.DynamicMeshGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UDynamicMeshGenerator final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MeshCommandChangeTarget")
+		STATIC_CLASS_IMPL("DynamicMeshGenerator")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MeshCommandChangeTarget")
+		STATIC_NAME_IMPL(L"DynamicMeshGenerator")
 	}
-	static class IMeshCommandChangeTarget* GetDefaultObj()
+	static class UDynamicMeshGenerator* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UDynamicMeshGenerator>();
 	}
 };
-DUMPER7_ASSERTS_IMeshCommandChangeTarget;
+DUMPER7_ASSERTS_UDynamicMeshGenerator;
 
 // Class GeometryFramework.BaseDynamicMeshComponent
 // 0x0070 (0x0610 - 0x05A0)
@@ -115,6 +106,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBaseDynamicMeshComponent;
+
+// Class GeometryFramework.MeshCommandChangeTarget
+// 0x0000 (0x0000 - 0x0000)
+class IMeshCommandChangeTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshCommandChangeTarget")
+	}
+	static class IMeshCommandChangeTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IMeshCommandChangeTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IMeshCommandChangeTarget;
 
 // Class GeometryFramework.MeshReplacementCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -256,26 +276,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ADynamicMeshActor;
-
-// Class GeometryFramework.DynamicMeshGenerator
-// 0x0000 (0x0028 - 0x0028)
-class UDynamicMeshGenerator final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DynamicMeshGenerator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DynamicMeshGenerator")
-	}
-	static class UDynamicMeshGenerator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDynamicMeshGenerator>();
-	}
-};
-DUMPER7_ASSERTS_UDynamicMeshGenerator;
 
 // Class GeometryFramework.DynamicMesh
 // 0x0088 (0x00B0 - 0x0028)

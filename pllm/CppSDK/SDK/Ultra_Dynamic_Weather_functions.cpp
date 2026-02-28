@@ -3554,19 +3554,19 @@ void AUltra_Dynamic_Weather_C::Restart_Random_Weather_Variation()
 }
 
 
-// Function Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C.Runtime Or Initializing
+// Function Ultra_Dynamic_Weather.Ultra_Dynamic_Weather_C.Runtime or Initializing
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool AUltra_Dynamic_Weather_C::Runtime_Or_Initializing()
+bool AUltra_Dynamic_Weather_C::Runtime_or_Initializing()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Weather_C", "Runtime Or Initializing");
+		Func = Class->GetFunction("Ultra_Dynamic_Weather_C", "Runtime or Initializing");
 
-	Params::Ultra_Dynamic_Weather_C_Runtime_Or_Initializing Parms{};
+	Params::Ultra_Dynamic_Weather_C_Runtime_or_Initializing Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

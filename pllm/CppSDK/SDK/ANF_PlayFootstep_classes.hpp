@@ -12,8 +12,8 @@
 
 #include "Enum_FootStepSoundType_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_Species_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Enum_Species_structs.hpp"
 
 
 namespace SDK

@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "Enum_ItemRarity_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Enum_ItemGrantType_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params

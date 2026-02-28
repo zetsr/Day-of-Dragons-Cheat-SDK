@@ -18,35 +18,6 @@
 namespace SDK
 {
 
-// Class RigVM.RigVMGraphFunctionHost
-// 0x0000 (0x0000 - 0x0000)
-class IRigVMGraphFunctionHost final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RigVMGraphFunctionHost")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RigVMGraphFunctionHost")
-	}
-	static class IRigVMGraphFunctionHost* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IRigVMGraphFunctionHost>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IRigVMGraphFunctionHost;
-
 // Class RigVM.RigVMUserWorkflowOptions
 // 0x0070 (0x0098 - 0x0028)
 class URigVMUserWorkflowOptions : public UObject
@@ -137,6 +108,60 @@ public:
 };
 DUMPER7_ASSERTS_URigVMHost;
 
+// Class RigVM.RigVMBlueprintGeneratedClass
+// 0x0030 (0x03A0 - 0x0370)
+class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass
+{
+public:
+	uint8                                         Pad_370[0x8];                                      // 0x0370(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMGraphFunctionStore               GraphFunctionStore;                                // 0x0378(0x0020)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RigVMBlueprintGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RigVMBlueprintGeneratedClass")
+	}
+	static class URigVMBlueprintGeneratedClass* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URigVMBlueprintGeneratedClass>();
+	}
+};
+DUMPER7_ASSERTS_URigVMBlueprintGeneratedClass;
+
+// Class RigVM.RigVMGraphFunctionHost
+// 0x0000 (0x0000 - 0x0000)
+class IRigVMGraphFunctionHost final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RigVMGraphFunctionHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RigVMGraphFunctionHost")
+	}
+	static class IRigVMGraphFunctionHost* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IRigVMGraphFunctionHost>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IRigVMGraphFunctionHost;
+
 // Class RigVM.RigVM
 // 0x03C8 (0x03F0 - 0x0028)
 class URigVM : public UObject
@@ -202,31 +227,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_URigVM;
-
-// Class RigVM.RigVMBlueprintGeneratedClass
-// 0x0030 (0x03A0 - 0x0370)
-class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass
-{
-public:
-	uint8                                         Pad_370[0x8];                                      // 0x0370(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMGraphFunctionStore               GraphFunctionStore;                                // 0x0378(0x0020)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("RigVMBlueprintGeneratedClass")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"RigVMBlueprintGeneratedClass")
-	}
-	static class URigVMBlueprintGeneratedClass* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URigVMBlueprintGeneratedClass>();
-	}
-};
-DUMPER7_ASSERTS_URigVMBlueprintGeneratedClass;
 
 // Class RigVM.RigVMMemoryStorageGeneratorClass
 // 0x0040 (0x0260 - 0x0220)

@@ -122,6 +122,24 @@ enum class EOptimusNodePinDirection : uint8
 	EOptimusNodePinDirection_MAX             = 3,
 };
 
+// ScriptStruct OptimusCore.OptimusAction
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FOptimusAction
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusAction;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_SetPinDataDomain
+// 0x0090 (0x00A8 - 0x0018)
+struct FOptimusNodeAction_SetPinDataDomain final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x90];                                      // 0x0018(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinDataDomain;
+
 // ScriptStruct OptimusCore.OptimusExecutionDomain
 // 0x0008 (0x0008 - 0x0000)
 struct FOptimusExecutionDomain final
@@ -130,6 +148,15 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOptimusExecutionDomain;
+
+// ScriptStruct OptimusCore.OptimusVariableAction_AddVariable
+// 0x0018 (0x0030 - 0x0018)
+struct FOptimusVariableAction_AddVariable final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusVariableAction_AddVariable;
 
 // ScriptStruct OptimusCore.OptimusDataTypeRef
 // 0x0010 (0x0010 - 0x0000)
@@ -151,31 +178,28 @@ public:
 };
 DUMPER7_ASSERTS_FOptimus_ShaderBinding;
 
-// ScriptStruct OptimusCore.OptimusGraphVariableDescription
-// 0x0030 (0x0030 - 0x0000)
-struct FOptimusGraphVariableDescription final
+// ScriptStruct OptimusCore.OptimusNodeAction_MovePin
+// 0x0030 (0x0048 - 0x0018)
+struct FOptimusNodeAction_MovePin final : public FOptimusAction
 {
 public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FShaderValueTypeHandle                 ValueType;                                         // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Value;                                             // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Offset;                                            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOptimusGraphVariableDescription;
+DUMPER7_ASSERTS_FOptimusNodeAction_MovePin;
 
-// ScriptStruct OptimusCore.OptimusDeformerInstanceExecInfo
-// 0x0030 (0x0030 - 0x0000)
-struct FOptimusDeformerInstanceExecInfo final
+// ScriptStruct OptimusCore.OptimusDebugDrawParameters
+// 0x0014 (0x0014 - 0x0000)
+struct FOptimusDebugDrawParameters final
 {
 public:
-	class FName                                   GraphName;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOptimusNodeGraphType                         GraphType;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UComputeGraph*                          ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FComputeGraphInstance                  ComputeGraphInstance;                              // 0x0018(0x0018)(NativeAccessSpecifierPublic)
+	bool                                          bForceEnable;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLineCount;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTriangleCount;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxCharacterCount;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FontSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOptimusDeformerInstanceExecInfo;
+DUMPER7_ASSERTS_FOptimusDebugDrawParameters;
 
 // ScriptStruct OptimusCore.OptimusValidatedName
 // 0x0008 (0x0008 - 0x0000)
@@ -212,15 +236,6 @@ public:
 };
 DUMPER7_ASSERTS_FOptimusParameterBinding;
 
-// ScriptStruct OptimusCore.OptimusAction
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FOptimusAction
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusAction;
-
 // ScriptStruct OptimusCore.OptimusNodeAction_AddRemovePin
 // 0x00A0 (0x00B8 - 0x0018)
 struct FOptimusNodeAction_AddRemovePin : public FOptimusAction
@@ -230,12 +245,345 @@ public:
 };
 DUMPER7_ASSERTS_FOptimusNodeAction_AddRemovePin;
 
+// ScriptStruct OptimusCore.OptimusNodeAction_AddPin
+// 0x0000 (0x00B8 - 0x00B8)
+struct FOptimusNodeAction_AddPin final : public FOptimusNodeAction_AddRemovePin
+{
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_AddPin;
+
+// ScriptStruct OptimusCore.OptimusNode_ResourceAccessorBase_DuplicationInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FOptimusNode_ResourceAccessorBase_DuplicationInfo final
+{
+public:
+	class FName                                   ResourceName;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOptimusDataTypeRef                    DataType;                                          // 0x0008(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FOptimusDataDomain                     DataDomain;                                        // 0x0018(0x0040)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusNode_ResourceAccessorBase_DuplicationInfo;
+
+// ScriptStruct OptimusCore.OptimusParameterBindingArray
+// 0x0010 (0x0010 - 0x0000)
+struct FOptimusParameterBindingArray final
+{
+public:
+	TArray<struct FOptimusParameterBinding>       InnerArray;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusParameterBindingArray;
+
+// ScriptStruct OptimusCore.OptimusShaderText
+// 0x0020 (0x0020 - 0x0000)
+struct FOptimusShaderText final
+{
+public:
+	class FString                                 Declarations;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ShaderText;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusShaderText;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveGraph
+// 0x0040 (0x0058 - 0x0018)
+struct FOptimusNodeGraphAction_RemoveGraph final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x40];                                      // 0x0018(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveGraph;
+
+// ScriptStruct OptimusCore.OptimusCompoundAction
+// 0x0010 (0x0028 - 0x0018)
+struct FOptimusCompoundAction final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusCompoundAction;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddRemoveLink
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusNodeGraphAction_AddRemoveLink : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddRemoveLink;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddLink
+// 0x0000 (0x0040 - 0x0040)
+struct FOptimusNodeGraphAction_AddLink final : public FOptimusNodeGraphAction_AddRemoveLink
+{
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddLink;
+
+// ScriptStruct OptimusCore.OptimusComponentBindingAction_AddBinding
+// 0x0018 (0x0030 - 0x0018)
+struct FOptimusComponentBindingAction_AddBinding final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_AddBinding;
+
+// ScriptStruct OptimusCore.OptimusDeformerInstanceExecInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FOptimusDeformerInstanceExecInfo final
+{
+public:
+	class FName                                   GraphName;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOptimusNodeGraphType                         GraphType;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UComputeGraph*                          ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComputeGraphInstance                  ComputeGraphInstance;                              // 0x0018(0x0018)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusDeformerInstanceExecInfo;
+
+// ScriptStruct OptimusCore.OptimusComponentBindingAction_RemoveBinding
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusComponentBindingAction_RemoveBinding final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_RemoveBinding;
+
 // ScriptStruct OptimusCore.OptimusNodeAction_AddGroupingPin
 // 0x0000 (0x00B8 - 0x00B8)
 struct FOptimusNodeAction_AddGroupingPin final : public FOptimusNodeAction_AddRemovePin
 {
 };
 DUMPER7_ASSERTS_FOptimusNodeAction_AddGroupingPin;
+
+// ScriptStruct OptimusCore.OptimusComponentBindingAction_RenameBinding
+// 0x0010 (0x0028 - 0x0018)
+struct FOptimusComponentBindingAction_RenameBinding final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_RenameBinding;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_DuplicateNode
+// 0x0088 (0x00A0 - 0x0018)
+struct alignas(0x10) FOptimusNodeGraphAction_DuplicateNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_DuplicateNode;
+
+// ScriptStruct OptimusCore.OptimusComponentBindingAction_SetComponentSource
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusComponentBindingAction_SetComponentSource final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_SetComponentSource;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_RenameNode
+// 0x0040 (0x0058 - 0x0018)
+struct FOptimusNodeAction_RenameNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x40];                                      // 0x0018(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_RenameNode;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_MoveNode
+// 0x0030 (0x0048 - 0x0018)
+struct FOptimusNodeAction_MoveNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_MoveNode;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_PackageKernelFunction
+// 0x0098 (0x00B0 - 0x0018)
+struct FOptimusNodeGraphAction_PackageKernelFunction final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x98];                                      // 0x0018(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_PackageKernelFunction;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_SetPinValue
+// 0x0030 (0x0048 - 0x0018)
+struct FOptimusNodeAction_SetPinValue final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinValue;
+
+// ScriptStruct OptimusCore.OptimusDeformerInstanceComponentBinding
+// 0x0010 (0x0010 - 0x0000)
+struct FOptimusDeformerInstanceComponentBinding final
+{
+public:
+	class FName                                   ProviderName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ComponentName;                                     // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusDeformerInstanceComponentBinding;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_SetPinName
+// 0x0020 (0x0038 - 0x0018)
+struct FOptimusNodeAction_SetPinName final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinName;
+
+// ScriptStruct OptimusCore.OptimusResourceAction_SetDataDomain
+// 0x0088 (0x00A0 - 0x0018)
+struct FOptimusResourceAction_SetDataDomain final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusResourceAction_SetDataDomain;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_SetPinType
+// 0x0020 (0x0038 - 0x0018)
+struct FOptimusNodeAction_SetPinType final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinType;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_ConnectAdderPin
+// 0x0038 (0x0050 - 0x0018)
+struct FOptimusNodeAction_ConnectAdderPin final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x38];                                      // 0x0018(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_ConnectAdderPin;
+
+// ScriptStruct OptimusCore.OptimusNodeAction_RemovePin
+// 0x0000 (0x00B8 - 0x00B8)
+struct FOptimusNodeAction_RemovePin final : public FOptimusNodeAction_AddRemovePin
+{
+};
+DUMPER7_ASSERTS_FOptimusNodeAction_RemovePin;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddGraph
+// 0x0078 (0x0090 - 0x0018)
+struct alignas(0x10) FOptimusNodeGraphAction_AddGraph final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x78];                                      // 0x0018(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddGraph;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_RenameGraph
+// 0x0020 (0x0038 - 0x0018)
+struct FOptimusNodeGraphAction_RenameGraph final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RenameGraph;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddNode
+// 0x0088 (0x00A0 - 0x0018)
+struct alignas(0x10) FOptimusNodeGraphAction_AddNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddNode;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveNode
+// 0x0048 (0x0060 - 0x0018)
+struct FOptimusNodeGraphAction_RemoveNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveNode;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveLink
+// 0x0000 (0x0040 - 0x0040)
+struct FOptimusNodeGraphAction_RemoveLink final : public FOptimusNodeGraphAction_AddRemoveLink
+{
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveLink;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_UnpackageKernelFunction
+// 0x0048 (0x0060 - 0x0018)
+struct FOptimusNodeGraphAction_UnpackageKernelFunction final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_UnpackageKernelFunction;
+
+// ScriptStruct OptimusCore.OptimusResourceAction_AddResource
+// 0x0058 (0x0070 - 0x0018)
+struct FOptimusResourceAction_AddResource final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x58];                                      // 0x0018(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusResourceAction_AddResource;
+
+// ScriptStruct OptimusCore.OptimusResourceAction_RemoveResource
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusResourceAction_RemoveResource final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusResourceAction_RemoveResource;
+
+// ScriptStruct OptimusCore.OptimusResourceAction_RenameResource
+// 0x0010 (0x0028 - 0x0018)
+struct FOptimusResourceAction_RenameResource final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusResourceAction_RenameResource;
+
+// ScriptStruct OptimusCore.OptimusResourceAction_SetDataType
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusResourceAction_SetDataType final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusResourceAction_SetDataType;
+
+// ScriptStruct OptimusCore.OptimusVariableAction_RemoveVariable
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusVariableAction_RemoveVariable final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusVariableAction_RemoveVariable;
+
+// ScriptStruct OptimusCore.OptimusVariableAction_RenameVariable
+// 0x0010 (0x0028 - 0x0018)
+struct FOptimusVariableAction_RenameVariable final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusVariableAction_RenameVariable;
+
+// ScriptStruct OptimusCore.OptimusVariableAction_SetDataType
+// 0x0028 (0x0040 - 0x0018)
+struct FOptimusVariableAction_SetDataType final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusVariableAction_SetDataType;
 
 // ScriptStruct OptimusCore.OptimusAnimAttributeDescription
 // 0x0048 (0x0048 - 0x0000)
@@ -251,23 +599,37 @@ public:
 };
 DUMPER7_ASSERTS_FOptimusAnimAttributeDescription;
 
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddNode
-// 0x0088 (0x00A0 - 0x0018)
-struct alignas(0x10) FOptimusNodeGraphAction_AddNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddNode;
-
-// ScriptStruct OptimusCore.OptimusParameterBindingArray
+// ScriptStruct OptimusCore.OptimusAnimAttributeArray
 // 0x0010 (0x0010 - 0x0000)
-struct FOptimusParameterBindingArray final
+struct FOptimusAnimAttributeArray final
 {
 public:
-	TArray<struct FOptimusParameterBinding>       InnerArray;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FOptimusAnimAttributeDescription> InnerArray;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOptimusParameterBindingArray;
+DUMPER7_ASSERTS_FOptimusAnimAttributeArray;
+
+// ScriptStruct OptimusCore.OptimusGraphVariableDescription
+// 0x0030 (0x0030 - 0x0000)
+struct FOptimusGraphVariableDescription final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FShaderValueTypeHandle                 ValueType;                                         // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Value;                                             // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Offset;                                            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusGraphVariableDescription;
+
+// ScriptStruct OptimusCore.OptimusSecondaryInputBindingsGroup
+// 0x0018 (0x0018 - 0x0000)
+struct FOptimusSecondaryInputBindingsGroup final
+{
+public:
+	struct FOptimusValidatedName                  GroupName;                                         // 0x0000(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FOptimusParameterBindingArray          BindingArray;                                      // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusSecondaryInputBindingsGroup;
 
 // ScriptStruct OptimusCore.OptimusNode_GetVariable_DuplicationInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -279,70 +641,6 @@ public:
 	class FString                                 DefaultValue;                                      // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOptimusNode_GetVariable_DuplicationInfo;
-
-// ScriptStruct OptimusCore.OptimusShaderText
-// 0x0020 (0x0020 - 0x0000)
-struct FOptimusShaderText final
-{
-public:
-	class FString                                 Declarations;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ShaderText;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusShaderText;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddGraph
-// 0x0078 (0x0090 - 0x0018)
-struct alignas(0x10) FOptimusNodeGraphAction_AddGraph final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x78];                                      // 0x0018(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddGraph;
-
-// ScriptStruct OptimusCore.OptimusCompoundAction
-// 0x0010 (0x0028 - 0x0018)
-struct FOptimusCompoundAction final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusCompoundAction;
-
-// ScriptStruct OptimusCore.OptimusComponentBindingAction_AddBinding
-// 0x0018 (0x0030 - 0x0018)
-struct FOptimusComponentBindingAction_AddBinding final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusComponentBindingAction_AddBinding;
-
-// ScriptStruct OptimusCore.OptimusComponentBindingAction_RemoveBinding
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusComponentBindingAction_RemoveBinding final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusComponentBindingAction_RemoveBinding;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveNode
-// 0x0048 (0x0060 - 0x0018)
-struct FOptimusNodeGraphAction_RemoveNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveNode;
-
-// ScriptStruct OptimusCore.OptimusComponentBindingAction_RenameBinding
-// 0x0010 (0x0028 - 0x0018)
-struct FOptimusComponentBindingAction_RenameBinding final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusComponentBindingAction_RenameBinding;
 
 // ScriptStruct OptimusCore.OptimusDataType
 // 0x0058 (0x0058 - 0x0000)
@@ -364,294 +662,6 @@ public:
 };
 DUMPER7_ASSERTS_FOptimusDataType;
 
-// ScriptStruct OptimusCore.OptimusComponentBindingAction_SetComponentSource
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusComponentBindingAction_SetComponentSource final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusComponentBindingAction_SetComponentSource;
-
-// ScriptStruct OptimusCore.OptimusResourceAction_AddResource
-// 0x0058 (0x0070 - 0x0018)
-struct FOptimusResourceAction_AddResource final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x58];                                      // 0x0018(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusResourceAction_AddResource;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_RenameNode
-// 0x0040 (0x0058 - 0x0018)
-struct FOptimusNodeAction_RenameNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x40];                                      // 0x0018(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_RenameNode;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_MoveNode
-// 0x0030 (0x0048 - 0x0018)
-struct FOptimusNodeAction_MoveNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_MoveNode;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveGraph
-// 0x0040 (0x0058 - 0x0018)
-struct FOptimusNodeGraphAction_RemoveGraph final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x40];                                      // 0x0018(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveGraph;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_SetPinValue
-// 0x0030 (0x0048 - 0x0018)
-struct FOptimusNodeAction_SetPinValue final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_SetPinValue;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddRemoveLink
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusNodeGraphAction_AddRemoveLink : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddRemoveLink;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveLink
-// 0x0000 (0x0040 - 0x0040)
-struct FOptimusNodeGraphAction_RemoveLink final : public FOptimusNodeGraphAction_AddRemoveLink
-{
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveLink;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_SetPinName
-// 0x0020 (0x0038 - 0x0018)
-struct FOptimusNodeAction_SetPinName final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_SetPinName;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_SetPinType
-// 0x0020 (0x0038 - 0x0018)
-struct FOptimusNodeAction_SetPinType final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_SetPinType;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_SetPinDataDomain
-// 0x0090 (0x00A8 - 0x0018)
-struct FOptimusNodeAction_SetPinDataDomain final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x90];                                      // 0x0018(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_SetPinDataDomain;
-
-// ScriptStruct OptimusCore.OptimusResourceAction_RenameResource
-// 0x0010 (0x0028 - 0x0018)
-struct FOptimusResourceAction_RenameResource final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusResourceAction_RenameResource;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_ConnectAdderPin
-// 0x0038 (0x0050 - 0x0018)
-struct FOptimusNodeAction_ConnectAdderPin final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x38];                                      // 0x0018(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_ConnectAdderPin;
-
-// ScriptStruct OptimusCore.OptimusVariableAction_SetDataType
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusVariableAction_SetDataType final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusVariableAction_SetDataType;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_AddPin
-// 0x0000 (0x00B8 - 0x00B8)
-struct FOptimusNodeAction_AddPin final : public FOptimusNodeAction_AddRemovePin
-{
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_AddPin;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_RemovePin
-// 0x0000 (0x00B8 - 0x00B8)
-struct FOptimusNodeAction_RemovePin final : public FOptimusNodeAction_AddRemovePin
-{
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_RemovePin;
-
-// ScriptStruct OptimusCore.OptimusNodeAction_MovePin
-// 0x0030 (0x0048 - 0x0018)
-struct FOptimusNodeAction_MovePin final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeAction_MovePin;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_RenameGraph
-// 0x0020 (0x0038 - 0x0018)
-struct FOptimusNodeGraphAction_RenameGraph final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_RenameGraph;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_DuplicateNode
-// 0x0088 (0x00A0 - 0x0018)
-struct alignas(0x10) FOptimusNodeGraphAction_DuplicateNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_DuplicateNode;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_AddLink
-// 0x0000 (0x0040 - 0x0040)
-struct FOptimusNodeGraphAction_AddLink final : public FOptimusNodeGraphAction_AddRemoveLink
-{
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddLink;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_PackageKernelFunction
-// 0x0098 (0x00B0 - 0x0018)
-struct FOptimusNodeGraphAction_PackageKernelFunction final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x98];                                      // 0x0018(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_PackageKernelFunction;
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_UnpackageKernelFunction
-// 0x0048 (0x0060 - 0x0018)
-struct FOptimusNodeGraphAction_UnpackageKernelFunction final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusNodeGraphAction_UnpackageKernelFunction;
-
-// ScriptStruct OptimusCore.OptimusResourceAction_RemoveResource
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusResourceAction_RemoveResource final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusResourceAction_RemoveResource;
-
-// ScriptStruct OptimusCore.OptimusResourceAction_SetDataType
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusResourceAction_SetDataType final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusResourceAction_SetDataType;
-
-// ScriptStruct OptimusCore.OptimusResourceAction_SetDataDomain
-// 0x0088 (0x00A0 - 0x0018)
-struct FOptimusResourceAction_SetDataDomain final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusResourceAction_SetDataDomain;
-
-// ScriptStruct OptimusCore.OptimusVariableAction_AddVariable
-// 0x0018 (0x0030 - 0x0018)
-struct FOptimusVariableAction_AddVariable final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusVariableAction_AddVariable;
-
-// ScriptStruct OptimusCore.OptimusVariableAction_RemoveVariable
-// 0x0028 (0x0040 - 0x0018)
-struct FOptimusVariableAction_RemoveVariable final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusVariableAction_RemoveVariable;
-
-// ScriptStruct OptimusCore.OptimusVariableAction_RenameVariable
-// 0x0010 (0x0028 - 0x0018)
-struct FOptimusVariableAction_RenameVariable final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOptimusVariableAction_RenameVariable;
-
-// ScriptStruct OptimusCore.OptimusAnimAttributeArray
-// 0x0010 (0x0010 - 0x0000)
-struct FOptimusAnimAttributeArray final
-{
-public:
-	TArray<struct FOptimusAnimAttributeDescription> InnerArray;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusAnimAttributeArray;
-
-// ScriptStruct OptimusCore.OptimusDebugDrawParameters
-// 0x0014 (0x0014 - 0x0000)
-struct FOptimusDebugDrawParameters final
-{
-public:
-	bool                                          bForceEnable;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxLineCount;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTriangleCount;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxCharacterCount;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FontSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusDebugDrawParameters;
-
-// ScriptStruct OptimusCore.OptimusSecondaryInputBindingsGroup
-// 0x0018 (0x0018 - 0x0000)
-struct FOptimusSecondaryInputBindingsGroup final
-{
-public:
-	struct FOptimusValidatedName                  GroupName;                                         // 0x0000(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FOptimusParameterBindingArray          BindingArray;                                      // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusSecondaryInputBindingsGroup;
-
-// ScriptStruct OptimusCore.OptimusNode_ResourceAccessorBase_DuplicationInfo
-// 0x0058 (0x0058 - 0x0000)
-struct FOptimusNode_ResourceAccessorBase_DuplicationInfo final
-{
-public:
-	class FName                                   ResourceName;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOptimusDataTypeRef                    DataType;                                          // 0x0008(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FOptimusDataDomain                     DataDomain;                                        // 0x0018(0x0040)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusNode_ResourceAccessorBase_DuplicationInfo;
-
 // ScriptStruct OptimusCore.OptimusComputeGraphInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FOptimusComputeGraphInfo final
@@ -663,16 +673,6 @@ public:
 	class UOptimusComputeGraph*                   ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOptimusComputeGraphInfo;
-
-// ScriptStruct OptimusCore.OptimusDeformerInstanceComponentBinding
-// 0x0010 (0x0010 - 0x0000)
-struct FOptimusDeformerInstanceComponentBinding final
-{
-public:
-	class FName                                   ProviderName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ComponentName;                                     // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptimusDeformerInstanceComponentBinding;
 
 // ScriptStruct OptimusCore.OptimusVariableMetaDataEntry
 // 0x0018 (0x0018 - 0x0000)

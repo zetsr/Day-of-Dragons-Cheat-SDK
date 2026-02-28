@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Enum_StatMutations_structs.hpp"
 #include "Enum_StatusEffects_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "Enum_IconSize_structs.hpp"
 #include "CoreUObject_structs.hpp"
 

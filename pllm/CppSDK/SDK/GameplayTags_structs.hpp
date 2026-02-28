@@ -92,15 +92,6 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayTagContainerNetSerializerSerializationHelper;
 
-// ScriptStruct GameplayTags.GameplayTagReferenceHelper
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FGameplayTagReferenceHelper final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGameplayTagReferenceHelper;
-
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)
 struct FGameplayTagQuery final
@@ -114,6 +105,15 @@ public:
 	class FString                                 AutoDescription;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FGameplayTagQuery;
+
+// ScriptStruct GameplayTags.GameplayTagReferenceHelper
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FGameplayTagReferenceHelper final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayTagReferenceHelper;
 
 // ScriptStruct GameplayTags.GameplayTagCreationWidgetHelper
 // 0x0001 (0x0001 - 0x0000)
