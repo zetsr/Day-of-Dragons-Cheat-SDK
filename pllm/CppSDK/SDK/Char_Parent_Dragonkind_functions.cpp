@@ -389,10 +389,11 @@ void AChar_Parent_Dragonkind_C::CalculateArmorRegen(bool* IsArmorFull)
 // Function Char_Parent_Dragonkind.Char_Parent_Dragonkind_C.CalculateBileRegen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// double                                  Modifier                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileFull                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileDepleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Parent_Dragonkind_C::CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted)
+void AChar_Parent_Dragonkind_C::CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted)
 {
 	static class UFunction* Func = nullptr;
 
@@ -400,6 +401,8 @@ void AChar_Parent_Dragonkind_C::CalculateBileRegen(bool* IsBileFull, bool* IsBil
 		Func = Class->GetFunction("Char_Parent_Dragonkind_C", "CalculateBileRegen");
 
 	Params::Char_Parent_Dragonkind_C_CalculateBileRegen Parms{};
+
+	Parms.Modifier = Modifier;
 
 	UObject::ProcessEvent(Func, &Parms);
 

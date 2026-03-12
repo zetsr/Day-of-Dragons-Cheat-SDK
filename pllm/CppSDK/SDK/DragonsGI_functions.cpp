@@ -1628,6 +1628,26 @@ void UDragonsGI_C::OnFailure_CA2896EF4514C37232A28AADEB991865()
 }
 
 
+// Function DragonsGI.DragonsGI_C.OnLocalFXChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDragonsGI_C::OnLocalFXChanged(int32 NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsGI_C", "OnLocalFXChanged");
+
+	Params::DragonsGI_C_OnLocalFXChanged Parms{};
+
+	Parms.NewValue = NewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function DragonsGI.DragonsGI_C.OnSettingsChanged
 // (BlueprintCallable, BlueprintEvent)
 

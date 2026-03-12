@@ -6507,15 +6507,15 @@ void AControlRigControlActor::Clear()
 }
 
 
-// Function ControlRig.ControlRigControlActor.Refresh
+// Function ControlRig.ControlRigControlActor.refresh
 // (Final, Native, Public, BlueprintCallable)
 
-void AControlRigControlActor::Refresh()
+void AControlRigControlActor::refresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigControlActor", "Refresh");
+		Func = Class->GetFunction("ControlRigControlActor", "refresh");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

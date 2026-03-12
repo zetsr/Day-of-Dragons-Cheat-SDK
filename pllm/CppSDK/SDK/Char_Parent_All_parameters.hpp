@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Enum_Species_structs.hpp"
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_AppliedDamage_structs.hpp"
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Enum_StatusEffects_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "Enum_Diet_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_Species_structs.hpp"
+#include "Enum_Diet_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
 
 

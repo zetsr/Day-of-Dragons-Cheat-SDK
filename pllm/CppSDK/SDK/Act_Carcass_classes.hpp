@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 
 
 namespace SDK

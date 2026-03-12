@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Enum_StatMutations_structs.hpp"
 #include "Enum_EmotesDragon_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Struct_RecentTarget_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Struct_SkinData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
-#include "Struct_SkinData_structs.hpp"
 
 
 namespace SDK::Params
@@ -77,17 +77,18 @@ public:
 DUMPER7_ASSERTS_Char_Dragon_ShadowScale_C_CalculateAbilityStamDrain;
 
 // Function Char_Dragon_ShadowScale.Char_Dragon_ShadowScale_C.CalculateBileRegen
-// 0x0007 (0x0007 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Char_Dragon_ShadowScale_C_CalculateBileRegen final
 {
 public:
-	bool                                          IsBileFull;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBileDepleted;                                    // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CalculateBileRegen_IsBileFull;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CalculateBileRegen_IsBileDepleted;        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Modifier;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBileFull;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBileDepleted;                                    // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CalculateBileRegen_IsBileFull;            // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CalculateBileRegen_IsBileDepleted;        // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Char_Dragon_ShadowScale_C_CalculateBileRegen;
 

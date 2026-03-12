@@ -509,7 +509,7 @@ public:
 
 public:
 	void Clear();
-	void Refresh();
+	void refresh();
 	void ResetControlActor();
 
 public:

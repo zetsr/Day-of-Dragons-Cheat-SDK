@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Enum_EmotesDragon_structs.hpp"
+#include "Enum_CrystalColor_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_CrystalColor_structs.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
 
 
 namespace SDK

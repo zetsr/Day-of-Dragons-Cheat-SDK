@@ -12,15 +12,15 @@
 
 #include "Struct_InvitationEgg_structs.hpp"
 #include "Struct_InvitationSocial_structs.hpp"
-#include "Struct_PlayerEggInfo_structs.hpp"
+#include "Enum_PlayerTitles_structs.hpp"
+#include "Struct_ClanRegister_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_ChatChannel_structs.hpp"
+#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
-#include "Struct_ClanRegister_structs.hpp"
-#include "Enum_PlayerTitles_structs.hpp"
 #include "Enum_ServerType_structs.hpp"
 #include "Enum_KickReason_structs.hpp"
-#include "Enum_ChatChannel_structs.hpp"
 
 
 namespace SDK::Params

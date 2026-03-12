@@ -589,15 +589,15 @@ void UWi_PI_Social_GroupMenu_C::PopulatePlayerList()
 }
 
 
-// Function Wi_PI_Social_GroupMenu.Wi_PI_Social_GroupMenu_C.Refresh
+// Function Wi_PI_Social_GroupMenu.Wi_PI_Social_GroupMenu_C.refresh
 // (BlueprintCallable, BlueprintEvent)
 
-void UWi_PI_Social_GroupMenu_C::Refresh()
+void UWi_PI_Social_GroupMenu_C::refresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Wi_PI_Social_GroupMenu_C", "Refresh");
+		Func = Class->GetFunction("Wi_PI_Social_GroupMenu_C", "refresh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

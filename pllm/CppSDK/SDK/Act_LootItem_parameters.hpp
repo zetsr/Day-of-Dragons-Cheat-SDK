@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_ItemRarity_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_ItemRarity_structs.hpp"
 #include "Struct_InventoryItemsReplicated_structs.hpp"
 #include "Struct_InventoryItemsStatic_structs.hpp"
 #include "Enum_ItemGrantType_structs.hpp"

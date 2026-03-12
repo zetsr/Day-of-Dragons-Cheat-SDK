@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Struct_RecentTarget_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
 #include "Char_Parent_Dragon_classes.hpp"
+#include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
+#include "Struct_RecentTarget_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
 
 
 namespace SDK
@@ -92,7 +92,7 @@ public:
 	void ApplySkin();
 	void BndEvt__Char_Dragon_ShadowScale_WeaponBite_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void CalculateAbilityStamDrain(int32* CostStamina_0);
-	void CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted);
+	void CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted);
 	void ChargeScales();
 	void ChargeShotFX__FinishedFunc();
 	void ChargeShotFX__UpdateFunc();

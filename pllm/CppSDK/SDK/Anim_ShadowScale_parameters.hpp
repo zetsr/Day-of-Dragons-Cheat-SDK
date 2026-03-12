@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Enum_MontageBlendTypes_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
 
 

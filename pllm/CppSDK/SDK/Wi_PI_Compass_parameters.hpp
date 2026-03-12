@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Struct_GeodeCompass_structs.hpp"
-#include "Enum_CrystalColor_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Enum_CrystalColor_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
 

@@ -10,29 +10,29 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Destination_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Enum_ItemRarity_structs.hpp"
-#include "Struct_AdminPlayerArrayInfo_structs.hpp"
-#include "Enum_Species_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
-#include "Enum_KickReason_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Struct_SavePlayerData_structs.hpp"
 #include "Enum_PlayerCharacter_structs.hpp"
 #include "Struct_EmitterTimeLoc_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Struct_AdminPlayerArrayInfo_structs.hpp"
+#include "Struct_Destination_structs.hpp"
 #include "FMODStudio_structs.hpp"
 #include "Dragons_structs.hpp"
 #include "Dragons_classes.hpp"
 #include "Enum_MapRegion_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
 #include "Enum_PlayerTitles_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_Unlockables_structs.hpp"
 #include "CommonInput_structs.hpp"
-#include "Enum_ServerType_structs.hpp"
+#include "Enum_ItemRarity_structs.hpp"
 
 
 namespace SDK
@@ -180,6 +180,7 @@ public:
 	void CheckConnection();
 	void CheckDevAccess(const class FString& Pass);
 	void CheckDistanceGroundFire(const struct FVector& CheckLocation, double ToleranceInCM, bool* CanSpawnNewEmitter);
+	void CheckForBannedOverlay(const class FString& String, bool* ContainsBannedOverlay);
 	void CheckForLowFPS();
 	void CheckForMelaSkin(class AChar_Parent_Dragonkind_C* Egg);
 	void CheckGroundFireEmitters();

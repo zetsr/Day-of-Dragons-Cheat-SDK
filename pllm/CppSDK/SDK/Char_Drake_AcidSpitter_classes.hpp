@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Struct_RecentTarget_structs.hpp"
-#include "Char_Parent_Drake_classes.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Char_Parent_Drake_classes.hpp"
+#include "Struct_RecentTarget_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
 
 
 namespace SDK

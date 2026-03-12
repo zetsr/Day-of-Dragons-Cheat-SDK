@@ -232,10 +232,11 @@ void AChar_Amphithere_BlitzStriker_C::Calc_FlightStaminaDrain(int32 PlayerMaxSta
 // Function Char_Amphithere_BlitzStriker.Char_Amphithere_BlitzStriker_C.CalculateBileRegen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// double                                  Modifier                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileFull                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileDepleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Amphithere_BlitzStriker_C::CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted)
+void AChar_Amphithere_BlitzStriker_C::CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted)
 {
 	static class UFunction* Func = nullptr;
 
@@ -243,6 +244,8 @@ void AChar_Amphithere_BlitzStriker_C::CalculateBileRegen(bool* IsBileFull, bool*
 		Func = Class->GetFunction("Char_Amphithere_BlitzStriker_C", "CalculateBileRegen");
 
 	Params::Char_Amphithere_BlitzStriker_C_CalculateBileRegen Parms{};
+
+	Parms.Modifier = Modifier;
 
 	UObject::ProcessEvent(Func, &Parms);
 

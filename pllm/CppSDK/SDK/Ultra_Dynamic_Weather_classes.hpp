@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "UDS_Season_structs.hpp"
-#include "UDS_RandomWeatherTiming_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "UDS_ControlPointMode_structs.hpp"
-#include "UDS_Particle_Collision_Mode_structs.hpp"
+#include "UDS_RandomWeatherTiming_structs.hpp"
 #include "UDS_Rain_Splash_RenderMode_structs.hpp"
+#include "UDS_Particle_Collision_Mode_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UDS_ControlPointMode_structs.hpp"
 #include "UDS_TemperatureType_structs.hpp"
 #include "UDS_PropertyType_structs.hpp"
 #include "UDS_SeasonMode_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
-#include "UDS_RunContext_structs.hpp"
+#include "UDS_Season_structs.hpp"
 #include "UDW_WeatherState_Structure_structs.hpp"
+#include "UDS_RunContext_structs.hpp"
 #include "UDS_Weather_State_Variable_structs.hpp"
 #include "UDS_Temperature_Sample_Location_structs.hpp"
 
@@ -844,7 +844,7 @@ public:
 	void Report_Removal_Of_Mask_Component(class UWeatherMask_C* Component);
 	void Report_Removed_Radial_Storm(class AActor* Storm, bool* Success);
 	void Restart_Random_Weather_Variation();
-	bool Runtime_or_Initializing();
+	bool Runtime_Or_Initializing();
 	void Screen_Droplets_Periodic_Updates();
 	void Screen_Frost_Startup();
 	void Second_Frame_Startup_Functions();

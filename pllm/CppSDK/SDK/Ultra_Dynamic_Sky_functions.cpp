@@ -4338,19 +4338,19 @@ void AUltra_Dynamic_Sky_C::Revert_Modified_Properties()
 }
 
 
-// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Runtime or Initializing
+// Function Ultra_Dynamic_Sky.Ultra_Dynamic_Sky_C.Runtime Or Initializing
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool AUltra_Dynamic_Sky_C::Runtime_or_Initializing()
+bool AUltra_Dynamic_Sky_C::Runtime_Or_Initializing()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Runtime or Initializing");
+		Func = Class->GetFunction("Ultra_Dynamic_Sky_C", "Runtime Or Initializing");
 
-	Params::Ultra_Dynamic_Sky_C_Runtime_or_Initializing Parms{};
+	Params::Ultra_Dynamic_Sky_C_Runtime_Or_Initializing Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

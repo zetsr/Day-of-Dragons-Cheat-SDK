@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Dmg_Electrical_classes.hpp"
 #include "Enum_DmgTypes_structs.hpp"
+#include "Dmg_Electrical_classes.hpp"
 
 
 namespace SDK

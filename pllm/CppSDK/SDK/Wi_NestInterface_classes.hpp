@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Species_structs.hpp"
-#include "Struct_StatRecessives_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
 #include "Struct_Lineage_structs.hpp"
+#include "Struct_StatRecessives_structs.hpp"
+#include "Enum_Species_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "UMG_classes.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
 

@@ -8162,7 +8162,7 @@ public:
 	void ClientMoveResponsePacked(const struct FCharacterMoveResponsePackedBits& PackedBits);
 	void ClientVeryShortAdjustPosition(float Timestamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, class FName NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, uint8 ServerMovementMode);
 	void Crouch(bool bClientSimulation);
-	void Jump();
+	void jump();
 	void K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
 	void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
 	void K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
@@ -11795,7 +11795,7 @@ public:
 	void ViewClass(TSubclassOf<class AActor> DesiredClass);
 	void ViewPlayer(const class FString& S);
 	void ViewSelf();
-	void Walk();
+	void walk();
 
 	class APlayerController* GetPlayerController() const;
 
@@ -32442,7 +32442,7 @@ public:
 	static float PerlinNoise1D(const float Value);
 	static bool PointsAreCoplanar(const TArray<struct FVector>& Points, float Tolerance);
 	static struct FVector ProjectPointOnToPlane(const struct FVector& Point, const struct FVector& PlaneBase, const struct FVector& PlaneNormal);
-	static struct FVector ProjectVectorOnToPlane(const struct FVector& V, const struct FVector& PlaneNormal);
+	static struct FVector ProjectVectorOntoPlane(const struct FVector& V, const struct FVector& PlaneNormal);
 	static struct FVector ProjectVectorOnToVector(const struct FVector& V, const struct FVector& Target);
 	static float Quat_AngularDistance(const struct FQuat& A, const struct FQuat& B);
 	static void Quat_EnforceShortestArcWith(struct FQuat& A, const struct FQuat& B);
@@ -32514,7 +32514,7 @@ public:
 	static void ResetRandomStream(const struct FRandomStream& Stream);
 	static void ResetVectorSpringState(struct FVectorSpringState& SpringState);
 	static struct FLinearColor RGBLinearToHSV(const struct FLinearColor& RGB);
-	static void RGBToHSV(const struct FLinearColor& InColor, float* H, float* S, float* V, float* A);
+	static void RGBtoHSV(const struct FLinearColor& InColor, float* H, float* S, float* V, float* A);
 	static void RGBToHSV_Vector(const struct FLinearColor& RGB, struct FLinearColor* HSV);
 	static struct FRotator RInterpTo(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed);
 	static struct FRotator RInterpTo_Constant(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed);

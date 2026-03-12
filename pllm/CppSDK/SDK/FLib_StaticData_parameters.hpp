@@ -18,6 +18,17 @@
 namespace SDK::Params
 {
 
+// Function FLib_StaticData.FLib_StaticData_C.Get Banned Overlays
+// 0x0028 (0x0028 - 0x0000)
+struct FLib_StaticData_C_Get_Banned_Overlays final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         BannedOverlays;                                    // 0x0008(0x0010)(Parm, OutParm)
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_FLib_StaticData_C_Get_Banned_Overlays;
+
 // Function FLib_StaticData.FLib_StaticData_C.Get Inventory Item Data
 // 0x0110 (0x0110 - 0x0000)
 struct FLib_StaticData_C_Get_Inventory_Item_Data final

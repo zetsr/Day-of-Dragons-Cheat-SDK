@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Enum_VocalTypes_structs.hpp"
+#include "Enum_Species_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_Species_structs.hpp"
 
 
 namespace SDK

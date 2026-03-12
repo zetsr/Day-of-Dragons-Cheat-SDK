@@ -12,18 +12,18 @@
 
 #include "Enum_HUD_Style_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SCUE5_structs.hpp"
-#include "FMODStudio_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 #include "Enum_InputModes_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
-#include "Enum_KickReason_structs.hpp"
-#include "Enum_TimeOfDay_structs.hpp"
 #include "Enum_IconSize_structs.hpp"
+#include "SCUE5_structs.hpp"
+#include "FMODStudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_TimeOfDay_structs.hpp"
 #include "Dragons_classes.hpp"
 #include "Enum_ServerType_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "Enum_MapRegion_structs.hpp"
+#include "Enum_KickReason_structs.hpp"
 #include "NetCore_structs.hpp"
 
 
@@ -251,6 +251,7 @@ public:
 	void OnFailure_799D85DC440F1FD20C65CFA2A1C9A3D7();
 	void OnFailure_AA9B05614B137471EC014E801291838A();
 	void OnFailure_CA2896EF4514C37232A28AADEB991865();
+	void OnLocalFXChanged(int32 NewValue);
 	void OnSettingsChanged();
 	void OnSuccess_1AAC8D3F489EBE872B0BE99AF1E8BF2E();
 	void OnSuccess_2353981948E3DE1E8D0EE4920A2C86D2();

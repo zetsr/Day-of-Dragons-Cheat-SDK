@@ -23,6 +23,7 @@ namespace SDK
 class UFLib_StaticData_C final : public UBlueprintFunctionLibrary
 {
 public:
+	static void Get_Banned_Overlays(class UObject* __WorldContext, TArray<class FString>* BannedOverlays);
 	static void Get_Inventory_Item_Data(class FName ItemRowID, class UObject* __WorldContext, struct FStruct_InventoryItemsStatic* ItemData, bool* Found);
 	static void Get_Player_Account_Save_Path(const class FString& SteamID, class UObject* __WorldContext, class FString* SavePath);
 	static void Get_VRAM_Info(class UObject* __WorldContext, int32* TotalVRAM, int32* UsedVRAM, int32* AvailableVRAM);

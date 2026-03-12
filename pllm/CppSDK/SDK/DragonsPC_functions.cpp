@@ -445,6 +445,30 @@ void ADragonsPC_C::CheckDistanceGroundFire(const struct FVector& CheckLocation, 
 }
 
 
+// Function DragonsPC.DragonsPC_C.CheckForBannedOverlay
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    String                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool*                                   ContainsBannedOverlay                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ADragonsPC_C::CheckForBannedOverlay(const class FString& String, bool* ContainsBannedOverlay)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DragonsPC_C", "CheckForBannedOverlay");
+
+	Params::DragonsPC_C_CheckForBannedOverlay Parms{};
+
+	Parms.String = std::move(String);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ContainsBannedOverlay != nullptr)
+		*ContainsBannedOverlay = Parms.ContainsBannedOverlay;
+}
+
+
 // Function DragonsPC.DragonsPC_C.CheckForLowFPS
 // (BlueprintCallable, BlueprintEvent)
 

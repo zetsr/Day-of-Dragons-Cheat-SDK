@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Char_Parent_Dragon_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "Enum_EmotesDragon_structs.hpp"
-#include "Char_Parent_Dragon_classes.hpp"
-#include "Enum_StatMutations_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
+#include "Enum_EmotesDragon_structs.hpp"
 
 
 namespace SDK
@@ -92,7 +92,7 @@ public:
 	void BndEvt__Char_Dragon_FlameStalker_WeaponSwipe_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__FlameCone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BreathFire();
-	void CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted);
+	void CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted);
 	void CanUseHeatvision(bool* CanUseHeatvision_0);
 	void CanUseNightvision(bool* Param_CanUseNightvision_0);
 	void ChangeElementColorOverride(bool Reset);

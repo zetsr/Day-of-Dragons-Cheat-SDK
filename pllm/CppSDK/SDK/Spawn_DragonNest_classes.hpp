@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "Struct_StatRecessives_structs.hpp"
+#include "Enum_StatMutations_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Struct_PlayerEggInfo_structs.hpp"
 #include "Struct_StatModifiers_structs.hpp"
-#include "Enum_StatMutations_structs.hpp"
+#include "Struct_Lineage_structs.hpp"
+#include "Struct_StatRecessives_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
 #include "Struct_SkinRecipes_structs.hpp"
-#include "Struct_PlayerEggInfo_structs.hpp"
-#include "Struct_Lineage_structs.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
-#include "Enum_Temperature_structs.hpp"
 #include "Struct_PiebaldRecipes_structs.hpp"
+#include "Enum_Temperature_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_Species_structs.hpp"
 #include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_SkinRarity_structs.hpp"
 #include "Enum_Elements_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 
 
 namespace SDK

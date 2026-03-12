@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "Struct_GeodeCompass_structs.hpp"
+#include "Struct_ByteDateTime_structs.hpp"
+#include "Enum_ServerType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_ServerType_structs.hpp"
 #include "Enum_ChatChannel_structs.hpp"
+#include "Enum_TimeOfDay_structs.hpp"
 #include "Struct_ChatQueue_structs.hpp"
 #include "EnumQuest__QuestLineTracker_structs.hpp"
-#include "Struct_ByteDateTime_structs.hpp"
-#include "Enum_TimeOfDay_structs.hpp"
-#include "Struct_GeodeCompass_structs.hpp"
 
 
 namespace SDK

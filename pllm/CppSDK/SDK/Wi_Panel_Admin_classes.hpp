@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Enum_ChatChannel_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Struct_ByteDateTime_structs.hpp"
 #include "Struct_AdminPlayerListData_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "Enum_Gender_structs.hpp"
-#include "Enum_ChatChannel_structs.hpp"
 
 
 namespace SDK
@@ -180,7 +180,7 @@ public:
 	class FText GetText_4();
 	void IsThisMe(bool* IsSelf);
 	void PopulatePlayerList();
-	void Refresh();
+	void refresh();
 	void RefreshAdminNumbers_Event_0(uint8 CurrentPlayers_0);
 	void RequestPlayerStateDataStruct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_Family_structs.hpp"
 #include "Enum_Mitigations_structs.hpp"
+#include "Enum_Diet_structs.hpp"
 #include "Enum_Elements_structs.hpp"
 #include "Enum_GrowthStage_structs.hpp"
-#include "Enum_Diet_structs.hpp"
-#include "Enum_CreatureLevels_structs.hpp"
 #include "Enum_Vitals_structs.hpp"
 
 
@@ -159,7 +159,7 @@ struct PDA_DragonData_C_GetAllSpeedValues final
 {
 public:
 	double                                        stalk;                                             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Walk;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        walk;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        trot;                                              // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        run;                                               // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        sprint;                                            // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

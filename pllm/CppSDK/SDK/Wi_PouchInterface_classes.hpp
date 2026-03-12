@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Struct_PlayerEggInfo_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 #include "Enum_EggWidgetStatus_structs.hpp"
 #include "Enum_EggGender_structs.hpp"

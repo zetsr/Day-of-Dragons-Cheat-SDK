@@ -360,10 +360,11 @@ void AChar_Wyvern_InfernoRavager_C::BreathFire()
 // Function Char_Wyvern_InfernoRavager.Char_Wyvern_InfernoRavager_C.CalculateBileRegen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// double                                  Modifier                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileFull                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   IsBileDepleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AChar_Wyvern_InfernoRavager_C::CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted)
+void AChar_Wyvern_InfernoRavager_C::CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted)
 {
 	static class UFunction* Func = nullptr;
 
@@ -371,6 +372,8 @@ void AChar_Wyvern_InfernoRavager_C::CalculateBileRegen(bool* IsBileFull, bool* I
 		Func = Class->GetFunction("Char_Wyvern_InfernoRavager_C", "CalculateBileRegen");
 
 	Params::Char_Wyvern_InfernoRavager_C_CalculateBileRegen Parms{};
+
+	Parms.Modifier = Modifier;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -470,6 +473,20 @@ void AChar_Wyvern_InfernoRavager_C::CheckIfCanApplyBioluminescence(bool* BioPrev
 
 	if (BioPreventionActive != nullptr)
 		*BioPreventionActive = Parms.BioPreventionActive;
+}
+
+
+// Function Char_Wyvern_InfernoRavager.Char_Wyvern_InfernoRavager_C.CheckReducedInfernoFX
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Wyvern_InfernoRavager_C::CheckReducedInfernoFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Wyvern_InfernoRavager_C", "CheckReducedInfernoFX");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -841,6 +858,20 @@ void AChar_Wyvern_InfernoRavager_C::K2_OnMovementModeChanged(EMovementMode PrevM
 	Parms.NewCustomMode = NewCustomMode;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Char_Wyvern_InfernoRavager.Char_Wyvern_InfernoRavager_C.LocalPossessed
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+
+void AChar_Wyvern_InfernoRavager_C::LocalPossessed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Wyvern_InfernoRavager_C", "LocalPossessed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -2285,6 +2316,20 @@ void AChar_Wyvern_InfernoRavager_C::SetLocalBurningFX()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Char_Wyvern_InfernoRavager_C", "SetLocalBurningFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Char_Wyvern_InfernoRavager.Char_Wyvern_InfernoRavager_C.SettingsChanged_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void AChar_Wyvern_InfernoRavager_C::SettingsChanged_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Char_Wyvern_InfernoRavager_C", "SettingsChanged_Event");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

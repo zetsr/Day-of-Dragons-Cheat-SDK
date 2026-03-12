@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "AnimGraphRuntime_structs.hpp"
-#include "NPC_Biolumin_AnimBP_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "NPC_Biolumin_AnimBP_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

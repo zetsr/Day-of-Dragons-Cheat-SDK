@@ -12,9 +12,9 @@
 
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "StructQuest_Progress_structs.hpp"
-#include "EnumQuest_EventStatus_structs.hpp"
 #include "EnumQuest__QuestLineTracker_structs.hpp"
+#include "EnumQuest_EventStatus_structs.hpp"
+#include "StructQuest_Progress_structs.hpp"
 
 
 namespace SDK::Params

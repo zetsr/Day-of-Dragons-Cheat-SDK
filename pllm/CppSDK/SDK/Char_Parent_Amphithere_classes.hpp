@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_GrowthStage_structs.hpp"
 #include "Char_Parent_Dragonkind_classes.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 
 
 namespace SDK

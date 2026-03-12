@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Enum_ChatChannel_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_ChannelWidget_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "Enum_ChatChannel_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 

@@ -1,0 +1,10 @@
+﻿  dllmain.cpp
+  hook.cpp
+  mdx12_globals.cpp
+  render.cpp
+    正在创建库 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\Reflective\x64\Release\Reflective.lib 和对象 C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\Reflective\x64\Release\Reflective.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 153 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Reflective.vcxproj -> C:\Users\zetsr\Documents\GitHub\Day-of-Dragons-Cheat-SDK\Reflective\x64\Release\Reflective.dll

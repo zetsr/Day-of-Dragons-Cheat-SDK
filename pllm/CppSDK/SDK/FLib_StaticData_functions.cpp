@@ -17,6 +17,30 @@
 namespace SDK
 {
 
+// Function FLib_StaticData.FLib_StaticData_C.Get Banned Overlays
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>*                  BannedOverlays                                         (Parm, OutParm)
+
+void UFLib_StaticData_C::Get_Banned_Overlays(class UObject* __WorldContext, TArray<class FString>* BannedOverlays)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("FLib_StaticData_C", "Get Banned Overlays");
+
+	Params::FLib_StaticData_C_Get_Banned_Overlays Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (BannedOverlays != nullptr)
+		*BannedOverlays = std::move(Parms.BannedOverlays);
+}
+
+
 // Function FLib_StaticData.FLib_StaticData_C.Get Inventory Item Data
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

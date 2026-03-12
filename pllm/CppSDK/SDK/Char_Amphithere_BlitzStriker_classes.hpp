@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Char_Parent_Amphithere_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Char_Parent_Amphithere_classes.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
+#include "Enum_GrowthStage_structs.hpp"
 #include "UDS_Weather_Display_Names_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Enum_EmotesDragon_structs.hpp"
-#include "Enum_GrowthStage_structs.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
 
 
@@ -105,7 +105,7 @@ public:
 	void BndEvt__Char_Amphithere_BlitzStriker_BeamCapsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__Char_Drake_AcidSpitter_BiteBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void Calc_FlightStaminaDrain(int32 PlayerMaxStam, int32* StaminaCost);
-	void CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted);
+	void CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted);
 	void ChangeElementColorOverride(bool Reset);
 	void ChargeCoil(bool SwitchOn, int32 CoilIndex);
 	void ChargeEmmissive__FinishedFunc();

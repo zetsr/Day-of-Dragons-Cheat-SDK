@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_GeneticGrades_structs.hpp"
 #include "Struct_StatMutations_structs.hpp"
+#include "Enum_GeneticGrades_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
 #include "Enum_DmgTypes_structs.hpp"
 

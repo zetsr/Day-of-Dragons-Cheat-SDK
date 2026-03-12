@@ -12,11 +12,11 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Struct_RecentTarget_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Struct_RecentTarget_structs.hpp"
+#include "Enum_AnimMotionStates_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "Char_Parent_Wyvern_classes.hpp"
-#include "Enum_AnimMotionStates_structs.hpp"
 #include "Enum_EmotesDragon_structs.hpp"
 #include "Enum_StatMutations_structs.hpp"
 
@@ -94,11 +94,12 @@ public:
 	void BndEvt__Char_Wyvern_InfernoRavager_WeaponBite_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__FlameCone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BreathFire();
-	void CalculateBileRegen(bool* IsBileFull, bool* IsBileDepleted);
+	void CalculateBileRegen(double Modifier, bool* IsBileFull, bool* IsBileDepleted);
 	void ChangeElementColorOverride(bool Reset);
 	void ChangeMotionState(Enum_AnimMotionStates MotionState_0);
 	void CheckCanSpawnGroundFire(const struct FVector& Start, const struct FVector& End, bool* ShouldSpawn, struct FVector* Location);
 	void CheckIfCanApplyBioluminescence(bool* BioPreventionActive);
+	void CheckReducedInfernoFX();
 	void CheckValidEmotePerSpecies(Enum_EmotesDragon Emote, bool HasEmotePack, bool* IsValidEmote);
 	void DisableSpecial();
 	void ExecuteUbergraph_Char_Wyvern_InfernoRavager(int32 EntryPoint);
@@ -116,6 +117,7 @@ public:
 	void InpActEvt_Attack_K2Node_InputActionEvent_2(const struct FKey& Key);
 	void InpActEvt_Special_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode_0, uint8 PrevCustomMode, uint8 NewCustomMode);
+	void LocalPossessed();
 	void LocalTick(double DeltaSeconds);
 	void LocalUnpossessed();
 	void MembraneExpand();
@@ -193,6 +195,7 @@ public:
 	void ServerBreathFire(bool Start);
 	void ServerGlideJump();
 	void SetLocalBurningFX();
+	void SettingsChanged_Event();
 	void StoreRecentTargets();
 	void StunTempImmunityDecay(double ImmuneDuration);
 	void Timeline_0__FinishedFunc();
