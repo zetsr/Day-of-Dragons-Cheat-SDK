@@ -1,4 +1,4 @@
-#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "../Minimal-D3D12-Hook-ImGui/Main/mdx12_api.h"
 #include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
@@ -16,8 +16,8 @@ namespace g_ESP {
     RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS) {
         if (!targetPS || !localPS) return RelationType::Enemy;
 
-        auto targetDragonPS = reinterpret_cast<SDK::ADragonsPS_C*>(targetPS);
-        auto localDragonPS = reinterpret_cast<SDK::ADragonsPS_C*>(localPS);
+        auto targetDragonPS = (SDK::ADragonsPS_C*)targetPS;
+        auto localDragonPS = (SDK::ADragonsPS_C*)localPS;
 
         if (!targetDragonPS || !localDragonPS) return RelationType::Enemy;
 
@@ -182,32 +182,9 @@ namespace g_ESP {
 
     void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a) {
         if (!rect.valid || !entity) return;
-        ImGui::PushFont(g_MDX12::g_Alibaba_PuHuiTi_Bold);
 
-        // 使用 FString 初始化默认显示内容
-        SDK::FString fName = L"未知生物";
-
-        // 1. 尝试作为玩家处理
-        if (entity->IsA(SDK::AChar_Parent_Player_C::StaticClass())) {
-            auto PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(entity);
-            if (PlayerChar && PlayerChar->PlayerName.IsValid()) {
-                fName = PlayerChar->PlayerName;
-            }
-        }
-        // 2. 否则作为 AI 处理
-        else {
-            auto BaseChar = reinterpret_cast<SDK::AChar_Parent_All_C*>(entity);
-            if (BaseChar) {
-                switch (BaseChar->BiologicalSpecies) {
-                case SDK::Enum_Species::NewEnumerator11: fName = L"小龙虾"; break;
-                case SDK::Enum_Species::NewEnumerator12: fName = L"螃蟹"; break;
-                case SDK::Enum_Species::NewEnumerator17: fName = L"鳄鱼"; break;
-                default: fName = L"AI生物"; break;
-                }
-            }
-        }
-
-        std::string utf8Name = fName.ToString();
+        // std::string fClanName = g_Util::GetClanName(TargetActor).ToString(); // crash
+        std::string utf8Name = g_Util::GetEntityName(entity).ToString();
 
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
         ImVec2 textSize = ImGui::CalcTextSize(utf8Name.c_str());
@@ -215,7 +192,5 @@ namespace g_ESP {
 
         drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), g_Util::ToImColor(0, 0, 0, a), utf8Name.c_str());
         drawList->AddText(textPos, g_Util::ToImColor(r, g, b, a), utf8Name.c_str());
-
-        ImGui::PopFont();
     }
 }

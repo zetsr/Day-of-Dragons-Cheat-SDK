@@ -1,4 +1,4 @@
-#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "../Minimal-D3D12-Hook-ImGui/Main/mdx12_api.h"
 #include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
@@ -132,21 +132,10 @@ namespace g_DrawESP {
 
                 if (bDrawName) {
                     DisplayInfo info = GetSpeciesInfo(BaseChar);
-                    SDK::FString fName = L"Î´ÖªÃû³Æ";
-                    if (TargetActor->IsA(SDK::AChar_Parent_Player_C::StaticClass())) {
-                        SDK::AChar_Parent_Player_C* PlayerChar = reinterpret_cast<SDK::AChar_Parent_Player_C*>(TargetActor);
-                        if (PlayerChar && PlayerChar->PlayerName.IsValid()) {
-                            fName = PlayerChar->PlayerName;
-                        }
-                    }
-                    else {
-                        switch (BaseChar->BiologicalSpecies) {
-                        case SDK::Enum_Species::NewEnumerator11: fName = L"Ð¡ÁúÏº"; break;
-                        case SDK::Enum_Species::NewEnumerator12: fName = L"ó¦Ð·"; break;
-                        case SDK::Enum_Species::NewEnumerator17: fName = L"öùÓã"; break;
-                        }
-                    }
-                    oofFlags.push_back({ fName.ToString(), g_Util::GetU32Color(NameColor) });
+                    SDK::FString fName = g_Util::GetEntityName(TargetActor);
+                    // std::string fClanName = g_Util::GetClanName(TargetActor).ToString(); // crash
+
+                    oofFlags.push_back({ fName.ToString(), g_Util::GetU32Color(NameColor)});
                 }
 
                 if (bDrawHealthBar) {

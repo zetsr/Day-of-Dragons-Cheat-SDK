@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -141,8 +141,11 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,17 +164,17 @@
     <ClInclude Include="Hack\GuiStyle.h" />
     <ClInclude Include="Hack\SDK_Headers.hpp" />
     <ClInclude Include="Hack\Util.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imconfig.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_dx12.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_win32.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_internal.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_rectpack.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_textedit.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_truetype.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\Fonts.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\mdx12_api.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\MinHook\include\MinHook.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Medium.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imconfig.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_dx12.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_internal.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Main\mdx12_api.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\MinHook\include\MinHook.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hack\dllmain.cpp" />
@@ -179,21 +182,22 @@
     <ClCompile Include="Hack\DrawImGui.cpp" />
     <ClCompile Include="Hack\ESP.cpp" />
     <ClCompile Include="Hack\SDK_Impl.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_demo.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_draw.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_dx12.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_win32.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_tables.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\hook.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\input.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\mdx12_globals.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\render.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\setup_imgui.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\hook.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\input.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\mdx12_globals.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\mdx12_libs.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\render.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\setup_imgui.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\LICENSE.txt" />
+    <Text Include="Minimal-D3D12-Hook-ImGui\ImGui\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
